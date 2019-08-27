@@ -5,18 +5,33 @@ import math, sys, csv, ast
 import numpy as np
 import matplotlib.pyplot as plt
 import csvFiles
+from plotter import *
 from collections import Counter
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import normalize
 from sRPCAviaADMMFast import *
 from oneHot import *
 
-num_rows = 5000   # TODO check to make sure attacks are in data For Thurs short file: 82840
-num_feat = 323    # TODO this will change with one-hot....
+''' 
+dictionary that holds the feature sizes
+ each next feature increments off of the previous ones
+ for ease of figuring out the defining feature(s) in sRPCA
+'''
+feat = {
+    "Src IP": 0,
+    "Src Port": 0,
+    "Dist Src Port": 0,
+    "Dest IP": 0,
+    "Dest Port": 0,
+    "Dist Dest Port": 0,
+    "Protocol": 0,
+    "Pkt Len Mean": 0
+}
 
 # loads a list of files and extracts/forms contents
 def loadFile(names):
-    mat = []
+    num_rows = 1000     # rows of data in matrix
+    mat, malPkts = [], []
     for name in names:
         count = 0
         with open(name) as fin:
@@ -34,14 +49,17 @@ def loadFile(names):
                         if item == 46:
                             mat.append(temp)
                             temp = []
+                    # create list of malicious packet indices
+                    if not "BENIGN" in lineData[84]:
+                        malPkts.append(count+1)
                 elif count > num_rows:
                     newMat = np.matrix(mat)
                     #print(newMat.shape)
                     break
 
                 count += 1
-        break   # XXX this only allows for 1 file to be read
-    return newMat
+        break   # NOTE this only allows for 1 file to be read
+    return newMat, malPkts
 
 # prints stats on file
 def printStats(filename):
@@ -51,7 +69,6 @@ def printStats(filename):
     with open(filename) as fin:
         for line in fin:
             lineInfo = line.split(",")
-#            print(lineInfo)
             # label
             if not "BENIGN" in lineInfo[84]:
                 if not lineInfo[1] in malSourceIps:
@@ -101,45 +118,27 @@ def printStats(filename):
 
 
 # function to run PCA and RPCA and graph them
-def runAnalysis(X):
+def runAnalysis(X, l, alpha, malPkts):
     # SVD PCA
     u, s, vh = np.linalg.svd(X)
-    print("PCA thru SVD Sigma matrix: ")
-    print(s)
+#    print("PCA thru SVD Sigma matrix: ",s)
 
     # TODO make better
     # take sub section(s) of matrix to get rank [8:15] and [3:10]
-#    sub1 = X[8:15][3:10]
+#    sub1 = X[:f][:rr]
 #    maxRank = np.linalg.matrix_rank(sub1)
     maxRank = np.linalg.matrix_rank(X)
-#    maxRank = 77
-    print("Max Rank: ", maxRank)
-   
+#    print("Max Rank: ", maxRank)
+
     T = np.asmatrix(X)  # gets shape of X
-    u = []
-    v = []
-    vecM = []
-    vecEpsilon = []
-    UOrig = []
-    VOrig = []
-#    UOrig = np.matrix(np.random.random(size=[num_rows, maxRank]))   # ideally, U would be num_rows x 523 (if have 523 features)
-#    VOrig = np.matrix(np.random.random(size=[num_feat, maxRank]))   # ideally, V would be square (523 x 523)
-
-    # fill in data from X
-    UOrig = np.matrix([[X[x][y] for y in range(maxRank)] for x in range(T.shape[0])])
-    VOrig = np.matrix([[X[x][y] for y in range(maxRank)] for x in range(T.shape[1])])
-
-#    print(UOrig.shape, VOrig.shape)
+    u, v, vecM, vecEpsilon = [], [], [], []
 
     for i in range(T.shape[0]):
         for j in range(T.shape[1]):
-#            u.append(X[i][14]) # 0 -> 77, next # 77 times, 1000 times     (uses clmn 14)
-#            v.append(X[14][j]) # 0..77 -> once, then again 0..77, 1000 times     (uses row 14)
-            # u and v are the indices for vecM in sRPCA???
             u.append(i)
             v.append(j)
-            vecEpsilon.append(1e-5)
-            Mij = float(UOrig[i, :] * (VOrig.T)[:, j])
+            vecEpsilon.append(1e-5)     # NOTE original value was 1e-5
+            Mij = float(T[i,j])
             vecM.append(Mij)
 
     u = np.array(u)
@@ -147,24 +146,79 @@ def runAnalysis(X):
     vecM = np.array(vecM)
     vecEpsilon = np.array(vecEpsilon)
     
-#    print(u.shape,v.shape)  # both should be (77000,)
-#    print(vecM)
-#    print(vecM.shape)
-       
-    [U, E, VT, S, B] = sRPCA(num_rows, num_feat, u, v, vecM, vecEpsilon, maxRank)
 
-    print("sRPCA E (sigma) matrix: ")
-    print(E)
+#    l = 0.015    # 0.015 good lambda for me?? NOTE
+    # 0.64 good lambda
+    [U, E, VT, S, B] = sRPCA(T.shape[0], T.shape[1], u, v, vecM, vecEpsilon, maxRank, lam=l)
+
+#    test = np.dot(U,np.diag(E))
+#    print(np.dot(test,VT))
+#    print("sRPCA E (sigma) matrix: ",E)
 
     S = S.todense()    # keep
+#    print("Dense S: ", S)   # eh
 
-    print("Dense S: ", S)   # eh
+    S[S < 0] = 0    # keep
+        
+    # map values to 0-1
+    newS, newSS = [], []#np.matrix()
+    leftMax = np.amax(S)
+    for row in range(T.shape[0]):
+        for i in range(T.shape[1]):
+#            print(S[row,i])
+            newS.append(translate(S[row,i], 0, leftMax, 0, 1))
+        newSS.append(newS)
+        newS = []
+    S = np.matrix(newSS)
 
-    S[S < 0] = 0    # keep???
-    print("# non-zero values: " + str(len(np.where(S>0)[0])) + " out of " + str(T.shape[0]*T.shape[1]))    # keep
+#    print("# non-zero values: " + str(len(np.where(S>0)[0])) + " out of " + str(T.shape[0]*T.shape[1]))    # keep
+
+#    alpha = 0.045    # optimal alpha???? NOTE
+
+    # Computes TP, FP, TN, FN
+    TP, FP, TN, FN = 0, 0, 0, 0
+    for row in range(T.shape[0]):
+        for feat in range(T.shape[1]):
+            # not an attack
+            if S[row, feat] < alpha:
+                if row in malPkts:  # an attack, False Negative
+                    FN += 1
+                else:   # not an attack, True Negative
+                    TN += 1
+            else:   # an attack
+                if row in malPkts:  # an attack, True Positive
+                    TP += 1
+                else:   # not an attack, False Positive
+                    FP += 1
+
+    # Compute the False Positive and True Positive Rates
+    FPR = FP*1./(FP + TN)
+    TPR = TP*1./(TP + FN)
+
+    print("Lambda: ", l, "  Alpha: ", alpha)
+    print("\nFPR:", FPR, "    TPR:", TPR)
+#    print("# of attacks: ", len(malPkts))
+
 #    plotMat(S)     # keep
+    plotS(X, s, E, maxRank)
+#    plotS(X, s, E, maxRank, True)
+#    attackInds = [823, 829, 886, 898, 977]
+    
+#    plotter(S,attackInds,xname="Stage 3")
 
-    plotS(s, E, X, maxRank)
+    return TPR, FPR
+
+# mapping values function
+def translate(value, leftMin, leftMax, rightMin, rightMax):
+    # Figure out how 'wide' each range is
+    leftSpan = leftMax - leftMin
+    rightSpan = rightMax - rightMin
+
+    # Convert the left range into a 0-1 range (float)
+    valueScaled = float(value - leftMin) / float(leftSpan)
+
+    # Convert the 0-1 range into a value in the right range.
+    return rightMin + (valueScaled * rightSpan)
 
 
 # plots matrices
@@ -178,12 +232,32 @@ def plotMat(mat):
 
 
 # plots Sigma matrices from PCA (SVD) and sRPCA
-def plotS(svd, srpca, T, maxRank):
+def plotS(T, svd, srpca, maxRank, log=False):
     print("Plotting...")
 
     T = np.asmatrix(T)
-    plt.plot(range(T.shape[1]), svd, 'rs', range(maxRank), srpca, 'bo')
+#    plt.plot(range(T.shape[1]), svd, 'rs', range(maxRank), srpca, 'bo')
+    plt.plot(range(T.shape[1]), svd, 'rs')
+    if log:
+        plt.yscale("log")
     plt.show()
+
+    plt.plot(range(maxRank), srpca, 'bo')
+    plt.show()
+
+
+# plots the graphs similar to the ones in the journal
+def plotJ(mat):
+    print("Plotting...")
+
+    plt.title("PCA/RPCA Title")
+    plt.xlabel("Column of Data Matrix") # TODO remove values from x axis
+    plt.ylabel("Value of Infinity Norm")
+    plt.plot([0.5, 0.5])    # Threshold line TODO make it a red line
+    # TODO figure out how to make vertical lines (make light gray and dotted)
+    
+    plt.show()
+
 
 # normalizes every column in the matrix from start position to end position
 def normMat(M):
@@ -265,10 +339,18 @@ if __name__ == '__main__':
 
     testing = [testing[1]]
     # loads and formats data from file
-    X = loadFile(testing)   # TODO this is only for getting the Thurs morning file for journal
+    X, malPkts = loadFile(testing)   # TODO this is only for getting the Thurs morning file for journal
 
     # one-hot encode columns
 
+    '''
+        "Dist Src Port": 0,
+            "Dest IP": 0,
+                "Dest Port": 0,
+                    "Dist Dest Port": 0,
+                        "Protocol": 0,
+                            "Pkt Len Mean": 0
+    '''
     # Source IP
     sip = X[:,0].T
     siph = []
@@ -277,24 +359,31 @@ if __name__ == '__main__':
         adr = sip[0,r]
         newAdr = adr.split(".")[0]
         siph.append(newAdr)
-    sip = np.array(siph, dtype=int)
+    sip = np.array(siph, dtype=float)
 #    ds = dict(Counter(sip))
 #    print(ds)
 #    print(len(ds))
     sipOH = oneHot(sip)
+    feat["Src IP"] = sipOH.shape[1]  # add to feature dict
 
     # Source Port
     sp = X[:,1].T
     sph = []
     for r in range(X.shape[0]):
         sph.append(sp[0,r])
-    sp = np.array(sph, dtype=int)
+    sp = np.array(sph, dtype=float)
     sp[sp > 1024] = 1024
     spOH = oneHot(sp)
-    # Distingishing ports
+    feat["Src Port"] = len(feat) + int(spOH.shape[1])  # add to feature dict
+
+#    print(len(feat), spOH.shape[1])
+#    print(feat)
+
+    # Distinguishing source ports
     sp[sp < 1024] = 0
     sp[sp >= 1024] = 1
     dspOH = oneHot(sp)
+    feat["Dist Src Port"] = dspOH.shape[1]  # add to feature dict
 
     # Destination IP
     dip = X[:,2].T
@@ -304,18 +393,19 @@ if __name__ == '__main__':
         adr = dip[0,r]
         newAdr = adr.split(".")[0]
         diph.append(newAdr)
-    dip = np.array(diph, dtype=int)
+    dip = np.array(diph, dtype=float)
     dipOH = oneHot(dip)
+    feat["Dest IP"] = dipOH.shape[1] # add to feature dict
 
     # Destination Port
     dp = X[:,3].T
     dph = []
     for r in range(X.shape[0]):
         dph.append(dp[0,r])
-    dp = np.array(dph, dtype=int)
+    dp = np.array(dph, dtype=float)
     dp[dp > 1024] = 1024
     dpOH = oneHot(dp)
-    # Distingishing ports
+    # Distingishing destination ports
     dp[dp < 1024] = 0
     dp[dp >= 1024] = 1
     ddpOH = oneHot(dp)
@@ -325,7 +415,7 @@ if __name__ == '__main__':
     ph = []
     for r in range(X.shape[0]):
         ph.append(p[0,r])
-    p = np.array(ph, dtype=int)
+    p = np.array(ph, dtype=float)
     pOH = oneHot(p)
 
     # Packet Length Mean
@@ -333,17 +423,17 @@ if __name__ == '__main__':
     plmh = []
     for r in range(X.shape[0]):
         plmh.append(float(plm[r,0]))
-    plm = np.array(plmh, dtype=int)
+    plm = np.array(plmh, dtype=float)
     plmd = plm.shape[0]
     plm = np.reshape(plm, (plmd,1))
 
 
     # creates new X matrix
-#    print(sipOH.shape, spOH.shape, dipOH.shape, dpOH.shape, pOH.shape, dspOH.shape, ddpOH.shape, plm.shape)
+    print(sipOH.shape, spOH.shape, dipOH.shape, dpOH.shape, pOH.shape, dspOH.shape, ddpOH.shape, plm.shape)
     newX = np.concatenate((sipOH, spOH, dipOH, dpOH, pOH, dspOH, ddpOH, plm), axis=1)
-#    newX = np.concatenate((sipOH, spOH, dipOH, dpOH, pOH, dspOH, ddpOH), axis=1)
+
     X = np.asmatrix(newX)
-    X.astype(int)
+    X.astype(float)
     print(X.shape,X.dtype)
 
     # clean and normalize matrix
@@ -353,4 +443,22 @@ if __name__ == '__main__':
     if stats:
         printStats(testing[0])   # can only handle 1 file at a time right now
 
-    runAnalysis(X)
+
+    TPR, FPR = 0, 1
+#    l = 0.64
+    l = 0.15
+    alpha = 0.045
+
+    runAnalysis(X, l, alpha, malPkts)
+
+    exit(0)
+
+    while TPR < FPR:
+        TPR, FPR = runAnalysis(X, l, alpha, malPkts)
+
+        if FPR-TPR < 0.5:
+#            alpha += 0.05
+            l -= 0.05
+        else:
+            l -= 0.05
+            

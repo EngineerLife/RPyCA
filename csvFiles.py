@@ -7,9 +7,9 @@ from os.path import isfile, join
 def getFile(day='', typ=False):
     days = ['Monday','Tuesday','Wednesday','Thursday','Friday']
     csvList = []
-    cdir = "MachineLearningCVE/"
+    cdir = "../../MachineLearningCVE/"
     if typ:
-        cdir = "TrafficLabelling/"
+        cdir = "../../TrafficLabelling/"
     # order list by day of week (M->F)
     for d in days:
         for f in listdir(cdir):
