@@ -1,0 +1,35 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000       202.77.162.213        172.16.115.20         DNS      86     Standard query 0xc9cc PTR 20.115.16.172.in-addr.arpa
+
+Frame 1: 86 bytes on wire (688 bits), 86 bytes captured (688 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 63517, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+      2 0.001254       172.16.115.20         202.77.162.213        DNS      166    Standard query response 0xc9cc PTR 20.115.16.172.in-addr.arpa PTR mill.eyrie.af.mil NS mill.eyrie.af.mil A 172.16.115.20
+
+Frame 2: 166 bytes on wire (1328 bits), 166 bytes captured (1328 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+User Datagram Protocol, Src Port: 53, Dst Port: 63517
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+      3 0.005933       202.77.162.213        172.16.115.20         DNS      77     Standard query 0xc9cd HINFO mill.eyrie.af.mil
+
+Frame 3: 77 bytes on wire (616 bits), 77 bytes captured (616 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 63518, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 0.006755       172.16.115.20         202.77.162.213        DNS      145    Standard query response 0xc9cd HINFO mill.eyrie.af.mil HINFO sparc solaris NS mill.eyrie.af.mil A 172.16.115.20
+
+Frame 4: 145 bytes on wire (1160 bits), 145 bytes captured (1160 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+User Datagram Protocol, Src Port: 53, Dst Port: 63518
+Domain Name System (response)

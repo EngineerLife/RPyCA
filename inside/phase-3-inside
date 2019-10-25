@@ -1,0 +1,782 @@
+No.     Time           Source                Destination           Protocol Length Info
+      1 0.000000       202.77.162.213        172.16.115.20         TCP      74     65267 → 21 [SYN] Seq=0 Win=32768 Len=0 MSS=1460 WS=1 TSval=361468 TSecr=0
+
+Frame 1: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      2 0.000327       172.16.115.20         202.77.162.213        TCP      74     21 → 65267 [SYN, ACK] Seq=0 Ack=1 Win=10136 Len=0 TSval=490460 TSecr=361468 WS=1 MSS=1460
+
+Frame 2: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      3 0.000501       202.77.162.213        172.16.115.20         TCP      66     65267 → 21 [ACK] Seq=1 Ack=1 Win=33580 Len=0 TSval=361468 TSecr=490460
+
+Frame 3: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      4 0.089221       172.16.115.20         202.77.162.213        FTP      106    Response: 220 mill FTP server (SunOS 5.7) ready.
+
+Frame 4: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 1, Ack: 1, Len: 40
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+      5 0.092124       202.77.162.213        172.16.115.20         FTP      80     Request: user hacker2
+
+Frame 5: 80 bytes on wire (640 bits), 80 bytes captured (640 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 1, Ack: 41, Len: 14
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+      6 0.092328       172.16.115.20         202.77.162.213        TCP      66     21 → 65267 [ACK] Seq=41 Ack=15 Win=10136 Len=0 TSval=490469 TSecr=361468
+
+Frame 6: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 41, Ack: 15, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+      7 0.098507       172.16.115.20         202.77.162.213        FTP      102    Response: 331 Password required for hacker2.
+
+Frame 7: 102 bytes on wire (816 bits), 102 bytes captured (816 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 41, Ack: 15, Len: 36
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+      8 0.100879       202.77.162.213        172.16.115.20         FTP      80     Request: PASS hithere
+
+Frame 8: 80 bytes on wire (640 bits), 80 bytes captured (640 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 15, Ack: 77, Len: 14
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+      9 0.117444       172.16.115.20         202.77.162.213        FTP      95     Response: 230 User hacker2 logged in.
+
+Frame 9: 95 bytes on wire (760 bits), 95 bytes captured (760 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 77, Ack: 29, Len: 29
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     10 0.140973       202.77.162.213        172.16.115.20         FTP      95     Request: PORT 202,77,162,213,254,244
+
+Frame 10: 95 bytes on wire (760 bits), 95 bytes captured (760 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 29, Ack: 106, Len: 29
+File Transfer Protocol (FTP)
+[Current working directory: ]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+[Command frame: 12]
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 0.141423       172.16.115.20         202.77.162.213        FTP      96     Response: 200 PORT command successful.
+
+Frame 11: 96 bytes on wire (768 bits), 96 bytes captured (768 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 106, Ack: 58, Len: 30
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     12 0.144010       202.77.162.213        172.16.115.20         FTP      100    Request: STOR bind_utils_8.11_sol7.tar.gz
+
+Frame 12: 100 bytes on wire (800 bits), 100 bytes captured (800 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 58, Ack: 136, Len: 34
+File Transfer Protocol (FTP)
+[Current working directory: ]
+[Command response frames: 29]
+[Command response bytes: 42074]
+[Command response first frame: 17]
+[Command response last frame: 60]
+[Response duration: 52ms]
+[Response bitrate: 6472Kbps]
+[Setup frame: 10]
+
+No.     Time           Source                Destination           Protocol Length Info
+     13 0.145996       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [SYN] Seq=0 Win=24820 Len=0 MSS=1460
+
+Frame 13: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     14 0.146150       202.77.162.213        172.16.115.20         TCP      60     65268 → 20 [SYN, ACK] Seq=0 Ack=1 Win=33580 Len=0 MSS=1460
+
+Frame 14: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     15 0.146327       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=1 Win=24820 Len=0
+
+Frame 15: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     16 0.146692       172.16.115.20         202.77.162.213        FTP      149    Response: 150 ASCII data connection for bind_utils_8.11_sol7.tar.gz (202.77.162.213,65268).
+
+Frame 16: 149 bytes on wire (1192 bits), 149 bytes captured (1192 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 136, Ack: 92, Len: 83
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     17 0.173547       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 17: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 1, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     18 0.174778       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 18: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 1461, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     19 0.174856       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=1461 Win=24820 Len=0
+
+Frame 19: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 1461, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     20 0.174982       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=2921 Win=24820 Len=0
+
+Frame 20: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 2921, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     21 0.181235       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 21: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 2921, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     22 0.182466       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 22: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 4381, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     23 0.182643       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=5841 Win=24820 Len=0
+
+Frame 23: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 5841, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     24 0.183924       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 24: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 5841, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     25 0.188940       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 25: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 7301, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     26 0.189107       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=8761 Win=24820 Len=0
+
+Frame 26: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 8761, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     27 0.190391       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 27: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 8761, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     28 0.191623       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 28: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 10221, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     29 0.191803       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=11681 Win=24820 Len=0
+
+Frame 29: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 11681, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     30 0.193084       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 30: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 11681, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     31 0.196457       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 31: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 13141, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     32 0.196644       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=14601 Win=24820 Len=0
+
+Frame 32: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 14601, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     33 0.197925       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 33: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 14601, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     34 0.199148       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 34: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 16061, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     35 0.199328       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=17521 Win=24820 Len=0
+
+Frame 35: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 17521, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     36 0.200859       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 36: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 17521, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     37 0.202526       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 37: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 18981, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     38 0.202702       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=20441 Win=24820 Len=0
+
+Frame 38: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 20441, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     39 0.203983       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 39: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 20441, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     40 0.206284       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 40: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 21901, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     41 0.206457       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=23361 Win=24820 Len=0
+
+Frame 41: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 23361, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     42 0.207739       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 42: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 23361, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     43 0.208968       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 43: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 24821, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     44 0.209156       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=26281 Win=24820 Len=0
+
+Frame 44: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 26281, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     45 0.210731       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 45: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 26281, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     46 0.212042       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 46: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 27741, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     47 0.212231       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=29201 Win=24820 Len=0
+
+Frame 47: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 29201, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     48 0.213743       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 48: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 29201, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     49 0.215036       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 49: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 30661, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     50 0.215212       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=32121 Win=24820 Len=0
+
+Frame 50: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 32121, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     51 0.216491       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 51: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 32121, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     52 0.217725       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 52: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 33581, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     53 0.217913       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=35041 Win=24820 Len=0
+
+Frame 53: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 35041, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     54 0.219195       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 54: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 35041, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     55 0.220435       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 55: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 36501, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     56 0.220608       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=37961 Win=24820 Len=0
+
+Frame 56: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 37961, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     57 0.221890       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 57: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 37961, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     58 0.224565       202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 58: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 39421, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     59 0.224745       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=40881 Win=24820 Len=0
+
+Frame 59: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 40881, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     60 0.225843       202.77.162.213        172.16.115.20         FTP-DATA 1248   FTP Data: 1194 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 60: 1248 bytes on wire (9984 bits), 1248 bytes captured (9984 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 40881, Ack: 1, Len: 1194
+FTP Data (1194 bytes data)
+[Setup frame: 10]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 12
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     61 0.225910       202.77.162.213        172.16.115.20         TCP      60     65268 → 20 [FIN, ACK] Seq=42075 Ack=1 Win=33580 Len=0
+
+Frame 61: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 42075, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     62 0.226060       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=42076 Win=24820 Len=0
+
+Frame 62: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 42076, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     63 0.227163       172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [FIN, ACK] Seq=1 Ack=42076 Win=24820 Len=0
+
+Frame 63: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 42076, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     64 0.227284       202.77.162.213        172.16.115.20         TCP      60     65268 → 20 [ACK] Seq=42076 Ack=2 Win=33580 Len=0
+
+Frame 64: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 42076, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     65 0.238717       202.77.162.213        172.16.115.20         TCP      66     65267 → 21 [ACK] Seq=92 Ack=219 Win=33580 Len=0 TSval=361468 TSecr=490475
+
+Frame 65: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 92, Ack: 219, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     66 0.238906       172.16.115.20         202.77.162.213        FTP      90     Response: 226 Transfer complete.
+
+Frame 66: 90 bytes on wire (720 bits), 90 bytes captured (720 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 219, Ack: 92, Len: 24
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     67 0.241726       202.77.162.213        172.16.115.20         FTP      72     Request: QUIT
+
+Frame 67: 72 bytes on wire (576 bits), 72 bytes captured (576 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 92, Ack: 243, Len: 6
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     68 0.242031       172.16.115.20         202.77.162.213        FTP      80     Response: 221 Goodbye.
+
+Frame 68: 80 bytes on wire (640 bits), 80 bytes captured (640 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 243, Ack: 98, Len: 14
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+     69 0.244374       202.77.162.213        172.16.115.20         TCP      66     65267 → 21 [FIN, ACK] Seq=98 Ack=257 Win=33580 Len=0 TSval=361469 TSecr=490484
+
+Frame 69: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 98, Ack: 257, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     70 0.244542       172.16.115.20         202.77.162.213        TCP      66     21 → 65267 [ACK] Seq=257 Ack=99 Win=10136 Len=0 TSval=490484 TSecr=361469
+
+Frame 70: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 257, Ack: 99, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     71 0.246931       172.16.115.20         202.77.162.213        TCP      66     21 → 65267 [FIN, ACK] Seq=257 Ack=99 Win=10136 Len=0 TSval=490485 TSecr=361469
+
+Frame 71: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 257, Ack: 99, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+     72 0.247064       202.77.162.213        172.16.115.20         TCP      66     65267 → 21 [ACK] Seq=99 Ack=258 Win=33580 Len=0 TSval=361469 TSecr=490485
+
+Frame 72: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 99, Ack: 258, Len: 0

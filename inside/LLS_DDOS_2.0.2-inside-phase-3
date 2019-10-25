@@ -1,0 +1,2751 @@
+No.     Time           Source                Destination           Protocol Length Info
+  90000 2680.102433    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90000: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 122, Ack: 293, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90001 2680.103491    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90001: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 293, Ack: 123, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90002 2680.112302    172.16.113.204        195.115.218.108       TCP      60     7271 → 23 [ACK] Seq=490 Ack=98275 Win=32120 Len=0
+
+Frame 90002: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.113.204, Dst: 195.115.218.108
+Transmission Control Protocol, Src Port: 7271, Dst Port: 23, Seq: 490, Ack: 98275, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90003 2680.122284    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=123 Ack=294 Win=32120 Len=0
+
+Frame 90003: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 123, Ack: 294, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90004 2680.192412    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90004: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 744, Ack: 2009, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90005 2680.192633    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90005: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2009, Ack: 745, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90006 2680.212272    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=745 Ack=2010 Win=32120 Len=0
+
+Frame 90006: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 745, Ack: 2010, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90007 2680.222393    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90007: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 139, Ack: 1710, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90008 2680.223829    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90008: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1710, Ack: 140, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90009 2680.242268    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=140 Ack=1711 Win=32120 Len=0
+
+Frame 90009: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 140, Ack: 1711, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90010 2680.252386    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90010: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 123, Ack: 294, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90011 2680.253447    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90011: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 294, Ack: 124, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90012 2680.272259    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=124 Ack=295 Win=32120 Len=0
+
+Frame 90012: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 124, Ack: 295, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90013 2680.382369    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90013: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 140, Ack: 1711, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90014 2680.383601    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90014: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1711, Ack: 141, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90015 2680.402232    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=141 Ack=1712 Win=32120 Len=0
+
+Frame 90015: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 141, Ack: 1712, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90016 2680.472324    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90016: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 141, Ack: 1712, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90017 2680.473542    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90017: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1712, Ack: 142, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90018 2680.492214    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=142 Ack=1713 Win=32120 Len=0
+
+Frame 90018: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 142, Ack: 1713, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90019 2680.533159    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90019: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 124, Ack: 295, Len: 2
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90020 2680.539086    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90020: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 295, Ack: 126, Len: 4
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90021 2680.552211    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=126 Ack=299 Win=32120 Len=0
+
+Frame 90021: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 126, Ack: 299, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90022 2680.602319    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90022: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 142, Ack: 1713, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90023 2680.603591    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90023: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1713, Ack: 143, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90024 2680.622185    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=143 Ack=1714 Win=32120 Len=0
+
+Frame 90024: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 143, Ack: 1714, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90025 2680.682510    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90025: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 143, Ack: 1714, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90026 2680.684088    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90026: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1714, Ack: 144, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90027 2680.702407    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=144 Ack=1715 Win=32120 Len=0
+
+Frame 90027: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 144, Ack: 1715, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90028 2680.732516    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90028: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 745, Ack: 2010, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90029 2680.732801    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90029: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2010, Ack: 746, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90030 2680.743349    172.16.113.50         172.16.115.20         DNS      90     Standard query 0x03c6 A hume.eyrie.af.mil.eyrie.af.mil
+
+Frame 90030: 90 bytes on wire (720 bits), 90 bytes captured (720 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1735, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90031 2680.744235    172.16.115.20         172.16.113.50         DNS      154    Standard query response 0x03c6 No such name A hume.eyrie.af.mil.eyrie.af.mil SOA mill.eyrie.af.mil
+
+Frame 90031: 154 bytes on wire (1232 bits), 154 bytes captured (1232 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.113.50
+User Datagram Protocol, Src Port: 53, Dst Port: 1735
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90032 2680.745710    172.16.113.50         172.16.115.20         DNS      84     Standard query 0x03c7 A hume.eyrie.af.mil.af.mil
+
+Frame 90032: 84 bytes on wire (672 bits), 84 bytes captured (672 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1735, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90033 2680.746453    172.16.115.20         192.168.1.20          DNS      84     Standard query 0x579a A hume.eyrie.af.mil.af.mil
+
+Frame 90033: 84 bytes on wire (672 bits), 84 bytes captured (672 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 192.168.1.20
+User Datagram Protocol, Src Port: 32780, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90034 2680.751688    192.168.1.20          172.16.115.20         DNS      137    Standard query response 0x579a No such name A hume.eyrie.af.mil.af.mil SOA aesop.world.net
+
+Frame 90034: 137 bytes on wire (1096 bits), 137 bytes captured (1096 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 192.168.1.20, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 53, Dst Port: 32780
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90035 2680.752405    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=746 Ack=2011 Win=32120 Len=0
+
+Frame 90035: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 746, Ack: 2011, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90036 2680.752525    172.16.115.20         172.16.113.50         DNS      137    Standard query response 0x03c7 No such name A hume.eyrie.af.mil.af.mil SOA aesop.world.net
+
+Frame 90036: 137 bytes on wire (1096 bits), 137 bytes captured (1096 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.113.50
+User Datagram Protocol, Src Port: 53, Dst Port: 1735
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90037 2680.753905    172.16.113.50         172.16.115.20         DNS      77     Standard query 0x03c8 A hume.eyrie.af.mil
+
+Frame 90037: 77 bytes on wire (616 bits), 77 bytes captured (616 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1735, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90038 2680.754520    172.16.115.20         172.16.113.50         DNS      140    Standard query response 0x03c8 A hume.eyrie.af.mil A 172.16.112.100 NS mill.eyrie.af.mil A 172.16.115.20
+
+Frame 90038: 140 bytes on wire (1120 bits), 140 bytes captured (1120 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.113.50
+User Datagram Protocol, Src Port: 53, Dst Port: 1735
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90039 2680.758595    172.16.113.50         172.16.115.20         DNS      96     Standard query 0x03c9 A hume.eyrie.af.milsimnet.eyrie.af.mil
+
+Frame 90039: 96 bytes on wire (768 bits), 96 bytes captured (768 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1736, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90040 2680.759352    172.16.115.20         172.16.113.50         DNS      160    Standard query response 0x03c9 No such name A hume.eyrie.af.milsimnet.eyrie.af.mil SOA mill.eyrie.af.mil
+
+Frame 90040: 160 bytes on wire (1280 bits), 160 bytes captured (1280 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.113.50
+User Datagram Protocol, Src Port: 53, Dst Port: 1736
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90041 2680.760167    172.16.113.50         172.16.115.20         DNS      90     Standard query 0x03ca A hume.eyrie.af.milsimnet.af.mil
+
+Frame 90041: 90 bytes on wire (720 bits), 90 bytes captured (720 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1736, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90042 2680.760876    172.16.115.20         192.168.1.20          DNS      90     Standard query 0x579b A hume.eyrie.af.milsimnet.af.mil
+
+Frame 90042: 90 bytes on wire (720 bits), 90 bytes captured (720 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 192.168.1.20
+User Datagram Protocol, Src Port: 32780, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90043 2680.762546    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90043: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 144, Ack: 1715, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90044 2680.764051    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90044: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1715, Ack: 145, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90045 2680.765873    192.168.1.20          172.16.115.20         DNS      143    Standard query response 0x579b No such name A hume.eyrie.af.milsimnet.af.mil SOA aesop.world.net
+
+Frame 90045: 143 bytes on wire (1144 bits), 143 bytes captured (1144 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 192.168.1.20, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 53, Dst Port: 32780
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90046 2680.766624    172.16.115.20         172.16.113.50         DNS      143    Standard query response 0x03ca No such name A hume.eyrie.af.milsimnet.af.mil SOA aesop.world.net
+
+Frame 90046: 143 bytes on wire (1144 bits), 143 bytes captured (1144 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.113.50
+User Datagram Protocol, Src Port: 53, Dst Port: 1736
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90047 2680.767352    172.16.113.50         172.16.115.20         DNS      83     Standard query 0x03cb A hume.eyrie.af.milsimnet
+
+Frame 90047: 83 bytes on wire (664 bits), 83 bytes captured (664 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1736, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90048 2680.767872    172.16.115.20         192.168.1.20          DNS      83     Standard query 0x579c A hume.eyrie.af.milsimnet
+
+Frame 90048: 83 bytes on wire (664 bits), 83 bytes captured (664 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 192.168.1.20
+User Datagram Protocol, Src Port: 32780, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90049 2680.772791    192.168.1.20          172.16.115.20         DNS      136    Standard query response 0x579c No such name A hume.eyrie.af.milsimnet SOA aesop.world.net
+
+Frame 90049: 136 bytes on wire (1088 bits), 136 bytes captured (1088 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 192.168.1.20, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 53, Dst Port: 32780
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90050 2680.773521    172.16.115.20         172.16.113.50         DNS      136    Standard query response 0x03cb No such name A hume.eyrie.af.milsimnet SOA aesop.world.net
+
+Frame 90050: 136 bytes on wire (1088 bits), 136 bytes captured (1088 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.113.50
+User Datagram Protocol, Src Port: 53, Dst Port: 1736
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90051 2680.782374    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=145 Ack=1716 Win=32120 Len=0
+
+Frame 90051: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 145, Ack: 1716, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90052 2680.889523    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90052: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 299, Ack: 126, Len: 6
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90053 2680.902357    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=126 Ack=305 Win=32120 Len=0
+
+Frame 90053: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 126, Ack: 305, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90054 2680.922502    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90054: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 145, Ack: 1716, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90055 2680.924148    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90055: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1716, Ack: 146, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90056 2680.942342    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=146 Ack=1717 Win=32120 Len=0
+
+Frame 90056: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 146, Ack: 1717, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90057 2681.002480    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90057: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 146, Ack: 1717, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90058 2681.003827    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90058: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1717, Ack: 147, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90059 2681.022325    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=147 Ack=1718 Win=32120 Len=0
+
+Frame 90059: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 147, Ack: 1718, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90060 2681.102474    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90060: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 147, Ack: 1718, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90061 2681.103713    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90061: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1718, Ack: 148, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90062 2681.122316    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=148 Ack=1719 Win=32120 Len=0
+
+Frame 90062: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 148, Ack: 1719, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90063 2681.152420    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90063: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 746, Ack: 2011, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90064 2681.152639    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90064: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2011, Ack: 747, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90065 2681.164897    172.16.115.87         172.16.115.20         DNS      74     Standard query 0xd1b1 A www.capweb.net
+
+Frame 90065: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1668, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90066 2681.165464    172.16.115.20         192.168.1.20          DNS      74     Standard query 0x579d A www.capweb.net
+
+Frame 90066: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 192.168.1.20
+User Datagram Protocol, Src Port: 32780, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90067 2681.170450    192.168.1.20          172.16.115.20         DNS      134    Standard query response 0x579d A www.capweb.net A 207.152.182.31 NS aesop.world.net A 192.168.1.20
+
+Frame 90067: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 192.168.1.20, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 53, Dst Port: 32780
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90068 2681.171198    172.16.115.20         172.16.115.87         DNS      134    Standard query response 0xd1b1 A www.capweb.net A 207.152.182.31 NS aesop.world.net A 192.168.1.20
+
+Frame 90068: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.115.87
+User Datagram Protocol, Src Port: 53, Dst Port: 1668
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90069 2681.172092    172.16.115.87         207.152.182.31        TCP      60     24984 → 80 [SYN] Seq=0 Win=512 Len=0 MSS=1460
+
+Frame 90069: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 24984, Dst Port: 80, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90070 2681.172276    207.152.182.31        172.16.115.87         TCP      60     80 → 24984 [SYN, ACK] Seq=0 Ack=1 Win=33580 Len=0 MSS=1460
+
+Frame 90070: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 24984, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90071 2681.172348    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=747 Ack=2012 Win=32120 Len=0
+
+Frame 90071: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 747, Ack: 2012, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90072 2681.172427    172.16.115.87         207.152.182.31        TCP      60     24984 → 80 [ACK] Seq=1 Ack=1 Win=32120 Len=0
+
+Frame 90072: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 24984, Dst Port: 80, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90073 2681.172935    172.16.115.87         207.152.182.31        HTTP     358    GET / HTTP/1.0 
+
+Frame 90073: 358 bytes on wire (2864 bits), 358 bytes captured (2864 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 24984, Dst Port: 80, Seq: 1, Ack: 1, Len: 304
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+  90074 2681.192451    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90074: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 148, Ack: 1719, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90075 2681.193702    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90075: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1719, Ack: 149, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90076 2681.202307    207.152.182.31        172.16.115.87         TCP      1078   80 → 24984 [PSH, ACK] Seq=1 Ack=305 Win=33580 Len=1024 [TCP segment of a reassembled PDU]
+
+Frame 90076: 1078 bytes on wire (8624 bits), 1078 bytes captured (8624 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 24984, Seq: 1, Ack: 305, Len: 1024
+
+No.     Time           Source                Destination           Protocol Length Info
+  90077 2681.202693    207.152.182.31        172.16.115.87         HTTP     454    HTTP/1.1 200 OK  (text/html) [TCP segment of a reassembled PDU]
+
+Frame 90077: 454 bytes on wire (3632 bits), 454 bytes captured (3632 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 24984, Seq: 1025, Ack: 305, Len: 400
+[2 Reassembled TCP Segments (1407 bytes): #90076(1024), #90077(383)]
+Hypertext Transfer Protocol
+Line-based text data: text/html (30 lines)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90078 2681.202862    172.16.115.87         207.152.182.31        TCP      60     24984 → 80 [ACK] Seq=305 Ack=1426 Win=30695 Len=0
+
+Frame 90078: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 24984, Dst Port: 80, Seq: 305, Ack: 1426, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90079 2681.203171    172.16.115.87         207.152.182.31        TCP      60     24984 → 80 [FIN, ACK] Seq=305 Ack=1426 Win=32120 Len=0
+
+Frame 90079: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 24984, Dst Port: 80, Seq: 305, Ack: 1426, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90080 2681.203295    207.152.182.31        172.16.115.87         TCP      60     80 → 24984 [ACK] Seq=1426 Ack=306 Win=33580 Len=0
+
+Frame 90080: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 24984, Seq: 1426, Ack: 306, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90081 2681.206529    172.16.115.87         172.16.115.20         DNS      74     Standard query 0xd1b2 A www.capweb.net
+
+Frame 90081: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1671, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90082 2681.207110    172.16.115.20         172.16.115.87         DNS      134    Standard query response 0xd1b2 A www.capweb.net A 207.152.182.31 NS aesop.world.net A 192.168.1.20
+
+Frame 90082: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.115.87
+User Datagram Protocol, Src Port: 53, Dst Port: 1671
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90083 2681.207787    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [SYN] Seq=0 Win=512 Len=0 MSS=1460
+
+Frame 90083: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90084 2681.207941    207.152.182.31        172.16.115.87         TCP      60     80 → 25048 [SYN, ACK] Seq=0 Ack=1 Win=33580 Len=0 MSS=1460
+
+Frame 90084: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90085 2681.208088    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [ACK] Seq=1 Ack=1 Win=32120 Len=0
+
+Frame 90085: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90086 2681.208553    172.16.115.87         207.152.182.31        HTTP     365    GET /_images/intro.gif HTTP/1.0 
+
+Frame 90086: 365 bytes on wire (2920 bits), 365 bytes captured (2920 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 1, Ack: 1, Len: 311
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+  90087 2681.212286    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=149 Ack=1720 Win=32120 Len=0
+
+Frame 90087: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 149, Ack: 1720, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90088 2681.233894    207.152.182.31        172.16.115.87         TCP      60     80 → 25048 [ACK] Seq=1 Ack=312 Win=33580 Len=0
+
+Frame 90088: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 1, Ack: 312, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90089 2681.238517    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [PSH, ACK] Seq=1 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90089: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 1, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90090 2681.239797    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [PSH, ACK] Seq=1461 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90090: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 1461, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90091 2681.242280    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [ACK] Seq=312 Ack=2921 Win=32120 Len=0
+
+Frame 90091: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 312, Ack: 2921, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90092 2681.250299    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [PSH, ACK] Seq=2921 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90092: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 2921, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90093 2681.251555    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [PSH, ACK] Seq=4381 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90093: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 4381, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90094 2681.252277    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [ACK] Seq=312 Ack=5841 Win=32120 Len=0
+
+Frame 90094: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 312, Ack: 5841, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90095 2681.253566    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [PSH, ACK] Seq=5841 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90095: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 5841, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90096 2681.260141    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [PSH, ACK] Seq=7301 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90096: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 7301, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90097 2681.262274    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [ACK] Seq=312 Ack=8761 Win=32120 Len=0
+
+Frame 90097: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 312, Ack: 8761, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90098 2681.263560    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [ACK] Seq=8761 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90098: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 8761, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90099 2681.264788    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [PSH, ACK] Seq=10221 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90099: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 10221, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90100 2681.272283    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [ACK] Seq=312 Ack=11681 Win=32120 Len=0
+
+Frame 90100: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 312, Ack: 11681, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90101 2681.273559    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [ACK] Seq=11681 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90101: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 11681, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90102 2681.273651    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90102: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 149, Ack: 1720, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90103 2681.274883    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [ACK] Seq=13141 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90103: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 13141, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90104 2681.274953    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90104: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1720, Ack: 150, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90105 2681.282271    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [ACK] Seq=312 Ack=14601 Win=32120 Len=0
+
+Frame 90105: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 312, Ack: 14601, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90106 2681.283586    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [ACK] Seq=14601 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90106: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 14601, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90107 2681.284816    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [ACK] Seq=16061 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90107: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 16061, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90108 2681.286049    207.152.182.31        172.16.115.87         TCP      1514   80 → 25048 [ACK] Seq=17521 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90108: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 17521, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90109 2681.292278    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [ACK] Seq=312 Ack=18981 Win=32120 Len=0
+
+Frame 90109: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 312, Ack: 18981, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90110 2681.292338    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=150 Ack=1721 Win=32120 Len=0
+
+Frame 90110: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 150, Ack: 1721, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90111 2681.292906    207.152.182.31        172.16.115.87         HTTP     680    HTTP/1.1 200 OK  (GIF87a) [TCP segment of a reassembled PDU]
+
+Frame 90111: 680 bytes on wire (5440 bits), 680 bytes captured (5440 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 18981, Ack: 312, Len: 626
+[14 Reassembled TCP Segments (19589 bytes): #90089(1460), #90090(1460), #90092(1460), #90093(1460), #90095(1460), #90096(1460), #90098(1460), #90099(1460), #90101(1460), #90103(1460), #90106(1460), #90107(1460), #90108(1460), #90111(609)]
+Hypertext Transfer Protocol
+Compuserve GIF, Version: GIF87a
+
+No.     Time           Source                Destination           Protocol Length Info
+  90112 2681.293075    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [ACK] Seq=312 Ack=19608 Win=31493 Len=0
+
+Frame 90112: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 312, Ack: 19608, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90113 2681.293578    172.16.115.87         207.152.182.31        TCP      60     25048 → 80 [FIN, ACK] Seq=312 Ack=19608 Win=32120 Len=0
+
+Frame 90113: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25048, Dst Port: 80, Seq: 312, Ack: 19608, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90114 2681.293702    207.152.182.31        172.16.115.87         TCP      60     80 → 25048 [ACK] Seq=19608 Ack=313 Win=33580 Len=0
+
+Frame 90114: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25048, Seq: 19608, Ack: 313, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90115 2681.294586    172.16.115.87         172.16.115.20         DNS      74     Standard query 0xd1b3 A www.capweb.net
+
+Frame 90115: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 172.16.115.20
+User Datagram Protocol, Src Port: 1673, Dst Port: 53
+Domain Name System (query)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90116 2681.295391    172.16.115.20         172.16.115.87         DNS      134    Standard query response 0xd1b3 A www.capweb.net A 207.152.182.31 NS aesop.world.net A 192.168.1.20
+
+Frame 90116: 134 bytes on wire (1072 bits), 134 bytes captured (1072 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 172.16.115.87
+User Datagram Protocol, Src Port: 53, Dst Port: 1673
+Domain Name System (response)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90117 2681.296080    172.16.115.87         207.152.182.31        TCP      60     25119 → 80 [SYN] Seq=0 Win=512 Len=0 MSS=1460
+
+Frame 90117: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25119, Dst Port: 80, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90118 2681.296232    207.152.182.31        172.16.115.87         TCP      60     80 → 25119 [SYN, ACK] Seq=0 Ack=1 Win=33580 Len=0 MSS=1460
+
+Frame 90118: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25119, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90119 2681.296377    172.16.115.87         207.152.182.31        TCP      60     25119 → 80 [ACK] Seq=1 Ack=1 Win=32120 Len=0
+
+Frame 90119: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25119, Dst Port: 80, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90120 2681.296848    172.16.115.87         207.152.182.31        HTTP     365    GET /_images/power.gif HTTP/1.0 
+
+Frame 90120: 365 bytes on wire (2920 bits), 365 bytes captured (2920 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25119, Dst Port: 80, Seq: 1, Ack: 1, Len: 311
+Hypertext Transfer Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+  90121 2681.297540    207.152.182.31        172.16.115.87         TCP      60     80 → 25119 [ACK] Seq=1 Ack=312 Win=33580 Len=0
+
+Frame 90121: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25119, Seq: 1, Ack: 312, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90122 2681.325745    207.152.182.31        172.16.115.87         TCP      1514   80 → 25119 [PSH, ACK] Seq=1 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90122: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25119, Seq: 1, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90123 2681.326966    207.152.182.31        172.16.115.87         TCP      1514   80 → 25119 [PSH, ACK] Seq=1461 Ack=312 Win=33580 Len=1460 [TCP segment of a reassembled PDU]
+
+Frame 90123: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25119, Seq: 1461, Ack: 312, Len: 1460
+
+No.     Time           Source                Destination           Protocol Length Info
+  90124 2681.332260    172.16.115.87         207.152.182.31        TCP      60     25119 → 80 [ACK] Seq=312 Ack=2921 Win=32120 Len=0
+
+Frame 90124: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25119, Dst Port: 80, Seq: 312, Ack: 2921, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90125 2681.338409    207.152.182.31        172.16.115.87         HTTP     731    HTTP/1.1 200 OK  (GIF89a) [TCP segment of a reassembled PDU]
+
+Frame 90125: 731 bytes on wire (5848 bits), 731 bytes captured (5848 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25119, Seq: 2921, Ack: 312, Len: 677
+[3 Reassembled TCP Segments (3581 bytes): #90122(1460), #90123(1460), #90125(661)]
+Hypertext Transfer Protocol
+Compuserve GIF, Version: GIF89a
+
+No.     Time           Source                Destination           Protocol Length Info
+  90126 2681.338478    207.152.182.31        172.16.115.87         TCP      60     80 → 25119 [FIN, ACK] Seq=3598 Ack=312 Win=33580 Len=0
+
+Frame 90126: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25119, Seq: 3598, Ack: 312, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90127 2681.338606    172.16.115.87         207.152.182.31        TCP      60     25119 → 80 [ACK] Seq=312 Ack=3599 Win=31442 Len=0
+
+Frame 90127: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25119, Dst Port: 80, Seq: 312, Ack: 3599, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90128 2681.339016    172.16.115.87         207.152.182.31        TCP      60     25119 → 80 [FIN, ACK] Seq=312 Ack=3599 Win=32120 Len=0
+
+Frame 90128: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.87, Dst: 207.152.182.31
+Transmission Control Protocol, Src Port: 25119, Dst Port: 80, Seq: 312, Ack: 3599, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90129 2681.339141    207.152.182.31        172.16.115.87         TCP      60     80 → 25119 [ACK] Seq=3599 Ack=313 Win=33580 Len=0
+
+Frame 90129: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 207.152.182.31, Dst: 172.16.115.87
+Transmission Control Protocol, Src Port: 80, Dst Port: 25119, Seq: 3599, Ack: 313, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90130 2681.352425    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90130: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 150, Ack: 1721, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90131 2681.353662    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90131: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1721, Ack: 151, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90132 2681.372249    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=151 Ack=1722 Win=32120 Len=0
+
+Frame 90132: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 151, Ack: 1722, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90133 2681.432343    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90133: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 151, Ack: 1722, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90134 2681.433586    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90134: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1722, Ack: 152, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90135 2681.452233    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=152 Ack=1723 Win=32120 Len=0
+
+Frame 90135: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 152, Ack: 1723, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90136 2681.522325    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90136: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 152, Ack: 1723, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90137 2681.523539    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90137: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1723, Ack: 153, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90138 2681.542212    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=153 Ack=1724 Win=32120 Len=0
+
+Frame 90138: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 153, Ack: 1724, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90139 2681.672529    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90139: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 153, Ack: 1724, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90140 2681.673752    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90140: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1724, Ack: 154, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90141 2681.692405    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=154 Ack=1725 Win=32120 Len=0
+
+Frame 90141: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 154, Ack: 1725, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90142 2681.692623    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90142: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 747, Ack: 2012, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90143 2681.692922    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90143: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2012, Ack: 748, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90144 2681.712398    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=748 Ack=2013 Win=32120 Len=0
+
+Frame 90144: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 748, Ack: 2013, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90145 2681.752543    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90145: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 154, Ack: 1725, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90146 2681.753802    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90146: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1725, Ack: 155, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90147 2681.772387    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=155 Ack=1726 Win=32120 Len=0
+
+Frame 90147: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 155, Ack: 1726, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90148 2681.832492    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90148: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 155, Ack: 1726, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90149 2681.833698    135.8.60.182          172.16.112.194        TELNET   60     Telnet Data ...
+
+Frame 90149: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1726, Ack: 156, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90150 2681.852371    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=156 Ack=1727 Win=32120 Len=0
+
+Frame 90150: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 156, Ack: 1727, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90151 2681.913896    172.16.112.194        135.8.60.182          TELNET   60     Telnet Data ...
+
+Frame 90151: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 156, Ack: 1727, Len: 2
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90152 2681.915514    135.8.60.182          172.16.112.194        TELNET   112    Telnet Data ...
+
+Frame 90152: 112 bytes on wire (896 bits), 112 bytes captured (896 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 135.8.60.182, Dst: 172.16.112.194
+Transmission Control Protocol, Src Port: 23, Dst Port: 12755, Seq: 1727, Ack: 158, Len: 58
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90153 2681.932353    172.16.112.194        135.8.60.182          TCP      60     12755 → 23 [ACK] Seq=158 Ack=1785 Win=32120 Len=0
+
+Frame 90153: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.194, Dst: 135.8.60.182
+Transmission Control Protocol, Src Port: 12755, Dst Port: 23, Seq: 158, Ack: 1785, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90154 2681.952475    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90154: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 748, Ack: 2013, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90155 2681.952703    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90155: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2013, Ack: 749, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90156 2681.972344    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=749 Ack=2014 Win=32120 Len=0
+
+Frame 90156: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 749, Ack: 2014, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90157 2682.343733    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90157: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 749, Ack: 2014, Len: 2
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90158 2682.343997    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90158: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2014, Ack: 751, Len: 2
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90159 2682.362262    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=751 Ack=2016 Win=32120 Len=0
+
+Frame 90159: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 751, Ack: 2016, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90160 2683.850233    HewlettP_ed:9b:2d     HewlettP_ed:9b:2d     LLC      54     U P, func=TEST; DSAP NULL LSAP Individual, SSAP NetBIOS Command
+
+Frame 90160: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Data (37 bytes)
+
+0000  ff 00 00 2a 2a 2a 2a 2a 2a 2a 20 48 50 20 48 55   ...******* HP HU
+0010  42 20 54 65 73 74 20 50 61 63 6b 65 74 20 2a 2a   B Test Packet **
+0020  2a 2a 2a 2a 2a                                    *****
+
+No.     Time           Source                Destination           Protocol Length Info
+  90161 2685.349518    HewlettP_ed:9b:2d     HewlettP_ed:9b:2d     LLC      54     U P, func=TEST; DSAP NULL LSAP Individual, SSAP NetBIOS Command
+
+Frame 90161: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Data (37 bytes)
+
+0000  ff 00 00 2a 2a 2a 2a 2a 2a 2a 20 48 50 20 48 55   ...******* HP HU
+0010  42 20 54 65 73 74 20 50 61 63 6b 65 74 20 2a 2a   B Test Packet **
+0020  2a 2a 2a 2a 2a                                    *****
+
+No.     Time           Source                Destination           Protocol Length Info
+  90162 2685.523018    172.16.112.20         172.16.112.255        RIPv1    66     Response
+
+Frame 90162: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+Internet Protocol Version 4, Src: 172.16.112.20, Dst: 172.16.112.255
+User Datagram Protocol, Src Port: 520, Dst Port: 520
+Routing Information Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+  90163 2685.523241    172.16.112.20         172.16.118.255        RIPv1    66     Response
+
+Frame 90163: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Broadcast (ff:ff:ff:ff:ff:ff)
+Internet Protocol Version 4, Src: 172.16.112.20, Dst: 172.16.118.255
+User Datagram Protocol, Src Port: 520, Dst Port: 520
+Routing Information Protocol
+
+No.     Time           Source                Destination           Protocol Length Info
+  90164 2686.658584    202.77.162.213        172.16.115.20         TCP      74     65267 → 21 [SYN] Seq=0 Win=32768 Len=0 MSS=1460 WS=1 TSval=361468 TSecr=0
+
+Frame 90164: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90165 2686.658911    172.16.115.20         202.77.162.213        TCP      74     21 → 65267 [SYN, ACK] Seq=0 Ack=1 Win=10136 Len=0 TSval=490460 TSecr=361468 WS=1 MSS=1460
+
+Frame 90165: 74 bytes on wire (592 bits), 74 bytes captured (592 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90166 2686.659085    202.77.162.213        172.16.115.20         TCP      66     65267 → 21 [ACK] Seq=1 Ack=1 Win=33580 Len=0 TSval=361468 TSecr=490460
+
+Frame 90166: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90167 2686.747805    172.16.115.20         202.77.162.213        FTP      106    Response: 220 mill FTP server (SunOS 5.7) ready.
+
+Frame 90167: 106 bytes on wire (848 bits), 106 bytes captured (848 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 1, Ack: 1, Len: 40
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90168 2686.750708    202.77.162.213        172.16.115.20         FTP      80     Request: user hacker2
+
+Frame 90168: 80 bytes on wire (640 bits), 80 bytes captured (640 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 1, Ack: 41, Len: 14
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90169 2686.750912    172.16.115.20         202.77.162.213        TCP      66     21 → 65267 [ACK] Seq=41 Ack=15 Win=10136 Len=0 TSval=490469 TSecr=361468
+
+Frame 90169: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 41, Ack: 15, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90170 2686.757091    172.16.115.20         202.77.162.213        FTP      102    Response: 331 Password required for hacker2.
+
+Frame 90170: 102 bytes on wire (816 bits), 102 bytes captured (816 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 41, Ack: 15, Len: 36
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90171 2686.759463    202.77.162.213        172.16.115.20         FTP      80     Request: PASS hithere
+
+Frame 90171: 80 bytes on wire (640 bits), 80 bytes captured (640 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 15, Ack: 77, Len: 14
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90172 2686.776028    172.16.115.20         202.77.162.213        FTP      95     Response: 230 User hacker2 logged in.
+
+Frame 90172: 95 bytes on wire (760 bits), 95 bytes captured (760 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 77, Ack: 29, Len: 29
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90173 2686.799557    202.77.162.213        172.16.115.20         FTP      95     Request: PORT 202,77,162,213,254,244
+
+Frame 90173: 95 bytes on wire (760 bits), 95 bytes captured (760 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 29, Ack: 106, Len: 29
+File Transfer Protocol (FTP)
+[Current working directory: ]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+[Command frame: 90175]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90174 2686.800007    172.16.115.20         202.77.162.213        FTP      96     Response: 200 PORT command successful.
+
+Frame 90174: 96 bytes on wire (768 bits), 96 bytes captured (768 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 106, Ack: 58, Len: 30
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90175 2686.802594    202.77.162.213        172.16.115.20         FTP      100    Request: STOR bind_utils_8.11_sol7.tar.gz
+
+Frame 90175: 100 bytes on wire (800 bits), 100 bytes captured (800 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 58, Ack: 136, Len: 34
+File Transfer Protocol (FTP)
+[Current working directory: ]
+[Command response frames: 29]
+[Command response bytes: 42074]
+[Command response first frame: 90180]
+[Command response last frame: 90223]
+[Response duration: 52ms]
+[Response bitrate: 6472Kbps]
+[Setup frame: 90173]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90176 2686.804580    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [SYN] Seq=0 Win=24820 Len=0 MSS=1460
+
+Frame 90176: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 0, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90177 2686.804734    202.77.162.213        172.16.115.20         TCP      60     65268 → 20 [SYN, ACK] Seq=0 Ack=1 Win=33580 Len=0 MSS=1460
+
+Frame 90177: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 0, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90178 2686.804911    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=1 Win=24820 Len=0
+
+Frame 90178: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90179 2686.805276    172.16.115.20         202.77.162.213        FTP      149    Response: 150 ASCII data connection for bind_utils_8.11_sol7.tar.gz (202.77.162.213,65268).
+
+Frame 90179: 149 bytes on wire (1192 bits), 149 bytes captured (1192 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 136, Ack: 92, Len: 83
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90180 2686.832131    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90180: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 1, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90181 2686.833362    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90181: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 1461, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90182 2686.833440    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=1461 Win=24820 Len=0
+
+Frame 90182: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 1461, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90183 2686.833566    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=2921 Win=24820 Len=0
+
+Frame 90183: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 2921, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90184 2686.839819    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90184: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 2921, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90185 2686.841050    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90185: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 4381, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90186 2686.841227    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=5841 Win=24820 Len=0
+
+Frame 90186: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 5841, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90187 2686.842508    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90187: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 5841, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90188 2686.847524    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90188: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 7301, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90189 2686.847691    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=8761 Win=24820 Len=0
+
+Frame 90189: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 8761, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90190 2686.848975    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90190: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 8761, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90191 2686.850207    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90191: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 10221, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90192 2686.850387    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=11681 Win=24820 Len=0
+
+Frame 90192: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 11681, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90193 2686.851668    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90193: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 11681, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90194 2686.855041    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90194: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 13141, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90195 2686.855228    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=14601 Win=24820 Len=0
+
+Frame 90195: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 14601, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90196 2686.856509    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90196: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 14601, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90197 2686.857732    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90197: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 16061, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90198 2686.857912    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=17521 Win=24820 Len=0
+
+Frame 90198: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 17521, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90199 2686.859443    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90199: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 17521, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90200 2686.861110    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90200: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 18981, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90201 2686.861286    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=20441 Win=24820 Len=0
+
+Frame 90201: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 20441, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90202 2686.862567    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90202: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 20441, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90203 2686.864868    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90203: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 21901, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90204 2686.865041    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=23361 Win=24820 Len=0
+
+Frame 90204: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 23361, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90205 2686.866323    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90205: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 23361, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90206 2686.867552    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90206: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 24821, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90207 2686.867740    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=26281 Win=24820 Len=0
+
+Frame 90207: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 26281, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90208 2686.869315    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90208: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 26281, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90209 2686.870626    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90209: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 27741, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90210 2686.870815    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=29201 Win=24820 Len=0
+
+Frame 90210: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 29201, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90211 2686.872327    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90211: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 29201, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90212 2686.873620    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90212: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 30661, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90213 2686.873796    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=32121 Win=24820 Len=0
+
+Frame 90213: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 32121, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90214 2686.875075    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90214: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 32121, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90215 2686.876309    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90215: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 33581, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90216 2686.876497    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=35041 Win=24820 Len=0
+
+Frame 90216: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 35041, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90217 2686.877779    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90217: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 35041, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90218 2686.879019    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90218: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 36501, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90219 2686.879192    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=37961 Win=24820 Len=0
+
+Frame 90219: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 37961, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90220 2686.880474    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90220: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 37961, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90221 2686.883149    202.77.162.213        172.16.115.20         FTP-DATA 1514   FTP Data: 1460 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90221: 1514 bytes on wire (12112 bits), 1514 bytes captured (12112 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 39421, Ack: 1, Len: 1460
+FTP Data (1460 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90222 2686.883329    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=40881 Win=24820 Len=0
+
+Frame 90222: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 40881, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90223 2686.884427    202.77.162.213        172.16.115.20         FTP-DATA 1248   FTP Data: 1194 bytes (PORT) (STOR bind_utils_8.11_sol7.tar.gz)
+
+Frame 90223: 1248 bytes on wire (9984 bits), 1248 bytes captured (9984 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 40881, Ack: 1, Len: 1194
+FTP Data (1194 bytes data)
+[Setup frame: 90173]
+[Setup method: PORT]
+[Command: STOR bind_utils_8.11_sol7.tar.gz]
+Command frame: 90175
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90224 2686.884494    202.77.162.213        172.16.115.20         TCP      60     65268 → 20 [FIN, ACK] Seq=42075 Ack=1 Win=33580 Len=0
+
+Frame 90224: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 42075, Ack: 1, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90225 2686.884644    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [ACK] Seq=1 Ack=42076 Win=24820 Len=0
+
+Frame 90225: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 42076, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90226 2686.885747    172.16.115.20         202.77.162.213        TCP      60     20 → 65268 [FIN, ACK] Seq=1 Ack=42076 Win=24820 Len=0
+
+Frame 90226: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 20, Dst Port: 65268, Seq: 1, Ack: 42076, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90227 2686.885868    202.77.162.213        172.16.115.20         TCP      60     65268 → 20 [ACK] Seq=42076 Ack=2 Win=33580 Len=0
+
+Frame 90227: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65268, Dst Port: 20, Seq: 42076, Ack: 2, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90228 2686.897301    202.77.162.213        172.16.115.20         TCP      66     65267 → 21 [ACK] Seq=92 Ack=219 Win=33580 Len=0 TSval=361468 TSecr=490475
+
+Frame 90228: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 92, Ack: 219, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90229 2686.897490    172.16.115.20         202.77.162.213        FTP      90     Response: 226 Transfer complete.
+
+Frame 90229: 90 bytes on wire (720 bits), 90 bytes captured (720 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 219, Ack: 92, Len: 24
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90230 2686.900310    202.77.162.213        172.16.115.20         FTP      72     Request: QUIT
+
+Frame 90230: 72 bytes on wire (576 bits), 72 bytes captured (576 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 92, Ack: 243, Len: 6
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90231 2686.900615    172.16.115.20         202.77.162.213        FTP      80     Response: 221 Goodbye.
+
+Frame 90231: 80 bytes on wire (640 bits), 80 bytes captured (640 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 243, Ack: 98, Len: 14
+File Transfer Protocol (FTP)
+[Current working directory: ]
+
+No.     Time           Source                Destination           Protocol Length Info
+  90232 2686.902958    202.77.162.213        172.16.115.20         TCP      66     65267 → 21 [FIN, ACK] Seq=98 Ack=257 Win=33580 Len=0 TSval=361469 TSecr=490484
+
+Frame 90232: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 98, Ack: 257, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90233 2686.903126    172.16.115.20         202.77.162.213        TCP      66     21 → 65267 [ACK] Seq=257 Ack=99 Win=10136 Len=0 TSval=490484 TSecr=361469
+
+Frame 90233: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 257, Ack: 99, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90234 2686.905515    172.16.115.20         202.77.162.213        TCP      66     21 → 65267 [FIN, ACK] Seq=257 Ack=99 Win=10136 Len=0 TSval=490485 TSecr=361469
+
+Frame 90234: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: Oracle_89:ba:28 (08:00:20:89:ba:28), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.115.20, Dst: 202.77.162.213
+Transmission Control Protocol, Src Port: 21, Dst Port: 65267, Seq: 257, Ack: 99, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90235 2686.905648    202.77.162.213        172.16.115.20         TCP      66     65267 → 21 [ACK] Seq=99 Ack=258 Win=33580 Len=0 TSval=361469 TSecr=490485
+
+Frame 90235: 66 bytes on wire (528 bits), 66 bytes captured (528 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Oracle_89:ba:28 (08:00:20:89:ba:28)
+Internet Protocol Version 4, Src: 202.77.162.213, Dst: 172.16.115.20
+Transmission Control Protocol, Src Port: 65267, Dst Port: 21, Seq: 99, Ack: 258, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90236 2687.850202    HewlettP_ed:9b:2d     HewlettP_ed:9b:2d     LLC      54     U P, func=TEST; DSAP NULL LSAP Individual, SSAP NetBIOS Command
+
+Frame 90236: 54 bytes on wire (432 bits), 54 bytes captured (432 bits)
+IEEE 802.3 Ethernet 
+Logical-Link Control
+Data (37 bytes)
+
+0000  ff 00 00 2a 2a 2a 2a 2a 2a 2a 20 48 50 20 48 55   ...******* HP HU
+0010  42 20 54 65 73 74 20 50 61 63 6b 65 74 20 2a 2a   B Test Packet **
+0020  2a 2a 2a 2a 2a                                    *****
+
+No.     Time           Source                Destination           Protocol Length Info
+  90237 2687.903252    197.182.91.233        172.16.113.168        TELNET   60     Telnet Data ...
+
+Frame 90237: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 197.182.91.233, Dst: 172.16.113.168
+Transmission Control Protocol, Src Port: 63729, Dst Port: 23, Seq: 4421, Ack: 8758, Len: 2
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90238 2687.903896    172.16.113.168        197.182.91.233        TELNET   60     Telnet Data ...
+
+Frame 90238: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.113.168, Dst: 197.182.91.233
+Transmission Control Protocol, Src Port: 23, Dst Port: 63729, Seq: 8758, Ack: 4423, Len: 4
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90239 2687.921813    197.182.91.233        172.16.113.168        TCP      60     63729 → 23 [ACK] Seq=4423 Ack=8762 Win=33580 Len=0
+
+Frame 90239: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 197.182.91.233, Dst: 172.16.113.168
+Transmission Control Protocol, Src Port: 63729, Dst Port: 23, Seq: 4423, Ack: 8762, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90240 2687.921977    172.16.113.168        197.182.91.233        TELNET   61     Telnet Data ...
+
+Frame 90240: 61 bytes on wire (488 bits), 61 bytes captured (488 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.113.168, Dst: 197.182.91.233
+Transmission Control Protocol, Src Port: 23, Dst Port: 63729, Seq: 8762, Ack: 4423, Len: 7
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90241 2687.941778    197.182.91.233        172.16.113.168        TCP      60     63729 → 23 [ACK] Seq=4423 Ack=8769 Win=33580 Len=0
+
+Frame 90241: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 197.182.91.233, Dst: 172.16.113.168
+Transmission Control Protocol, Src Port: 63729, Dst Port: 23, Seq: 4423, Ack: 8769, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90242 2688.652716    3comFast_9c:b2:8e     Dell_a3:57:db         ARP      60     Who has 172.16.112.207? Tell 172.16.112.1
+
+Frame 90242: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Address Resolution Protocol (request)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90243 2688.652775    194.27.251.21         172.16.112.207        TELNET   60     Telnet Data ...
+
+Frame 90243: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 194.27.251.21, Dst: 172.16.112.207
+Transmission Control Protocol, Src Port: 63329, Dst Port: 23, Seq: 812, Ack: 5500, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90244 2688.652897    Dell_a3:57:db         3comFast_9c:b2:8e     ARP      60     172.16.112.207 is at 00:c0:4f:a3:57:db
+
+Frame 90244: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Address Resolution Protocol (reply)
+
+No.     Time           Source                Destination           Protocol Length Info
+  90245 2688.653529    172.16.112.207        194.27.251.21         TELNET   79     Telnet Data ...
+
+Frame 90245: 79 bytes on wire (632 bits), 79 bytes captured (632 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.207, Dst: 194.27.251.21
+Transmission Control Protocol, Src Port: 23, Dst Port: 63329, Seq: 5500, Ack: 813, Len: 25
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90246 2688.671867    194.27.251.21         172.16.112.207        TCP      60     63329 → 23 [ACK] Seq=813 Ack=5525 Win=33580 Len=0
+
+Frame 90246: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 194.27.251.21, Dst: 172.16.112.207
+Transmission Control Protocol, Src Port: 63329, Dst Port: 23, Seq: 813, Ack: 5525, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90247 2689.263647    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90247: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 126, Ack: 305, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90248 2689.265146    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90248: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 305, Ack: 127, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90249 2689.282368    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=127 Ack=306 Win=32120 Len=0
+
+Frame 90249: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 127, Ack: 306, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90250 2689.372617    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90250: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 127, Ack: 306, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90251 2689.373697    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90251: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 306, Ack: 128, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90252 2689.382986    194.27.251.21         172.16.112.207        TELNET   60     Telnet Data ...
+
+Frame 90252: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 194.27.251.21, Dst: 172.16.112.207
+Transmission Control Protocol, Src Port: 63329, Dst Port: 23, Seq: 813, Ack: 5525, Len: 2
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90253 2689.384144    172.16.112.207        194.27.251.21         TELNET   112    Telnet Data ...
+
+Frame 90253: 112 bytes on wire (896 bits), 112 bytes captured (896 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e)
+Internet Protocol Version 4, Src: 172.16.112.207, Dst: 194.27.251.21
+Transmission Control Protocol, Src Port: 23, Dst Port: 63329, Seq: 5525, Ack: 815, Len: 58
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90254 2689.392339    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=128 Ack=307 Win=32120 Len=0
+
+Frame 90254: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 128, Ack: 307, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90255 2689.401718    194.27.251.21         172.16.112.207        TCP      60     63329 → 23 [ACK] Seq=815 Ack=5583 Win=33580 Len=0
+
+Frame 90255: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: 3comFast_9c:b2:8e (00:10:5a:9c:b2:8e), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 194.27.251.21, Dst: 172.16.112.207
+Transmission Control Protocol, Src Port: 63329, Dst Port: 23, Seq: 815, Ack: 5583, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90256 2689.662660    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90256: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 128, Ack: 307, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90257 2689.663719    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90257: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 307, Ack: 129, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90258 2689.682495    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=129 Ack=308 Win=32120 Len=0
+
+Frame 90258: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 129, Ack: 308, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90259 2689.882609    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90259: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 129, Ack: 308, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90260 2689.883645    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90260: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 308, Ack: 130, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90261 2689.902448    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=130 Ack=309 Win=32120 Len=0
+
+Frame 90261: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 130, Ack: 309, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90262 2690.082545    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90262: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 130, Ack: 309, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90263 2690.083590    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90263: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 309, Ack: 131, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90264 2690.102404    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=131 Ack=310 Win=32120 Len=0
+
+Frame 90264: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 131, Ack: 310, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90265 2690.272486    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90265: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 131, Ack: 310, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90266 2690.273553    172.16.113.50         172.16.113.105        TELNET   60     Telnet Data ...
+
+Frame 90266: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 310, Ack: 132, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90267 2690.292363    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=132 Ack=311 Win=32120 Len=0
+
+Frame 90267: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 132, Ack: 311, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90268 2690.435214    172.16.113.105        172.16.113.50         TELNET   60     Telnet Data ...
+
+Frame 90268: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 132, Ack: 311, Len: 2
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90269 2690.442979    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [FIN, ACK] Seq=134 Ack=311 Win=32120 Len=0
+
+Frame 90269: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 134, Ack: 311, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90270 2690.443268    172.16.113.50         172.16.113.105        TCP      60     23 → 24699 [ACK] Seq=311 Ack=135 Win=4096 Len=0
+
+Frame 90270: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 311, Ack: 135, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90271 2690.472685    172.16.113.50         172.16.113.105        TCP      60     23 → 24699 [FIN, ACK] Seq=311 Ack=135 Win=4096 Len=0
+
+Frame 90271: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_1b:0b:9b (08:00:20:1b:0b:9b), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.113.50, Dst: 172.16.113.105
+Transmission Control Protocol, Src Port: 23, Dst Port: 24699, Seq: 311, Ack: 135, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90272 2690.472938    172.16.113.105        172.16.113.50         TCP      60     24699 → 23 [ACK] Seq=135 Ack=312 Win=32120 Len=0
+
+Frame 90272: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_1b:0b:9b (08:00:20:1b:0b:9b)
+Internet Protocol Version 4, Src: 172.16.113.105, Dst: 172.16.113.50
+Transmission Control Protocol, Src Port: 24699, Dst Port: 23, Seq: 135, Ack: 312, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90273 2690.913777    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90273: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 751, Ack: 2016, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90274 2690.914107    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90274: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2016, Ack: 752, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90275 2690.932452    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=752 Ack=2017 Win=32120 Len=0
+
+Frame 90275: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 752, Ack: 2017, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90276 2691.412493    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90276: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 752, Ack: 2017, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90277 2691.412838    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90277: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2017, Ack: 753, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90278 2691.432344    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=753 Ack=2018 Win=32120 Len=0
+
+Frame 90278: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 753, Ack: 2018, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90279 2691.652646    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90279: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 753, Ack: 2018, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90280 2691.652912    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90280: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2018, Ack: 754, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90281 2691.672519    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=754 Ack=2019 Win=32120 Len=0
+
+Frame 90281: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 754, Ack: 2019, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90282 2691.982573    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90282: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 754, Ack: 2019, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90283 2691.982791    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90283: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2019, Ack: 755, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90284 2692.002447    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=755 Ack=2020 Win=32120 Len=0
+
+Frame 90284: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 755, Ack: 2020, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90285 2692.402677    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90285: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 755, Ack: 2020, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90286 2692.402895    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90286: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2020, Ack: 756, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90287 2692.422380    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=756 Ack=2021 Win=32120 Len=0
+
+Frame 90287: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 756, Ack: 2021, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90288 2692.642608    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90288: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 756, Ack: 2021, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90289 2692.642883    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90289: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2021, Ack: 757, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90290 2692.662538    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=757 Ack=2022 Win=32120 Len=0
+
+Frame 90290: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 757, Ack: 2022, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90291 2693.272527    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90291: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 757, Ack: 2022, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90292 2693.272747    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90292: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2022, Ack: 758, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90293 2693.292399    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=758 Ack=2023 Win=32120 Len=0
+
+Frame 90293: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 758, Ack: 2023, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90294 2693.592464    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90294: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 758, Ack: 2023, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90295 2693.592741    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90295: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2023, Ack: 759, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90296 2693.612327    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=759 Ack=2024 Win=32120 Len=0
+
+Frame 90296: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 759, Ack: 2024, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info
+  90297 2694.092638    172.16.112.149        172.16.112.50         TELNET   60     Telnet Data ...
+
+Frame 90297: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 759, Ack: 2024, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90298 2694.092924    172.16.112.50         172.16.112.149        TELNET   60     Telnet Data ...
+
+Frame 90298: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Oracle_89:a5:9f (08:00:20:89:a5:9f), Dst: Dell_a3:57:db (00:c0:4f:a3:57:db)
+Internet Protocol Version 4, Src: 172.16.112.50, Dst: 172.16.112.149
+Transmission Control Protocol, Src Port: 23, Dst Port: 20609, Seq: 2024, Ack: 760, Len: 1
+Telnet
+
+No.     Time           Source                Destination           Protocol Length Info
+  90299 2694.112449    172.16.112.149        172.16.112.50         TCP      60     20609 → 23 [ACK] Seq=760 Ack=2025 Win=32120 Len=0
+
+Frame 90299: 60 bytes on wire (480 bits), 60 bytes captured (480 bits)
+Ethernet II, Src: Dell_a3:57:db (00:c0:4f:a3:57:db), Dst: Oracle_89:a5:9f (08:00:20:89:a5:9f)
+Internet Protocol Version 4, Src: 172.16.112.149, Dst: 172.16.112.50
+Transmission Control Protocol, Src Port: 20609, Dst Port: 23, Seq: 760, Ack: 2025, Len: 0
+
+No.     Time           Source                Destination           Protocol Length Info

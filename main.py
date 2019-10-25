@@ -1,314 +1,187 @@
 # Python3 file
 # Created by Marissa Bennett
 
-import math, sys, csv, ast
+import math, sys, csv, ast, re, warnings
 import numpy as np
 import matplotlib.pyplot as plt
-import csvFiles
 from collections import Counter
 from sklearn.decomposition import PCA
-from sklearn.preprocessing import normalize
-from sRPCAviaADMMFast import *
+from helperFiles.sRPCAviaADMMFast import *
+from helperFiles.matrixOp import *
+from helperFiles.oneHot import *
+from helperFiles.fileHandler import *
+from helperFiles.plotter import *
+from helperFiles.models import *
+from helperFiles.csvFiles import *
 
-num_rows = 12000
-num_feat = 77
-
-# loads a list of files and extracts/forms contents
-def loadFile(names):
-#    destP = []  # groups feature and counts them
-#    destIP = []
-    mat = []
-    mx = "\n"
-    for name in names:
-        count = 0
-    #    count = 1   # groups feature and counts them
-
-        with open(name) as fin:
-            for line in fin:
-                if count == 0:
-                    lineLabel = mx.join(line.split(","))
-#                    lineLabel = line.split(",")     # shows label + 1 item of data
-
-
-                # shows label + 1 item of data
-                if count >= 1 and count <= num_rows:
-                    lineData = line.split(",")
-
-                    indexes = len(lineData)-1
-                    temp = []
-
-                    for item in range(indexes):   # uses 77 features
-                        if item >= 7:   # removes first few features that aren't int/floats
-                            temp.append(lineData[item])
-                        if item == indexes-1:
-                            mat.append(temp)
-                            temp = []
-
-#                    destP.append(lineData[1])      # source IP    # groups feature and counts them
-#                    destIP.append(lineData[3])     # destination IP
-                    
-                    # shows label + 1 item of data
-#                    c = 0
-#                    for l in lineLabel:
-#                        if not "Min" in l and not "Max" in l and not "Std" in l and not "Mean" in l:
-#                            print(str(l)+":   "+str(lineData[c]))
-#                        c += 1
-#                    exit(0)
-                elif count > num_rows:
-                    newMat = np.matrix(mat, dtype='float')
-                    print(newMat.shape)
-                    break
-
-#                count = 1
-                count += 1
-        break
-#    print(mat)
-     # groups features and counts them
-#    destP = [int(x) for x in destP if not " Source IP" in x]
-#    destP = [x for x in destP if not " Source IP" in x]
-#    destIP = [x for x in destP if not " Destination IP" in x]
-#    destP = sorted(destP)
-#    a = dict(Counter(destP))
-#    b = dict(Counter(destIP))
-#    print("Source IP's:\n"+str(a))
-#    print("# Unique Source IP's:\n"+str(len(a)))
-#    print("# Unique Destination IP's:\n"+str(len(b)))
-    return newMat
-
-# prints stats on file
-def printStats(filename):
-    c, mal, m, a, ogMal = 0, 0, 0, 0, 0
-    sourceIps, malSourceIps, malTime = [], [], []
-    malLines = []
-
-    with open(filename) as fin:
-        for line in fin:
-            lineInfo = line.split(",")
-           
-            # skips header row
-            if c == 0:
-                c+=1
-                ogMal = mal
-                continue
-            
-            # label
-            if not "BENIGN" in lineInfo[84]:
-                if not lineInfo[1] in malSourceIps:
-                    malSourceIps.append(lineInfo[1])
-                malLines.append(c)
-                mal += 1
-
-            # source IP
-            if not lineInfo[1] in sourceIps:
-                sourceIps.append(lineInfo[1])
-
-            # timestamp
-            time = lineInfo[6].split(" ")[1]
-            hour = int(time[:2].replace(":", ""))
-            if hour >= 8 and hour < 12:
-                timeFrame1 = "Morning"
-                m += 1
-                if mal > ogMal and not timeFrame1 in malTime:
-                    malTime.append(timeFrame1)
-            elif hour >= 1 and hour <= 5:
-                timeFrame2 = "Afternoon"
-                a += 1
-                if mal > ogMal and not timeFrame2 in malTime:
-                    malTime.append(timeFrame2)
-
-            c += 1
-            ogMal = mal
-
-    sortedSource = sorted(sourceIps)
-    dictSource = dict(Counter(sortedSource))
-    sortedMalSource = sorted(malSourceIps)
-    dictMalSource = dict(Counter(sortedMalSource))
-
-    # All totals subtract the label line
-    print("Total # packet flows:", c)
-    print("Total # malicious packet flows:", mal)
-    print("Percent of malicious to total", ((mal)/(c)*100))
-    print("# Unique Source IP's:", len(dictSource))
-    print("# Unique Malicious Source IP's:", len(dictMalSource))
-    print("Malicious packets during:", malTime)
-#    print("Malicious packets on lines:", malLines)
-    print("# packets during", timeFrame1, "=", m)
-    print("# packets during", timeFrame2, "=", a)
-
-
-
-# function to run PCA and RPCA and graph them
-def runAnalysis(X):
-    print("Running Analysis...")
+# function to run PCA and RPCA
+def runAnalysis(X, lamScale, alpha):
     # SVD PCA
-    u, s, vh = np.linalg.svd(X)
-    print("PCA thru SVD Sigma matrix: ")
-    print(s)
+#    u, s, vh = np.linalg.svd(X)
+#    print("PCA thru SVD Sigma matrix: ",s)
 
-    # TODO make better
-    # take sub section(s) of matrix to get rank [8:15] and [3:10]
-#    sub1 = X[8:15][3:10]
-#    maxRank = np.linalg.matrix_rank(sub1)
     maxRank = np.linalg.matrix_rank(X)
-#    maxRank = 77
-    print("Max Rank: ", maxRank)
-    
-    u = []
-    v = []
-    vecM = []
-    vecEpsilon = []
-    UOrig = []
-    VOrig = []
-#    UOrig = np.matrix(np.random.random(size=[num_rows, maxRank]))   # ideally, U would be num_rows x 523 (if have 523 features)
-#    VOrig = np.matrix(np.random.random(size=[num_feat, maxRank]))   # ideally, V would be square (523 x 523)
+#    print("Max Rank: ", maxRank)
 
-    # fill in data from X
-    UOrig = np.matrix([[X[x][y] for y in range(maxRank)] for x in range(num_rows)])
-    VOrig = np.matrix([[X[x][y] for y in range(maxRank)] for x in range(num_feat)])
+    T = np.asmatrix(X)  # gets shape of X
+    u, v, vecM, vecEpsilon = [], [], [], []
 
-#    print(UOrig.shape, VOrig.shape)
-
-    for i in range(num_rows):       # 1000
-        for j in range(num_feat):   # 77
-#            u.append(X[i][14]) # 0 -> 77, next # 77 times, 1000 times     (uses clmn 14)
-#            v.append(X[14][j]) # 0..77 -> once, then again 0..77, 1000 times     (uses row 14)
-            # u and v are the indices for vecM in sRPCA???
+    for i in range(T.shape[0]):
+        for j in range(T.shape[1]):
             u.append(i)
             v.append(j)
-            vecEpsilon.append(1e-5)
-            Mij = float(UOrig[i, :] * (VOrig.T)[:, j])
+            vecEpsilon.append(1e-5)     # NOTE original value is 1e-5
+            Mij = float(T[i,j])
             vecM.append(Mij)
 
     u = np.array(u)
     v = np.array(v)
     vecM = np.array(vecM)
     vecEpsilon = np.array(vecEpsilon)
-    
-#    print(u.shape,v.shape)  # both should be (77000,)
-#    print(vecM)
-#    print(vecM.shape)
-       
-    [U, E, VT, S, B] = sRPCA(num_rows, num_feat, u, v, vecM, vecEpsilon, maxRank)
 
-    print("sRPCA E (sigma) matrix: ")
-    print(E)
+#    print((1/math.sqrt(max(T.shape[0],T.shape[1]))))
+#    newLambda = (1/math.sqrt(max(T.shape[0],T.shape[1])))* lamScale
+#    print("Norm lambda: ", newLambda/lamScale)
+
+    print("LAMBDA SCALE WANT: ", lamScale/(1/math.sqrt(max(T.shape[0],T.shape[1]))))
+
+    [U, E, VT, S, B] = sRPCA(T.shape[0], T.shape[1], u, v, vecM, vecEpsilon, maxRank, lam=lamScale)
 
     S = S.todense()    # keep
-
-    print("Dense S: ", S)   # eh
-
-    S[S < 0] = 0    # keep???
-    print("# non-zero values: " + str(len(np.where(S>0)[0])) + " out of " + str(num_rows*num_feat))    # keep
-    plotMat(S)     # keep
-
-#    plotS(s, E, maxRank)
-
-
-# plots matrices
-def plotMat(mat):
-    print("Plotting...")
-
-    plt.matshow(mat)
-#    plt.imshow(mat)
-#    plt.colorbar()
-    plt.show()
-
-
-# plots Sigma matrices from PCA (SVD) and sRPCA
-def plotS(svd, srpca, maxRank):
-    print("Plotting...")
-
-    plt.plot(range(num_feat), svd, 'rs', range(maxRank), srpca, 'bo')
-    plt.show()
-
-# normalizes every column in the matrix from start position to end position
-def normMat(M):
-
-    std = np.std(M,axis=0)
-#    print("# <= 0 val: " + str(len(np.where(std<=0)[0])))
-
-    # ensures no values are 0
-    stdDev = []
-    for i in range(num_feat):
-        if std[0,i] <= 0:
-            stdDev.append(1e-5)
-        else:
-            stdDev.append(std[0,i])
-    stdDev = np.asmatrix(stdDev)
-
-    # Z-Score
-    normed = (M - np.mean(M,axis=0)) / stdDev
-
-    # clears up matrix for exporting to csv
-    nn = []
-    for row in range(num_rows):
-        inar = []
-        for clmn in range(num_feat):
-            inar.append(normed[row,clmn])
-        nn.append(inar)
-
-    with open('normed3.csv', 'w') as writeFile:
-        writer = csv.writer(writeFile)
-        writer.writerows(nn)
+#    print("Dense S: ", S)   # eh
+    ue = np.dot(U, np.diag(E))
+    L = np.dot(ue, VT)
     
-    writeFile.close()
+    Xls = L + S
+    Xt = X.T
 
-    return nn
+    # NOTE KEEP THESE 2 LINES
+#    xtx = np.dot(Xt, X)
+# TODO email haitao:
+#    print(xtx.shape)
+#    exit(0)
+    
+    warnings.filterwarnings('always')
+    print("\nL mean val: \n", np.mean(L))
+    print("S max val: ", S.max(), "   difference: ", S.max()/np.mean(L), "\n")
+    if abs(np.mean(L)) < 0.001: # arbitrary value
+        print(L)
+        warnings.warn('L matrix seems to be empty.\n')
+    if abs(S.max()/np.mean(L)) < 0.01:  # arbitrary value
+        print(S)
+        warnings.warn('S matrix seems to be empty.\n')
+    warnings.filterwarnings('ignore')
 
-# cleans the numpy matrix of any INF or NaN values
-# TODO change later so values are NOT removed
-def cleanMat(M):
-    if np.isnan(np.sum(X)):
-        M = M[~np.isnan(X)] # just remove nan elements from vector
-        print("Cleaning nulls...")
-    if np.isinf(np.sum(X)):
-        M = M[~np.isinf(X)] # just remove inf elements from vector
-        print("Cleaning infs...")
-    return M
+#    return S, X, s, E, L, maxRank
+    return S, X, E, L, maxRank
 
+def preproc(filename, l, alpha, typ):
+    # get X matrix then one-hot encode columns & creates final matrix
+    if typ == "p":
+        X = getData(filename)   # loads and formats data from file
+        newX = createMatrixProposal(X)  # This creates the matrix according to the OG Kathleen paper
+    else:
+        X = thesisDataset()
+#        print("preproc: ", X.shape)
+        newX = createMatrix(X)  # main thesis dataset (default)
 
-# main func
-if __name__ == '__main__':
-    files = ''
-    stats = False
-    numSys = len(sys.argv)
-    # get user input of command
-    if numSys > 3:
-        print("Too many args given! Please use the format:\n\n" \
-              "python3 main.py <files=all> <stats=False>\n\n" \
-              "Where files defaults to all, or choose <day of week>\n" \
-              "      stats defaults to False, or set to True to show stats\n" \
-              "Ex: python3 main.py\n" \
-              "    python3 main.py Wed True\n"\
-              "    python3 main.py True\n")
-        exit(0)
-    elif numSys == 2:
-        if sys.argv[1].lower() in "True".lower():
-            stats = True
-    elif numSys == 3:
-        if sys.argv[2].lower() in "True".lower():
-            stats = True
-    if numSys <= 3 and numSys > 1:
-        days = ['Monday','Tuesday','Wednesday','Thursday','Friday']
-        for d in days:
-            if sys.argv[1].lower() in d.lower():
-                files = sys.argv[1]
-                break
-        
-
-    # gets label data
-    testing = csvFiles.getFile(files, True)
-
-    # loads and formats data from file
-    X = loadFile(testing)
-
-    X = X.astype(int)
-
-    # clean and normalize matrix
-    X = cleanMat(X)
+    X = np.asmatrix(newX)
+    X.astype(float)     #TODO investigate this??? should be int? float? is it needed?
+#    X = cleanMat(X)    # TODO do we even need this too?
     X = normMat(X)
+    print("Finished pre-processing. Running analysis...")
+    return X
 
-    if stats:
-        printStats(testing[0])   # can only handle 1 file at a time right now
+def thesisDataset():
+    # NOTE UNB INTRUSION DETECTION DATASET
+#    days = ['Monday','Tuesday','Wednesday','Thursday','Friday']
+    files = 'thurs'
+    testing = getFile(files, True)
+    testing = [testing[1]]
+#    print(testing)
+    # loads and formats data from file
+    return loadFile(testing)   # TODO this is only for getting the Thurs morning file for journal
 
-#    runAnalysis(X)
+
+# !!!!!!TODO make the input for creating X normalized (csv or something)
+
+
+# main function
+if __name__ == '__main__':
+    numSys = len(sys.argv)
+    lam = []
+    typ = ""
+    # Gets arguments from command line 
+    if numSys > 1:
+        st = sys.argv[1].split(",")
+        for i in st:
+            if re.search("[-+]?[0-9]*\.?[0-9]+", i):
+                lam.append(float(i))
+        if numSys == 3 and sys.argv[2].lower() in "proposal":
+            typ = "p"
+    else:
+        lam = [1]
+
+    # TODO incorporate file weekday name into args if main thesis
+
+
+    if typ == "p":
+        # retrieves malicious packet indexes
+        malPkts1, malPkts2, malPkts3 = listLabels("phase-all-MORE-counts.txt")
+        # puts all malicious packet lists into one
+        mpc = np.concatenate((malPkts1, malPkts2, malPkts3))
+    else:
+#        mpc = 'TrafficLabelling/Thursday-WorkingHours-Morning-SHORT-WebAttacks.pcap_ISCX.csv'
+        mpc = 'TrafficLabelling/Thursday-WorkingHours-Morning-8100-SHORT-WebAttacks.pcap_ISCX.csv'
+
+    i = 1
+    alpha = 0.7
+    # 0.027 is so far best lambda (I think)
+    # so 0.554 is the best lambdaScale (I think)
+
+#    fig = plt.figure()
+#    fig.subplots_adjust(left=0.2, bottom=0.05, right=0.8, hspace=0.5, wspace=0.6)
+
+    for l in lam:
+        print("\n\nNEXT LAMBDA: ", l)
+        X = preproc("inside/LLS_DDOS_2.0.2-inside-all-MORE", l, alpha, typ)
+#        print("X: ",X.shape)
+        # runs RPCA
+        S1, X1, E1, L1, maxRank1 = runAnalysis(X, l, alpha)
+
+
+        '''
+        # phase 1
+        S1, X1, s1, E1, maxRank1 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-1", l, alpha, typ)
+
+        # phase 2
+        S2, X2, s2, E2, maxRank2 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-2", l, alpha, typ)
+
+        # phase 3
+        S3, X3, s3, E3, maxRank3 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-3", l, alpha, typ)
+
+        x1 = fig.add_subplot(3, len(lam), i)
+        x2 = fig.add_subplot(3, len(lam), i+len(lam))
+        x3 = fig.add_subplot(3, len(lam), i+(len(lam)*2))
+
+        plotter(S1,malPkts1,alpha,xname="Phase 1 w/ Lambda: "+str(l),bx=x1)
+        plotter(S2,malPkts2,alpha,xname="Phase 2 w/ Lambda: "+str(l),bx=x2)
+        plotter(S3,malPkts3,alpha,xname="Phase 3 w/ Lambda: "+str(l),bx=x3)
+        '''
+#        plotter(S1,mpc,alpha,xname="All Phases w/ LambdaScale: "+str(lam),bx=x1)
+        i += 1
+
+
+        # ML/AI
+        # old was 290 for "all" file
+        if typ == "p":
+            splitOn = 8000
+        else:
+            splitOn = 4050
+#            splitOn = 900
+
+        toRun = ["rf"]
+#        runModels(X1, L1, S1, mpc, splitOn)    # NOTE this runs all models!!!
+        runModels(X1, L1, S1, mpc, splitOn, code=toRun)
+
+

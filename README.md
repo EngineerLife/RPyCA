@@ -1,3 +1,3 @@
-# Thesis
+# ConferencePaper
 
-Dataset can be downloaded here: https://www.unb.ca/cic/datasets/ids-2017.html
+This code focuses on the MIT LL DARPA Intrusion Detection Dataset version 2.
