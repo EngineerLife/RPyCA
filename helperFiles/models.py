@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 from .fileHandler import *
+from .logger import *
 from scipy.spatial.distance import cdist
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -123,6 +124,41 @@ def gb(X_train, X_test, y_train):
 
 
 ####
+# Find Optimal Values TODO TODO TODO
+####
+# checks all combinations of model on data to find optimal tuning values
+#   Input: regr is the regressor model object
+#          X_train data
+#          y_train labels to the X_train data
+#   Output: None
+def findOptVal(regr, X_train, y_train):
+    # Create the parameter grid based on the results of random search 
+    param_grid = {
+        'bootstrap': [True],
+        'max_depth': [2, 10, 20],#, 50],
+    #   'max_features': [2, 3],
+        'min_samples_leaf': [3, 4, 5],
+        'min_samples_split': [8, 10, 12],
+        'n_estimators': [100, 200, 300, 1000]
+    }
+                                                                   
+    # Create a based model
+#    rf = RandomForestRegressor()
+
+    # Instantiate the grid search model
+    grid_search = GridSearchCV(estimator=regr, param_grid=param_grid, cv=3, n_jobs=-1, verbose=2)
+
+    # Fit the grid search to the data
+    grid_search.fit(X_train, y_train)
+    print(grid_search.best_params_)
+
+    best_grid = grid_search.best_estimator_
+    print(grid_accuracy)
+
+
+
+
+####
 # Create Y labels
 ####
 # creates labels for data set
@@ -148,77 +184,111 @@ def createY(lenData, atkPnts):
 #          L mat, 
 #          S mat, 
 #          malicious packets counts, (see confPaper.py)
-#          integer to split data on for train and test
+#          integer to split data on for train and test <=== FIXME
 #          code defaults to empty (all models run) or contains codes for specific ones to run
+#          tune if we are tuning the model with the data to find optimal values
 #   Output: Prints confusion matricies for each model and f1_scores
-def runModels(X, L, S, mpc, splitOn, code=[]):#X_train, X_test, y_train, y_test):
+#def runModels(X, L, S, mpc, splitOn, code=[], tune=False):
+def runModels(X, L, S, mpc, splitOn, code=[], tune=False):
     # creates training and testing label data to be used for all models
     if not type(mpc) == str: # TODO check if list or if filename
         y = createY(len(X), mpc)
     else:
         y = loadLabels(mpc)
-    y_train, y_test = np.split(y, [splitOn])
+    # TODO CHECK THAT THESE ARE CORRECT
+    y_train, y_test = np.split(y, [splitOn[0]])
+    y_test, y_validate = np.split(y_test, [splitOn[1]])
+    print(y_train.shape, y_test.shape, y_validate.shape)
 
-    LS = np.concatenate((L,S), axis=1)
-    XLS = np.concatenate((X, L, S), axis=1)
-    matAr = [X, LS, XLS]    # holds data matricies to run models on
+    LS1 = np.concatenate((L[0],S[0]), axis=1)
+    XLS1 = np.concatenate((X[0], L[0], S[0]), axis=1)
+    LS2 = np.concatenate((L[1],S[1]), axis=1)
+    XLS2 = np.concatenate((X[1], L[1], S[1]), axis=1)
+    train = [X[0], LS1, XLS1]     # holds data matricies to run models on
+    test = [X[1], LS2, XLS2]
+#    validate = [X3, LS3, XLS3]
     matName = ["X", "CONCAT LS", "CONCAT XLS"]
     # can choose code(s) to use
-    if code:    # TODO change this to one int later
-        print(code)
-    else:
+    if not code:
         code = np.arange(8)    # NOTE if there are more models increase this number
    
     for i in code:
         countName = 0
-        for dataMat in matAr:
-            X_train, X_test = np.split(dataMat, [splitOn])
-            print("SHAPES: ", X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+        for matType in range(3):
+            X_train = train[matType]
+            X_test = test[matType]
+#            X_train, X_test = np.split(dataMat, [splitOn[0]])
+#            X_test, X_validate = np.split(X_test, [splitOn[1]])
+#            print("SHAPES (train, test validate): X[", X_train.shape, X_test.shape, X_validate.shape, "]\n \
+#            y[", y_train.shape, y_test.shape, y_validate.shape, "]")
 
-            y_pred = chooseModel(str(i), X_train, X_test, y_train)
+            print("Model SHAPES:", X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+
+            # TODO somehow get validate stuff in here???
+            y_pred, regr = chooseModel(str(i), X_train, X_test, y_train, tune)
+            # ONLY for tuning; not for training/main algo
+            if tune and not regr == None:
+                print("Oops! Did not want to test this right now.")
+                exit(0)
+                findOptVal(regr, X_train, y_train)
+
             print("FOR MATRIX: ", matName[countName])
-
+            logMsg(1, "FOR MATRIX: %s" % (matName[countName]))
             #print("MEAN ACCURACY: ", classifier.score(X_test, y_test))
+
             # Create confusion matrix
             cfm = pd.crosstab(y_test, y_pred, rownames=['Actual Packet Type'], colnames=['Predicted Packet Type'])
+            logMsg(1, "\n%s" % str(cfm))
             print(cfm)
             f1 = f1_score(y_test, y_pred)
+            logMsg(1, "f1_Score: %f" % f1)
             print("f1_Score: ", f1)
             countName += 1
-
-
-def chooseModel(code, X_train, X_test, y_train):
+####
+# chooses the model to run 
+#   [and any other qualities of it (used for tuning only)]
+####
+def chooseModel(code, X_train, X_test, y_train, tune=False):
     if code == "rf" or code == "0":
-        y_pred = rf(X_train, X_test, y_train)
+        if tune: return None, RandomForestRegressor()
         print("************ RANDOM FOREST ************")
+        y_pred = rf(X_train, X_test, y_train)
     elif code == "knn" or code == "1":
+        if tune: return None, RandomForestRegressor()
         print("************ KNN ************")
         y_pred = runKNN(X_train, X_test, y_train, 5)     # TODO accomidate for different number clusters
     elif code == "svm" or code == "2":
+        if tune: return None, RandomForestRegressor()
         print("************ SVM ************")
         y_pred = runSVM(X_train, X_test, y_train)
     elif code == "logreg" or code == "3":
+        if tune: return None, RandomForestRegressor()
         print("************ LOG REG ************")
         y_pred = runLogReg(X_train, X_test, y_train)
     elif code == "dtree" or code == "4":
+        if tune: return None, RandomForestRegressor()
         print("************ DEC. TREE ************")
         y_pred = runDTree(X_train, X_test, y_train)
     elif code == "nb" or code == "5":
+        if tune: return None, RandomForestRegressor()
         print("************ NAIVE BAYES ************")
         y_pred = runNB(X_train, X_test, y_train)
     elif code == "kmeans" or code == "6":
+        if tune: return None, RandomForestRegressor()
         print("************ KMEANS ************")
         y_pred = runKmeans(X_train, X_test, y_train)
     elif code == "gb" or code == "7":
+        if tune: return None, RandomForestRegressor()
         print("************ GRAD. BOOSTING ************")
         y_pred = gb(X_train, X_test, y_train)
     elif code == "nn" or code == "8":
+        if tune: return None, RandomForestRegressor()
         print("************ NN ************")
         y_pred = runNN(X_train, X_test, y_train)
-    else:
+    else:   # SHOULD NEVER GET HERE
         print("************ ELSE ************")
         exit(0)
-    return y_pred
+    return y_pred, None
 
 
 

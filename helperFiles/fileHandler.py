@@ -173,6 +173,20 @@ def loadLabels(filename):
             first = False
     return malPkts
 
+# randomizes the data in the main X matrix and cooresponding y labels
+def randData():
+    randX = []
+    randy = []  # made this var before I realized it's your name Randy P.
+    
+    # produce a random seed
+#    seed = rand
+
+    # randomize rows based on seed
+    # for X:
+
+    # for y:
+
+    return randX, randy
 
 if __name__ == "__main__":
     print("Running")
