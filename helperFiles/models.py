@@ -71,13 +71,6 @@ def runKmeans(X_train, X_test, y_train):
     clf = KMeans(n_clusters=2, random_state=0)
     clf.fit(X_train)
     y_pred = clf.predict(X_test)
-    # elbow method
-#    Sum_sqrd_dist = []
-#    K = range(1,15)
-#    for k in K:
-#        km = KMeans(n_clusters=k)
-#        km = km.fit(X)
-#        Sum_sqrd_dist.append(km.inertia_)
     return y_pred
 
 ####
@@ -155,39 +148,27 @@ def findOptVal(regr, X_train, y_train):
     best_grid = grid_search.best_estimator_
     print(grid_accuracy)
 
+
 # runs all the models or chosen models
 #   Input: X mat, 
 #          L mat, 
 #          S mat, 
-#          malicious packets counts, (see confPaper.py)
-#          integer to split data on for train and test <=== FIXME
+#          y mat,
 #          code defaults to empty (all models run) or contains codes for specific ones to run
 #          tune if we are tuning the model with the data to find optimal values
 #   Output: Prints confusion matricies for each model and f1_scores
-#def runModels(X, L, S, mpc, splitOn, code=[], tune=False):
-def runModels(X, L, S, mpc, splitOn, code=[], tune=False):
-    # creates training and testing label data to be used for all models
-    if not type(mpc) == str: # TODO check if list or if filename
-        y = createY(len(X), mpc)
-    else:
-        y = loadUNBLabels(mpc)
-    # TODO CHECK THAT THESE ARE CORRECT
-    y_train, y_test = np.split(y, [splitOn[0]])
-    y_test, y_validate = np.split(y_test, [splitOn[1]])
-    # FIXME 
-    y_train, y_test = y_test, y_validate
+def runModels(X, L, S, ymats, code=[], tune=False):
+    y_train, y_test, y_validate = ymats[0], ymats[1], ymats[2]
     print(y_train.shape, y_test.shape, y_validate.shape)
 
-#    LS1 = np.concatenate((L[0],S[0]), axis=1)
-#    XLS1 = np.concatenate((X[0], L[0], S[0]), axis=1)
+    LS1 = np.concatenate((L[0],S[0]), axis=1)
+    XLS1 = np.concatenate((X[0], L[0], S[0]), axis=1)
     LS2 = np.concatenate((L[1],S[1]), axis=1)
     XLS2 = np.concatenate((X[1], L[1], S[1]), axis=1)
     LS3 = np.concatenate((L[2],S[2]), axis=1)
     XLS3 = np.concatenate((X[2], L[2], S[2]), axis=1)
-#    train = [X[0], LS1, XLS1]     # holds data matricies to run models on
-#    test = [X[1], LS2, XLS2]
-    train = [X[1], LS2, XLS2]
-    test = [X[2], LS3, XLS3]
+    train = [X[0], LS1, XLS1]     # holds data matricies to run models on
+    test = [X[1], LS2, XLS2]
 
     matName = ["X", "CONCAT LS", "CONCAT XLS"]
     # can choose code(s) to use
@@ -199,14 +180,10 @@ def runModels(X, L, S, mpc, splitOn, code=[], tune=False):
         for matType in range(3):
             X_train = train[matType]
             X_test = test[matType]
-#            X_train, X_test = np.split(dataMat, [splitOn[0]])
-#            X_test, X_validate = np.split(X_test, [splitOn[1]])
 #            print("SHAPES (train, test validate): X[", X_train.shape, X_test.shape, X_validate.shape, "]\n \
 #            y[", y_train.shape, y_test.shape, y_validate.shape, "]")
+#            print("Model SHAPES:", X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 
-            print("Model SHAPES:", X_train.shape, X_test.shape, y_train.shape, y_test.shape)
-
-            # TODO somehow get validate stuff in here???
             y_pred, regr = chooseModel(str(i), X_train, X_test, y_train, tune)
             # ONLY for tuning; not for training/main algo
             if tune and not regr == None:
@@ -216,7 +193,6 @@ def runModels(X, L, S, mpc, splitOn, code=[], tune=False):
 
             print("FOR MATRIX: ", matName[countName])
             logMsg(1, "FOR MATRIX: %s" % (matName[countName]))
-            #print("MEAN ACCURACY: ", classifier.score(X_test, y_test))
 
             # Create confusion matrix
             cfm = pd.crosstab(y_test, y_pred, rownames=['Actual Packet Type'], colnames=['Predicted Packet Type'])

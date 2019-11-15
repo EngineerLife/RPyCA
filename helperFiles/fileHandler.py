@@ -206,7 +206,7 @@ def loadUNBFile(names):
     return np.matrix(mat)
 
 # FOR MAIN THESIS
-# This is pretty similar as what is needed for CreatY
+# This is pretty similar as what is needed for CreateY
 def loadUNBLabels(filename):
     malPkts = []
     first = True
@@ -221,20 +221,7 @@ def loadUNBLabels(filename):
             first = False
     return malPkts
 
-# randomizes the data in the main X matrix and cooresponding y labels
-def randData():
-    randX = []
-    randy = []  # made this var before I realized it's your name Randy P.
-    
-    # produce a random seed
-#    seed = rand
 
-    # randomize rows based on seed
-    # for X:
-
-    # for y:
-
-    return randX, randy
 
 if __name__ == "__main__":
     print("Running")

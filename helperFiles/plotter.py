@@ -105,3 +105,30 @@ def plotProp(mat, name, subx):
     '''
 
 
+# extra stuff from main.py
+'''
+#    fig = plt.figure()
+#    fig.subplots_adjust(left=0.2, bottom=0.05, right=0.8, hspace=0.5, wspace=0.6)
+
+# phase 1
+S1, X1, s1, E1, maxRank1 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-1", l, alpha, typ)
+
+# phase 2
+S2, X2, s2, E2, maxRank2 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-2", l, alpha, typ)
+
+# phase 3
+S3, X3, s3, E3, maxRank3 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-3", l, alpha, typ)
+
+x1 = fig.add_subplot(3, len(lam), i)
+x2 = fig.add_subplot(3, len(lam), i+len(lam))
+x3 = fig.add_subplot(3, len(lam), i+(len(lam)*2))
+
+plotter(S1,malPkts1,alpha,xname="Phase 1 w/ Lambda: "+str(l),bx=x1)
+plotter(S2,malPkts2,alpha,xname="Phase 2 w/ Lambda: "+str(l),bx=x2)
+plotter(S3,malPkts3,alpha,xname="Phase 3 w/ Lambda: "+str(l),bx=x3)
+
+#plotter(S1,mpc,alpha,xname="All Phases w/ LambdaScale: "+str(lam),bx=x1)
+#i += 1
+'''
+
+
