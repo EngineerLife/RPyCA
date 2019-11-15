@@ -13,7 +13,7 @@ from helperFiles.oneHot import *
 from helperFiles.fileHandler import *
 from helperFiles.plotter import *
 from helperFiles.models import *
-from helperFiles.csvFiles import *
+#from helperFiles.csvFiles import *
 
 # function to run PCA and RPCA
 def runAnalysis(X, lamScale):
@@ -104,7 +104,7 @@ def runAnalysis(X, lamScale):
 def preproc(filename, l, alpha, typ):
     # get X matrix then one-hot encode columns & creates final matrix
     if typ == "p":
-        X = getData(filename)   # loads and formats data from file
+        X = getLLDOSData(filename)   # loads and formats data from file
         newX = createMatrixProposal(X)  # This creates the matrix according to the OG Kathleen paper
     else:
         X = thesisDataset()
@@ -122,11 +122,11 @@ def thesisDataset():
     # NOTE UNB INTRUSION DETECTION DATASET
 #    days = ['Monday','Tuesday','Wednesday','Thursday','Friday']
     files = 'thurs'
-    testing = getFile(files, True)
+    testing = getUNBFile(files, True)
     testing = [testing[1]]
 #    print(testing)
     # loads and formats data from file
-    return loadFile(testing)   # TODO this is only for getting the Thurs morning file for journal
+    return loadUNBFile(testing)   # TODO this is only for getting the Thurs morning file for journal
 
 # float range function
 def frange(start, stop, step):
@@ -141,7 +141,7 @@ def frange(start, stop, step):
 
 # main function
 if __name__ == '__main__':
-    setLog("log3")
+    setLog("logTESTx2x3")
     numSys = len(sys.argv)
     lam = []
     typ = ""
@@ -165,12 +165,12 @@ if __name__ == '__main__':
 
     if typ == "p":
         # retrieves malicious packet indexes
-        malPkts1, malPkts2, malPkts3 = listLabels("phase-all-MORE-counts.txt")
+        malPkts1, malPkts2, malPkts3 = listLLDOSLabels("phase-all-MORE-counts.txt")
         # puts all malicious packet lists into one
         mpc = np.concatenate((malPkts1, malPkts2, malPkts3))
     else:
-#        mpc = 'TrafficLabelling/Thursday-WorkingHours-Morning-SHORT-WebAttacks.pcap_ISCX.csv'
-        mpc = 'TrafficLabelling/Thursday-WorkingHours-Morning-8100-SHORT-WebAttacks.pcap_ISCX.csv'
+#        mpc = 'datasets/TrafficLabelling/Thursday-WorkingHours-Morning-SHORT-WebAttacks.pcap_ISCX.csv'
+        mpc = 'datasets/TrafficLabelling/Thursday-WorkingHours-Morning-8100-SHORT-WebAttacks.pcap_ISCX.csv'
 
     i = 1
     alpha = 0.7
@@ -187,7 +187,7 @@ if __name__ == '__main__':
 #    for l in frange(0.04, 0.06, 0.01): #lam:
         logMsg(1, " Next Lambda: %s" % (str(lam)))
         print("\n\nNEXT LAMBDA: ", l)
-        X = preproc("inside/LLS_DDOS_2.0.2-inside-all-MORE", l, alpha, typ)
+        X = preproc("datasets/inside/LLS_DDOS_2.0.2-inside-all-MORE", l, alpha, typ)
 #        print("X: ",X.shape)
 
         # TODO 

@@ -1,15 +1,19 @@
 # Contains methods to handle files in the data set
 import numpy as np
 import time, csv
+from os import listdir, chdir, curdir, getcwd
+from os.path import isfile, join
 
-# TODO rename function calls
-
-
+#
+#
+# XXX MIT LLDOS dataset functions
+#
+#
 # Gets the data from txt file of Collapsed PCAP
 #   Input: String of name of file to extract data from
 #   Output: Matrix with each row in form of [Src IP, Dest IP, Protocol, length, Src Port, Dest Port]
 # NOTE may error if there are duplicate lines 
-def getData(name):
+def getLLDOSData(name):
     count = 0
     extract, foundPort = False, False
     info, matrix = [], []
@@ -40,42 +44,10 @@ def getData(name):
 #    print("NUMBER OF LINES: ",count)    # should be 347987 for LLS_DDOS_2.0.2-inside
     return np.matrix(matrix)
 
-# reads the label data from the file given and converts them to lists
-#   Input: String of name of file to extract data from
-#   Output: 3 lists for the 3 phases
-def listLabels(name):
-    malPkts1, malPkts2, malPkts3 = [], [], []
-    e1, e2, e3 = False, False, False
-    with open(name) as fin:
-        for line in fin:
-            if not line or "*" in line:
-                continue
-            
-            if "P1" in line:
-                e1 = True
-                e2, e3 = False, False
-                continue
-            elif "P2" in line:
-                e2 = True
-                e1, e3 = False, False
-                continue
-            elif "P3" in line:
-                e3 = True
-                e1, e2 = False, False
-                continue
-            line = "".join(line.split())
-            if e1:
-                malPkts1.append(int(line))
-            elif e2:
-                malPkts2.append(int(line))
-            elif e3:
-                malPkts3.append(int(line))
-    return malPkts1, malPkts2, malPkts3
-
 # gets the labels for each packet row
 #   Input: String of name of file to extract data from
 #   Output: Dictionary of phases and the attack indices in the LLDOS inside file
-def getLabels(name):
+def getLLDOSLabels(name):
     directory = "inside/"
     phaseFiles = ["phase-1-inside", "phase-2-inside", "phase-3-inside"]
     phaseDict = {
@@ -128,9 +100,85 @@ def getLabels(name):
                 lc += 1     # only counts lines that we collect data from!!!!
     return points
 
-# FOR MAIN THESIS DATASET
+
+# reads the label data from the file given and converts them to lists
+#   Input: String of name of file to extract data from
+#   Output: 3 lists for the 3 phases
+def listLLDOSLabels(name):
+    malPkts1, malPkts2, malPkts3 = [], [], []
+    e1, e2, e3 = False, False, False
+    with open(name) as fin:
+        for line in fin:
+            if not line or "*" in line:
+                continue
+            
+            if "P1" in line:
+                e1 = True
+                e2, e3 = False, False
+                continue
+            elif "P2" in line:
+                e2 = True
+                e1, e3 = False, False
+                continue
+            elif "P3" in line:
+                e3 = True
+                e1, e2 = False, False
+                continue
+            line = "".join(line.split())
+            if e1:
+                malPkts1.append(int(line))
+            elif e2:
+                malPkts2.append(int(line))
+            elif e3:
+                malPkts3.append(int(line))
+    return malPkts1, malPkts2, malPkts3
+
+####
+# Create Y labels
+####
+# creates labels for data set
+#   Input: list of attak point indexes
+#           length of data
+#   Output: list of labels [0, 1] 0 being benign and 1 being malicious
+def createY(lenData, atkPnts):
+    y = []
+    j = 0
+    for i in range(lenData):
+        if j < len(atkPnts) and i == atkPnts[j]:     # NOTE we can do this bc atkPnts are in numerical order
+            y.append(1)
+#            y.append("attack")
+            j += 1
+        else:
+            y.append(0)
+#            y.append("normal")
+    return y
+#    return np.flip(y)
+
+
+
+#
+#
+# XXX UNB main thesis dataset functions
+#
+#
+# gets the list of csv's from directory
+def getUNBFile(day='', typ=False):
+    days = ['Monday','Tuesday','Wednesday','Thursday','Friday']
+    csvList = []
+    cdir = "MachineLearningCVE/"
+    if typ:
+        cdir = "datasets/TrafficLabelling/"
+    # order list by day of week (M->F)
+    for d in days:
+        for f in listdir(cdir):
+            if isfile(join(cdir, f)) and d.lower() in f.lower() and day.lower() in f.lower():
+                csvList.append(cdir+f)
+
+    return csvList
+
+
 # loads a list of files and extracts/forms contents
-def loadFile(names):
+def loadUNBFile(names):
     num_rows = 8101   # TODO check to make sure attacks are in data For Thurs short file: 82840
     num_feat = 323 #166    # TODO this will change with one-hot....
 
@@ -158,8 +206,8 @@ def loadFile(names):
     return np.matrix(mat)
 
 # FOR MAIN THESIS
-# This is pretty similar as what is needed for CreatY in models.py
-def loadLabels(filename):
+# This is pretty similar as what is needed for CreatY
+def loadUNBLabels(filename):
     malPkts = []
     first = True
     with open(filename) as fin:
@@ -192,7 +240,7 @@ if __name__ == "__main__":
     print("Running")
     
     '''
-    data = getData("inside/LLS_DDOS_2.0.2-inside-all-MORE")
+    data = getLLDOSData("datasets/inside/LLS_DDOS_2.0.2-inside-all-MORE")
     f = open("inside/matrixAllMORE.txt", "w")
     for i in data:
         f.write(str(i[0])+"\n")
@@ -200,13 +248,13 @@ if __name__ == "__main__":
     '''    
 
     #print(data)
-#    malPkts1, malPkts2, malPkts3 = listLabels("phase-1-shorter-counts.txt")
+#    malPkts1, malPkts2, malPkts3 = listLLDOSLabels("phase-1-shorter-counts.txt")
 #    atks = getAttacks("inside/LLS_DDOS_2.0.2-inside-phase-1", malPkts1)
 #    print(atks)
 #    print("1: ",malPkts1,"\n2: ",malPkts2,"\n3:",malPkts3)
 
     '''    
-    pnts = getLabels("inside/LLS_DDOS_2.0.2-inside-all-MORE")
+    pnts = getLLDOSLabels("datasets/inside/LLS_DDOS_2.0.2-inside-all-MORE")
 
     # writes attack data to file
     fi = open("testfile.txt","w") 

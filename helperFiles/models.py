@@ -155,30 +155,6 @@ def findOptVal(regr, X_train, y_train):
     best_grid = grid_search.best_estimator_
     print(grid_accuracy)
 
-
-
-
-####
-# Create Y labels
-####
-# creates labels for data set
-#   Input: list of attak point indexes
-#           length of data
-#   Output: list of labels [0, 1] 0 being benign and 1 being malicious
-def createY(lenData, atkPnts):
-    y = []
-    j = 0
-    for i in range(lenData):
-        if j < len(atkPnts) and i == atkPnts[j]:     # NOTE we can do this bc atkPnts are in numerical order
-            y.append(1)
-#            y.append("attack")
-            j += 1
-        else:
-            y.append(0)
-#            y.append("normal")
-    return y
-#    return np.flip(y)
-
 # runs all the models or chosen models
 #   Input: X mat, 
 #          L mat, 
@@ -194,19 +170,25 @@ def runModels(X, L, S, mpc, splitOn, code=[], tune=False):
     if not type(mpc) == str: # TODO check if list or if filename
         y = createY(len(X), mpc)
     else:
-        y = loadLabels(mpc)
+        y = loadUNBLabels(mpc)
     # TODO CHECK THAT THESE ARE CORRECT
     y_train, y_test = np.split(y, [splitOn[0]])
     y_test, y_validate = np.split(y_test, [splitOn[1]])
+    # FIXME 
+    y_train, y_test = y_test, y_validate
     print(y_train.shape, y_test.shape, y_validate.shape)
 
-    LS1 = np.concatenate((L[0],S[0]), axis=1)
-    XLS1 = np.concatenate((X[0], L[0], S[0]), axis=1)
+#    LS1 = np.concatenate((L[0],S[0]), axis=1)
+#    XLS1 = np.concatenate((X[0], L[0], S[0]), axis=1)
     LS2 = np.concatenate((L[1],S[1]), axis=1)
     XLS2 = np.concatenate((X[1], L[1], S[1]), axis=1)
-    train = [X[0], LS1, XLS1]     # holds data matricies to run models on
-    test = [X[1], LS2, XLS2]
-#    validate = [X3, LS3, XLS3]
+    LS3 = np.concatenate((L[2],S[2]), axis=1)
+    XLS3 = np.concatenate((X[2], L[2], S[2]), axis=1)
+#    train = [X[0], LS1, XLS1]     # holds data matricies to run models on
+#    test = [X[1], LS2, XLS2]
+    train = [X[1], LS2, XLS2]
+    test = [X[2], LS3, XLS3]
+
     matName = ["X", "CONCAT LS", "CONCAT XLS"]
     # can choose code(s) to use
     if not code:

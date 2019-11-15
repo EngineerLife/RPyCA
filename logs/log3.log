@@ -1097,3 +1097,30 @@ Actual Packet Type
 0                      3033   0
 1                         0  17
 2019-11-08 14:41:40,437  INFO:f1_Score: 1.000000
+2019-11-13 12:44:37,096  INFO:Run started.
+2019-11-13 12:44:37,096  INFO: Start variables= lambda(s): [0.031]  type: 
+2019-11-13 12:44:37,097  INFO: Next Lambda: [0.031]
+2019-11-13 12:45:25,718  INFO:Run started.
+2019-11-13 12:45:25,719  INFO: Start variables= lambda(s): [0.031]  type: 
+2019-11-13 12:45:25,719  INFO: Next Lambda: [0.031]
+2019-11-13 12:45:48,388  INFO:FOR MATRIX: X
+2019-11-13 12:45:48,465  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      3033   0
+1                         0  17
+2019-11-13 12:45:48,479  INFO:f1_Score: 1.000000
+2019-11-13 12:45:49,448  INFO:FOR MATRIX: CONCAT LS
+2019-11-13 12:45:49,509  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      3033   0
+1                         0  17
+2019-11-13 12:45:49,523  INFO:f1_Score: 1.000000
+2019-11-13 12:45:50,746  INFO:FOR MATRIX: CONCAT XLS
+2019-11-13 12:45:50,804  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      3033   0
+1                         0  17
+2019-11-13 12:45:50,818  INFO:f1_Score: 1.000000
