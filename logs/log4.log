@@ -24,3 +24,300 @@ Actual Packet Type
 0                      892  0
 1                        0  8
 2019-11-15 15:22:06,789  INFO:f1_Score: 1.000000
+2019-11-15 16:11:05,918  INFO:Run started.
+2019-11-15 16:11:05,919  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:11:05,947  INFO: Next Lambda: [0.01]
+2019-11-15 16:11:06,115  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,139  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,140  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,170  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,170  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,199  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,199  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,229  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,229  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,258  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,258  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,288  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,288  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,317  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,317  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,353  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,353  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,384  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,384  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,421  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,421  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,453  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,453  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,500  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,500  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,545  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,546  DEBUG:Random seed = 4322
+2019-11-15 16:11:06,726  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:06,726  DEBUG:Random seed = 4322
+2019-11-15 16:11:07,005  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:07,005  DEBUG:Random seed = 4322
+2019-11-15 16:11:07,335  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:07,335  DEBUG:Random seed = 4322
+2019-11-15 16:11:07,715  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:07,715  DEBUG:Random seed = 4322
+2019-11-15 16:11:08,146  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:08,146  DEBUG:Random seed = 4322
+2019-11-15 16:11:08,546  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:11:08,546  DEBUG:Random seed = 4322
+2019-11-15 16:13:19,931  INFO:Run started.
+2019-11-15 16:13:19,931  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:13:19,961  INFO: Next Lambda: [0.01]
+2019-11-15 16:13:20,139  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,161  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,161  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,190  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,191  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,220  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,220  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,250  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,250  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,289  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,289  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,321  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,321  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,351  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,352  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,381  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,381  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,411  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,411  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,440  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,440  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,470  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,470  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,498  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,499  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,528  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,528  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,558  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,558  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,585  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,585  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,617  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,617  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,653  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,653  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,686  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,686  DEBUG:Random seed = 4322
+2019-11-15 16:13:20,879  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:13:20,879  DEBUG:Random seed = 4322
+2019-11-15 16:14:31,946  INFO:Run started.
+2019-11-15 16:14:31,946  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:14:31,976  INFO: Next Lambda: [0.01]
+2019-11-15 16:14:32,163  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,189  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,189  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,221  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,221  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,254  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,254  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,290  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,290  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,322  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,322  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,352  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,354  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,401  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,402  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,435  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,435  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,470  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,471  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,512  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,512  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,543  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,544  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,575  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,575  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,611  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,611  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,651  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,651  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,683  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,684  DEBUG:Random seed = 4322
+2019-11-15 16:14:32,811  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:32,811  DEBUG:Random seed = 4322
+2019-11-15 16:14:33,147  WARNING:Check failed for creating matrix sections! Revaluating...
+2019-11-15 16:14:33,147  DEBUG:Random seed = 4322
+2019-11-15 16:16:06,798  INFO:Run started.
+2019-11-15 16:16:06,798  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:16:06,830  INFO: Next Lambda: [0.01]
+2019-11-15 16:16:07,019  DEBUG:Random seed = 4322
+2019-11-15 16:16:07,045  INFO:Randomizaiton of X and y matrices complete.
+2019-11-15 16:18:06,310  INFO:Run started.
+2019-11-15 16:18:06,310  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:18:06,338  INFO: Next Lambda: [0.01]
+2019-11-15 16:18:06,519  DEBUG:Random seed = 4322
+2019-11-15 16:18:59,506  INFO:Run started.
+2019-11-15 16:18:59,506  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:18:59,534  INFO: Next Lambda: [0.01]
+2019-11-15 16:18:59,705  DEBUG:Random seed = 4322
+2019-11-15 16:19:42,240  INFO:Run started.
+2019-11-15 16:19:42,240  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:19:42,270  INFO: Next Lambda: [0.01]
+2019-11-15 16:19:42,461  DEBUG:Random seed = 4322
+2019-11-15 16:20:00,718  INFO:Run started.
+2019-11-15 16:20:00,719  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:20:00,748  INFO: Next Lambda: [0.01]
+2019-11-15 16:20:00,934  DEBUG:Random seed = 4322
+2019-11-15 16:20:00,963  INFO:Randomizaiton of X and y matrices complete.
+2019-11-15 16:21:07,074  INFO:Run started.
+2019-11-15 16:21:07,074  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:21:07,106  INFO: Next Lambda: [0.01]
+2019-11-15 16:21:07,307  DEBUG:Random seed = 4322
+2019-11-15 16:22:10,620  INFO:Run started.
+2019-11-15 16:22:10,620  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:22:10,653  INFO: Next Lambda: [0.01]
+2019-11-15 16:22:10,874  DEBUG:Random seed = 4322
+2019-11-15 16:22:37,760  INFO:Run started.
+2019-11-15 16:22:37,760  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:22:37,790  INFO: Next Lambda: [0.01]
+2019-11-15 16:22:37,991  DEBUG:Random seed = 4322
+2019-11-15 16:23:08,647  INFO:Run started.
+2019-11-15 16:23:08,648  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:23:08,676  INFO: Next Lambda: [0.01]
+2019-11-15 16:23:08,860  DEBUG:Random seed = 4322
+2019-11-15 16:23:08,886  INFO:Randomizaiton of X and y matrices complete.
+2019-11-15 16:24:27,784  INFO:Run started.
+2019-11-15 16:24:27,784  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:24:27,813  INFO: Next Lambda: [0.01]
+2019-11-15 16:24:27,995  DEBUG:Random seed = 4322
+2019-11-15 16:24:28,024  INFO:Randomizaiton of X and y matrices complete.
+2019-11-15 16:24:44,811  INFO:FOR MATRIX: X
+2019-11-15 16:24:44,841  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      1783   0
+1                         0  16
+2019-11-15 16:24:44,851  INFO:f1_Score: 1.000000
+2019-11-15 16:24:45,457  INFO:FOR MATRIX: CONCAT LS
+2019-11-15 16:24:45,493  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      1783   0
+1                         0  16
+2019-11-15 16:24:45,505  INFO:f1_Score: 1.000000
+2019-11-15 16:24:46,318  INFO:FOR MATRIX: CONCAT XLS
+2019-11-15 16:24:46,346  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      1783   0
+1                         0  16
+2019-11-15 16:24:46,353  INFO:f1_Score: 1.000000
+2019-11-15 16:44:08,881  INFO:Run started.
+2019-11-15 16:44:08,881  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:44:08,910  INFO: Next Lambda: [0.01]
+2019-11-15 16:44:09,115  DEBUG:Random seed = 4322
+2019-11-15 16:46:28,579  INFO:Run started.
+2019-11-15 16:46:28,580  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 16:46:28,608  INFO: Next Lambda: [0.01]
+2019-11-15 16:46:28,789  DEBUG:Random seed = 4322
+2019-11-15 17:03:18,808  INFO:Run started.
+2019-11-15 17:03:18,809  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:03:18,837  INFO: Next Lambda: [0.01]
+2019-11-15 17:03:19,016  DEBUG:Random seed = 4322
+2019-11-15 17:04:00,880  INFO:Run started.
+2019-11-15 17:04:00,880  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:04:00,908  INFO: Next Lambda: [0.01]
+2019-11-15 17:04:01,092  DEBUG:Random seed = 4322
+2019-11-15 17:04:52,011  INFO:Run started.
+2019-11-15 17:04:52,011  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:04:52,039  INFO: Next Lambda: [0.01]
+2019-11-15 17:04:52,218  DEBUG:Random seed = 4322
+2019-11-15 17:05:54,970  INFO:Run started.
+2019-11-15 17:05:54,971  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:05:54,999  INFO: Next Lambda: [0.01]
+2019-11-15 17:05:55,190  DEBUG:Random seed = 4322
+2019-11-15 17:06:04,932  INFO:Run started.
+2019-11-15 17:06:04,932  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:06:04,961  INFO: Next Lambda: [0.01]
+2019-11-15 17:06:05,159  DEBUG:Random seed = 4322
+2019-11-15 17:06:44,341  INFO:Run started.
+2019-11-15 17:06:44,341  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:06:44,370  INFO: Next Lambda: [0.01]
+2019-11-15 17:06:44,549  DEBUG:Random seed = 4322
+2019-11-15 17:07:07,633  INFO:Run started.
+2019-11-15 17:07:07,633  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:07:07,662  INFO: Next Lambda: [0.01]
+2019-11-15 17:07:07,847  DEBUG:Random seed = 4322
+2019-11-15 17:08:01,842  INFO:Run started.
+2019-11-15 17:08:01,842  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:08:01,871  INFO: Next Lambda: [0.01]
+2019-11-15 17:08:02,055  DEBUG:Random seed = 4322
+2019-11-15 17:08:26,929  INFO:Run started.
+2019-11-15 17:08:26,929  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:08:26,969  INFO: Next Lambda: [0.01]
+2019-11-15 17:08:27,215  DEBUG:Random seed = 4322
+2019-11-15 17:09:16,287  INFO:Run started.
+2019-11-15 17:09:16,287  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:09:16,316  INFO: Next Lambda: [0.01]
+2019-11-15 17:09:16,501  DEBUG:Random seed = 4322
+2019-11-15 17:10:41,690  INFO:Run started.
+2019-11-15 17:10:41,690  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:10:41,736  INFO: Next Lambda: [0.01]
+2019-11-15 17:10:41,997  DEBUG:Random seed = 4322
+2019-11-15 17:11:01,709  INFO:Run started.
+2019-11-15 17:11:01,709  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:11:01,755  INFO: Next Lambda: [0.01]
+2019-11-15 17:11:02,117  DEBUG:Random seed = 4322
+2019-11-15 17:11:24,573  INFO:Run started.
+2019-11-15 17:11:24,573  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:11:24,677  INFO: Next Lambda: [0.01]
+2019-11-15 17:11:25,228  DEBUG:Random seed = 4322
+2019-11-15 17:11:34,416  INFO:Run started.
+2019-11-15 17:11:34,417  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:11:34,483  INFO: Next Lambda: [0.01]
+2019-11-15 17:11:34,929  DEBUG:Random seed = 4322
+2019-11-15 17:12:01,522  INFO:Run started.
+2019-11-15 17:12:01,522  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:12:01,550  INFO: Next Lambda: [0.01]
+2019-11-15 17:12:01,731  DEBUG:Random seed = 4322
+2019-11-15 17:18:28,947  INFO:Run started.
+2019-11-15 17:18:28,948  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:18:28,976  INFO: Next Lambda: [0.01]
+2019-11-15 17:18:29,164  DEBUG:Random seed = 4322
+2019-11-15 17:18:57,142  INFO:Run started.
+2019-11-15 17:18:57,142  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:18:57,170  INFO: Next Lambda: [0.01]
+2019-11-15 17:18:57,353  DEBUG:Random seed = 4322
+2019-11-15 17:19:39,712  INFO:Run started.
+2019-11-15 17:19:39,712  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:19:39,739  INFO: Next Lambda: [0.01]
+2019-11-15 17:19:39,929  DEBUG:Random seed = 4322
+2019-11-15 17:19:53,130  INFO:Run started.
+2019-11-15 17:19:53,130  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:19:53,157  INFO: Next Lambda: [0.01]
+2019-11-15 17:19:53,335  DEBUG:Random seed = 4322
+2019-11-15 17:20:07,535  INFO:Run started.
+2019-11-15 17:20:07,536  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 17:20:07,564  INFO: Next Lambda: [0.01]
+2019-11-15 17:20:07,747  DEBUG:Random seed = 4322
+2019-11-15 17:20:07,776  INFO:Randomizaiton of X and y matrices complete.
+2019-11-15 17:20:23,797  INFO:FOR MATRIX: X
+2019-11-15 17:20:23,824  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      1782   0
+1                         1  16
+2019-11-15 17:20:23,831  INFO:f1_Score: 0.969697
+2019-11-15 17:20:24,334  INFO:FOR MATRIX: CONCAT LS
+2019-11-15 17:20:24,359  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      1782   0
+1                         1  16
+2019-11-15 17:20:24,365  INFO:f1_Score: 0.969697
+2019-11-15 17:20:25,140  INFO:FOR MATRIX: CONCAT XLS
+2019-11-15 17:20:25,163  INFO:
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      1782   0
+1                         1  16
+2019-11-15 17:20:25,169  INFO:f1_Score: 0.969697

@@ -25,7 +25,8 @@ def randData(X_data, y_data):
 #    numValid = numItems - (numTrain+numTest)    # rest of rest is validation
     
     # set random seed
-    rSeed = randint(0,numItems)
+#    rSeed = randint(0,numItems)
+    rSeed = 4322
     logMsg(0, "Random seed = %d" % rSeed)
     seed(rSeed)
 
@@ -42,17 +43,32 @@ def randData(X_data, y_data):
         randy.append(y_data[index])
 
     # separate sections of data
+#    X_train = np.matrix(randX[:numTrain])
+#    X_test = np.matrix(randX[numTrain:(numTrain+numTest)])
+#    X_valid = np.matrix(randX[(numTrain+numTest):])
     X_train = np.matrix(randX[:numTrain])
-    X_test = np.matrix(randX[numTrain:(numTrain+numTest)])
-    X_valid = np.matrix(randX[(numTrain+numTest):])
+    X_test = np.matrix(randX[numTrain:(numTrain+numTest-1)])
+    X_test[1] = randX[numTrain]
+    X_valid = np.matrix(randX[(numTrain+numTest-1):])
     X_mats = [X_train, X_test, X_valid]
 
+    print(X_test[0] == X_test[1])
+
+    y_test = np.array(randy[numTrain:(numTrain+numTest-1)])
+    y_test[1] = 1
+    print(y_test[0], y_test[1])
+#    y_test = np.array(randy[numTrain:(numTrain+numTest-1)])
+    y_valid = np.array(randy[(numTrain+numTest-1):])
     y_train = np.array(randy[:numTrain])
-    y_test = np.array(randy[numTrain:(numTrain+numTest)])
-    y_valid = np.array(randy[(numTrain+numTest):])
+#    y_test = np.array(randy[numTrain:(numTrain+numTest)])
+#    y_valid = np.array(randy[(numTrain+numTest):])
     y_mats = [y_train, y_test, y_valid]
 
     # check that each section has at least 2 classes
+    
+    print(np.unique(y_train, return_counts=True))
+    print(np.unique(y_test, return_counts=True))
+    print(np.unique(y_valid, return_counts=True))
     if (not 1 in y_train) or (not 1 in y_test) or (not 1 in y_valid):
         logMsg(2, "Check failed for creating matrix sections! Revaluating...")
         return randData(X_data, y_data)
