@@ -1,0 +1,26 @@
+2019-11-15 15:21:50,467  INFO:Run started.
+2019-11-15 15:21:50,468  INFO: Start variables= lambda(s): [0.01]  type: 
+2019-11-15 15:21:50,498  INFO: Next Lambda: [0.01]
+2019-11-15 15:21:50,676  DEBUG:Random seed = 4322
+2019-11-15 15:21:50,704  INFO:Randomizaiton of X and y matrices complete.
+2019-11-15 15:22:06,481  INFO:FOR MATRIX: X
+2019-11-15 15:22:06,515  INFO:
+Predicted Packet Type    0  1
+Actual Packet Type           
+0                      892  0
+1                        0  8
+2019-11-15 15:22:06,521  INFO:f1_Score: 1.000000
+2019-11-15 15:22:06,604  INFO:FOR MATRIX: CONCAT LS
+2019-11-15 15:22:06,632  INFO:
+Predicted Packet Type    0  1
+Actual Packet Type           
+0                      892  0
+1                        0  8
+2019-11-15 15:22:06,641  INFO:f1_Score: 1.000000
+2019-11-15 15:22:06,761  INFO:FOR MATRIX: CONCAT XLS
+2019-11-15 15:22:06,784  INFO:
+Predicted Packet Type    0  1
+Actual Packet Type           
+0                      892  0
+1                        0  8
+2019-11-15 15:22:06,789  INFO:f1_Score: 1.000000

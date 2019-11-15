@@ -13,7 +13,6 @@ from helperFiles.oneHot import *
 from helperFiles.fileHandler import *
 from helperFiles.plotter import *
 from helperFiles.models import *
-#from helperFiles.csvFiles import *
 
 # function to run PCA and RPCA
 def runAnalysis(X, lamScale):
@@ -23,7 +22,6 @@ def runAnalysis(X, lamScale):
 
     maxRank = np.linalg.matrix_rank(X)
 #    print("Max Rank: ", maxRank)
-
     T = np.asmatrix(X)  # gets shape of X
     u, v, vecM, vecEpsilon = [], [], [], []
 
@@ -39,7 +37,6 @@ def runAnalysis(X, lamScale):
     v = np.array(v)
     vecM = np.array(vecM)
     vecEpsilon = np.array(vecEpsilon)
-    alpha = 0.7
 
 #    print((1/math.sqrt(max(T.shape[0],T.shape[1]))))
 #    newLambda = (1/math.sqrt(max(T.shape[0],T.shape[1])))* lamScale
@@ -61,29 +58,15 @@ def runAnalysis(X, lamScale):
     # L^hat = u^hat dot E^hat dot VT^hat
     hatRows = len(E[E > 0])
     Uhat = U[:,:hatRows]
-    Ehat = np.diag(E[E > 0])    # sigma^hat old note: (set to threshold and set them to 0)
+    Ehat = np.diag(E[E > 0])
     VThat = VT[:hatRows]
     VTta = VT[hatRows:]
 
     print(Uhat.shape, Ehat.shape, VThat.shape, VTta.shape)
 
-#    print("# non-zero values: " + str(len(np.where(E>0)[0])))
-#    print("# negative values: " + str(len(np.where(E<0)[0])))
-#    print("# non-zero values: " + str(E[E>0]))
-
-#    XVTT = np.dot(X,VT.T)
-#    S1 = np.dot(XVTT, VT)
-#    print(S.shape, S1.shape)
-#    print(S, "\n\n", S1)
-#    exit(0)
-
-#    Xls = L + S
-#    Xt = X.T
-    # NOTE KEEP THESE 2 LINES
-#    xtx = np.dot(Xt, X)
 # TODO email haitao:
+#    xtx = np.dot(X.T, X)
 #    print(xtx.shape)
-#    exit(0)
     
     warnings.filterwarnings('always')
     print("\nL mean val: \n", np.mean(L))
@@ -99,21 +82,19 @@ def runAnalysis(X, lamScale):
     warnings.filterwarnings('ignore')
 
 #    return S, X, s, E, L, maxRank
-    return S, L, VTta, maxRank
+    return S, L, VTta
 
-def preproc(filename, l, alpha, typ):
+def preproc(filename, l, typ):
     # get X matrix then one-hot encode columns & creates final matrix
     if typ == "p":
         X = getLLDOSData(filename)   # loads and formats data from file
         newX = createMatrixProposal(X)  # This creates the matrix according to the OG Kathleen paper
     else:
         X = thesisDataset()
-#        print("preproc: ", X.shape)
         newX = createMatrix(X)  # main thesis dataset (default)
 
     X = np.asmatrix(newX)
     X.astype(float)     #TODO investigate this??? should be int? float? is it needed?
-#    X = cleanMat(X)    # TODO do we even need this too?
     X = normMat(X)
     print("Finished pre-processing. Running analysis...")
     return X
@@ -121,7 +102,7 @@ def preproc(filename, l, alpha, typ):
 def thesisDataset():
     # NOTE UNB INTRUSION DETECTION DATASET
 #    days = ['Monday','Tuesday','Wednesday','Thursday','Friday']
-    files = 'thurs'
+    files = 'thurs'     # TODO remove hardcoding
     testing = getUNBFile(files, True)
     testing = [testing[1]]
 #    print(testing)
@@ -141,7 +122,7 @@ def frange(start, stop, step):
 
 # main function
 if __name__ == '__main__':
-    setLog("logTESTx2x3")
+    setLog("log4")
     numSys = len(sys.argv)
     lam = []
     typ = ""
@@ -171,86 +152,42 @@ if __name__ == '__main__':
     else:
 #        mpc = 'datasets/TrafficLabelling/Thursday-WorkingHours-Morning-SHORT-WebAttacks.pcap_ISCX.csv'
         mpc = 'datasets/TrafficLabelling/Thursday-WorkingHours-Morning-8100-SHORT-WebAttacks.pcap_ISCX.csv'
-
-    i = 1
-    alpha = 0.7
-    # 0.027 is so far best lambda (I think)
-    # so 0.554 is the best lambdaScale (I think)
+        y = loadUNBLabels(mpc)
 
 
-#    fig = plt.figure()
-#    fig.subplots_adjust(left=0.2, bottom=0.05, right=0.8, hspace=0.5, wspace=0.6)
-
-
-    # NOTE 0.05 got f1 score of 1 for rf!!
+    # NOTE lambda of 0.05 got f1 score of 1 for rf!!
     for l in lam:
-#    for l in frange(0.04, 0.06, 0.01): #lam:
+#    for l in frange(0.04, 0.06, 0.01):
         logMsg(1, " Next Lambda: %s" % (str(lam)))
         print("\n\nNEXT LAMBDA: ", l)
-        X = preproc("datasets/inside/LLS_DDOS_2.0.2-inside-all-MORE", l, alpha, typ)
-#        print("X: ",X.shape)
+        X = preproc("datasets/inside/LLS_DDOS_2.0.2-inside-all-MORE", l, typ)
 
-        # TODO 
-        splitOn = [4050, 3050]
-        # X1 = train, X2 = test, X3 = validate
-        X1, X2 = np.split(X, [splitOn[0]])
-        X2, X3 = np.split(X2, [splitOn[1]])
+        if typ == "p":
+            y = createY(len(X), mpc)
+        # randomizes data and creates separated matrices
+        [X1, X2, X3], ymat = randData(X, y)
 
         # runs RPCA
-        S1, L1, VTta, maxRank = runAnalysis(X1, l)
+        S1, L1, VTta = runAnalysis(X1, l)
+        print("X1 SHAPES: X L S", X1.shape, L1.shape, S1.shape)
+
         # test
-#        S2, X2, E2, L2, maxRank1 = runAnalysis(X, l)
-        # TODO X2 dot V1 dot V1.T # V's are slimmed
         X2VTT = np.dot(X2, VTta.T)
         S2 = np.dot(X2VTT, VTta)
         L2 = X2 - S2
         print("X2 SHAPES: X L S", X2.shape, L2.shape, S2.shape)
 
         # validate
-        # TODO X3 dot V1 dot V1.T
         X3VTT = np.dot(X3, VTta.T)
         S3 = np.dot(X3VTT, VTta)
         L3 = X3 - S3
         print("X3 SHAPES: X L S", X3.shape, L3.shape, S3.shape)
 
-        '''
-        # phase 1
-        S1, X1, s1, E1, maxRank1 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-1", l, alpha, typ)
-
-        # phase 2
-        S2, X2, s2, E2, maxRank2 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-2", l, alpha, typ)
-
-        # phase 3
-        S3, X3, s3, E3, maxRank3 = preproc("inside/LLS_DDOS_2.0.2-inside-phase-3", l, alpha, typ)
-
-        x1 = fig.add_subplot(3, len(lam), i)
-        x2 = fig.add_subplot(3, len(lam), i+len(lam))
-        x3 = fig.add_subplot(3, len(lam), i+(len(lam)*2))
-
-        plotter(S1,malPkts1,alpha,xname="Phase 1 w/ Lambda: "+str(l),bx=x1)
-        plotter(S2,malPkts2,alpha,xname="Phase 2 w/ Lambda: "+str(l),bx=x2)
-        plotter(S3,malPkts3,alpha,xname="Phase 3 w/ Lambda: "+str(l),bx=x3)
-        '''
-#        plotter(S1,mpc,alpha,xname="All Phases w/ LambdaScale: "+str(lam),bx=x1)
-#        i += 1
-
         # ML/AI
-        # old was 290 for "all" file
-        if typ == "p":
-            splitOn = 8000
-        else:
-            splitOn = [4050, 3050]
-#            splitOn = 4050
-#            splitOn = 900
-
         Xmat = [X1 ,X2, X3]
         Lmat = [L1, L2, L3]
         Smat = [S1, S2, S3]
         
         toRun = ["svm"]
-        # TODO ask about this?????
-#        runModels(X_mats, L1, S1, mpc, splitOn)
 #        runModels(Xmat, Lmat, Smat, mpc, splitOn)    # NOTE this runs all models!!!
-        runModels(Xmat, Lmat, Smat, mpc, splitOn, code=toRun)
-
-
+        runModels(Xmat, Lmat, Smat, ymat, code=toRun)
