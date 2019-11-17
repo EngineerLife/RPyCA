@@ -84,6 +84,7 @@ def runAnalysis(X, lamScale):
 #    return S, X, s, E, L, maxRank
     return S, L, VTta
 
+# TODO change parameters so that filename is not needed
 def preproc(filename, l, typ):
     # get X matrix then one-hot encode columns & creates final matrix
     if typ == "p":
@@ -122,7 +123,7 @@ def frange(start, stop, step):
 
 # main function
 if __name__ == '__main__':
-    setLog("log4")
+    setLog("logBugTesting")
     numSys = len(sys.argv)
     lam = []
     typ = ""
@@ -166,6 +167,7 @@ if __name__ == '__main__':
             y = createY(len(X), mpc)
         # randomizes data and creates separated matrices
         [X1, X2, X3], ymat = randData(X, y)
+#        [X1, X2, X3], ymat = randData(X, y, 0.5, 0.5)
 
         # runs RPCA
         S1, L1, VTta = runAnalysis(X1, l)

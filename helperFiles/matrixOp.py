@@ -15,13 +15,13 @@ def normMat(M):
 
 
 # randomizes the data in the main X matrix and cooresponding y labels
-def randData(X_data, y_data):
+def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(1/3)):
     randX, randy = [], []   # made this var before I realized it's your name; Randy P.
 
     # determine size of train, test, and validate matrices
     numItems = X_data.shape[0]
-    numTrain = math.ceil(X_data.shape[0] * (2/3))    # 2/3 is training
-    numTest = math.ceil(numTrain * (1/3))    # 1/3 of rest is testing
+    numTrain = math.ceil(X_data.shape[0] * ratioTrain)    # default is 2/3 is training
+    numTest = math.ceil(numTrain * ratioTest)    # default is 1/3 of rest is testing
 #    numValid = numItems - (numTrain+numTest)    # rest of rest is validation
     
     # set random seed
@@ -44,31 +44,53 @@ def randData(X_data, y_data):
 
     # separate sections of data
 #    X_train = np.matrix(randX[:numTrain])
-#    X_test = np.matrix(randX[numTrain:(numTrain+numTest)])
-#    X_valid = np.matrix(randX[(numTrain+numTest):])
+#    X_test = np.matrix(randX[numTrain:(numTrain+numTest-1)])
+#    X_test[1] = randX[numTrain]
+#    X_valid = np.matrix(randX[(numTrain+numTest-1):])
+
     X_train = np.matrix(randX[:numTrain])
-    X_test = np.matrix(randX[numTrain:(numTrain+numTest-1)])
-    X_test[1] = randX[numTrain]
-    X_valid = np.matrix(randX[(numTrain+numTest-1):])
+    X_test = np.matrix(randX[numTrain:(numTrain+numTest)])
+    X_valid = np.matrix(randX[(numTrain+numTest):])
     X_mats = [X_train, X_test, X_valid]
 
-    print(X_test[0] == X_test[1])
+#    print(X_test[0] == X_test[1])
 
-    y_test = np.array(randy[numTrain:(numTrain+numTest-1)])
-    y_test[1] = 1
-    print(y_test[0], y_test[1])
+#    y_train = np.array(randy[:numTrain])
 #    y_test = np.array(randy[numTrain:(numTrain+numTest-1)])
-    y_valid = np.array(randy[(numTrain+numTest-1):])
+#    y_test[1] = 1
+#    print(y_test[0], y_test[1])
+#    y_test = np.array(randy[numTrain:(numTrain+numTest-1)])
+#    y_valid = np.array(randy[(numTrain+numTest-1):])
+
     y_train = np.array(randy[:numTrain])
-#    y_test = np.array(randy[numTrain:(numTrain+numTest)])
-#    y_valid = np.array(randy[(numTrain+numTest):])
+    y_test = np.array(randy[numTrain:(numTrain+numTest)])
+    y_valid = np.array(randy[(numTrain+numTest):])
     y_mats = [y_train, y_test, y_valid]
 
     # check that each section has at least 2 classes
     
+    logMsg(0, "y_train class counts: %s" % str(np.unique(y_train, return_counts=True)))
+    logMsg(0, "y_test class counts: %s" % str(np.unique(y_test, return_counts=True)))
+    logMsg(0, "y_valid class counts: %s" % str(np.unique(y_valid, return_counts=True)))
     print(np.unique(y_train, return_counts=True))
     print(np.unique(y_test, return_counts=True))
     print(np.unique(y_valid, return_counts=True))
+
+#    lyt = len(y_test)
+#    rSeed = randint(0,lyt)
+#    print("NEW RANDOM SEED: ", rSeed)
+#    seed(rSeed)
+#    order = np.arange(lyt)
+#    shuffle(order)
+    
+#    ry = []
+#    for index in order:
+#        ry.append(y_test[index])
+#    print("Are original y_test and new y_test the same? ", np.array_equal(y_test, ry))
+#    y_test = np.array(ry)
+#    y_mats = [y_train, y_test, y_valid]
+#    print("AFTER 2nd RANOMIZATION: ",np.unique(y_test, return_counts=True))
+
     if (not 1 in y_train) or (not 1 in y_test) or (not 1 in y_valid):
         logMsg(2, "Check failed for creating matrix sections! Revaluating...")
         return randData(X_data, y_data)
@@ -79,7 +101,7 @@ def randData(X_data, y_data):
 
 # cleans the numpy matrix of any INF or NaN values
 # todo change later so values are NOT removed
-# XXX MAY NOT USE THIS
+# XXX NO LONGER USES THIS
 def cleanMat(M):
     if np.isnan(np.sum(M)):
         M = M[~np.isnan(M)] # just remove nan elements from vector
