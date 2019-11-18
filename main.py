@@ -123,7 +123,7 @@ def frange(start, stop, step):
 
 # main function
 if __name__ == '__main__':
-    setLog("logBugTesting")
+    setLog("logBugTesting2")
     numSys = len(sys.argv)
     lam = []
     typ = ""
@@ -166,8 +166,8 @@ if __name__ == '__main__':
         if typ == "p":
             y = createY(len(X), mpc)
         # randomizes data and creates separated matrices
-        [X1, X2, X3], ymat = randData(X, y)
-#        [X1, X2, X3], ymat = randData(X, y, 0.5, 0.5)
+#        [X1, X2, X3], ymat = randData(X, y)
+        [X1, X2, X3], ymat = randData(X, y, 0.055)
 
         # runs RPCA
         S1, L1, VTta = runAnalysis(X1, l)

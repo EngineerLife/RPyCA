@@ -148,3 +148,27 @@ Actual Packet Type
 2019-11-17 13:07:04,340  DEBUG: y_test class counts: (array([0, 1]), array([1784,   16]))
 2019-11-17 13:07:04,341  DEBUG: y_valid class counts: (array([0, 1]), array([892,   8]))
 2019-11-17 13:07:04,342  INFO: Randomizaiton of X and y matrices complete.
+2019-11-17 13:09:21,722  INFO: Run started.
+2019-11-17 13:09:21,722  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-17 13:09:21,796  INFO:  Next Lambda: [0.01]
+2019-11-17 13:09:22,198  DEBUG: Random seed = 4322
+2019-11-17 13:09:22,253  DEBUG: y_train class counts: (array([0, 1]), array([804,   6]))
+2019-11-17 13:09:22,254  DEBUG: y_test class counts: (array([0, 1]), array([267,   3]))
+2019-11-17 13:09:22,255  DEBUG: y_valid class counts: (array([0, 1]), array([6959,   61]))
+2019-11-17 13:09:22,257  INFO: Randomizaiton of X and y matrices complete.
+2019-11-17 13:14:00,731  INFO: Run started.
+2019-11-17 13:14:00,733  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-17 13:14:00,837  INFO:  Next Lambda: [0.01]
+2019-11-17 13:14:01,456  DEBUG: Random seed = 4322
+2019-11-17 13:14:01,555  DEBUG: y_train class counts: (array([0, 1]), array([804,   6]))
+2019-11-17 13:14:01,556  DEBUG: y_test class counts: (array([0, 1]), array([267,   3]))
+2019-11-17 13:14:01,557  DEBUG: y_valid class counts: (array([0, 1]), array([6959,   61]))
+2019-11-17 13:14:01,559  INFO: Randomizaiton of X and y matrices complete.
+2019-11-17 13:14:33,371  INFO: Run started.
+2019-11-17 13:14:33,371  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-17 13:14:33,449  INFO:  Next Lambda: [0.01]
+2019-11-17 13:14:33,882  DEBUG: Random seed = 4322
+2019-11-17 13:14:33,950  DEBUG: y_train class counts: (array([0, 1]), array([804,   6]))
+2019-11-17 13:14:33,950  DEBUG: y_test class counts: (array([0, 1]), array([267,   3]))
+2019-11-17 13:14:33,951  DEBUG: y_valid class counts: (array([0, 1]), array([6959,   61]))
+2019-11-17 13:14:33,955  INFO: Randomizaiton of X and y matrices complete.

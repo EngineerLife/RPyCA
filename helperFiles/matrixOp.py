@@ -15,13 +15,15 @@ def normMat(M):
 
 
 # randomizes the data in the main X matrix and cooresponding y labels
-def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(1/3)):
+def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(2/3)):
+    print("train:", ratioTrain, "test:", ratioTest)
     randX, randy = [], []   # made this var before I realized it's your name; Randy P.
 
     # determine size of train, test, and validate matrices
     numItems = X_data.shape[0]
     numTrain = math.ceil(X_data.shape[0] * ratioTrain)    # default is 2/3 is training
-    numTest = math.ceil(numTrain * ratioTest)    # default is 1/3 of rest is testing
+#    numTest = math.ceil(numTrain * ratioTest)    # default is 2/3 of rest is testing
+    numTest = math.ceil((numItems-numTrain) * ratioTest)    # default is 2/3 of rest is testing
 #    numValid = numItems - (numTrain+numTest)    # rest of rest is validation
     
     # set random seed
@@ -93,7 +95,7 @@ def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(1/3)):
 
     if (not 1 in y_train) or (not 1 in y_test) or (not 1 in y_valid):
         logMsg(2, "Check failed for creating matrix sections! Revaluating...")
-        return randData(X_data, y_data)
+        return randData(X_data, y_data, ratioTrain, ratioTest)
 
     logMsg(1, "Randomizaiton of X and y matrices complete.")
     return X_mats, y_mats
