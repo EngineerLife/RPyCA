@@ -162,6 +162,7 @@ def createY(lenData, atkPnts):
 #
 #
 # gets the list of csv's from directory
+# eg: testing = getUNBFile(files, True)[1]
 def getUNBFile(day='', typ=False):
     days = ['Monday','Tuesday','Wednesday','Thursday','Friday']
     csvList = []
@@ -178,31 +179,26 @@ def getUNBFile(day='', typ=False):
 
 
 # loads a list of files and extracts/forms contents
-def loadUNBFile(names):
-    #num_rows = 10#8101   # TODO check to make sure attacks are in data For Thurs short file: 82840
-
-    mat = []
-    for name in names:
-        count = 0
-        with open(name) as fin:
-#            print(len(fin.readlines()))    # counts line in file
-            for line in fin:
-                if count >= 1: #and count <= num_rows:
-                    lineData = line.split(",")
-                    indexes = [1,2,3,4,5,46]
-                    temp = []
-                    for i in indexes:
-                        temp.append(lineData[i])
-#                        if item == 46:
-                    mat.append(temp)
-#                elif count == num_rows:
-#                    print("END: ",count)
-#                    newMat = np.matrix(mat)
-                    #print(newMat.shape)
-#                    break
-                count += 1
-        break   # XXX this only allows for 1 file to be read
-    return np.matrix(mat)
+# returns data wanted for X and the labels of those columns
+def loadUNBFile(name):
+    mat, featLabels = [], []
+    count = 0
+    with open(name) as fin:
+#        print(len(fin.readlines()))    # counts line in file
+        for line in fin:
+            lineData = line.split(",")
+#            indexes = [1,2,3,4,5,46]   # contains IP's
+            indexes = [2,4,5,46]
+            temp = []
+            for i in indexes:
+                if count == 0:
+                    featLabels.append(lineData[i])
+                else:
+                    temp.append(lineData[i])
+            if count >= 1:
+                mat.append(temp)
+            count += 1
+    return np.matrix(mat), featLabels
 
 # FOR MAIN THESIS
 # This is pretty similar as what is needed for CreateY

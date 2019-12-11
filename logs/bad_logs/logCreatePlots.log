@@ -7012,3 +7012,11 @@ Actual Packet Type
 0                      2682
 1                        18
 2019-12-05 14:35:49,389  INFO: f1_Score: 0.000000
+2019-12-11 14:56:41,627  INFO: Run started.
+2019-12-11 14:56:41,628  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-12-11 14:57:26,516  INFO: Run started.
+2019-12-11 14:57:26,517  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-12-11 14:57:47,517  INFO: Run started.
+2019-12-11 14:57:47,518  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-12-11 14:58:28,836  INFO: Run started.
+2019-12-11 14:58:28,836  INFO:  Start variables= lambda(s): [0.0]  type: 

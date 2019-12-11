@@ -262,106 +262,36 @@ def createMatrixProposal(X):
     return newX
 
 
+# XXX notes
+# specify what operation on which clmn
+# need matrix
+# concat new stuff on axis 1
+# record which feature
 
-# ONLY USED FOR THE UNB DATASET MAIN THESIS
-# TODO don't use IP's as feature
-def createMatrix(X):
+# start from 1st clmn of X
+def createMatrix(X, preOp, ohCheck, featLabels):
+    newX, feats = [], []
 
-    '''
-    # Source IP
-    sip = X[:,0].T
-    siph = []
-    # NOTE only uses the first byte of IP address
-    for r in range(X.shape[0]):
-        adr = sip[0,r]
-        # TODO use 2 bytes
-        newAdr = adr.split(".")[0] # non-routable IP's 192.168...
-        newAdr2= adr.split(".")[1]
-        print(newAdr)
-        print(newAdr2)
+#    print("COLUMNS TO GO THRU:",X.shape[1])
+    for clmn in range(X.shape[1]):
+        dataClmn = np.array(X[:,clmn].T, dtype=float)[0]
+#        print("DATA:",dataClmn)
+        # custom pre-operation (eg:)    # TODO make separate helper function for this
+        if preOp[clmn] == 1:
+            dataClmn[dataClmn > 1024] = 1024
+        elif preOp[clmn] == 2:
+            dataClmn = np.reshape(dataClmn, (dataClmn.shape[0],1))
+        # checks if clmn needs one hot encoding
+        if ohCheck[clmn]:
+            dataClmn = oneHot(dataClmn)
+        # add new clmn(s) to X and feature list
+        if clmn == 0:
+            newX = dataClmn
+        else:
+            newX = np.concatenate((newX, dataClmn), axis=1)
+        feats = makeFeat(feats, dataClmn.shape[1], featLabels[clmn])
+    np.asmatrix(newX)
+    finalX = normMat(newX)  # normalizes values
 
-        exit(0)
-        siph.append(newAdr)
-    sip = np.array(siph, dtype=int)
-    sipOH = oneHot(sip)
-    '''
+    return finalX, feats
 
-    # Source Port
-    sp = X[:,1].T
-    sph = []
-    for r in range(X.shape[0]):
-        sph.append(sp[0,r])
-    sp = np.array(sph, dtype=int)
-    sp[sp > 1024] = 1024
-    spOH = oneHot(sp)
-
-
-    # TODO extract destination port of victim IP
-    '''
-    # Destination IP
-    dip = X[:,2].T
-    diph = []
-    # NOTE only uses the first byte of IP address
-    for r in range(X.shape[0]):
-        adr = dip[0,r]
-        newAdr = adr.split(".")[0]
-        diph.append(newAdr)
-    dip = np.array(diph, dtype=int)
-    dipOH = oneHot(dip)
-    '''
-
-    # Destination Port
-    dp = X[:,3].T
-    dph = []
-    for r in range(X.shape[0]):
-        dph.append(dp[0,r])
-    dp = np.array(dph, dtype=int)
-    dp[dp > 1024] = 1024
-    dpOH = oneHot(dp)
-
-    # Protocols
-    p = X[:,4].T
-    ph = []
-    for r in range(X.shape[0]):
-        ph.append(p[0,r])
-    p = np.array(ph, dtype=int)
-    pOH = oneHot(p)
-
-    # Packet Length Mean
-    plm = X[:,5]
-    plmh = []
-    for r in range(X.shape[0]):
-        plmh.append(float(plm[r,0]))
-    plm = np.array(plmh, dtype=int)
-    plmd = plm.shape[0]
-    plm = np.reshape(plm, (plmd,1))
-
-    # TODO do we care about keeping these?????
-    # Distingishing destination ports
-    dp[dp < 1024] = 0
-    dp[dp >= 1024] = 1
-    ddpOH = oneHot(dp)
-
-    # Distinguishing source ports
-    sp[sp < 1024] = 0
-    sp[sp >= 1024] = 1
-    dspOH = oneHot(sp)
-
-    # creates new X matrix
-#    print(sipOH.shape, spOH.shape, dipOH.shape, dpOH.shape, pOH.shape, dspOH.shape, ddpOH.shape, plm.shape, spm.shape, dpm.shape)
-#    newX = np.concatenate((sipOH, dipOH, spOH, dpOH, dspOH, ddpOH, pOH, plm), axis=1)
-    newX = np.concatenate((spOH, dpOH, dspOH, ddpOH, pOH, plm), axis=1)
-
-    # MUST UPDATE with *NEW* FEATURES (not change in one-hot amt of clmns)
-    feats = []
-#    feats = makeFeat(feats, sipOH.shape[1], "Src IP")
-#    feats = makeFeat(feats, dipOH.shape[1], "Dest IP")
-    feats = makeFeat(feats, spOH.shape[1], "Src Port")
-    feats = makeFeat(feats, dpOH.shape[1], "Dest Port")
-    feats = makeFeat(feats, dspOH.shape[1], "Dist Src Port")
-    feats = makeFeat(feats, ddpOH.shape[1], "Dist Dest Port")
-    feats = makeFeat(feats, pOH.shape[1], "Protocol")
-    feats = makeFeat(feats, plm.shape[1], "Packet Length")
-#    print(len(feats))  # prints number of features used
-
-    return newX
