@@ -179,8 +179,7 @@ def getUNBFile(day='', typ=False):
 
 # loads a list of files and extracts/forms contents
 def loadUNBFile(names):
-    num_rows = 8101   # TODO check to make sure attacks are in data For Thurs short file: 82840
-    num_feat = 323 #166    # TODO this will change with one-hot....
+    #num_rows = 10#8101   # TODO check to make sure attacks are in data For Thurs short file: 82840
 
     mat = []
     for name in names:
@@ -220,6 +219,16 @@ def loadUNBLabels(filename):
                     malPkts.append(0)
             first = False
     return malPkts
+
+# saves matrix data to file
+def save(data, fileName):
+    fn = "helperFiles/files/" + fileName
+    f = open(fn, "w")
+    print("SAVING", fn)
+#    f = open(fileName, "w")
+    for i in data:
+        f.write(str(i[0])+"\n")
+    f.close()
 
 
 

@@ -150,31 +150,33 @@ def findOptVal(regr, X_train, y_train):
 
 
 # runs all the models or chosen models
-#   Input: X mat, 
-#          L mat, 
-#          S mat, 
-#          y mat,
+#   Input: X mat = 2 mats, 
+#          L mat = 2 mats, 
+#          S mat = 2 mats, 
+#          y mat = 2 vectors,
 #          code defaults to empty (all models run) or contains codes for specific ones to run
 #          tune if we are tuning the model with the data to find optimal values
 #   Output: Prints confusion matricies for each model and f1_scores
 def runModels(X, L, S, ymats, code=[], tune=False):
-    y_train, y_test, y_validate = ymats[0], ymats[1], ymats[2]
-    print(y_train.shape, y_test.shape, y_validate.shape)
+    y_train, y_test = ymats[0], ymats[1]
+#    print(y_train.shape, y_test.shape)
 
-    LS1 = np.concatenate((L[0],S[0]), axis=1)
-    XLS1 = np.concatenate((X[0], L[0], S[0]), axis=1)
-    LS2 = np.concatenate((L[1],S[1]), axis=1)
-    XLS2 = np.concatenate((X[1], L[1], S[1]), axis=1)
-    LS3 = np.concatenate((L[2],S[2]), axis=1)
-    XLS3 = np.concatenate((X[2], L[2], S[2]), axis=1)
-    train = [X[0], LS1, XLS1]     # holds data matricies to run models on
-    test = [X[1], LS2, XLS2]
+    LStrain = np.concatenate((L[0],S[0]), axis=1)
+    XLStrain = np.concatenate((X[0], L[0], S[0]), axis=1)
+    LStest = np.concatenate((L[1],S[1]), axis=1)
+    XLStest = np.concatenate((X[1], L[1], S[1]), axis=1)
+    train = [X[0], LStrain, XLStrain]     # holds data matricies to run models on
+    test = [X[1], LStest, XLStest]
 
     matName = ["X", "CONCAT LS", "CONCAT XLS"]
     # can choose code(s) to use
     if not code:
         code = np.arange(8)    # NOTE if there are more models increase this number
-   
+    ifgood = False
+
+    # XXX for plotting
+    d = []
+
     for i in code:
         countName = 0
         for matType in range(3):
@@ -184,69 +186,81 @@ def runModels(X, L, S, ymats, code=[], tune=False):
 #            y[", y_train.shape, y_test.shape, y_validate.shape, "]")
 #            print("Model SHAPES:", X_train.shape, X_test.shape, y_train.shape, y_test.shape)
 
-            y_pred, regr = chooseModel(str(i), X_train, X_test, y_train, tune)
+            y_pred, regr, m = chooseModel(str(i), X_train, X_test, y_train, tune)
+            logMsg(1, m)    # logs the chosen model
             # ONLY for tuning; not for training/main algo
             if tune and not regr == None:
                 print("Oops! Did not want to test this right now.")
                 exit(0)
                 findOptVal(regr, X_train, y_train)
 
-            print("FOR MATRIX: ", matName[countName])
+#            print("FOR MATRIX: ", matName[countName])
             logMsg(1, "FOR MATRIX: %s" % (matName[countName]))
 
             # Create confusion matrix
             cfm = pd.crosstab(y_test, y_pred, rownames=['Actual Packet Type'], colnames=['Predicted Packet Type'])
             logMsg(1, "\n%s" % str(cfm))
-            print(cfm)
+#            print(cfm)
             f1 = f1_score(y_test, y_pred)
             logMsg(1, "f1_Score: %f" % f1)
-            print("f1_Score: ", f1)
+
+            # XXX creates row for plotting
+            d.append(f1)
+
+            if float(f1) > 0.0:
+                print("f1_Score for %s : %s" % (matName[countName], str(f1)))
+#            if float(f1) >= 0.51:
+                ifgood = True
+#                print("GOOD f1_Score for %s : %s" % (matName[countName], str(f1)))
             countName += 1
+    return ifgood, d
+
 ####
 # chooses the model to run 
 #   [and any other qualities of it (used for tuning only)]
 ####
 def chooseModel(code, X_train, X_test, y_train, tune=False):
+    m = ""
     if code == "rf" or code == "0":
         if tune: return None, RandomForestRegressor()
-        print("************ RANDOM FOREST ************")
+        m = "************ RANDOM FOREST ************"
         y_pred = rf(X_train, X_test, y_train)
     elif code == "knn" or code == "1":
         if tune: return None, RandomForestRegressor()
-        print("************ KNN ************")
+        m = "************ KNN ************"
         y_pred = runKNN(X_train, X_test, y_train, 5)     # TODO accomidate for different number clusters
     elif code == "svm" or code == "2":
         if tune: return None, RandomForestRegressor()
-        print("************ SVM ************")
+        m = "************ SVM ************"
         y_pred = runSVM(X_train, X_test, y_train)
     elif code == "logreg" or code == "3":
         if tune: return None, RandomForestRegressor()
-        print("************ LOG REG ************")
+        m = "************ LOG REG ************"
         y_pred = runLogReg(X_train, X_test, y_train)
     elif code == "dtree" or code == "4":
         if tune: return None, RandomForestRegressor()
-        print("************ DEC. TREE ************")
+        m = "************ DEC. TREE ************"
         y_pred = runDTree(X_train, X_test, y_train)
     elif code == "nb" or code == "5":
         if tune: return None, RandomForestRegressor()
-        print("************ NAIVE BAYES ************")
+        m = "************ NAIVE BAYES ************"
         y_pred = runNB(X_train, X_test, y_train)
     elif code == "kmeans" or code == "6":
         if tune: return None, RandomForestRegressor()
-        print("************ KMEANS ************")
+        m = "************ KMEANS ************"
         y_pred = runKmeans(X_train, X_test, y_train)
     elif code == "gb" or code == "7":
         if tune: return None, RandomForestRegressor()
-        print("************ GRAD. BOOSTING ************")
+        m = "************ GRAD. BOOSTING ************"
         y_pred = gb(X_train, X_test, y_train)
     elif code == "nn" or code == "8":
         if tune: return None, RandomForestRegressor()
-        print("************ NN ************")
+        m = "************ NN ************"
         y_pred = runNN(X_train, X_test, y_train)
     else:   # SHOULD NEVER GET HERE
-        print("************ ELSE ************")
+        m = "************ ELSE ************"
         exit(0)
-    return y_pred, None
+    return y_pred, None, m
 
 
 

@@ -1,34 +1,59 @@
 import math, sys, ast
 import numpy as np
+from numpy import argmax
 from random import shuffle, randint, seed
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import OneHotEncoder
 from .logger import *
+from .fileHandler import save
 
 # normalizes every column in the matrix from start position to end position
 def normMat(M):
-    # TODO later: combine columns with only 1 or not many 1's in clmn of 0's
-
+    # TODO later: combine columns with (only 1) or (not many 1's in a clmn of 0's)
     # takes std dev of columns in M
     stdDev = np.std(M,axis=0)
     # Z-Score
     normed = (M - np.mean(M,axis=0)) / stdDev
+#    save(normed, "normedX")
     return normed
 
+# Function one hot encodes data
+#   takes in column of data to encode
+#   returns numpy matrix of encoded column data
+def oneHot(clmn):
+    # define example
+    values = clmn
+    # integer encode
+    label_encoder = LabelEncoder()
+    integer_encoded = label_encoder.fit_transform(values)
+    # binary encode
+    onehot_encoder = OneHotEncoder(categories='auto', sparse=False)
+    integer_encoded = integer_encoded.reshape(len(integer_encoded), 1)
+    onehot_encoded = onehot_encoder.fit_transform(integer_encoded)
+    # invert first example
+    inverted = label_encoder.inverse_transform([argmax(onehot_encoded[0, :])])
+
+    return onehot_encoded
+
+
+# Used for randData function
+# !!! Must be global var bc func is recursive
+loopError = 0
 
 # randomizes the data in the main X matrix and cooresponding y labels
 def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(2/3)):
-    print("train:", ratioTrain, "test:", ratioTest)
     randX, randy = [], []   # made this var before I realized it's your name; Randy P.
 
     # determine size of train, test, and validate matrices
     numItems = X_data.shape[0]
     numTrain = math.ceil(X_data.shape[0] * ratioTrain)    # default is 2/3 is training
 #    numTest = math.ceil(numTrain * ratioTest)    # default is 2/3 of rest is testing
-    numTest = math.ceil((numItems-numTrain) * ratioTest)    # default is 2/3 of rest is testing
+    numTest = numTrain
 #    numValid = numItems - (numTrain+numTest)    # rest of rest is validation
     
     # set random seed
-#    rSeed = randint(0,numItems)
-    rSeed = 4322
+    rSeed = randint(0,numItems)
+#    rSeed = 6102
     logMsg(0, "Random seed = %d" % rSeed)
     seed(rSeed)
 
@@ -45,70 +70,267 @@ def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(2/3)):
         randy.append(y_data[index])
 
     # separate sections of data
-#    X_train = np.matrix(randX[:numTrain])
-#    X_test = np.matrix(randX[numTrain:(numTrain+numTest-1)])
-#    X_test[1] = randX[numTrain]
-#    X_valid = np.matrix(randX[(numTrain+numTest-1):])
-
     X_train = np.matrix(randX[:numTrain])
     X_test = np.matrix(randX[numTrain:(numTrain+numTest)])
     X_valid = np.matrix(randX[(numTrain+numTest):])
     X_mats = [X_train, X_test, X_valid]
-
-#    print(X_test[0] == X_test[1])
-
-#    y_train = np.array(randy[:numTrain])
-#    y_test = np.array(randy[numTrain:(numTrain+numTest-1)])
-#    y_test[1] = 1
-#    print(y_test[0], y_test[1])
-#    y_test = np.array(randy[numTrain:(numTrain+numTest-1)])
-#    y_valid = np.array(randy[(numTrain+numTest-1):])
 
     y_train = np.array(randy[:numTrain])
     y_test = np.array(randy[numTrain:(numTrain+numTest)])
     y_valid = np.array(randy[(numTrain+numTest):])
     y_mats = [y_train, y_test, y_valid]
 
-    # check that each section has at least 2 classes
-    
+    # log sizes of y labels    
     logMsg(0, "y_train class counts: %s" % str(np.unique(y_train, return_counts=True)))
     logMsg(0, "y_test class counts: %s" % str(np.unique(y_test, return_counts=True)))
     logMsg(0, "y_valid class counts: %s" % str(np.unique(y_valid, return_counts=True)))
-    print(np.unique(y_train, return_counts=True))
-    print(np.unique(y_test, return_counts=True))
-    print(np.unique(y_valid, return_counts=True))
 
-#    lyt = len(y_test)
-#    rSeed = randint(0,lyt)
-#    print("NEW RANDOM SEED: ", rSeed)
-#    seed(rSeed)
-#    order = np.arange(lyt)
-#    shuffle(order)
-    
-#    ry = []
-#    for index in order:
-#        ry.append(y_test[index])
-#    print("Are original y_test and new y_test the same? ", np.array_equal(y_test, ry))
-#    y_test = np.array(ry)
-#    y_mats = [y_train, y_test, y_valid]
-#    print("AFTER 2nd RANOMIZATION: ",np.unique(y_test, return_counts=True))
-
+    # check that each section has at least 2 classes
     if (not 1 in y_train) or (not 1 in y_test) or (not 1 in y_valid):
+        global loopError 
+        loopError += 1
+        if loopError >= 10:
+            print("ERROR: cannot create matrix sections!")
+            logMsg(4, "ERROR: cannot create matrix sections!")  # major issue
+            exit(1)
         logMsg(2, "Check failed for creating matrix sections! Revaluating...")
         return randData(X_data, y_data, ratioTrain, ratioTest)
 
+    # XXX checking y_test counts of 1:
+#    unique, counts = np.unique(y_test, return_counts=True)
+#    print(unique[1], counts[1])
+#    if not counts[1] == 5:
+#        logMsg(2, "Not enough malicious packets in testing data. Revaluating...")
+#        return randData(X_data, y_data, ratioTrain, ratioTest)
+
+    loopError = 0
     logMsg(1, "Randomizaiton of X and y matrices complete.")
     return X_mats, y_mats
 
 
-# cleans the numpy matrix of any INF or NaN values
-# todo change later so values are NOT removed
-# XXX NO LONGER USES THIS
-def cleanMat(M):
-    if np.isnan(np.sum(M)):
-        M = M[~np.isnan(M)] # just remove nan elements from vector
-        print("Cleaning nulls...")
-    if np.isinf(np.sum(M)):
-        M = M[~np.isinf(M)] # just remove inf elements from vector
-        print("Cleaning infs...")
-    return M
+
+
+######################################  X MATRIX CREATION FUNCTIONS ######################################
+
+# makes a list of features 
+# useful for one-hot as # clmns vary
+def makeFeat(lis, num, featName):
+    for i in range(num):
+        lis.append(featName)
+    return lis
+
+
+# ONLY USED FOR THE PROPOSAL/OG KATHLEEN PAPER
+# PROPOSAL ONLY!!!!!!
+# EXAMPLE: ['172.16.112.50' '172.16.113.148' 'TELNET'   '60'      '23'        '4170']
+#               src ip          dest ip      protocol   len    src port     dest port
+def createMatrixProposal(X):
+    # Source IP
+    sip = X[:,0].T
+    siph = []
+    # NOTE only uses the first byte of IP address
+    for r in range(X.shape[0]):
+        adr = sip[0,r]
+        newAdr = adr.split(".")[0]
+        siph.append(newAdr)
+    sip = np.array(siph)#, dtype=float)
+    sipOH = oneHot(sip)
+
+    # Destination IP
+    dip = X[:,1].T
+    diph = []
+    # NOTE only uses the first byte of IP address
+    for r in range(X.shape[0]):
+        adr = dip[0,r]
+        newAdr = adr.split(".")[0]
+        diph.append(newAdr)
+    dip = np.array(diph)#, dtype=float)
+    dipOH = oneHot(dip)
+
+    # Protocols
+    p = X[:,2].T
+    ph = []
+    for r in range(X.shape[0]):
+        ph.append(p[0,r])
+    p = np.array(ph)#, dtype=float)
+    pOH = oneHot(p)
+
+    # Packet Length
+    plm = X[:,3]
+    plmh = []
+    for r in range(X.shape[0]):
+        plmh.append(float(plm[r,0]))
+    plm = np.array(plmh, dtype=float)
+    plmd = plm.shape[0]
+    plm = np.reshape(plm, (plmd,1))
+
+    # Source Port
+    sp = X[:,4].T
+    sph = []
+    spm = []
+    for r in range(X.shape[0]):
+        if sp[0,r] is None:     # handle missing port numbers
+            spm.append(1)   # designate missing port
+            sph.append(-1)
+        else:
+            spm.append(0)   # designate port available
+            sph.append(sp[0,r])
+    spm = np.array(spm, dtype=int)
+    spmd = spm.shape[0]
+    spm = np.reshape(spm, (spmd,1))
+    sp = np.array(sph, dtype=int)
+    sp[sp > 1024] = 1024
+    spOH = oneHot(sp)
+
+    # Destination Port
+    dp = X[:,5].T
+    dph = []
+    dpm = []
+    for r in range(X.shape[0]):
+        if dp[0,r] is None:     # handle missing port numbers
+            dpm.append(1)   # designate missing port
+            dph.append(-1)
+        else:
+            dpm.append(0)   # designate port available
+            dph.append(dp[0,r])
+    dpm = np.array(dpm, dtype=int)
+    dpmd = dpm.shape[0]
+    dpm = np.reshape(dpm, (dpmd,1))
+    dp = np.array(dph, dtype=int)
+    dp[dp > 1024] = 1024
+    dpOH = oneHot(dp)
+
+    # Distingishing destination ports
+    dp[dp < 1024] = 0
+    dp[dp >= 1024] = 1
+    ddpOH = oneHot(dp)
+
+    # Distinguishing source ports
+    sp[sp < 1024] = 0
+    sp[sp >= 1024] = 1
+    dspOH = oneHot(sp)
+
+    # creates new X matrix
+#    print(sipOH.shape, spOH.shape, dipOH.shape, dpOH.shape, pOH.shape, dspOH.shape, ddpOH.shape, plm.shape, spm.shape, dpm.shape)
+    newX = np.concatenate((sipOH, dipOH, spOH, dpOH, dspOH, ddpOH, spm, dpm, pOH, plm), axis=1)
+
+    # MUST UPDATE with *NEW* FEATURES (not change in one-hot amt of clmns)
+    feats = []
+    feats = makeFeat(feats, sipOH.shape[1], "Src IP")
+    feats = makeFeat(feats, dipOH.shape[1], "Dest IP")
+    feats = makeFeat(feats, spOH.shape[1], "Src Port")
+    feats = makeFeat(feats, dpOH.shape[1], "Dest Port")
+    feats = makeFeat(feats, dspOH.shape[1], "Dist Src Port")
+    feats = makeFeat(feats, ddpOH.shape[1], "Dist Dest Port")
+    feats = makeFeat(feats, spm.shape[1], "Missing Src Port")
+    feats = makeFeat(feats, dpm.shape[1], "Missing Dest Port")
+    feats = makeFeat(feats, pOH.shape[1], "Protocol")
+    feats = makeFeat(feats, plm.shape[1], "Packet Length")
+#    print(len(feats))  # prints number of features used
+
+    return newX
+
+
+
+# ONLY USED FOR THE UNB DATASET MAIN THESIS
+# TODO don't use IP's as feature
+def createMatrix(X):
+
+    '''
+    # Source IP
+    sip = X[:,0].T
+    siph = []
+    # NOTE only uses the first byte of IP address
+    for r in range(X.shape[0]):
+        adr = sip[0,r]
+        # TODO use 2 bytes
+        newAdr = adr.split(".")[0] # non-routable IP's 192.168...
+        newAdr2= adr.split(".")[1]
+        print(newAdr)
+        print(newAdr2)
+
+        exit(0)
+        siph.append(newAdr)
+    sip = np.array(siph, dtype=int)
+    sipOH = oneHot(sip)
+    '''
+
+    # Source Port
+    sp = X[:,1].T
+    sph = []
+    for r in range(X.shape[0]):
+        sph.append(sp[0,r])
+    sp = np.array(sph, dtype=int)
+    sp[sp > 1024] = 1024
+    spOH = oneHot(sp)
+
+
+    # TODO extract destination port of victim IP
+    '''
+    # Destination IP
+    dip = X[:,2].T
+    diph = []
+    # NOTE only uses the first byte of IP address
+    for r in range(X.shape[0]):
+        adr = dip[0,r]
+        newAdr = adr.split(".")[0]
+        diph.append(newAdr)
+    dip = np.array(diph, dtype=int)
+    dipOH = oneHot(dip)
+    '''
+
+    # Destination Port
+    dp = X[:,3].T
+    dph = []
+    for r in range(X.shape[0]):
+        dph.append(dp[0,r])
+    dp = np.array(dph, dtype=int)
+    dp[dp > 1024] = 1024
+    dpOH = oneHot(dp)
+
+    # Protocols
+    p = X[:,4].T
+    ph = []
+    for r in range(X.shape[0]):
+        ph.append(p[0,r])
+    p = np.array(ph, dtype=int)
+    pOH = oneHot(p)
+
+    # Packet Length Mean
+    plm = X[:,5]
+    plmh = []
+    for r in range(X.shape[0]):
+        plmh.append(float(plm[r,0]))
+    plm = np.array(plmh, dtype=int)
+    plmd = plm.shape[0]
+    plm = np.reshape(plm, (plmd,1))
+
+    # TODO do we care about keeping these?????
+    # Distingishing destination ports
+    dp[dp < 1024] = 0
+    dp[dp >= 1024] = 1
+    ddpOH = oneHot(dp)
+
+    # Distinguishing source ports
+    sp[sp < 1024] = 0
+    sp[sp >= 1024] = 1
+    dspOH = oneHot(sp)
+
+    # creates new X matrix
+#    print(sipOH.shape, spOH.shape, dipOH.shape, dpOH.shape, pOH.shape, dspOH.shape, ddpOH.shape, plm.shape, spm.shape, dpm.shape)
+#    newX = np.concatenate((sipOH, dipOH, spOH, dpOH, dspOH, ddpOH, pOH, plm), axis=1)
+    newX = np.concatenate((spOH, dpOH, dspOH, ddpOH, pOH, plm), axis=1)
+
+    # MUST UPDATE with *NEW* FEATURES (not change in one-hot amt of clmns)
+    feats = []
+#    feats = makeFeat(feats, sipOH.shape[1], "Src IP")
+#    feats = makeFeat(feats, dipOH.shape[1], "Dest IP")
+    feats = makeFeat(feats, spOH.shape[1], "Src Port")
+    feats = makeFeat(feats, dpOH.shape[1], "Dest Port")
+    feats = makeFeat(feats, dspOH.shape[1], "Dist Src Port")
+    feats = makeFeat(feats, ddpOH.shape[1], "Dist Dest Port")
+    feats = makeFeat(feats, pOH.shape[1], "Protocol")
+    feats = makeFeat(feats, plm.shape[1], "Packet Length")
+#    print(len(feats))  # prints number of features used
+
+    return newX

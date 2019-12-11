@@ -1,0 +1,68 @@
+2019-11-27 20:35:34,460  INFO: Run started.
+2019-11-27 20:35:34,463  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-11-27 20:35:34,874  DEBUG: Random seed = 3138
+2019-11-27 20:35:34,933  DEBUG: y_train class counts: (array([0, 1]), array([2679,   21]))
+2019-11-27 20:35:34,934  DEBUG: y_test class counts: (array([0, 1]), array([2676,   24]))
+2019-11-27 20:35:34,935  DEBUG: y_valid class counts: (array([0, 1]), array([2675,   25]))
+2019-11-27 20:35:34,936  INFO: Randomizaiton of X and y matrices complete.
+2019-11-27 20:35:34,937  INFO: Lambda: 0.05
+2019-11-27 20:35:34,985  DEBUG: Max Rank: 136
+2019-11-27 20:35:36,204  DEBUG: Lambda Scale: 2.598076211353316
+2019-11-27 20:35:37,624  DEBUG: criterion1 is the constraint
+2019-11-27 20:35:37,624  DEBUG: criterion2 is the solution
+2019-11-27 20:35:37,624  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 20:35:41,482  DEBUG:        10   8.44e-03 1.00e-05   2.32e-04 1.00e-04 3.08e+00 2.66e-02
+2019-11-27 20:35:48,621  DEBUG:        20   9.31e-05 1.00e-05   1.02e-04 1.00e-04 3.08e+00 2.38e+00
+2019-11-27 20:35:51,328  DEBUG:        25   5.72e-06 1.00e-05   2.79e-05 1.00e-04 3.08e+00 2.25e+01
+2019-11-27 20:35:51,360  DEBUG: OG SHAPES, X: (2700, 182)  U: (2700, 136)  E: (136, 136)  VT: (136, 182)  L: (2700, 182)
+2019-11-27 20:35:51,360  DEBUG: HAT SHAPES, Uhat: (2700, 10)  Ehat: (10, 10)  VThat: (10, 182)  VTta: (126, 182)
+2019-11-27 20:35:51,361  DEBUG: X1 SHAPES: X: (2700, 182)  L: (2700, 182)  S: (2700, 182)
+2019-12-03 12:09:13,365  INFO: Run started.
+2019-12-03 12:09:13,366  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-12-03 12:09:13,980  DEBUG: Random seed = 7896
+2019-12-03 12:09:14,040  DEBUG: y_train class counts: (array([0, 1]), array([2676,   24]))
+2019-12-03 12:09:14,041  DEBUG: y_test class counts: (array([0, 1]), array([2678,   22]))
+2019-12-03 12:09:14,041  DEBUG: y_valid class counts: (array([0, 1]), array([2676,   24]))
+2019-12-03 12:09:14,042  INFO: Randomizaiton of X and y matrices complete.
+2019-12-03 12:09:14,044  INFO: Lambda: 0.05
+2019-12-03 12:09:14,148  DEBUG: Max Rank: 137
+2019-12-03 12:09:15,957  DEBUG: Lambda Scale: 2.598076211353316
+2019-12-03 12:09:17,965  DEBUG: criterion1 is the constraint
+2019-12-03 12:09:17,965  DEBUG: criterion2 is the solution
+2019-12-03 12:09:17,965  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-12-03 12:09:26,420  DEBUG:        10   5.93e-03 1.00e-05   1.32e-04 1.00e-04 3.08e+00 3.12e-02
+2019-12-03 12:09:34,507  DEBUG:        20   1.07e-04 1.00e-05   1.08e-04 1.00e-04 3.08e+00 9.08e-01
+2019-12-03 12:09:57,707  INFO: Run started.
+2019-12-03 12:09:57,708  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-12-03 12:09:58,178  DEBUG: Random seed = 1184
+2019-12-03 12:09:58,229  DEBUG: y_train class counts: (array([0, 1]), array([2677,   23]))
+2019-12-03 12:09:58,230  DEBUG: y_test class counts: (array([0, 1]), array([2681,   19]))
+2019-12-03 12:09:58,231  DEBUG: y_valid class counts: (array([0, 1]), array([2672,   28]))
+2019-12-03 12:09:58,231  INFO: Randomizaiton of X and y matrices complete.
+2019-12-03 12:09:58,232  INFO: Lambda: 0.05
+2019-12-03 12:09:58,315  DEBUG: Max Rank: 140
+2019-12-03 12:10:00,056  DEBUG: Lambda Scale: 2.598076211353316
+2019-12-03 12:10:01,706  DEBUG: criterion1 is the constraint
+2019-12-03 12:10:01,706  DEBUG: criterion2 is the solution
+2019-12-03 12:10:01,706  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-12-03 12:10:07,579  DEBUG:        10   4.46e-03 1.00e-05   1.11e-04 1.00e-04 3.08e+00 3.23e-02
+2019-12-03 12:10:14,241  DEBUG:        20   8.54e-05 1.00e-05   1.15e-04 1.00e-04 3.08e+00 2.89e+00
+2019-12-03 12:10:20,563  DEBUG:        28   7.44e-06 1.00e-05   2.90e-05 1.00e-04 3.08e+00 2.74e+01
+2019-12-03 12:10:20,594  DEBUG: OG SHAPES, X: (2700, 182)  U: (2700, 140)  E: (140, 140)  VT: (140, 182)  L: (2700, 182)
+2019-12-03 12:11:16,528  INFO: Run started.
+2019-12-03 12:11:16,528  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-12-03 12:11:16,979  DEBUG: Random seed = 4257
+2019-12-03 12:11:17,031  DEBUG: y_train class counts: (array([0, 1]), array([2670,   30]))
+2019-12-03 12:11:17,032  DEBUG: y_test class counts: (array([0, 1]), array([2674,   26]))
+2019-12-03 12:11:17,032  DEBUG: y_valid class counts: (array([0, 1]), array([2686,   14]))
+2019-12-03 12:11:17,032  INFO: Randomizaiton of X and y matrices complete.
+2019-12-03 12:11:17,034  INFO: Lambda: 0.05
+2019-12-03 12:11:17,109  DEBUG: Max Rank: 148
+2019-12-03 12:11:19,040  DEBUG: Lambda Scale: 2.598076211353316
+2019-12-03 12:11:21,298  DEBUG: criterion1 is the constraint
+2019-12-03 12:11:21,298  DEBUG: criterion2 is the solution
+2019-12-03 12:11:21,298  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-12-03 12:11:29,962  DEBUG:        10   6.95e-03 1.00e-05   2.35e-04 1.00e-04 3.08e+00 2.81e-02
+2019-12-03 12:11:41,575  DEBUG:        20   1.71e-04 1.00e-05   1.13e-04 1.00e-04 3.08e+00 8.16e-01
+2019-12-03 12:11:51,601  DEBUG:        29   6.58e-06 1.00e-05   3.75e-05 1.00e-04 3.08e+00 2.38e+01
+2019-12-03 12:11:51,635  DEBUG: OG SHAPES, X: (2700, 182)  U: (2700, 148)  E: (148, 148)  VT: (148, 182)  L: (2700, 182)

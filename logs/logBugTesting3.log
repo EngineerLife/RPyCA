@@ -1,0 +1,282 @@
+2019-11-18 11:50:16,801  INFO: Run started.
+2019-11-18 11:50:16,801  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-18 11:50:16,875  INFO:  Next Lambda: [0.01]
+2019-11-18 11:50:17,279  DEBUG: Random seed = 1456
+2019-11-18 11:50:17,335  DEBUG: y_train class counts: (array([0, 1]), array([444,   2]))
+2019-11-18 11:50:17,336  DEBUG: y_test class counts: (array([0, 1]), array([5060,   43]))
+2019-11-18 11:50:17,337  DEBUG: y_valid class counts: (array([0, 1]), array([2526,   25]))
+2019-11-18 11:50:17,338  INFO: Randomizaiton of X and y matrices complete.
+2019-11-18 11:50:20,721  INFO: FOR MATRIX: X
+2019-11-18 11:50:20,790  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5060
+1                        43
+2019-11-18 11:50:20,801  INFO: f1_Score: 0.000000
+2019-11-18 11:50:20,907  INFO: FOR MATRIX: CONCAT LS
+2019-11-18 11:50:20,966  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5060
+1                        43
+2019-11-18 11:50:20,984  INFO: f1_Score: 0.000000
+2019-11-18 11:50:21,140  INFO: FOR MATRIX: CONCAT XLS
+2019-11-18 11:50:21,192  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5060
+1                        43
+2019-11-18 11:50:21,205  INFO: f1_Score: 0.000000
+2019-11-18 11:50:32,651  INFO: Run started.
+2019-11-18 11:50:32,654  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-18 11:50:32,718  INFO:  Next Lambda: [0.01]
+2019-11-18 11:50:33,142  DEBUG: Random seed = 1948
+2019-11-18 11:50:33,214  DEBUG: y_train class counts: (array([0, 1]), array([441,   5]))
+2019-11-18 11:50:33,214  DEBUG: y_test class counts: (array([0, 1]), array([5061,   42]))
+2019-11-18 11:50:33,215  DEBUG: y_valid class counts: (array([0, 1]), array([2528,   23]))
+2019-11-18 11:50:33,217  INFO: Randomizaiton of X and y matrices complete.
+2019-11-18 11:50:35,601  INFO: FOR MATRIX: X
+2019-11-18 11:50:35,672  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      5061   0
+1                         0  42
+2019-11-18 11:50:35,687  INFO: f1_Score: 1.000000
+2019-11-18 11:50:35,835  INFO: FOR MATRIX: CONCAT LS
+2019-11-18 11:50:35,902  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      5061   0
+1                         0  42
+2019-11-18 11:50:35,922  INFO: f1_Score: 1.000000
+2019-11-18 11:50:36,124  INFO: FOR MATRIX: CONCAT XLS
+2019-11-18 11:50:36,187  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      5061   0
+1                         0  42
+2019-11-18 11:50:36,201  INFO: f1_Score: 1.000000
+2019-11-18 11:50:42,648  INFO: Run started.
+2019-11-18 11:50:42,650  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-18 11:50:42,734  INFO:  Next Lambda: [0.01]
+2019-11-18 11:50:43,221  DEBUG: Random seed = 5721
+2019-11-18 11:50:43,284  DEBUG: y_train class counts: (array([0, 1]), array([443,   3]))
+2019-11-18 11:50:43,285  DEBUG: y_test class counts: (array([0, 1]), array([5063,   40]))
+2019-11-18 11:50:43,286  DEBUG: y_valid class counts: (array([0, 1]), array([2524,   27]))
+2019-11-18 11:50:43,288  INFO: Randomizaiton of X and y matrices complete.
+2019-11-18 11:50:47,580  INFO: FOR MATRIX: X
+2019-11-18 11:50:47,652  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5063
+1                        40
+2019-11-18 11:50:47,668  INFO: f1_Score: 0.000000
+2019-11-18 11:50:47,866  INFO: FOR MATRIX: CONCAT LS
+2019-11-18 11:50:47,930  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5063
+1                        40
+2019-11-18 11:50:47,945  INFO: f1_Score: 0.000000
+2019-11-18 11:50:48,231  INFO: FOR MATRIX: CONCAT XLS
+2019-11-18 11:50:48,296  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5063
+1                        40
+2019-11-18 11:50:48,314  INFO: f1_Score: 0.000000
+2019-11-18 11:50:54,723  INFO: Run started.
+2019-11-18 11:50:54,723  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-18 11:50:54,797  INFO:  Next Lambda: [0.01]
+2019-11-18 11:50:55,263  DEBUG: Random seed = 6765
+2019-11-18 11:50:55,329  DEBUG: y_train class counts: (array([0, 1]), array([444,   2]))
+2019-11-18 11:50:55,330  DEBUG: y_test class counts: (array([0, 1]), array([5062,   41]))
+2019-11-18 11:50:55,330  DEBUG: y_valid class counts: (array([0, 1]), array([2524,   27]))
+2019-11-18 11:50:55,333  INFO: Randomizaiton of X and y matrices complete.
+2019-11-18 11:50:59,818  INFO: FOR MATRIX: X
+2019-11-18 11:50:59,904  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5062
+1                        41
+2019-11-18 11:50:59,920  INFO: f1_Score: 0.000000
+2019-11-18 11:51:00,038  INFO: FOR MATRIX: CONCAT LS
+2019-11-18 11:51:00,109  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5062
+1                        41
+2019-11-18 11:51:00,129  INFO: f1_Score: 0.000000
+2019-11-18 11:51:00,304  INFO: FOR MATRIX: CONCAT XLS
+2019-11-18 11:51:00,369  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5062
+1                        41
+2019-11-18 11:51:00,384  INFO: f1_Score: 0.000000
+2019-11-18 11:51:05,728  INFO: Run started.
+2019-11-18 11:51:05,729  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-18 11:51:05,815  INFO:  Next Lambda: [0.01]
+2019-11-18 11:51:06,234  DEBUG: Random seed = 3307
+2019-11-18 11:51:06,294  DEBUG: y_train class counts: (array([0, 1]), array([443,   3]))
+2019-11-18 11:51:06,295  DEBUG: y_test class counts: (array([0, 1]), array([5054,   49]))
+2019-11-18 11:51:06,296  DEBUG: y_valid class counts: (array([0, 1]), array([2533,   18]))
+2019-11-18 11:51:06,307  INFO: Randomizaiton of X and y matrices complete.
+2019-11-18 11:51:08,925  INFO: FOR MATRIX: X
+2019-11-18 11:51:08,991  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5054
+1                        49
+2019-11-18 11:51:09,006  INFO: f1_Score: 0.000000
+2019-11-18 11:51:09,222  INFO: FOR MATRIX: CONCAT LS
+2019-11-18 11:51:09,277  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5054
+1                        49
+2019-11-18 11:51:09,289  INFO: f1_Score: 0.000000
+2019-11-18 11:51:09,639  INFO: FOR MATRIX: CONCAT XLS
+2019-11-18 11:51:09,759  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5054
+1                        49
+2019-11-18 11:51:09,779  INFO: f1_Score: 0.000000
+2019-11-18 11:58:53,257  INFO: Run started.
+2019-11-18 11:58:53,258  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-18 11:58:53,376  INFO:  Next Lambda: [0.01]
+2019-11-18 11:58:53,874  DEBUG: Random seed = 7075
+2019-11-18 11:58:53,940  DEBUG: y_train class counts: (array([0, 1]), array([444,   2]))
+2019-11-18 11:58:53,941  DEBUG: y_test class counts: (array([0, 1]), array([5061,   42]))
+2019-11-18 11:58:53,941  DEBUG: y_valid class counts: (array([0, 1]), array([2525,   26]))
+2019-11-18 11:58:53,943  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:58:53,944  DEBUG: Random seed = 2967
+2019-11-18 11:58:54,012  DEBUG: y_train class counts: (array([0, 1]), array([444,   2]))
+2019-11-18 11:58:54,013  DEBUG: y_test class counts: (array([0, 1]), array([5052,   51]))
+2019-11-18 11:58:54,014  DEBUG: y_valid class counts: (array([0, 1]), array([2534,   17]))
+2019-11-18 11:58:54,018  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:58:54,018  DEBUG: Random seed = 778
+2019-11-18 11:58:54,125  DEBUG: y_train class counts: (array([0, 1]), array([441,   5]))
+2019-11-18 11:58:54,126  DEBUG: y_test class counts: (array([0, 1]), array([5054,   49]))
+2019-11-18 11:58:54,127  DEBUG: y_valid class counts: (array([0, 1]), array([2535,   16]))
+2019-11-18 11:58:54,130  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:58:54,130  DEBUG: Random seed = 3486
+2019-11-18 11:58:54,304  DEBUG: y_train class counts: (array([0, 1]), array([443,   3]))
+2019-11-18 11:58:54,306  DEBUG: y_test class counts: (array([0, 1]), array([5064,   39]))
+2019-11-18 11:58:54,307  DEBUG: y_valid class counts: (array([0, 1]), array([2523,   28]))
+2019-11-18 11:58:54,315  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:58:54,316  DEBUG: Random seed = 6808
+2019-11-18 11:58:54,713  DEBUG: y_train class counts: (array([0, 1]), array([441,   5]))
+2019-11-18 11:58:54,714  DEBUG: y_test class counts: (array([0, 1]), array([5064,   39]))
+2019-11-18 11:58:54,715  DEBUG: y_valid class counts: (array([0, 1]), array([2525,   26]))
+2019-11-18 11:58:54,716  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:58:54,717  DEBUG: Random seed = 7854
+2019-11-18 11:58:54,776  DEBUG: y_train class counts: (array([0, 1]), array([442,   4]))
+2019-11-18 11:58:54,777  DEBUG: y_test class counts: (array([0, 1]), array([5057,   46]))
+2019-11-18 11:58:54,777  DEBUG: y_valid class counts: (array([0, 1]), array([2531,   20]))
+2019-11-18 11:58:54,780  INFO: Randomizaiton of X and y matrices complete.
+2019-11-18 11:58:59,938  INFO: FOR MATRIX: X
+2019-11-18 11:59:00,132  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      5057   0
+1                         4  42
+2019-11-18 11:59:00,173  INFO: f1_Score: 0.954545
+2019-11-18 11:59:00,369  INFO: FOR MATRIX: CONCAT LS
+2019-11-18 11:59:00,458  INFO: 
+Predicted Packet Type     0  1
+Actual Packet Type            
+0                      5057  0
+1                        42  4
+2019-11-18 11:59:00,486  INFO: f1_Score: 0.160000
+2019-11-18 11:59:00,683  INFO: FOR MATRIX: CONCAT XLS
+2019-11-18 11:59:00,767  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      5057   0
+1                         7  39
+2019-11-18 11:59:00,794  INFO: f1_Score: 0.917647
+2019-11-18 11:59:29,791  INFO: Run started.
+2019-11-18 11:59:29,792  INFO:  Start variables= lambda(s): [0.01]  type: 
+2019-11-18 11:59:29,876  INFO:  Next Lambda: [0.01]
+2019-11-18 11:59:30,441  DEBUG: Random seed = 4842
+2019-11-18 11:59:30,526  DEBUG: y_train class counts: (array([0, 1]), array([440,   6]))
+2019-11-18 11:59:30,527  DEBUG: y_test class counts: (array([0, 1]), array([5066,   37]))
+2019-11-18 11:59:30,528  DEBUG: y_valid class counts: (array([0, 1]), array([2524,   27]))
+2019-11-18 11:59:30,529  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:59:30,530  DEBUG: Random seed = 1181
+2019-11-18 11:59:30,614  DEBUG: y_train class counts: (array([0, 1]), array([437,   9]))
+2019-11-18 11:59:30,615  DEBUG: y_test class counts: (array([0, 1]), array([5061,   42]))
+2019-11-18 11:59:30,616  DEBUG: y_valid class counts: (array([0, 1]), array([2532,   19]))
+2019-11-18 11:59:30,619  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:59:30,619  DEBUG: Random seed = 1537
+2019-11-18 11:59:30,707  DEBUG: y_train class counts: (array([0, 1]), array([443,   3]))
+2019-11-18 11:59:30,708  DEBUG: y_test class counts: (array([0, 1]), array([5054,   49]))
+2019-11-18 11:59:30,708  DEBUG: y_valid class counts: (array([0, 1]), array([2533,   18]))
+2019-11-18 11:59:30,710  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:59:30,711  DEBUG: Random seed = 3098
+2019-11-18 11:59:30,787  DEBUG: y_train class counts: (array([0, 1]), array([439,   7]))
+2019-11-18 11:59:30,787  DEBUG: y_test class counts: (array([0, 1]), array([5064,   39]))
+2019-11-18 11:59:30,788  DEBUG: y_valid class counts: (array([0, 1]), array([2527,   24]))
+2019-11-18 11:59:30,791  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:59:30,792  DEBUG: Random seed = 607
+2019-11-18 11:59:30,870  DEBUG: y_train class counts: (array([0, 1]), array([442,   4]))
+2019-11-18 11:59:30,871  DEBUG: y_test class counts: (array([0, 1]), array([5059,   44]))
+2019-11-18 11:59:30,872  DEBUG: y_valid class counts: (array([0, 1]), array([2529,   22]))
+2019-11-18 11:59:30,875  INFO: Randomizaiton of X and y matrices complete.
+2019-11-18 11:59:34,611  INFO: FOR MATRIX: X
+2019-11-18 11:59:34,685  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5059
+1                        44
+2019-11-18 11:59:34,707  INFO: f1_Score: 0.000000
+2019-11-18 11:59:34,864  INFO: FOR MATRIX: CONCAT LS
+2019-11-18 11:59:34,956  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5059
+1                        44
+2019-11-18 11:59:34,974  INFO: f1_Score: 0.000000
+2019-11-18 11:59:35,221  INFO: FOR MATRIX: CONCAT XLS
+2019-11-18 11:59:35,298  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5059
+1                        44
+2019-11-18 11:59:35,320  INFO: f1_Score: 0.000000
+2019-11-18 11:59:44,501  INFO: Run started.
+2019-11-18 11:59:44,502  INFO:  Start variables= lambda(s): [0.05]  type: 
+2019-11-18 11:59:44,594  INFO:  Next Lambda: [0.05]
+2019-11-18 11:59:45,123  DEBUG: Random seed = 109
+2019-11-18 11:59:45,197  DEBUG: y_train class counts: (array([0, 1]), array([438,   8]))
+2019-11-18 11:59:45,198  DEBUG: y_test class counts: (array([0, 1]), array([5061,   42]))
+2019-11-18 11:59:45,199  DEBUG: y_valid class counts: (array([0, 1]), array([2531,   20]))
+2019-11-18 11:59:45,203  WARNING: Not enough malicious packets in training data. Revaluating...
+2019-11-18 11:59:45,204  DEBUG: Random seed = 4980
+2019-11-18 11:59:45,285  DEBUG: y_train class counts: (array([0, 1]), array([442,   4]))
+2019-11-18 11:59:45,285  DEBUG: y_test class counts: (array([0, 1]), array([5061,   42]))
+2019-11-18 11:59:45,286  DEBUG: y_valid class counts: (array([0, 1]), array([2527,   24]))
+2019-11-18 11:59:45,288  INFO: Randomizaiton of X and y matrices complete.
+2019-11-18 11:59:51,668  INFO: FOR MATRIX: X
+2019-11-18 11:59:51,757  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5061
+1                        42
+2019-11-18 11:59:51,775  INFO: f1_Score: 0.000000
+2019-11-18 11:59:52,007  INFO: FOR MATRIX: CONCAT LS
+2019-11-18 11:59:52,069  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5061
+1                        42
+2019-11-18 11:59:52,086  INFO: f1_Score: 0.000000
+2019-11-18 11:59:52,351  INFO: FOR MATRIX: CONCAT XLS
+2019-11-18 11:59:52,410  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      5061
+1                        42
+2019-11-18 11:59:52,428  INFO: f1_Score: 0.000000

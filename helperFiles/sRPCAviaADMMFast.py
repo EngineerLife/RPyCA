@@ -34,7 +34,7 @@ from dimredu.lib.minShrink1Plus2Norm import minShrink1Plus2Norm
 from dimredu.lib.minShrink2Plus2Norm import minShrink2Plus2Norm
 from dimredu.lib.projSVD import projSVD
 from dimredu.lib.shrink import shrink
-
+from .logger import *
 
 def objective(L, S, Epsilon, lam, truncateK=0):
     U, E, VT = np.linalg.svd(L)
@@ -326,30 +326,49 @@ def sRPCA(m, n, u, v, vecM, vecEpsilon, maxRank,
 
         if verbose:
             if iteration == 1:
-                print()
-                print('criterion1 is the constraint')
-                print('criterion2 is the solution')
-                print('iteration criterion1 epsilon1 ', end='')
-                print('criterion2 epsilon2 rho      mu')
+#                print()
+#                print('criterion1 is the constraint')
+#                print('criterion2 is the solution')
+#                print('iteration criterion1 epsilon1 ', end='')
+#                print('criterion2 epsilon2 rho      mu')
+                logMsg(0, "criterion1 is the constraint")
+                logMsg(0, "criterion2 is the solution")
+                logMsg(0, "iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu")
+
             if iteration % 10 == 0:
-                print('%9d %10.2e %8.2e ' % (iteration,
-                                             criterion1,
-                                             epsilon1), end='')
-                print('%10.2e %8.2e %8.2e %8.2e' % (criterion2,
-                                                    epsilon2,
-                                                    rho,
-                                                    mu))
+                logMsg(0, '%9d %10.2e %8.2e %10.2e %8.2e %8.2e %8.2e' % (iteration,
+                                                                         criterion1,
+                                                                         epsilon1,
+                                                                         criterion2,
+                                                                         epsilon2,
+                                                                         rho,
+                                                                         mu))
+#                print('%9d %10.2e %8.2e ' % (iteration,
+#                                             criterion1,
+#                                             epsilon1), end='')
+#                print('%10.2e %8.2e %8.2e %8.2e' % (criterion2,
+#                                                    epsilon2,
+#                                                    rho,
+#                                                    mu))
 
         # If both error criterions are satisfied stop the algorithm
         if criterion1 < epsilon1 and criterion2 < epsilon2:
             if verbose:
-                print('%9d %10.2e %8.2e ' % (iteration,
-                                             criterion1,
-                                             epsilon1), end='')
-                print('%10.2e %8.2e %8.2e %8.2e' % (criterion2,
-                                                    epsilon2,
-                                                    rho,
-                                                    mu))
+                logMsg(0, '%9d %10.2e %8.2e %10.2e %8.2e %8.2e %8.2e' % (iteration,
+                                                                         criterion1,
+                                                                         epsilon1,
+                                                                         criterion2,
+                                                                         epsilon2,
+                                                                         rho,
+                                                                         mu))
+
+#                print('%9d %10.2e %8.2e ' % (iteration,
+#                                             criterion1,
+#                                             epsilon1), end='')
+#                print('%10.2e %8.2e %8.2e %8.2e' % (criterion2,
+#                                                    epsilon2,
+#                                                    rho,
+#                                                    mu))
             break
 
         # Keep around the old answer for convergence testing.

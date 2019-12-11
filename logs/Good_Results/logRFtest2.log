@@ -1,0 +1,2078 @@
+2019-11-27 13:45:34,295  INFO: Run started.
+2019-11-27 13:45:34,295  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-11-27 13:45:34,527  DEBUG: Random seed = 5602
+2019-11-27 13:45:34,552  DEBUG: y_train class counts: (array([0, 1]), array([5351,   49]))
+2019-11-27 13:45:34,552  DEBUG: y_test class counts: (array([0, 1]), array([267,   3]))
+2019-11-27 13:45:34,552  DEBUG: y_valid class counts: (array([0, 1]), array([2412,   18]))
+2019-11-27 13:45:34,553  INFO: Randomizaiton of X and y matrices complete.
+2019-11-27 13:45:34,553  INFO: Lambda: 0.05
+2019-11-27 13:45:34,618  DEBUG: Max Rank: 167
+2019-11-27 13:45:36,197  DEBUG: Lambda Scale: 3.6742346141747677
+2019-11-27 13:45:38,042  DEBUG: criterion1 is the constraint
+2019-11-27 13:45:38,042  DEBUG: criterion2 is the solution
+2019-11-27 13:45:38,042  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:45:46,779  DEBUG:        10   7.79e-03 1.00e-05   1.39e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:45:58,862  DEBUG:        20   6.90e-05 1.00e-05   1.66e-04 1.00e-04 3.08e+00 1.85e+00
+2019-11-27 13:46:07,772  DEBUG:        26   8.35e-06 1.00e-05   4.01e-05 1.00e-04 3.08e+00 5.39e+01
+2019-11-27 13:46:07,802  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:46:07,802  DEBUG: HAT SHAPES, Uhat: (5400, 14)  Ehat: (14, 14)  VThat: (14, 182)  VTta: (153, 182)
+2019-11-27 13:46:07,807  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:46:07,807  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:46:07,810  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:46:07,950  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:46:07,951  INFO: FOR MATRIX: X
+2019-11-27 13:46:07,981  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:46:07,983  INFO: f1_Score: 0.000000
+2019-11-27 13:46:08,150  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:46:08,150  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:46:08,175  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:46:08,176  INFO: f1_Score: 0.000000
+2019-11-27 13:46:08,323  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:46:08,323  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:46:08,349  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:46:08,350  INFO: f1_Score: 0.000000
+2019-11-27 13:46:08,351  INFO: Lambda: 0.1
+2019-11-27 13:46:08,412  DEBUG: Max Rank: 167
+2019-11-27 13:46:10,207  DEBUG: Lambda Scale: 7.348469228349535
+2019-11-27 13:46:12,383  DEBUG: criterion1 is the constraint
+2019-11-27 13:46:12,383  DEBUG: criterion2 is the solution
+2019-11-27 13:46:12,383  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:46:22,771  DEBUG:        10   1.76e-02 1.00e-05   1.63e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:46:34,338  DEBUG:        20   1.51e-04 1.00e-05   1.22e-04 1.00e-04 3.08e+00 1.85e+00
+2019-11-27 13:46:40,016  DEBUG:        25   9.81e-06 1.00e-05   4.72e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:46:40,049  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:46:40,049  DEBUG: HAT SHAPES, Uhat: (5400, 21)  Ehat: (21, 21)  VThat: (21, 182)  VTta: (146, 182)
+2019-11-27 13:46:40,054  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:46:40,054  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:46:40,057  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:46:40,220  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:46:40,220  INFO: FOR MATRIX: X
+2019-11-27 13:46:40,244  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:46:40,245  INFO: f1_Score: 0.000000
+2019-11-27 13:46:40,396  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:46:40,396  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:46:40,417  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:46:40,418  INFO: f1_Score: 0.000000
+2019-11-27 13:46:40,570  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:46:40,570  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:46:40,589  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:46:40,590  INFO: f1_Score: 0.000000
+2019-11-27 13:46:40,592  INFO: Lambda: 0.15000000000000002
+2019-11-27 13:46:40,668  DEBUG: Max Rank: 167
+2019-11-27 13:46:42,536  DEBUG: Lambda Scale: 11.022703842524304
+2019-11-27 13:46:44,673  DEBUG: criterion1 is the constraint
+2019-11-27 13:46:44,673  DEBUG: criterion2 is the solution
+2019-11-27 13:46:44,673  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:46:54,803  DEBUG:        10   1.39e-02 1.00e-05   2.44e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:47:08,910  DEBUG:        20   9.18e-05 1.00e-05   1.42e-04 1.00e-04 3.08e+00 1.85e+00
+2019-11-27 13:47:14,568  DEBUG:        24   7.69e-06 1.00e-05   6.63e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:47:14,595  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:47:14,596  DEBUG: HAT SHAPES, Uhat: (5400, 36)  Ehat: (36, 36)  VThat: (36, 182)  VTta: (131, 182)
+2019-11-27 13:47:14,608  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:47:14,608  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:47:14,612  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:47:14,758  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:47:14,759  INFO: FOR MATRIX: X
+2019-11-27 13:47:14,784  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:47:14,785  INFO: f1_Score: 0.000000
+2019-11-27 13:47:14,932  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:47:14,932  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:47:14,958  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:47:14,960  INFO: f1_Score: 0.000000
+2019-11-27 13:47:15,100  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:47:15,100  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:47:15,122  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:47:15,123  INFO: f1_Score: 0.000000
+2019-11-27 13:47:15,124  INFO: Lambda: 0.2
+2019-11-27 13:47:15,200  DEBUG: Max Rank: 167
+2019-11-27 13:47:17,076  DEBUG: Lambda Scale: 14.69693845669907
+2019-11-27 13:47:19,093  DEBUG: criterion1 is the constraint
+2019-11-27 13:47:19,093  DEBUG: criterion2 is the solution
+2019-11-27 13:47:19,093  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:47:29,291  DEBUG:        10   9.82e-03 1.00e-05   1.28e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:47:40,730  DEBUG:        20   1.49e-04 1.00e-05   1.04e-04 1.00e-04 3.08e+00 1.85e+00
+2019-11-27 13:47:47,623  DEBUG:        26   7.47e-06 1.00e-05   3.90e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:47:47,648  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:47:47,649  DEBUG: HAT SHAPES, Uhat: (5400, 52)  Ehat: (52, 52)  VThat: (52, 182)  VTta: (115, 182)
+2019-11-27 13:47:47,658  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:47:47,662  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:47:47,665  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:47:47,801  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:47:47,801  INFO: FOR MATRIX: X
+2019-11-27 13:47:47,828  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:47:47,829  INFO: f1_Score: 0.000000
+2019-11-27 13:47:47,973  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:47:47,973  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:47:47,996  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:47:47,998  INFO: f1_Score: 0.000000
+2019-11-27 13:47:48,133  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:47:48,133  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:47:48,152  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:47:48,153  INFO: f1_Score: 0.000000
+2019-11-27 13:47:48,154  INFO: Lambda: 0.25
+2019-11-27 13:47:48,226  DEBUG: Max Rank: 167
+2019-11-27 13:47:50,053  DEBUG: Lambda Scale: 18.371173070873837
+2019-11-27 13:47:52,271  DEBUG: criterion1 is the constraint
+2019-11-27 13:47:52,271  DEBUG: criterion2 is the solution
+2019-11-27 13:47:52,271  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:48:04,478  DEBUG:        10   1.29e-02 1.00e-05   1.35e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:48:18,135  DEBUG:        20   2.59e-04 1.00e-05   1.05e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:48:26,176  DEBUG:        27   7.16e-06 1.00e-05   4.95e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:48:26,199  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:48:26,200  DEBUG: HAT SHAPES, Uhat: (5400, 66)  Ehat: (66, 66)  VThat: (66, 182)  VTta: (101, 182)
+2019-11-27 13:48:26,205  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:48:26,206  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:48:26,215  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:48:26,373  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:48:26,374  INFO: FOR MATRIX: X
+2019-11-27 13:48:26,395  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:48:26,397  INFO: f1_Score: 0.000000
+2019-11-27 13:48:26,549  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:48:26,550  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:48:26,572  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:48:26,573  INFO: f1_Score: 0.000000
+2019-11-27 13:48:26,714  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:48:26,715  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:48:26,736  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:48:26,737  INFO: f1_Score: 0.000000
+2019-11-27 13:48:26,738  INFO: Lambda: 0.3
+2019-11-27 13:48:26,825  DEBUG: Max Rank: 167
+2019-11-27 13:48:28,704  DEBUG: Lambda Scale: 22.045407685048605
+2019-11-27 13:48:30,833  DEBUG: criterion1 is the constraint
+2019-11-27 13:48:30,833  DEBUG: criterion2 is the solution
+2019-11-27 13:48:30,833  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:48:41,204  DEBUG:        10   1.57e-02 1.00e-05   3.27e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:48:52,706  DEBUG:        20   3.98e-04 1.00e-05   6.90e-05 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:49:03,285  DEBUG:        28   6.44e-06 1.00e-05   2.54e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:49:03,311  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:49:03,312  DEBUG: HAT SHAPES, Uhat: (5400, 79)  Ehat: (79, 79)  VThat: (79, 182)  VTta: (88, 182)
+2019-11-27 13:49:03,315  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:49:03,315  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:49:03,320  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:49:03,478  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:49:03,478  INFO: FOR MATRIX: X
+2019-11-27 13:49:03,510  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:49:03,512  INFO: f1_Score: 0.000000
+2019-11-27 13:49:03,657  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:49:03,658  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:49:03,685  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:49:03,687  INFO: f1_Score: 0.000000
+2019-11-27 13:49:03,822  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:49:03,823  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:49:03,850  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:49:03,851  INFO: f1_Score: 0.000000
+2019-11-27 13:49:03,851  INFO: Lambda: 0.35
+2019-11-27 13:49:03,966  DEBUG: Max Rank: 167
+2019-11-27 13:49:05,940  DEBUG: Lambda Scale: 25.71964229922337
+2019-11-27 13:49:08,039  DEBUG: criterion1 is the constraint
+2019-11-27 13:49:08,039  DEBUG: criterion2 is the solution
+2019-11-27 13:49:08,039  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:49:19,532  DEBUG:        10   1.59e-02 1.00e-05   2.45e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:49:32,332  DEBUG:        20   4.15e-04 1.00e-05   1.46e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:49:41,028  DEBUG:        27   4.91e-06 1.00e-05   2.76e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:49:41,056  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:49:41,056  DEBUG: HAT SHAPES, Uhat: (5400, 92)  Ehat: (92, 92)  VThat: (92, 182)  VTta: (75, 182)
+2019-11-27 13:49:41,068  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:49:41,069  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:49:41,082  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:49:41,221  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:49:41,222  INFO: FOR MATRIX: X
+2019-11-27 13:49:41,251  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:49:41,252  INFO: f1_Score: 0.000000
+2019-11-27 13:49:41,402  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:49:41,402  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:49:41,423  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:49:41,424  INFO: f1_Score: 0.000000
+2019-11-27 13:49:41,554  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:49:41,555  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:49:41,586  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:49:41,587  INFO: f1_Score: 0.000000
+2019-11-27 13:49:41,587  INFO: Lambda: 0.39999999999999997
+2019-11-27 13:49:41,666  DEBUG: Max Rank: 167
+2019-11-27 13:49:43,646  DEBUG: Lambda Scale: 29.393876913398138
+2019-11-27 13:49:45,736  DEBUG: criterion1 is the constraint
+2019-11-27 13:49:45,736  DEBUG: criterion2 is the solution
+2019-11-27 13:49:45,736  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:49:56,527  DEBUG:        10   1.58e-02 1.00e-05   2.15e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:50:13,785  DEBUG:        20   5.56e-04 1.00e-05   1.63e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:50:23,560  DEBUG:        28   6.98e-06 1.00e-05   2.92e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:50:23,606  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:50:23,606  DEBUG: HAT SHAPES, Uhat: (5400, 96)  Ehat: (96, 96)  VThat: (96, 182)  VTta: (71, 182)
+2019-11-27 13:50:23,610  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:50:23,613  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:50:23,626  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:50:23,854  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:50:23,854  INFO: FOR MATRIX: X
+2019-11-27 13:50:23,894  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:50:23,896  INFO: f1_Score: 0.000000
+2019-11-27 13:50:24,059  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:50:24,059  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:50:24,090  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:50:24,091  INFO: f1_Score: 0.000000
+2019-11-27 13:50:24,281  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:50:24,282  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:50:24,323  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:50:24,324  INFO: f1_Score: 0.000000
+2019-11-27 13:50:24,324  INFO: Lambda: 0.44999999999999996
+2019-11-27 13:50:24,458  DEBUG: Max Rank: 167
+2019-11-27 13:50:26,711  DEBUG: Lambda Scale: 33.0681115275729
+2019-11-27 13:50:28,843  DEBUG: criterion1 is the constraint
+2019-11-27 13:50:28,844  DEBUG: criterion2 is the solution
+2019-11-27 13:50:28,844  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:50:39,306  DEBUG:        10   1.60e-02 1.00e-05   2.10e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:50:50,584  DEBUG:        20   5.49e-04 1.00e-05   1.75e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:50:55,098  DEBUG:        24   6.28e-06 1.00e-05   6.59e-05 1.00e-04 3.08e+00 5.70e+00
+2019-11-27 13:50:55,125  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:50:55,125  DEBUG: HAT SHAPES, Uhat: (5400, 99)  Ehat: (99, 99)  VThat: (99, 182)  VTta: (68, 182)
+2019-11-27 13:50:55,130  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:50:55,131  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:50:55,137  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:50:55,269  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:50:55,269  INFO: FOR MATRIX: X
+2019-11-27 13:50:55,295  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:50:55,297  INFO: f1_Score: 0.000000
+2019-11-27 13:50:55,428  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:50:55,428  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:50:55,453  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:50:55,454  INFO: f1_Score: 0.000000
+2019-11-27 13:50:55,589  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:50:55,589  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:50:55,611  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:50:55,614  INFO: f1_Score: 0.000000
+2019-11-27 13:50:55,614  INFO: Lambda: 0.49999999999999994
+2019-11-27 13:50:55,688  DEBUG: Max Rank: 167
+2019-11-27 13:50:57,581  DEBUG: Lambda Scale: 36.742346141747674
+2019-11-27 13:50:59,711  DEBUG: criterion1 is the constraint
+2019-11-27 13:50:59,711  DEBUG: criterion2 is the solution
+2019-11-27 13:50:59,711  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:51:11,016  DEBUG:        10   1.26e-02 1.00e-05   2.59e-04 1.00e-04 3.08e+00 6.37e-02
+2019-11-27 13:51:29,616  DEBUG:        20   5.97e-05 1.00e-05   1.17e-04 1.00e-04 3.08e+00 1.85e+00
+2019-11-27 13:51:33,898  DEBUG:        22   1.70e-06 1.00e-05   4.97e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:51:33,940  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:51:33,941  DEBUG: HAT SHAPES, Uhat: (5400, 109)  Ehat: (109, 109)  VThat: (109, 182)  VTta: (58, 182)
+2019-11-27 13:51:33,951  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:51:33,952  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:51:33,961  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:51:34,220  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:51:34,220  INFO: FOR MATRIX: X
+2019-11-27 13:51:34,260  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:51:34,261  INFO: f1_Score: 0.000000
+2019-11-27 13:51:34,508  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:51:34,508  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:51:34,563  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:51:34,566  INFO: f1_Score: 0.000000
+2019-11-27 13:51:34,786  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:51:34,786  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:51:34,829  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:51:34,830  INFO: f1_Score: 0.000000
+2019-11-27 13:51:34,831  INFO: Lambda: 0.5499999999999999
+2019-11-27 13:51:35,021  DEBUG: Max Rank: 167
+2019-11-27 13:51:39,185  DEBUG: Lambda Scale: 40.41658075592244
+2019-11-27 13:51:42,871  DEBUG: criterion1 is the constraint
+2019-11-27 13:51:42,872  DEBUG: criterion2 is the solution
+2019-11-27 13:51:42,872  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:51:59,314  DEBUG:        10   1.54e-02 1.00e-05   1.44e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:52:21,431  DEBUG:        20   1.18e-04 1.00e-05   3.09e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:52:27,575  DEBUG:        23   1.63e-06 1.00e-05   4.86e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:52:27,648  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:52:27,648  DEBUG: HAT SHAPES, Uhat: (5400, 116)  Ehat: (116, 116)  VThat: (116, 182)  VTta: (51, 182)
+2019-11-27 13:52:27,672  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:52:27,674  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:52:27,691  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:52:28,038  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:52:28,038  INFO: FOR MATRIX: X
+2019-11-27 13:52:28,110  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:52:28,116  INFO: f1_Score: 0.000000
+2019-11-27 13:52:28,372  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:52:28,373  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:52:28,409  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:52:28,413  INFO: f1_Score: 0.000000
+2019-11-27 13:52:28,717  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:52:28,717  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:52:28,759  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:52:28,761  INFO: f1_Score: 0.000000
+2019-11-27 13:52:28,761  INFO: Lambda: 0.6
+2019-11-27 13:52:28,891  DEBUG: Max Rank: 167
+2019-11-27 13:52:32,827  DEBUG: Lambda Scale: 44.09081537009721
+2019-11-27 13:52:36,424  DEBUG: criterion1 is the constraint
+2019-11-27 13:52:36,424  DEBUG: criterion2 is the solution
+2019-11-27 13:52:36,424  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:52:53,441  DEBUG:        10   1.51e-02 1.00e-05   1.63e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:53:13,974  DEBUG:        20   2.31e-04 1.00e-05   4.50e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:53:22,337  DEBUG:        24   1.33e-06 1.00e-05   4.08e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:53:22,408  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:53:22,408  DEBUG: HAT SHAPES, Uhat: (5400, 116)  Ehat: (116, 116)  VThat: (116, 182)  VTta: (51, 182)
+2019-11-27 13:53:22,427  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:53:22,429  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:53:22,452  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:53:22,770  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:53:22,770  INFO: FOR MATRIX: X
+2019-11-27 13:53:22,851  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:53:22,853  INFO: f1_Score: 0.000000
+2019-11-27 13:53:23,188  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:53:23,188  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:53:23,246  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:53:23,250  INFO: f1_Score: 0.000000
+2019-11-27 13:53:23,513  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:53:23,514  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:53:23,561  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:53:23,563  INFO: f1_Score: 0.000000
+2019-11-27 13:53:23,564  INFO: Lambda: 0.65
+2019-11-27 13:53:23,704  DEBUG: Max Rank: 167
+2019-11-27 13:53:27,549  DEBUG: Lambda Scale: 47.76504998427198
+2019-11-27 13:53:31,144  DEBUG: criterion1 is the constraint
+2019-11-27 13:53:31,144  DEBUG: criterion2 is the solution
+2019-11-27 13:53:31,145  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:53:46,598  DEBUG:        10   1.88e-02 1.00e-05   1.91e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:54:07,438  DEBUG:        20   2.54e-04 1.00e-05   1.22e-04 1.00e-04 3.08e+00 1.96e-01
+2019-11-27 13:54:18,453  DEBUG:        24   6.83e-06 1.00e-05   3.52e-05 1.00e-04 3.08e+00 1.75e+01
+2019-11-27 13:54:18,535  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:54:18,536  DEBUG: HAT SHAPES, Uhat: (5400, 118)  Ehat: (118, 118)  VThat: (118, 182)  VTta: (49, 182)
+2019-11-27 13:54:18,540  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:54:18,549  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:54:18,571  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:54:18,925  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:54:18,925  INFO: FOR MATRIX: X
+2019-11-27 13:54:18,964  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:54:18,966  INFO: f1_Score: 0.000000
+2019-11-27 13:54:19,207  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:54:19,207  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:54:19,261  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:54:19,263  INFO: f1_Score: 0.000000
+2019-11-27 13:54:19,515  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:54:19,515  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:54:19,546  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:54:19,548  INFO: f1_Score: 0.000000
+2019-11-27 13:54:19,548  INFO: Lambda: 0.7000000000000001
+2019-11-27 13:54:19,702  DEBUG: Max Rank: 167
+2019-11-27 13:54:23,851  DEBUG: Lambda Scale: 51.43928459844675
+2019-11-27 13:54:28,117  DEBUG: criterion1 is the constraint
+2019-11-27 13:54:28,117  DEBUG: criterion2 is the solution
+2019-11-27 13:54:28,117  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:54:46,642  DEBUG:        10   1.53e-02 1.00e-05   1.37e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:55:05,498  DEBUG:        20   2.56e-04 1.00e-05   1.13e-04 1.00e-04 3.08e+00 1.96e-01
+2019-11-27 13:55:12,499  DEBUG:        23   9.63e-06 1.00e-05   7.83e-05 1.00e-04 3.08e+00 1.85e+00
+2019-11-27 13:55:12,570  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:55:12,570  DEBUG: HAT SHAPES, Uhat: (5400, 138)  Ehat: (138, 138)  VThat: (138, 182)  VTta: (29, 182)
+2019-11-27 13:55:12,585  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:55:12,591  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:55:12,615  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:55:12,958  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:55:12,959  INFO: FOR MATRIX: X
+2019-11-27 13:55:13,011  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:55:13,014  INFO: f1_Score: 0.000000
+2019-11-27 13:55:13,304  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:55:13,305  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:55:13,366  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:55:13,372  INFO: f1_Score: 0.000000
+2019-11-27 13:55:13,638  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:55:13,638  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:55:13,685  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:55:13,686  INFO: f1_Score: 0.000000
+2019-11-27 13:55:13,686  INFO: Lambda: 0.7500000000000001
+2019-11-27 13:55:13,941  DEBUG: Max Rank: 167
+2019-11-27 13:55:17,843  DEBUG: Lambda Scale: 55.11351921262152
+2019-11-27 13:55:22,697  DEBUG: criterion1 is the constraint
+2019-11-27 13:55:22,697  DEBUG: criterion2 is the solution
+2019-11-27 13:55:22,697  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:55:40,325  DEBUG:        10   1.53e-02 1.00e-05   1.50e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:55:58,335  DEBUG:        20   2.48e-04 1.00e-05   1.01e-04 1.00e-04 3.08e+00 1.96e-01
+2019-11-27 13:56:06,461  DEBUG:        24   2.87e-06 1.00e-05   2.39e-05 1.00e-04 3.08e+00 5.70e+00
+2019-11-27 13:56:06,529  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:56:06,530  DEBUG: HAT SHAPES, Uhat: (5400, 138)  Ehat: (138, 138)  VThat: (138, 182)  VTta: (29, 182)
+2019-11-27 13:56:06,536  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:56:06,541  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:56:06,566  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:56:06,894  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:56:06,894  INFO: FOR MATRIX: X
+2019-11-27 13:56:06,944  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:56:06,948  INFO: f1_Score: 0.000000
+2019-11-27 13:56:07,250  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:56:07,251  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:56:07,306  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:56:07,308  INFO: f1_Score: 0.000000
+2019-11-27 13:56:07,573  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:56:07,573  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:56:07,619  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:56:07,622  INFO: f1_Score: 0.000000
+2019-11-27 13:56:07,623  INFO: Lambda: 0.8000000000000002
+2019-11-27 13:56:07,862  DEBUG: Max Rank: 167
+2019-11-27 13:56:11,737  DEBUG: Lambda Scale: 58.78775382679629
+2019-11-27 13:56:16,127  DEBUG: criterion1 is the constraint
+2019-11-27 13:56:16,127  DEBUG: criterion2 is the solution
+2019-11-27 13:56:16,127  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:56:39,839  DEBUG:        10   1.55e-02 1.00e-05   1.59e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:57:04,435  DEBUG:        20   2.84e-04 1.00e-05   2.80e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:57:16,863  DEBUG:        23   8.75e-06 1.00e-05   9.36e-05 1.00e-04 3.08e+00 5.70e+00
+2019-11-27 13:57:16,955  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:57:16,956  DEBUG: HAT SHAPES, Uhat: (5400, 138)  Ehat: (138, 138)  VThat: (138, 182)  VTta: (29, 182)
+2019-11-27 13:57:16,969  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:57:16,976  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:57:17,000  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:57:17,685  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:57:17,685  INFO: FOR MATRIX: X
+2019-11-27 13:57:17,760  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:57:17,762  INFO: f1_Score: 0.000000
+2019-11-27 13:57:18,283  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:57:18,283  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:57:18,356  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:57:18,358  INFO: f1_Score: 0.000000
+2019-11-27 13:57:18,647  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:57:18,647  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:57:18,727  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:57:18,747  INFO: f1_Score: 0.000000
+2019-11-27 13:57:18,747  INFO: Lambda: 0.8500000000000002
+2019-11-27 13:57:19,094  DEBUG: Max Rank: 167
+2019-11-27 13:57:25,464  DEBUG: Lambda Scale: 62.46198844097106
+2019-11-27 13:57:31,310  DEBUG: criterion1 is the constraint
+2019-11-27 13:57:31,310  DEBUG: criterion2 is the solution
+2019-11-27 13:57:31,310  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:57:50,863  DEBUG:        10   1.58e-02 1.00e-05   1.69e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:58:12,106  DEBUG:        20   3.92e-04 1.00e-05   2.95e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:58:18,273  DEBUG:        23   9.53e-06 1.00e-05   8.85e-05 1.00e-04 3.08e+00 5.70e+00
+2019-11-27 13:58:18,352  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:58:18,352  DEBUG: HAT SHAPES, Uhat: (5400, 139)  Ehat: (139, 139)  VThat: (139, 182)  VTta: (28, 182)
+2019-11-27 13:58:18,378  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:58:18,383  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:58:18,404  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:58:18,717  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:58:18,717  INFO: FOR MATRIX: X
+2019-11-27 13:58:18,774  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:58:18,779  INFO: f1_Score: 0.000000
+2019-11-27 13:58:19,051  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:58:19,051  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:58:19,115  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:58:19,121  INFO: f1_Score: 0.000000
+2019-11-27 13:58:19,413  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:58:19,414  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:58:19,459  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:58:19,462  INFO: f1_Score: 0.000000
+2019-11-27 13:58:19,463  INFO: Lambda: 0.9000000000000002
+2019-11-27 13:58:19,635  DEBUG: Max Rank: 167
+2019-11-27 13:58:23,868  DEBUG: Lambda Scale: 66.13622305514583
+2019-11-27 13:58:28,085  DEBUG: criterion1 is the constraint
+2019-11-27 13:58:28,085  DEBUG: criterion2 is the solution
+2019-11-27 13:58:28,086  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 13:58:48,199  DEBUG:        10   1.58e-02 1.00e-05   1.48e-04 1.00e-04 3.08e+00 2.07e-02
+2019-11-27 13:59:12,389  DEBUG:        20   1.43e-04 1.00e-05   1.93e-04 1.00e-04 3.08e+00 6.02e-01
+2019-11-27 13:59:21,579  DEBUG:        25   6.14e-06 1.00e-05   3.86e-05 1.00e-04 3.08e+00 5.39e+01
+2019-11-27 13:59:21,645  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 167)  E: (167, 167)  VT: (167, 182)  L: (5400, 182)
+2019-11-27 13:59:21,646  DEBUG: HAT SHAPES, Uhat: (5400, 151)  Ehat: (151, 151)  VThat: (151, 182)  VTta: (16, 182)
+2019-11-27 13:59:21,660  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 13:59:21,662  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 13:59:21,689  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 13:59:21,944  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:59:21,944  INFO: FOR MATRIX: X
+2019-11-27 13:59:21,985  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:59:21,986  INFO: f1_Score: 0.000000
+2019-11-27 13:59:22,244  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:59:22,244  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 13:59:22,278  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:59:22,280  INFO: f1_Score: 0.000000
+2019-11-27 13:59:22,502  INFO: ************ RANDOM FOREST ************
+2019-11-27 13:59:22,502  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 13:59:22,548  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2412
+1                        18
+2019-11-27 13:59:22,549  INFO: f1_Score: 0.000000
+2019-11-27 14:01:57,097  INFO: Run started.
+2019-11-27 14:01:57,098  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-11-27 14:01:57,326  DEBUG: Random seed = 5913
+2019-11-27 14:01:57,353  DEBUG: y_train class counts: (array([0, 1]), array([5347,   53]))
+2019-11-27 14:01:57,353  DEBUG: y_test class counts: (array([0, 1]), array([268,   2]))
+2019-11-27 14:01:57,354  DEBUG: y_valid class counts: (array([0, 1]), array([2415,   15]))
+2019-11-27 14:01:57,354  INFO: Randomizaiton of X and y matrices complete.
+2019-11-27 14:01:57,355  INFO: Lambda: 0.05
+2019-11-27 14:01:57,439  DEBUG: Max Rank: 162
+2019-11-27 14:01:59,038  DEBUG: Lambda Scale: 3.6742346141747677
+2019-11-27 14:02:01,160  DEBUG: criterion1 is the constraint
+2019-11-27 14:02:01,160  DEBUG: criterion2 is the solution
+2019-11-27 14:02:01,160  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:02:11,324  DEBUG:        10   7.98e-03 1.00e-05   1.26e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:02:23,725  DEBUG:        20   5.73e-05 1.00e-05   1.29e-04 1.00e-04 3.08e+00 1.83e+00
+2019-11-27 14:02:31,086  DEBUG:        26   4.72e-06 1.00e-05   3.63e-05 1.00e-04 3.08e+00 1.73e+01
+2019-11-27 14:02:31,114  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:02:31,114  DEBUG: HAT SHAPES, Uhat: (5400, 15)  Ehat: (15, 15)  VThat: (15, 182)  VTta: (147, 182)
+2019-11-27 14:02:31,120  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:02:31,120  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:02:31,123  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:02:31,280  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:02:31,280  INFO: FOR MATRIX: X
+2019-11-27 14:02:31,311  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:02:31,313  INFO: f1_Score: 0.000000
+2019-11-27 14:02:31,452  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:02:31,452  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:02:31,478  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:02:31,479  INFO: f1_Score: 0.000000
+2019-11-27 14:02:31,612  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:02:31,612  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:02:31,636  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:02:31,637  INFO: f1_Score: 0.000000
+2019-11-27 14:02:31,637  INFO: Lambda: 0.1
+2019-11-27 14:02:31,729  DEBUG: Max Rank: 162
+2019-11-27 14:02:33,539  DEBUG: Lambda Scale: 7.348469228349535
+2019-11-27 14:02:35,491  DEBUG: criterion1 is the constraint
+2019-11-27 14:02:35,491  DEBUG: criterion2 is the solution
+2019-11-27 14:02:35,492  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:02:45,343  DEBUG:        10   1.71e-02 1.00e-05   1.99e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:02:56,387  DEBUG:        20   1.20e-04 1.00e-05   2.46e-04 1.00e-04 3.08e+00 1.83e+00
+2019-11-27 14:03:00,779  DEBUG:        24   9.99e-06 1.00e-05   4.82e-05 1.00e-04 3.08e+00 5.64e+00
+2019-11-27 14:03:00,813  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:03:00,814  DEBUG: HAT SHAPES, Uhat: (5400, 21)  Ehat: (21, 21)  VThat: (21, 182)  VTta: (141, 182)
+2019-11-27 14:03:00,816  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:03:00,816  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:03:00,820  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:03:00,990  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:03:00,990  INFO: FOR MATRIX: X
+2019-11-27 14:03:01,022  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:03:01,024  INFO: f1_Score: 0.000000
+2019-11-27 14:03:01,178  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:03:01,178  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:03:01,202  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:03:01,203  INFO: f1_Score: 0.000000
+2019-11-27 14:03:01,337  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:03:01,338  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:03:01,359  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:03:01,360  INFO: f1_Score: 0.000000
+2019-11-27 14:03:01,361  INFO: Lambda: 0.15000000000000002
+2019-11-27 14:03:01,457  DEBUG: Max Rank: 162
+2019-11-27 14:03:03,512  DEBUG: Lambda Scale: 11.022703842524304
+2019-11-27 14:03:05,469  DEBUG: criterion1 is the constraint
+2019-11-27 14:03:05,469  DEBUG: criterion2 is the solution
+2019-11-27 14:03:05,469  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:03:17,277  DEBUG:        10   1.47e-02 1.00e-05   2.28e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:03:29,155  DEBUG:        20   9.22e-05 1.00e-05   1.63e-04 1.00e-04 3.08e+00 1.83e+00
+2019-11-27 14:03:32,416  DEBUG:        23   5.13e-06 1.00e-05   5.63e-05 1.00e-04 3.08e+00 1.73e+01
+2019-11-27 14:03:32,443  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:03:32,444  DEBUG: HAT SHAPES, Uhat: (5400, 32)  Ehat: (32, 32)  VThat: (32, 182)  VTta: (130, 182)
+2019-11-27 14:03:32,447  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:03:32,447  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:03:32,455  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:03:32,604  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:03:32,604  INFO: FOR MATRIX: X
+2019-11-27 14:03:32,627  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:03:32,628  INFO: f1_Score: 0.000000
+2019-11-27 14:03:32,798  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:03:32,798  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:03:32,824  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:03:32,825  INFO: f1_Score: 0.000000
+2019-11-27 14:03:32,955  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:03:32,956  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:03:32,979  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:03:32,980  INFO: f1_Score: 0.000000
+2019-11-27 14:03:32,980  INFO: Lambda: 0.2
+2019-11-27 14:03:33,088  DEBUG: Max Rank: 162
+2019-11-27 14:03:34,879  DEBUG: Lambda Scale: 14.69693845669907
+2019-11-27 14:03:36,846  DEBUG: criterion1 is the constraint
+2019-11-27 14:03:36,847  DEBUG: criterion2 is the solution
+2019-11-27 14:03:36,847  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:03:46,525  DEBUG:        10   1.88e-02 1.00e-05   2.26e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:03:57,489  DEBUG:        20   4.37e-04 1.00e-05   1.85e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:04:07,861  DEBUG:        28   7.00e-06 1.00e-05   4.04e-05 1.00e-04 3.08e+00 5.34e+01
+2019-11-27 14:04:07,894  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:04:07,894  DEBUG: HAT SHAPES, Uhat: (5400, 52)  Ehat: (52, 52)  VThat: (52, 182)  VTta: (110, 182)
+2019-11-27 14:04:07,897  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:04:07,897  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:04:07,901  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:04:08,079  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:04:08,079  INFO: FOR MATRIX: X
+2019-11-27 14:04:08,102  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:04:08,104  INFO: f1_Score: 0.000000
+2019-11-27 14:04:08,238  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:04:08,238  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:04:08,262  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:04:08,263  INFO: f1_Score: 0.000000
+2019-11-27 14:04:08,390  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:04:08,390  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:04:08,416  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:04:08,417  INFO: f1_Score: 0.000000
+2019-11-27 14:04:08,417  INFO: Lambda: 0.25
+2019-11-27 14:04:08,512  DEBUG: Max Rank: 162
+2019-11-27 14:04:10,703  DEBUG: Lambda Scale: 18.371173070873837
+2019-11-27 14:04:12,839  DEBUG: criterion1 is the constraint
+2019-11-27 14:04:12,839  DEBUG: criterion2 is the solution
+2019-11-27 14:04:12,839  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:04:24,617  DEBUG:        10   1.59e-02 1.00e-05   2.68e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:04:36,982  DEBUG:        20   3.42e-04 1.00e-05   1.70e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:04:44,484  DEBUG:        26   7.49e-06 1.00e-05   3.24e-05 1.00e-04 3.08e+00 1.73e+01
+2019-11-27 14:04:44,532  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:04:44,532  DEBUG: HAT SHAPES, Uhat: (5400, 68)  Ehat: (68, 68)  VThat: (68, 182)  VTta: (94, 182)
+2019-11-27 14:04:44,543  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:04:44,544  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:04:44,549  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:04:44,721  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:04:44,721  INFO: FOR MATRIX: X
+2019-11-27 14:04:44,753  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:04:44,754  INFO: f1_Score: 0.000000
+2019-11-27 14:04:44,914  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:04:44,914  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:04:44,946  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:04:44,948  INFO: f1_Score: 0.000000
+2019-11-27 14:04:45,082  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:04:45,082  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:04:45,107  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:04:45,109  INFO: f1_Score: 0.000000
+2019-11-27 14:04:45,109  INFO: Lambda: 0.3
+2019-11-27 14:04:45,193  DEBUG: Max Rank: 162
+2019-11-27 14:04:47,065  DEBUG: Lambda Scale: 22.045407685048605
+2019-11-27 14:04:49,001  DEBUG: criterion1 is the constraint
+2019-11-27 14:04:49,002  DEBUG: criterion2 is the solution
+2019-11-27 14:04:49,002  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:04:59,029  DEBUG:        10   1.16e-02 1.00e-05   1.39e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:05:09,738  DEBUG:        20   2.00e-04 1.00e-05   1.19e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:05:18,867  DEBUG:        27   4.64e-06 1.00e-05   8.12e-05 1.00e-04 3.08e+00 1.73e+01
+2019-11-27 14:05:18,890  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:05:18,891  DEBUG: HAT SHAPES, Uhat: (5400, 81)  Ehat: (81, 81)  VThat: (81, 182)  VTta: (81, 182)
+2019-11-27 14:05:18,893  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:05:18,895  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:05:18,905  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:05:19,052  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:05:19,053  INFO: FOR MATRIX: X
+2019-11-27 14:05:19,081  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:05:19,082  INFO: f1_Score: 0.000000
+2019-11-27 14:05:19,235  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:05:19,236  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:05:19,263  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:05:19,265  INFO: f1_Score: 0.000000
+2019-11-27 14:05:19,424  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:05:19,425  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:05:19,458  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:05:19,460  INFO: f1_Score: 0.000000
+2019-11-27 14:05:19,460  INFO: Lambda: 0.35
+2019-11-27 14:05:19,590  DEBUG: Max Rank: 162
+2019-11-27 14:05:21,829  DEBUG: Lambda Scale: 25.71964229922337
+2019-11-27 14:05:23,993  DEBUG: criterion1 is the constraint
+2019-11-27 14:05:23,994  DEBUG: criterion2 is the solution
+2019-11-27 14:05:23,994  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:05:34,432  DEBUG:        10   1.71e-02 1.00e-05   2.59e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:05:45,016  DEBUG:        20   2.94e-04 1.00e-05   1.54e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:05:52,638  DEBUG:        27   4.61e-06 1.00e-05   3.55e-05 1.00e-04 3.08e+00 1.73e+01
+2019-11-27 14:05:52,668  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:05:52,670  DEBUG: HAT SHAPES, Uhat: (5400, 93)  Ehat: (93, 93)  VThat: (93, 182)  VTta: (69, 182)
+2019-11-27 14:05:52,686  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:05:52,689  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:05:52,699  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:05:52,887  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:05:52,887  INFO: FOR MATRIX: X
+2019-11-27 14:05:52,916  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:05:52,918  INFO: f1_Score: 0.000000
+2019-11-27 14:05:53,091  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:05:53,091  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:05:53,114  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:05:53,116  INFO: f1_Score: 0.000000
+2019-11-27 14:05:53,258  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:05:53,258  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:05:53,280  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:05:53,282  INFO: f1_Score: 0.000000
+2019-11-27 14:05:53,282  INFO: Lambda: 0.39999999999999997
+2019-11-27 14:05:53,357  DEBUG: Max Rank: 162
+2019-11-27 14:05:55,248  DEBUG: Lambda Scale: 29.393876913398138
+2019-11-27 14:05:57,273  DEBUG: criterion1 is the constraint
+2019-11-27 14:05:57,273  DEBUG: criterion2 is the solution
+2019-11-27 14:05:57,274  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:06:07,858  DEBUG:        10   1.67e-02 1.00e-05   2.38e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:06:21,802  DEBUG:        20   4.15e-04 1.00e-05   1.41e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:06:29,506  DEBUG:        27   7.85e-06 1.00e-05   3.01e-05 1.00e-04 3.08e+00 1.73e+01
+2019-11-27 14:06:29,533  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:06:29,534  DEBUG: HAT SHAPES, Uhat: (5400, 99)  Ehat: (99, 99)  VThat: (99, 182)  VTta: (63, 182)
+2019-11-27 14:06:29,537  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:06:29,537  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:06:29,543  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:06:29,689  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:06:29,690  INFO: FOR MATRIX: X
+2019-11-27 14:06:29,712  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:06:29,714  INFO: f1_Score: 0.000000
+2019-11-27 14:06:29,859  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:06:29,859  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:06:29,882  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:06:29,883  INFO: f1_Score: 0.000000
+2019-11-27 14:06:30,022  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:06:30,023  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:06:30,044  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:06:30,045  INFO: f1_Score: 0.000000
+2019-11-27 14:06:30,045  INFO: Lambda: 0.44999999999999996
+2019-11-27 14:06:30,152  DEBUG: Max Rank: 162
+2019-11-27 14:06:31,928  DEBUG: Lambda Scale: 33.0681115275729
+2019-11-27 14:06:33,952  DEBUG: criterion1 is the constraint
+2019-11-27 14:06:33,952  DEBUG: criterion2 is the solution
+2019-11-27 14:06:33,952  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:06:43,734  DEBUG:        10   1.26e-02 1.00e-05   1.25e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:06:54,871  DEBUG:        20   2.18e-04 1.00e-05   1.13e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:06:58,514  DEBUG:        23   2.30e-06 1.00e-05   1.44e-05 1.00e-04 3.08e+00 5.64e+00
+2019-11-27 14:06:58,538  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:06:58,538  DEBUG: HAT SHAPES, Uhat: (5400, 100)  Ehat: (100, 100)  VThat: (100, 182)  VTta: (62, 182)
+2019-11-27 14:06:58,550  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:06:58,557  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:06:58,565  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:06:58,731  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:06:58,731  INFO: FOR MATRIX: X
+2019-11-27 14:06:58,752  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:06:58,753  INFO: f1_Score: 0.000000
+2019-11-27 14:06:58,887  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:06:58,887  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:06:58,908  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:06:58,910  INFO: f1_Score: 0.000000
+2019-11-27 14:06:59,045  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:06:59,045  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:06:59,071  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:06:59,072  INFO: f1_Score: 0.000000
+2019-11-27 14:06:59,072  INFO: Lambda: 0.49999999999999994
+2019-11-27 14:06:59,170  DEBUG: Max Rank: 162
+2019-11-27 14:07:01,093  DEBUG: Lambda Scale: 36.742346141747674
+2019-11-27 14:07:03,224  DEBUG: criterion1 is the constraint
+2019-11-27 14:07:03,224  DEBUG: criterion2 is the solution
+2019-11-27 14:07:03,224  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:07:14,411  DEBUG:        10   1.67e-02 1.00e-05   2.01e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:07:27,388  DEBUG:        20   1.66e-04 1.00e-05   1.84e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:07:31,765  DEBUG:        23   1.21e-06 1.00e-05   3.01e-05 1.00e-04 3.08e+00 1.73e+01
+2019-11-27 14:07:31,799  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:07:31,800  DEBUG: HAT SHAPES, Uhat: (5400, 108)  Ehat: (108, 108)  VThat: (108, 182)  VTta: (54, 182)
+2019-11-27 14:07:31,803  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:07:31,804  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:07:31,812  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:07:31,984  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:07:31,985  INFO: FOR MATRIX: X
+2019-11-27 14:07:32,011  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:07:32,012  INFO: f1_Score: 0.000000
+2019-11-27 14:07:32,141  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:07:32,141  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:07:32,162  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:07:32,163  INFO: f1_Score: 0.000000
+2019-11-27 14:07:32,289  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:07:32,289  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:07:32,309  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:07:32,310  INFO: f1_Score: 0.000000
+2019-11-27 14:07:32,311  INFO: Lambda: 0.5499999999999999
+2019-11-27 14:07:32,380  DEBUG: Max Rank: 162
+2019-11-27 14:07:34,172  DEBUG: Lambda Scale: 40.41658075592244
+2019-11-27 14:07:36,252  DEBUG: criterion1 is the constraint
+2019-11-27 14:07:36,253  DEBUG: criterion2 is the solution
+2019-11-27 14:07:36,253  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:07:46,164  DEBUG:        10   1.82e-02 1.00e-05   2.01e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:07:57,321  DEBUG:        20   3.21e-04 1.00e-05   2.25e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:08:00,583  DEBUG:        23   2.66e-06 1.00e-05   4.94e-05 1.00e-04 3.08e+00 5.64e+00
+2019-11-27 14:08:00,613  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:08:00,614  DEBUG: HAT SHAPES, Uhat: (5400, 119)  Ehat: (119, 119)  VThat: (119, 182)  VTta: (43, 182)
+2019-11-27 14:08:00,617  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:08:00,618  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:08:00,624  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:08:00,764  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:00,765  INFO: FOR MATRIX: X
+2019-11-27 14:08:00,789  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:00,791  INFO: f1_Score: 0.000000
+2019-11-27 14:08:00,924  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:00,925  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:08:00,950  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:00,951  INFO: f1_Score: 0.000000
+2019-11-27 14:08:01,081  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:01,082  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:08:01,105  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:01,106  INFO: f1_Score: 0.000000
+2019-11-27 14:08:01,107  INFO: Lambda: 0.6
+2019-11-27 14:08:01,180  DEBUG: Max Rank: 162
+2019-11-27 14:08:02,967  DEBUG: Lambda Scale: 44.09081537009721
+2019-11-27 14:08:04,957  DEBUG: criterion1 is the constraint
+2019-11-27 14:08:04,958  DEBUG: criterion2 is the solution
+2019-11-27 14:08:04,958  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:08:15,537  DEBUG:        10   1.81e-02 1.00e-05   1.96e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:08:28,181  DEBUG:        20   2.34e-04 1.00e-05   3.03e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:08:30,339  DEBUG:        22   4.30e-06 1.00e-05   6.07e-05 1.00e-04 3.08e+00 1.83e+00
+2019-11-27 14:08:30,362  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:08:30,362  DEBUG: HAT SHAPES, Uhat: (5400, 119)  Ehat: (119, 119)  VThat: (119, 182)  VTta: (43, 182)
+2019-11-27 14:08:30,369  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:08:30,371  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:08:30,385  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:08:30,524  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:30,524  INFO: FOR MATRIX: X
+2019-11-27 14:08:30,553  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:30,555  INFO: f1_Score: 0.000000
+2019-11-27 14:08:30,689  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:30,689  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:08:30,716  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:30,718  INFO: f1_Score: 0.000000
+2019-11-27 14:08:30,843  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:30,843  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:08:30,865  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:30,866  INFO: f1_Score: 0.000000
+2019-11-27 14:08:30,867  INFO: Lambda: 0.65
+2019-11-27 14:08:30,950  DEBUG: Max Rank: 162
+2019-11-27 14:08:32,733  DEBUG: Lambda Scale: 47.76504998427198
+2019-11-27 14:08:34,796  DEBUG: criterion1 is the constraint
+2019-11-27 14:08:34,796  DEBUG: criterion2 is the solution
+2019-11-27 14:08:34,796  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:08:44,827  DEBUG:        10   1.83e-02 1.00e-05   1.88e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:08:55,465  DEBUG:        20   1.63e-04 1.00e-05   3.42e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:08:57,553  DEBUG:        22   4.99e-06 1.00e-05   5.02e-05 1.00e-04 3.08e+00 5.64e+00
+2019-11-27 14:08:57,575  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:08:57,575  DEBUG: HAT SHAPES, Uhat: (5400, 123)  Ehat: (123, 123)  VThat: (123, 182)  VTta: (39, 182)
+2019-11-27 14:08:57,580  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:08:57,581  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:08:57,595  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:08:57,743  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:57,744  INFO: FOR MATRIX: X
+2019-11-27 14:08:57,767  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:57,768  INFO: f1_Score: 0.000000
+2019-11-27 14:08:57,899  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:57,900  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:08:57,922  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:57,925  INFO: f1_Score: 0.000000
+2019-11-27 14:08:58,054  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:08:58,054  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:08:58,075  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:08:58,077  INFO: f1_Score: 0.000000
+2019-11-27 14:08:58,077  INFO: Lambda: 0.7000000000000001
+2019-11-27 14:08:58,157  DEBUG: Max Rank: 162
+2019-11-27 14:09:00,751  DEBUG: Lambda Scale: 51.43928459844675
+2019-11-27 14:09:02,992  DEBUG: criterion1 is the constraint
+2019-11-27 14:09:02,992  DEBUG: criterion2 is the solution
+2019-11-27 14:09:02,992  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:09:13,001  DEBUG:        10   1.56e-02 1.00e-05   2.51e-04 1.00e-04 3.08e+00 6.30e-02
+2019-11-27 14:09:25,063  DEBUG:        20   2.42e-05 1.00e-05   9.68e-05 1.00e-04 3.08e+00 1.83e+00
+2019-11-27 14:09:26,629  DEBUG:        21   3.79e-06 1.00e-05   4.97e-05 1.00e-04 3.08e+00 5.64e+00
+2019-11-27 14:09:26,681  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:09:26,681  DEBUG: HAT SHAPES, Uhat: (5400, 139)  Ehat: (139, 139)  VThat: (139, 182)  VTta: (23, 182)
+2019-11-27 14:09:26,684  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:09:26,686  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:09:26,693  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:09:26,914  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:09:26,914  INFO: FOR MATRIX: X
+2019-11-27 14:09:26,940  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:09:26,941  INFO: f1_Score: 0.000000
+2019-11-27 14:09:27,086  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:09:27,086  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:09:27,114  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:09:27,121  INFO: f1_Score: 0.000000
+2019-11-27 14:09:27,280  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:09:27,280  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:09:27,313  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:09:27,314  INFO: f1_Score: 0.000000
+2019-11-27 14:09:27,314  INFO: Lambda: 0.7500000000000001
+2019-11-27 14:09:27,415  DEBUG: Max Rank: 162
+2019-11-27 14:09:29,297  DEBUG: Lambda Scale: 55.11351921262152
+2019-11-27 14:09:31,374  DEBUG: criterion1 is the constraint
+2019-11-27 14:09:31,374  DEBUG: criterion2 is the solution
+2019-11-27 14:09:31,374  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:09:42,292  DEBUG:        10   1.55e-02 1.00e-05   2.90e-04 1.00e-04 3.08e+00 6.30e-02
+2019-11-27 14:09:55,172  DEBUG:        20   2.82e-05 1.00e-05   9.63e-05 1.00e-04 3.08e+00 1.83e+00
+2019-11-27 14:09:56,632  DEBUG:        21   4.24e-06 1.00e-05   5.78e-05 1.00e-04 3.08e+00 5.64e+00
+2019-11-27 14:09:56,672  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:09:56,672  DEBUG: HAT SHAPES, Uhat: (5400, 139)  Ehat: (139, 139)  VThat: (139, 182)  VTta: (23, 182)
+2019-11-27 14:09:56,679  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:09:56,680  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:09:56,699  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:09:56,885  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:09:56,885  INFO: FOR MATRIX: X
+2019-11-27 14:09:56,923  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:09:56,924  INFO: f1_Score: 0.000000
+2019-11-27 14:09:57,114  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:09:57,114  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:09:57,144  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:09:57,146  INFO: f1_Score: 0.000000
+2019-11-27 14:09:57,315  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:09:57,315  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:09:57,350  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:09:57,351  INFO: f1_Score: 0.000000
+2019-11-27 14:09:57,351  INFO: Lambda: 0.8000000000000002
+2019-11-27 14:09:57,471  DEBUG: Max Rank: 162
+2019-11-27 14:09:59,820  DEBUG: Lambda Scale: 58.78775382679629
+2019-11-27 14:10:02,437  DEBUG: criterion1 is the constraint
+2019-11-27 14:10:02,437  DEBUG: criterion2 is the solution
+2019-11-27 14:10:02,437  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:10:15,688  DEBUG:        10   1.54e-02 1.00e-05   1.06e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:10:32,574  DEBUG:        20   3.10e-04 1.00e-05   2.05e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:10:38,558  DEBUG:        23   5.00e-06 1.00e-05   6.97e-05 1.00e-04 3.08e+00 5.64e+00
+2019-11-27 14:10:38,598  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:10:38,599  DEBUG: HAT SHAPES, Uhat: (5400, 139)  Ehat: (139, 139)  VThat: (139, 182)  VTta: (23, 182)
+2019-11-27 14:10:38,614  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:10:38,617  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:10:38,632  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:10:38,836  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:10:38,836  INFO: FOR MATRIX: X
+2019-11-27 14:10:38,870  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:10:38,872  INFO: f1_Score: 0.000000
+2019-11-27 14:10:39,058  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:10:39,059  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:10:39,093  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:10:39,095  INFO: f1_Score: 0.000000
+2019-11-27 14:10:39,260  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:10:39,260  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:10:39,285  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:10:39,287  INFO: f1_Score: 0.000000
+2019-11-27 14:10:39,287  INFO: Lambda: 0.8500000000000002
+2019-11-27 14:10:39,397  DEBUG: Max Rank: 162
+2019-11-27 14:10:41,701  DEBUG: Lambda Scale: 62.46198844097106
+2019-11-27 14:10:44,275  DEBUG: criterion1 is the constraint
+2019-11-27 14:10:44,275  DEBUG: criterion2 is the solution
+2019-11-27 14:10:44,275  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:10:56,569  DEBUG:        10   1.55e-02 1.00e-05   1.15e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:11:10,500  DEBUG:        20   3.38e-04 1.00e-05   1.84e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:11:15,698  DEBUG:        23   4.83e-06 1.00e-05   7.09e-05 1.00e-04 3.08e+00 5.64e+00
+2019-11-27 14:11:15,753  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:11:15,754  DEBUG: HAT SHAPES, Uhat: (5400, 139)  Ehat: (139, 139)  VThat: (139, 182)  VTta: (23, 182)
+2019-11-27 14:11:15,766  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:11:15,777  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:11:15,797  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:11:16,063  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:11:16,064  INFO: FOR MATRIX: X
+2019-11-27 14:11:16,107  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:11:16,111  INFO: f1_Score: 0.000000
+2019-11-27 14:11:16,308  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:11:16,309  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:11:16,352  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:11:16,354  INFO: f1_Score: 0.000000
+2019-11-27 14:11:16,552  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:11:16,552  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:11:16,590  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:11:16,592  INFO: f1_Score: 0.000000
+2019-11-27 14:11:16,592  INFO: Lambda: 0.9000000000000002
+2019-11-27 14:11:16,719  DEBUG: Max Rank: 162
+2019-11-27 14:11:19,043  DEBUG: Lambda Scale: 66.13622305514583
+2019-11-27 14:11:21,605  DEBUG: criterion1 is the constraint
+2019-11-27 14:11:21,605  DEBUG: criterion2 is the solution
+2019-11-27 14:11:21,605  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:11:34,107  DEBUG:        10   1.58e-02 1.00e-05   1.11e-04 1.00e-04 3.08e+00 2.05e-02
+2019-11-27 14:11:48,382  DEBUG:        20   3.50e-04 1.00e-05   1.79e-04 1.00e-04 3.08e+00 5.96e-01
+2019-11-27 14:11:55,575  DEBUG:        25   9.91e-06 1.00e-05   4.90e-05 1.00e-04 3.08e+00 1.73e+01
+2019-11-27 14:11:55,609  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 162)  E: (162, 162)  VT: (162, 182)  L: (5400, 182)
+2019-11-27 14:11:55,609  DEBUG: HAT SHAPES, Uhat: (5400, 149)  Ehat: (149, 149)  VThat: (149, 182)  VTta: (13, 182)
+2019-11-27 14:11:55,619  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:11:55,620  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:11:55,643  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:11:55,816  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:11:55,816  INFO: FOR MATRIX: X
+2019-11-27 14:11:55,850  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:11:55,852  INFO: f1_Score: 0.000000
+2019-11-27 14:11:56,081  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:11:56,081  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:11:56,114  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:11:56,115  INFO: f1_Score: 0.000000
+2019-11-27 14:11:56,281  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:11:56,281  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:11:56,312  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2415
+1                        15
+2019-11-27 14:11:56,313  INFO: f1_Score: 0.000000
+2019-11-27 14:14:17,498  INFO: Run started.
+2019-11-27 14:14:17,499  INFO:  Start variables= lambda(s): [0.0]  type: 
+2019-11-27 14:14:17,938  DEBUG: Random seed = 5431
+2019-11-27 14:14:18,002  DEBUG: y_train class counts: (array([0, 1]), array([5352,   48]))
+2019-11-27 14:14:18,002  DEBUG: y_test class counts: (array([0]), array([270]))
+2019-11-27 14:14:18,003  DEBUG: y_valid class counts: (array([0, 1]), array([2408,   22]))
+2019-11-27 14:14:18,003  WARNING: Check failed for creating matrix sections! Revaluating...
+2019-11-27 14:14:18,003  DEBUG: Random seed = 6694
+2019-11-27 14:14:18,076  DEBUG: y_train class counts: (array([0, 1]), array([5357,   43]))
+2019-11-27 14:14:18,077  DEBUG: y_test class counts: (array([0, 1]), array([266,   4]))
+2019-11-27 14:14:18,078  DEBUG: y_valid class counts: (array([0, 1]), array([2407,   23]))
+2019-11-27 14:14:18,079  INFO: Randomizaiton of X and y matrices complete.
+2019-11-27 14:14:18,083  INFO: Lambda: 0.05
+2019-11-27 14:14:18,226  DEBUG: Max Rank: 165
+2019-11-27 14:14:21,522  DEBUG: Lambda Scale: 3.6742346141747677
+2019-11-27 14:14:24,392  DEBUG: criterion1 is the constraint
+2019-11-27 14:14:24,392  DEBUG: criterion2 is the solution
+2019-11-27 14:14:24,392  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:14:43,059  DEBUG:        10   7.43e-03 1.00e-05   1.20e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:15:00,743  DEBUG:        20   9.21e-05 1.00e-05   1.07e-04 1.00e-04 3.08e+00 1.96e+00
+2019-11-27 14:15:08,972  DEBUG:        25   8.98e-06 1.00e-05   6.52e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:15:09,020  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:15:09,021  DEBUG: HAT SHAPES, Uhat: (5400, 15)  Ehat: (15, 15)  VThat: (15, 182)  VTta: (150, 182)
+2019-11-27 14:15:09,024  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:15:09,025  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:15:09,034  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:15:09,225  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:15:09,225  INFO: FOR MATRIX: X
+2019-11-27 14:15:09,262  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:15:09,264  INFO: f1_Score: 0.000000
+2019-11-27 14:15:09,467  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:15:09,467  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:15:09,498  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:15:09,501  INFO: f1_Score: 0.000000
+2019-11-27 14:15:09,704  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:15:09,705  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:15:09,738  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:15:09,743  INFO: f1_Score: 0.000000
+2019-11-27 14:15:09,743  INFO: Lambda: 0.1
+2019-11-27 14:15:09,851  DEBUG: Max Rank: 165
+2019-11-27 14:15:12,741  DEBUG: Lambda Scale: 7.348469228349535
+2019-11-27 14:15:16,744  DEBUG: criterion1 is the constraint
+2019-11-27 14:15:16,745  DEBUG: criterion2 is the solution
+2019-11-27 14:15:16,745  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:15:35,486  DEBUG:        10   1.08e-02 1.00e-05   2.55e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:15:54,401  DEBUG:        20   4.44e-05 1.00e-05   1.39e-04 1.00e-04 3.08e+00 1.96e+00
+2019-11-27 14:15:59,844  DEBUG:        23   9.53e-06 1.00e-05   4.40e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:15:59,886  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:15:59,887  DEBUG: HAT SHAPES, Uhat: (5400, 22)  Ehat: (22, 22)  VThat: (22, 182)  VTta: (143, 182)
+2019-11-27 14:15:59,890  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:15:59,890  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:15:59,902  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:16:00,256  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:16:00,257  INFO: FOR MATRIX: X
+2019-11-27 14:16:00,305  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:16:00,306  INFO: f1_Score: 0.000000
+2019-11-27 14:16:00,621  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:16:00,622  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:16:00,658  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:16:00,659  INFO: f1_Score: 0.000000
+2019-11-27 14:16:00,871  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:16:00,871  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:16:00,910  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2407   0
+1                         5  18
+2019-11-27 14:16:00,911  INFO: f1_Score: 0.878049
+2019-11-27 14:16:00,912  INFO: Lambda: 0.15000000000000002
+2019-11-27 14:16:01,019  DEBUG: Max Rank: 165
+2019-11-27 14:16:03,758  DEBUG: Lambda Scale: 11.022703842524304
+2019-11-27 14:16:07,057  DEBUG: criterion1 is the constraint
+2019-11-27 14:16:07,057  DEBUG: criterion2 is the solution
+2019-11-27 14:16:07,057  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:16:23,837  DEBUG:        10   1.28e-02 1.00e-05   2.41e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:16:41,634  DEBUG:        20   2.32e-04 1.00e-05   1.48e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:16:51,800  DEBUG:        26   7.98e-06 1.00e-05   4.42e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:16:51,848  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:16:51,849  DEBUG: HAT SHAPES, Uhat: (5400, 35)  Ehat: (35, 35)  VThat: (35, 182)  VTta: (130, 182)
+2019-11-27 14:16:51,855  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:16:51,856  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:16:51,860  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:16:52,175  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:16:52,175  INFO: FOR MATRIX: X
+2019-11-27 14:16:52,227  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:16:52,229  INFO: f1_Score: 0.000000
+2019-11-27 14:16:52,498  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:16:52,498  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:16:52,537  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:16:52,538  INFO: f1_Score: 0.000000
+2019-11-27 14:16:52,755  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:16:52,756  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:16:52,787  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:16:52,789  INFO: f1_Score: 0.000000
+2019-11-27 14:16:52,789  INFO: Lambda: 0.2
+2019-11-27 14:16:52,929  DEBUG: Max Rank: 165
+2019-11-27 14:16:55,850  DEBUG: Lambda Scale: 14.69693845669907
+2019-11-27 14:16:59,174  DEBUG: criterion1 is the constraint
+2019-11-27 14:16:59,175  DEBUG: criterion2 is the solution
+2019-11-27 14:16:59,175  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:17:14,588  DEBUG:        10   1.73e-02 1.00e-05   2.56e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:17:35,658  DEBUG:        20   2.98e-04 1.00e-05   1.71e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:17:50,933  DEBUG:        28   3.80e-06 1.00e-05   6.64e-05 1.00e-04 3.08e+00 5.69e+01
+2019-11-27 14:17:51,001  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:17:51,003  DEBUG: HAT SHAPES, Uhat: (5400, 55)  Ehat: (55, 55)  VThat: (55, 182)  VTta: (110, 182)
+2019-11-27 14:17:51,010  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:17:51,012  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:17:51,024  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:17:51,378  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:17:51,378  INFO: FOR MATRIX: X
+2019-11-27 14:17:51,421  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:17:51,423  INFO: f1_Score: 0.000000
+2019-11-27 14:17:51,658  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:17:51,659  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:17:51,695  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:17:51,697  INFO: f1_Score: 0.000000
+2019-11-27 14:17:52,058  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:17:52,058  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:17:52,144  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:17:52,146  INFO: f1_Score: 0.000000
+2019-11-27 14:17:52,147  INFO: Lambda: 0.25
+2019-11-27 14:17:52,376  DEBUG: Max Rank: 165
+2019-11-27 14:17:55,787  DEBUG: Lambda Scale: 18.371173070873837
+2019-11-27 14:17:58,955  DEBUG: criterion1 is the constraint
+2019-11-27 14:17:58,955  DEBUG: criterion2 is the solution
+2019-11-27 14:17:58,955  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:18:16,884  DEBUG:        10   1.42e-02 1.00e-05   2.47e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:18:41,973  DEBUG:        20   4.38e-04 1.00e-05   2.36e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:18:57,525  DEBUG:        28   6.82e-06 1.00e-05   3.98e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:18:57,592  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:18:57,592  DEBUG: HAT SHAPES, Uhat: (5400, 64)  Ehat: (64, 64)  VThat: (64, 182)  VTta: (101, 182)
+2019-11-27 14:18:57,602  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:18:57,604  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:18:57,611  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:18:57,858  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:18:57,859  INFO: FOR MATRIX: X
+2019-11-27 14:18:57,903  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:18:57,905  INFO: f1_Score: 0.000000
+2019-11-27 14:18:58,179  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:18:58,179  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:18:58,221  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:18:58,223  INFO: f1_Score: 0.000000
+2019-11-27 14:18:58,429  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:18:58,429  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:18:58,464  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:18:58,467  INFO: f1_Score: 0.000000
+2019-11-27 14:18:58,467  INFO: Lambda: 0.3
+2019-11-27 14:18:58,614  DEBUG: Max Rank: 165
+2019-11-27 14:19:02,028  DEBUG: Lambda Scale: 22.045407685048605
+2019-11-27 14:19:05,142  DEBUG: criterion1 is the constraint
+2019-11-27 14:19:05,142  DEBUG: criterion2 is the solution
+2019-11-27 14:19:05,142  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:19:22,377  DEBUG:        10   1.41e-02 1.00e-05   3.03e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:19:44,901  DEBUG:        20   2.94e-04 1.00e-05   1.42e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:19:53,481  DEBUG:        26   9.20e-06 1.00e-05   2.51e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:19:53,518  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:19:53,519  DEBUG: HAT SHAPES, Uhat: (5400, 83)  Ehat: (83, 83)  VThat: (83, 182)  VTta: (82, 182)
+2019-11-27 14:19:53,521  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:19:53,522  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:19:53,529  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:19:53,678  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:19:53,678  INFO: FOR MATRIX: X
+2019-11-27 14:19:53,702  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:19:53,703  INFO: f1_Score: 0.000000
+2019-11-27 14:19:53,861  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:19:53,861  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:19:53,893  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:19:53,895  INFO: f1_Score: 0.000000
+2019-11-27 14:19:54,072  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:19:54,073  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:19:54,102  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:19:54,103  INFO: f1_Score: 0.000000
+2019-11-27 14:19:54,103  INFO: Lambda: 0.35
+2019-11-27 14:19:54,217  DEBUG: Max Rank: 165
+2019-11-27 14:19:56,262  DEBUG: Lambda Scale: 25.71964229922337
+2019-11-27 14:19:58,830  DEBUG: criterion1 is the constraint
+2019-11-27 14:19:58,831  DEBUG: criterion2 is the solution
+2019-11-27 14:19:58,831  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:20:16,189  DEBUG:        10   1.86e-02 1.00e-05   1.96e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:20:28,183  DEBUG:        20   3.61e-04 1.00e-05   2.20e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:20:35,842  DEBUG:        27   3.62e-06 1.00e-05   3.39e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:20:35,862  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:20:35,863  DEBUG: HAT SHAPES, Uhat: (5400, 90)  Ehat: (90, 90)  VThat: (90, 182)  VTta: (75, 182)
+2019-11-27 14:20:35,871  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:20:35,874  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:20:35,886  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:20:36,035  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:20:36,035  INFO: FOR MATRIX: X
+2019-11-27 14:20:36,060  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:20:36,061  INFO: f1_Score: 0.000000
+2019-11-27 14:20:36,187  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:20:36,187  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:20:36,211  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:20:36,213  INFO: f1_Score: 0.000000
+2019-11-27 14:20:36,345  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:20:36,345  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:20:36,364  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:20:36,365  INFO: f1_Score: 0.000000
+2019-11-27 14:20:36,366  INFO: Lambda: 0.39999999999999997
+2019-11-27 14:20:36,462  DEBUG: Max Rank: 165
+2019-11-27 14:20:38,878  DEBUG: Lambda Scale: 29.393876913398138
+2019-11-27 14:20:41,223  DEBUG: criterion1 is the constraint
+2019-11-27 14:20:41,223  DEBUG: criterion2 is the solution
+2019-11-27 14:20:41,223  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:20:52,082  DEBUG:        10   1.51e-02 1.00e-05   2.62e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:21:04,253  DEBUG:        20   1.90e-04 1.00e-05   1.73e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:21:10,308  DEBUG:        25   7.23e-06 1.00e-05   2.32e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:21:10,344  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:21:10,345  DEBUG: HAT SHAPES, Uhat: (5400, 97)  Ehat: (97, 97)  VThat: (97, 182)  VTta: (68, 182)
+2019-11-27 14:21:10,354  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:21:10,355  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:21:10,363  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:21:10,515  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:21:10,515  INFO: FOR MATRIX: X
+2019-11-27 14:21:10,546  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:21:10,548  INFO: f1_Score: 0.000000
+2019-11-27 14:21:10,716  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:21:10,716  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:21:10,746  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:21:10,748  INFO: f1_Score: 0.000000
+2019-11-27 14:21:10,907  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:21:10,907  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:21:10,938  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:21:10,939  INFO: f1_Score: 0.000000
+2019-11-27 14:21:10,939  INFO: Lambda: 0.44999999999999996
+2019-11-27 14:21:11,048  DEBUG: Max Rank: 165
+2019-11-27 14:21:12,948  DEBUG: Lambda Scale: 33.0681115275729
+2019-11-27 14:21:15,266  DEBUG: criterion1 is the constraint
+2019-11-27 14:21:15,267  DEBUG: criterion2 is the solution
+2019-11-27 14:21:15,267  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:21:28,334  DEBUG:        10   1.00e-02 1.00e-05   1.56e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:21:42,427  DEBUG:        20   2.47e-04 1.00e-05   2.14e-04 1.00e-04 3.08e+00 1.96e+00
+2019-11-27 14:21:48,505  DEBUG:        25   4.14e-06 1.00e-05   1.10e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:21:48,532  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:21:48,532  DEBUG: HAT SHAPES, Uhat: (5400, 101)  Ehat: (101, 101)  VThat: (101, 182)  VTta: (64, 182)
+2019-11-27 14:21:48,543  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:21:48,545  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:21:48,556  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:21:48,703  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:21:48,704  INFO: FOR MATRIX: X
+2019-11-27 14:21:48,739  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:21:48,740  INFO: f1_Score: 0.000000
+2019-11-27 14:21:48,874  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:21:48,875  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:21:48,907  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:21:48,909  INFO: f1_Score: 0.000000
+2019-11-27 14:21:49,073  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:21:49,074  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:21:49,103  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:21:49,104  INFO: f1_Score: 0.000000
+2019-11-27 14:21:49,104  INFO: Lambda: 0.49999999999999994
+2019-11-27 14:21:49,207  DEBUG: Max Rank: 165
+2019-11-27 14:21:51,133  DEBUG: Lambda Scale: 36.742346141747674
+2019-11-27 14:21:53,331  DEBUG: criterion1 is the constraint
+2019-11-27 14:21:53,331  DEBUG: criterion2 is the solution
+2019-11-27 14:21:53,331  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:22:04,435  DEBUG:        10   1.10e-02 1.00e-05   1.07e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:22:16,500  DEBUG:        20   2.52e-04 1.00e-05   1.27e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:22:20,930  DEBUG:        23   3.84e-06 1.00e-05   5.78e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:22:20,979  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:22:20,980  DEBUG: HAT SHAPES, Uhat: (5400, 108)  Ehat: (108, 108)  VThat: (108, 182)  VTta: (57, 182)
+2019-11-27 14:22:20,983  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:22:20,992  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:22:21,014  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:22:21,211  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:22:21,211  INFO: FOR MATRIX: X
+2019-11-27 14:22:21,248  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:22:21,250  INFO: f1_Score: 0.000000
+2019-11-27 14:22:21,429  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:22:21,429  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:22:21,462  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2407   0
+1                         0  23
+2019-11-27 14:22:21,464  INFO: f1_Score: 1.000000
+2019-11-27 14:22:21,646  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:22:21,646  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:22:21,678  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:22:21,680  INFO: f1_Score: 0.000000
+2019-11-27 14:22:21,680  INFO: Lambda: 0.5499999999999999
+2019-11-27 14:22:21,846  DEBUG: Max Rank: 165
+2019-11-27 14:22:24,420  DEBUG: Lambda Scale: 40.41658075592244
+2019-11-27 14:22:26,942  DEBUG: criterion1 is the constraint
+2019-11-27 14:22:26,942  DEBUG: criterion2 is the solution
+2019-11-27 14:22:26,942  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:22:39,358  DEBUG:        10   1.13e-02 1.00e-05   1.82e-04 1.00e-04 3.08e+00 6.72e-02
+2019-11-27 14:22:52,384  DEBUG:        20   1.81e-05 1.00e-05   5.98e-05 1.00e-04 3.08e+00 1.96e+00
+2019-11-27 14:22:53,693  DEBUG:        21   2.57e-06 1.00e-05   3.88e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:22:53,722  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:22:53,722  DEBUG: HAT SHAPES, Uhat: (5400, 123)  Ehat: (123, 123)  VThat: (123, 182)  VTta: (42, 182)
+2019-11-27 14:22:53,743  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:22:53,745  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:22:53,754  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:22:53,945  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:22:53,945  INFO: FOR MATRIX: X
+2019-11-27 14:22:53,969  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:22:53,970  INFO: f1_Score: 0.000000
+2019-11-27 14:22:54,125  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:22:54,125  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:22:54,153  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:22:54,154  INFO: f1_Score: 0.000000
+2019-11-27 14:22:54,303  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:22:54,303  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:22:54,330  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:22:54,332  INFO: f1_Score: 0.000000
+2019-11-27 14:22:54,332  INFO: Lambda: 0.6
+2019-11-27 14:22:54,441  DEBUG: Max Rank: 165
+2019-11-27 14:22:56,683  DEBUG: Lambda Scale: 44.09081537009721
+2019-11-27 14:22:59,152  DEBUG: criterion1 is the constraint
+2019-11-27 14:22:59,152  DEBUG: criterion2 is the solution
+2019-11-27 14:22:59,152  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:23:10,960  DEBUG:        10   1.33e-02 1.00e-05   1.94e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:23:24,816  DEBUG:        20   5.99e-05 1.00e-05   1.40e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:23:27,399  DEBUG:        22   1.79e-06 1.00e-05   2.69e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:23:27,433  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:23:27,434  DEBUG: HAT SHAPES, Uhat: (5400, 123)  Ehat: (123, 123)  VThat: (123, 182)  VTta: (42, 182)
+2019-11-27 14:23:27,441  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:23:27,451  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:23:27,461  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:23:27,624  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:23:27,624  INFO: FOR MATRIX: X
+2019-11-27 14:23:27,654  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:23:27,656  INFO: f1_Score: 0.000000
+2019-11-27 14:23:27,801  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:23:27,801  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:23:27,832  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:23:27,834  INFO: f1_Score: 0.000000
+2019-11-27 14:23:28,045  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:23:28,045  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:23:28,080  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:23:28,085  INFO: f1_Score: 0.000000
+2019-11-27 14:23:28,086  INFO: Lambda: 0.65
+2019-11-27 14:23:28,231  DEBUG: Max Rank: 165
+2019-11-27 14:23:30,636  DEBUG: Lambda Scale: 47.76504998427198
+2019-11-27 14:23:33,473  DEBUG: criterion1 is the constraint
+2019-11-27 14:23:33,473  DEBUG: criterion2 is the solution
+2019-11-27 14:23:33,473  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:23:46,704  DEBUG:        10   1.70e-02 1.00e-05   2.06e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:24:00,429  DEBUG:        20   1.02e-04 1.00e-05   2.50e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:24:03,256  DEBUG:        22   2.82e-06 1.00e-05   3.22e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:24:03,293  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:24:03,293  DEBUG: HAT SHAPES, Uhat: (5400, 125)  Ehat: (125, 125)  VThat: (125, 182)  VTta: (40, 182)
+2019-11-27 14:24:03,301  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:24:03,305  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:24:03,319  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:24:03,509  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:24:03,509  INFO: FOR MATRIX: X
+2019-11-27 14:24:03,546  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:24:03,547  INFO: f1_Score: 0.000000
+2019-11-27 14:24:03,700  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:24:03,700  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:24:03,725  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:24:03,728  INFO: f1_Score: 0.000000
+2019-11-27 14:24:03,896  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:24:03,896  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:24:03,931  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:24:03,935  INFO: f1_Score: 0.000000
+2019-11-27 14:24:03,935  INFO: Lambda: 0.7000000000000001
+2019-11-27 14:24:04,081  DEBUG: Max Rank: 165
+2019-11-27 14:24:06,363  DEBUG: Lambda Scale: 51.43928459844675
+2019-11-27 14:24:08,825  DEBUG: criterion1 is the constraint
+2019-11-27 14:24:08,825  DEBUG: criterion2 is the solution
+2019-11-27 14:24:08,825  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:24:21,382  DEBUG:        10   9.59e-03 1.00e-05   7.07e-04 1.00e-04 3.08e+00 6.72e-02
+2019-11-27 14:24:37,479  DEBUG:        20   2.99e-06 1.00e-05   3.59e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:24:37,479  DEBUG:        20   2.99e-06 1.00e-05   3.59e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:24:37,514  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:24:37,515  DEBUG: HAT SHAPES, Uhat: (5400, 145)  Ehat: (145, 145)  VThat: (145, 182)  VTta: (20, 182)
+2019-11-27 14:24:37,520  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:24:37,522  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:24:37,537  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:24:37,704  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:24:37,704  INFO: FOR MATRIX: X
+2019-11-27 14:24:37,729  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:24:37,731  INFO: f1_Score: 0.000000
+2019-11-27 14:24:37,890  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:24:37,891  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:24:37,928  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:24:37,929  INFO: f1_Score: 0.000000
+2019-11-27 14:24:38,109  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:24:38,109  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:24:38,136  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:24:38,137  INFO: f1_Score: 0.000000
+2019-11-27 14:24:38,138  INFO: Lambda: 0.7500000000000001
+2019-11-27 14:24:38,238  DEBUG: Max Rank: 165
+2019-11-27 14:24:40,486  DEBUG: Lambda Scale: 55.11351921262152
+2019-11-27 14:24:43,725  DEBUG: criterion1 is the constraint
+2019-11-27 14:24:43,725  DEBUG: criterion2 is the solution
+2019-11-27 14:24:43,725  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:24:57,390  DEBUG:        10   9.36e-03 1.00e-05   6.99e-04 1.00e-04 3.08e+00 6.72e-02
+2019-11-27 14:25:11,154  DEBUG:        20   3.53e-06 1.00e-05   4.52e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:25:11,154  DEBUG:        20   3.53e-06 1.00e-05   4.52e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:25:11,206  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:25:11,207  DEBUG: HAT SHAPES, Uhat: (5400, 145)  Ehat: (145, 145)  VThat: (145, 182)  VTta: (20, 182)
+2019-11-27 14:25:11,210  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:25:11,212  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:25:11,246  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:25:11,402  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:25:11,402  INFO: FOR MATRIX: X
+2019-11-27 14:25:11,426  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:25:11,427  INFO: f1_Score: 0.000000
+2019-11-27 14:25:11,566  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:25:11,566  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:25:11,591  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:25:11,593  INFO: f1_Score: 0.000000
+2019-11-27 14:25:11,738  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:25:11,738  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:25:11,760  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:25:11,761  INFO: f1_Score: 0.000000
+2019-11-27 14:25:11,761  INFO: Lambda: 0.8000000000000002
+2019-11-27 14:25:11,888  DEBUG: Max Rank: 165
+2019-11-27 14:25:14,339  DEBUG: Lambda Scale: 58.78775382679629
+2019-11-27 14:25:16,890  DEBUG: criterion1 is the constraint
+2019-11-27 14:25:16,890  DEBUG: criterion2 is the solution
+2019-11-27 14:25:16,890  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:25:30,837  DEBUG:        10   9.24e-03 1.00e-05   6.99e-04 1.00e-04 3.08e+00 6.72e-02
+2019-11-27 14:25:44,865  DEBUG:        20   2.25e-05 1.00e-05   8.31e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:25:46,365  DEBUG:        21   5.06e-06 1.00e-05   4.30e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:25:46,431  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:25:46,431  DEBUG: HAT SHAPES, Uhat: (5400, 146)  Ehat: (146, 146)  VThat: (146, 182)  VTta: (19, 182)
+2019-11-27 14:25:46,441  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:25:46,442  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:25:46,455  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:25:46,623  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:25:46,624  INFO: FOR MATRIX: X
+2019-11-27 14:25:46,654  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:25:46,655  INFO: f1_Score: 0.000000
+2019-11-27 14:25:46,792  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:25:46,792  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:25:46,820  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:25:46,821  INFO: f1_Score: 0.000000
+2019-11-27 14:25:46,974  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:25:46,975  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:25:47,014  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2407   0
+1                         5  18
+2019-11-27 14:25:47,015  INFO: f1_Score: 0.878049
+2019-11-27 14:25:47,016  INFO: Lambda: 0.8500000000000002
+2019-11-27 14:25:47,130  DEBUG: Max Rank: 165
+2019-11-27 14:25:49,429  DEBUG: Lambda Scale: 62.46198844097106
+2019-11-27 14:25:52,157  DEBUG: criterion1 is the constraint
+2019-11-27 14:25:52,157  DEBUG: criterion2 is the solution
+2019-11-27 14:25:52,157  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:26:04,686  DEBUG:        10   9.11e-03 1.00e-05   7.16e-04 1.00e-04 3.08e+00 6.72e-02
+2019-11-27 14:26:18,366  DEBUG:        20   3.56e-06 1.00e-05   5.36e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:26:18,366  DEBUG:        20   3.56e-06 1.00e-05   5.36e-05 1.00e-04 3.08e+00 6.02e+00
+2019-11-27 14:26:18,408  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:26:18,409  DEBUG: HAT SHAPES, Uhat: (5400, 146)  Ehat: (146, 146)  VThat: (146, 182)  VTta: (19, 182)
+2019-11-27 14:26:18,411  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:26:18,413  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:26:18,426  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:26:18,574  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:26:18,575  INFO: FOR MATRIX: X
+2019-11-27 14:26:18,604  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:26:18,605  INFO: f1_Score: 0.000000
+2019-11-27 14:26:18,750  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:26:18,750  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:26:18,780  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:26:18,782  INFO: f1_Score: 0.000000
+2019-11-27 14:26:18,925  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:26:18,925  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:26:18,966  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:26:18,967  INFO: f1_Score: 0.000000
+2019-11-27 14:26:18,967  INFO: Lambda: 0.9000000000000002
+2019-11-27 14:26:19,091  DEBUG: Max Rank: 165
+2019-11-27 14:26:21,604  DEBUG: Lambda Scale: 66.13622305514583
+2019-11-27 14:26:25,284  DEBUG: criterion1 is the constraint
+2019-11-27 14:26:25,286  DEBUG: criterion2 is the solution
+2019-11-27 14:26:25,286  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2019-11-27 14:26:39,961  DEBUG:        10   1.31e-02 1.00e-05   1.42e-04 1.00e-04 3.08e+00 2.19e-02
+2019-11-27 14:26:54,913  DEBUG:        20   1.32e-04 1.00e-05   2.10e-04 1.00e-04 3.08e+00 6.36e-01
+2019-11-27 14:27:01,866  DEBUG:        25   5.20e-06 1.00e-05   3.31e-05 1.00e-04 3.08e+00 1.85e+01
+2019-11-27 14:27:01,892  DEBUG: OG SHAPES, X: (5400, 182)  U: (5400, 165)  E: (165, 165)  VT: (165, 182)  L: (5400, 182)
+2019-11-27 14:27:01,893  DEBUG: HAT SHAPES, Uhat: (5400, 165)  Ehat: (165, 165)  VThat: (165, 182)  VTta: (0, 182)
+2019-11-27 14:27:01,898  DEBUG: X1 SHAPES: X: (5400, 182)  L: (5400, 182)  S: (5400, 182)
+2019-11-27 14:27:01,909  DEBUG: X2 SHAPES: X: (270, 182)  L: (270, 182)  S: (270, 182)
+2019-11-27 14:27:01,925  DEBUG: X3 SHAPES: X: (2430, 182)  L: (2430, 182)  S: (2430, 182)
+2019-11-27 14:27:02,126  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:27:02,126  INFO: FOR MATRIX: X
+2019-11-27 14:27:02,157  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:27:02,159  INFO: f1_Score: 0.000000
+2019-11-27 14:27:02,298  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:27:02,299  INFO: FOR MATRIX: CONCAT LS
+2019-11-27 14:27:02,326  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:27:02,329  INFO: f1_Score: 0.000000
+2019-11-27 14:27:02,475  INFO: ************ RANDOM FOREST ************
+2019-11-27 14:27:02,475  INFO: FOR MATRIX: CONCAT XLS
+2019-11-27 14:27:02,509  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2407
+1                        23
+2019-11-27 14:27:02,511  INFO: f1_Score: 0.000000

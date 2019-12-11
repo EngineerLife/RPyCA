@@ -1,6 +1,8 @@
 # Logs results to file folder
 import logging
 
+logSET = False
+
 # logs a message to the previously set file
 #   Input: lvl - log level (see: https://docs.python.org/3/howto/logging.html)
 #          msg - string of what to log
@@ -8,7 +10,9 @@ import logging
 #
 def logMsg(lvl, msg):
     # check if log has been set
-#    if
+    global logSET
+    if not logSET:
+        return
 
     # check level
     if lvl == 0:
@@ -33,4 +37,5 @@ def setLog(fileName):
     # NOTE filemode='w' overwrites previous file. 
     #      If omitted, future runs will append to file
     logging.info("Run started.")
-
+    global logSET
+    logSET = True
