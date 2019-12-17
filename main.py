@@ -12,6 +12,7 @@ from helperFiles.matrixOp import *
 from helperFiles.fileHandler import *
 from helperFiles.plotter import *
 from helperFiles.models import *
+from helperFiles.configParser import *
 
 import pandas as pd     # XXX used for plotting only
 
@@ -94,35 +95,29 @@ def frange(start, stop, step):
         i += step
 
 
-# !!!!!!TODO make the input for creating X normalized (csv or something)
+# !!!!!!TODO make the input for creating X the same (csv or something)
 
 # TODO TODO TODO:
 # When explaining data:
 #   take x and y data to show that using IP's as a feature makes it too easy
 #   get writing done-ish before next semester
 #       where chapters are complete
-
+#   add better docs
 
 
 
 # main function
 if __name__ == '__main__':
+    # Ask for configuration to use
+    con = setConfig()
+    exit(0)
+
     setLog("trash")
-    numSys = len(sys.argv)
+#    numSys = len(sys.argv)
     lam = []
     typ = ""
-    # Gets arguments from command line 
-    if numSys > 1:
-        st = sys.argv[1].split(",")
-        for i in st:
-            if re.search("[-+]?[0-9]*\.?[0-9]+", i):
-                lam.append(float(i))
-        if numSys == 3 and sys.argv[2].lower() in "proposal":
-            typ = "p"
-    else:
-        lam = [1]
-    logMsg(1, " Start variables= lambda(s): %s  type: %s" % (str(lam), typ))
-    # TODO incorporate file weekday name into args if main thesis
+    mode = 1
+#    logMsg(1, " Start variables= lambda(s): %s  type: %s" % (str(lam), typ))
 
     # Create X and y
     if typ == "p":
@@ -148,14 +143,13 @@ if __name__ == '__main__':
     # ML model to run
     toRun = ["svm"]
     goodData = []  # XXX plotting
+    howToRun = []
+    if not mode:    # this is used for plotting
+        howToRun = [0.1] * 10
+    else:           # default for finding a good lambda
+        howToRun = frange(0.01, 0.1, 0.01)
 
-    # for random seed: 6102 lambdas: 0.08, 0.09 .1
-#    artest = [0.08] * 10
-#    artest = [0.1] * 10
-
-#    for l in lam:
-    for l in frange(0.01, 0.1, 0.01):
-#    for l in artest:
+    for l in howToRun:
         logMsg(1, "Lambda: %s" % (str(l)))
         print("\n\nLAMBDA: ", l)
 
