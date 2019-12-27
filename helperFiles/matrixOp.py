@@ -7,6 +7,13 @@ from sklearn.preprocessing import OneHotEncoder
 from .logger import *
 from .fileHandler import save
 
+# float range function
+def frange(start, stop, step):
+    i = start
+    while i < stop:
+        yield i
+        i += step
+
 # normalizes every column in the matrix from start position to end position
 def normMat(M):
     # TODO later: combine columns with (only 1) or (not many 1's in a clmn of 0's)
@@ -14,7 +21,7 @@ def normMat(M):
     stdDev = np.std(M,axis=0)
     # Z-Score
     normed = (M - np.mean(M,axis=0)) / stdDev
-#    save(normed, "normedX")
+    save(normed, "normedX")
     return normed
 
 # Function one hot encodes data
@@ -269,20 +276,21 @@ def createMatrixProposal(X):
 # record which feature
 
 # start from 1st clmn of X
-def createMatrix(X, preOp, ohCheck, featLabels):
+def createMatrix(X, preOp,  featLabels):
     newX, feats = [], []
 
-#    print("COLUMNS TO GO THRU:",X.shape[1])
+    print("COLUMNS TO GO THRU:",X.shape[1])
     for clmn in range(X.shape[1]):
         dataClmn = np.array(X[:,clmn].T, dtype=float)[0]
 #        print("DATA:",dataClmn)
-        # custom pre-operation (eg:)    # TODO make separate helper function for this
-        if preOp[clmn] == 1:
-            dataClmn[dataClmn > 1024] = 1024
-        elif preOp[clmn] == 2:
+        # custom pre-operation 
+        # (If only Z-transforming w/ NO 1-hot then preOp should be 0!)
+        if not preOp[clmn]:
             dataClmn = np.reshape(dataClmn, (dataClmn.shape[0],1))
         # checks if clmn needs one hot encoding
-        if ohCheck[clmn]:
+        else:
+            if preOp[clmn] == 22:    # TODO change this later; only for ports
+                dataClmn[dataClmn > 1024] = 1024
             dataClmn = oneHot(dataClmn)
         # add new clmn(s) to X and feature list
         if clmn == 0:

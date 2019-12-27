@@ -698,3 +698,27 @@ Actual Packet Type
 0                      2684
 1                        16
 2019-12-12 13:44:43,287  INFO: f1_Score: 0.000000
+2019-12-27 14:09:32,256  INFO: Run started.
+2019-12-27 14:10:50,375  INFO: Run started.
+2019-12-27 14:11:06,483  INFO: Run started.
+2019-12-27 14:11:42,993  INFO: Run started.
+2019-12-27 14:12:00,981  INFO: Run started.
+2019-12-27 14:12:29,149  INFO: Run started.
+2019-12-27 14:12:52,430  INFO: Run started.
+2019-12-27 14:13:16,616  INFO: Run started.
+2019-12-27 14:25:03,421  INFO: Run started.
+2019-12-27 14:26:16,049  INFO: Run started.
+2019-12-27 14:26:43,596  INFO: Run started.
+2019-12-27 14:30:00,095  INFO: Run started.
+2019-12-27 14:32:00,725  INFO: Run started.
+2019-12-27 14:43:43,002  INFO: Run started.
+2019-12-27 14:44:10,206  INFO: Run started.
+2019-12-27 14:45:42,897  INFO: Run started.
+2019-12-27 14:47:42,130  INFO: Run started.
+2019-12-27 14:48:33,358  INFO: Run started.
+2019-12-27 14:49:26,623  DEBUG: Random seed = 3215
+2019-12-27 14:49:27,579  DEBUG: y_train class counts: (array([0, 1]), array([2676,   24]))
+2019-12-27 14:49:27,580  DEBUG: y_test class counts: (array([0, 1]), array([2680,   20]))
+2019-12-27 14:49:27,580  DEBUG: y_valid class counts: (array([0, 1]), array([2674,   26]))
+2019-12-27 14:49:27,581  INFO: Randomizaiton of X and y matrices complete.
+2019-12-27 14:49:27,616  INFO: Lambda: 0.01

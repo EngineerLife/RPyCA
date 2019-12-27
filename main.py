@@ -88,11 +88,11 @@ def runAnalysis(X, lamScale):
     return S, L, VThat
 
 # float range function
-def frange(start, stop, step):
-    i = start
-    while i < stop:
-        yield i
-        i += step
+#def frange(start, stop, step):
+#    i = start
+#    while i < stop:
+#        yield i
+#        i += step
 
 
 # !!!!!!TODO make the input for creating X the same (csv or something)
@@ -110,44 +110,47 @@ def frange(start, stop, step):
 if __name__ == '__main__':
     # Ask for configuration to use
     con = setConfig()
-    exit(0)
 
-    setLog("trash")
-#    numSys = len(sys.argv)
-    lam = []
-    typ = ""
-    mode = 1
-#    logMsg(1, " Start variables= lambda(s): %s  type: %s" % (str(lam), typ))
+    setLog(con['LogFile'])
+    typ = con['Dataset']
+    mode = con['Mode']
 
     # Create X and y
-    if typ == "p":
+    if typ == "LLDOS":
         # retrieves malicious packet indexes
         malPkts1, malPkts2, malPkts3 = listLLDOSLabels("phase-all-MORE-counts.txt")
         # puts all malicious packet lists into one
         y = createY(len(X), np.concatenate((malPkts1, malPkts2, malPkts3)))
-        X = getLLDOSData("datasets/inside/LLS_DDOS_2.0.2-inside-all-MORE")   # loads and formats data from file
+        X = getLLDOSData(con['CSVFile'])   # loads and formats data from file
         newX = createMatrixProposal(X)  # This creates the matrix according to the OG Kathleen paper
     else:
-        fileName = 'datasets/TrafficLabelling/Thursday-WorkingHours-Morning-8100-SHORT-WebAttacks.pcap_ISCX.csv'
+        fileName = con['CSVFile']
         y = loadUNBLabels(fileName)
         X, featLabels = loadUNBFile(fileName)
-        preOp, ohCheck = [1,1,0,2], [1,1,1,0]
-        X, fls = createMatrix(X, preOp, ohCheck, featLabels)  # main thesis dataset (default)
+        preOp = [2,2,1,0]
+        preOp = np.zeros(len(featLabels))
+        preOp[0] = 2    # TODO change l8r
+        preOp[1] = 2    # TODO change l8r
+        # TODO make this less manual. These are hardcoded for this data set
+        # these are being labeled for running thru 1-hot
+        for i in [2,32,33,34,35,45,46,47,48,49,50,51,52]:
+            preOp[i] = 1
+        X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
 
 #    print("X SHAPE; feat shape", newX.shape, len(fls))
 
     # randomizes data and creates separated matrices
 #    [X1, X2, X3], ymat = randData(X, y, ratioTest=0.06)
-    [X1, X2, X3], ymat = randData(X, y, 1/3, 1/3)
+    [X1, X2, X3], ymat = randData(X, y, con['RatioTrainData'], con['RatioTestData'])
     
     # ML model to run
-    toRun = ["svm"]
+    toRun = [con['Models']]
     goodData = []  # XXX plotting
     howToRun = []
     if not mode:    # this is used for plotting
-        howToRun = [0.1] * 10
+        howToRun = [con['LambdaStartValue']] * 10
     else:           # default for finding a good lambda
-        howToRun = frange(0.01, 0.1, 0.01)
+        howToRun = frange(con['LambdaStartValue'], con['LambdaEndValue'], con['LambdaIncrValue'])
 
     for l in howToRun:
         logMsg(1, "Lambda: %s" % (str(l)))
