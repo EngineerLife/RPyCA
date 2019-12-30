@@ -24,7 +24,7 @@ def runAnalysis(X, lamScale):
 #    print("PCA thru SVD Sigma matrix: ",s)
 
     maxRank = np.linalg.matrix_rank(X)
-#    print("Max Rank: ", maxRank)
+    print("Max Rank: ", maxRank)
     logMsg(0, "Max Rank: %d" % maxRank)
     T = np.asmatrix(X)  # gets shape of X
     u, v, vecM, vecEpsilon = [], [], [], []
@@ -49,7 +49,8 @@ def runAnalysis(X, lamScale):
     scaleWant = lamScale/(1/math.sqrt(max(T.shape[0],T.shape[1])))
 #    print("LAMBDA SCALE WANT: ", lamScale/(1/math.sqrt(max(T.shape[0],T.shape[1]))))
     logMsg(0, "Lambda Scale: %s" % (str(scaleWant)))
-
+    
+    exit(0) # TODO MAKE SURE RANK IS NOT ZERO
     [U, E, VT, S, B] = sRPCA(T.shape[0], T.shape[1], u, v, vecM, vecEpsilon, maxRank, lam=lamScale)
 
     S = S.todense()
@@ -137,17 +138,18 @@ if __name__ == '__main__':
             preOp[i] = 1
         X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
 
-#    print("X SHAPE; feat shape", newX.shape, len(fls))
+    print("X SHAPE; feat shape", X.shape, len(fls))
 
     # randomizes data and creates separated matrices
 #    [X1, X2, X3], ymat = randData(X, y, ratioTest=0.06)
     [X1, X2, X3], ymat = randData(X, y, con['RatioTrainData'], con['RatioTestData'])
     
+    print(X1) 
     # ML model to run
     toRun = [con['Models']]
     goodData = []  # XXX plotting
     howToRun = []
-    if not mode:    # this is used for plotting
+    if mode:    # this is used for plotting
         howToRun = [con['LambdaStartValue']] * 10
     else:           # default for finding a good lambda
         howToRun = frange(con['LambdaStartValue'], con['LambdaEndValue'], con['LambdaIncrValue'])
@@ -155,7 +157,7 @@ if __name__ == '__main__':
     for l in howToRun:
         logMsg(1, "Lambda: %s" % (str(l)))
         print("\n\nLAMBDA: ", l)
-
+        
         # runs RPCA
         S1, L1, VThat = runAnalysis(X1, l)
         logMsg(0, "X1 SHAPES: X: %s  L: %s  S: %s" % (str(X1.shape), str(L1.shape), str(S1.shape)))

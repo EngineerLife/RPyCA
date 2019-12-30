@@ -14,11 +14,20 @@ def frange(start, stop, step):
         yield i
         i += step
 
+def cleanMat(M):
+    # masks nan or inf values in matrix 
+    M[~np.isnan(M)] = 1e-5
+    M[~np.isinf(M)] = 1e5
+    print("Cleaning matrix...")
+    return M
+
 # normalizes every column in the matrix from start position to end position
 def normMat(M):
     # TODO later: combine columns with (only 1) or (not many 1's in a clmn of 0's)
+    cleanMat(M)
     # takes std dev of columns in M
     stdDev = np.std(M,axis=0)
+    stdDev[stdDev <= 0] = 1e-5
     # Z-Score
     normed = (M - np.mean(M,axis=0)) / stdDev
     save(normed, "normedX")
@@ -119,6 +128,9 @@ def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(2/3)):
     y_mats = [y_train, y_test, y_valid]
 
     # log sizes of y labels    
+    logMsg(0, "X_train size: %s" % str(X_train.shape))
+    logMsg(0, "X_test size: %s" % str(X_test.shape))
+    logMsg(0, "X_valid size: %s" % str(X_valid.shape))
     logMsg(0, "y_train class counts: %s" % str(np.unique(y_train, return_counts=True)))
     logMsg(0, "y_test class counts: %s" % str(np.unique(y_test, return_counts=True)))
     logMsg(0, "y_valid class counts: %s" % str(np.unique(y_valid, return_counts=True)))
@@ -279,7 +291,7 @@ def createMatrixProposal(X):
 def createMatrix(X, preOp,  featLabels):
     newX, feats = [], []
 
-    print("COLUMNS TO GO THRU:",X.shape[1])
+#    print("COLUMNS TO GO THRU:",X.shape[1])
     for clmn in range(X.shape[1]):
         dataClmn = np.array(X[:,clmn].T, dtype=float)[0]
 #        print("DATA:",dataClmn)
@@ -289,8 +301,8 @@ def createMatrix(X, preOp,  featLabels):
             dataClmn = np.reshape(dataClmn, (dataClmn.shape[0],1))
         # checks if clmn needs one hot encoding
         else:
-            if preOp[clmn] == 22:    # TODO change this later; only for ports
-                dataClmn[dataClmn > 1024] = 1024
+            if preOp[clmn] == 2:
+                dataClmn[dataClmn > 1024] = 1024    # FIXME??? Technically this does group all ports above 1024...
             dataClmn = oneHot(dataClmn)
         # add new clmn(s) to X and feature list
         if clmn == 0:
@@ -299,7 +311,9 @@ def createMatrix(X, preOp,  featLabels):
             newX = np.concatenate((newX, dataClmn), axis=1)
         feats = makeFeat(feats, dataClmn.shape[1], featLabels[clmn])
     np.asmatrix(newX)
+    print(newX.shape)
     finalX = normMat(newX)  # normalizes values
+    print(finalX.shape)
 
     return finalX, feats
 
