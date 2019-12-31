@@ -14,11 +14,14 @@ def frange(start, stop, step):
         yield i
         i += step
 
+# DO need this; Flow Bytes/s literally has the word "Infinity" used...
 def cleanMat(M):
-    # masks nan or inf values in matrix 
-    M[~np.isnan(M)] = 1e-5
-    M[~np.isinf(M)] = 1e5
-    print("Cleaning matrix...")
+    if np.isnan(np.sum(M)):
+        M[np.isnan(M)] = 1e-5
+        print("Cleaning nulls...")
+    if np.isinf(np.sum(M)):
+        M[np.isinf(M)] = 1e5
+        print("Cleaning infs...")
     return M
 
 # normalizes every column in the matrix from start position to end position
@@ -289,7 +292,7 @@ def createMatrixProposal(X):
 
 # start from 1st clmn of X
 def createMatrix(X, preOp,  featLabels):
-    newX, feats = [], []
+    M, feats = [], []
 
 #    print("COLUMNS TO GO THRU:",X.shape[1])
     for clmn in range(X.shape[1]):
@@ -306,14 +309,11 @@ def createMatrix(X, preOp,  featLabels):
             dataClmn = oneHot(dataClmn)
         # add new clmn(s) to X and feature list
         if clmn == 0:
-            newX = dataClmn
+            M = dataClmn
         else:
-            newX = np.concatenate((newX, dataClmn), axis=1)
+            M = np.concatenate((M, dataClmn), axis=1)
         feats = makeFeat(feats, dataClmn.shape[1], featLabels[clmn])
-    np.asmatrix(newX)
-    print(newX.shape)
-    finalX = normMat(newX)  # normalizes values
-    print(finalX.shape)
-
+    np.asmatrix(M)
+    finalX = normMat(M)  # normalizes values
     return finalX, feats
 

@@ -1,6 +1,7 @@
 # Contains methods to handle files in the data set
 import numpy as np
 import time, csv
+from .logger import logMsg
 from os import listdir, chdir, curdir, getcwd
 from os.path import isfile, join
 
@@ -224,7 +225,8 @@ def loadUNBLabels(filename):
 def save(data, fileName):
     fn = "helperFiles/files/" + fileName
     f = open(fn, "w")
-    print("SAVING", fn)
+#    print("SAVING", fn)
+    logMsg(1,"Saving final X matrix to %s" % fn)
 #    f = open(fileName, "w")
     for i in data:
         f.write(str(i[0])+"\n")

@@ -50,7 +50,6 @@ def runAnalysis(X, lamScale):
 #    print("LAMBDA SCALE WANT: ", lamScale/(1/math.sqrt(max(T.shape[0],T.shape[1]))))
     logMsg(0, "Lambda Scale: %s" % (str(scaleWant)))
     
-    exit(0) # TODO MAKE SURE RANK IS NOT ZERO
     [U, E, VT, S, B] = sRPCA(T.shape[0], T.shape[1], u, v, vecM, vecEpsilon, maxRank, lam=lamScale)
 
     S = S.todense()
@@ -144,7 +143,6 @@ if __name__ == '__main__':
 #    [X1, X2, X3], ymat = randData(X, y, ratioTest=0.06)
     [X1, X2, X3], ymat = randData(X, y, con['RatioTrainData'], con['RatioTestData'])
     
-    print(X1) 
     # ML model to run
     toRun = [con['Models']]
     goodData = []  # XXX plotting
