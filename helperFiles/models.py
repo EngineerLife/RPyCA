@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
+import re
 from .fileHandler import *
 from .logger import *
 from scipy.spatial.distance import cdist
@@ -169,9 +170,12 @@ def runModels(X, L, S, ymats, code=[], tune=False):
     test = [X[1], LStest, XLStest]
 
     matName = ["X", "CONCAT LS", "CONCAT XLS"]
-    # can choose code(s) to use
     if not code:
-        code = np.arange(8)    # NOTE if there are more models increase this number
+        # for running a custom model. Saves off training and testing
+        print("RUN CUSTOM MODEL")
+    # runs all models if no code given
+    elif code[0] == "all":
+        code = np.arange(9)    # NOTE if there are more models increase this number
     ifgood = False
 
     # XXX for plotting

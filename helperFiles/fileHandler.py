@@ -190,7 +190,8 @@ def loadUNBFile(name):
             lineData = line.split(",")
 #            indexes = [1,2,3,4,5,46]   # contains IP's
 #            indexes = [2,4,5,46]
-            indexes = [2,4,5]  # gets all data, except for Flow ID, IP ADDR, Timestamp, and label
+#            indexes = [2,4,5]  # gets all data, except for Flow ID, SOURCE IP ADDR, Timestamp, and label
+            indexes = [2,3,4,5]  # gets all data, except for Flow ID, SOURCE IP ADDR, Timestamp, and label
             for x in range(7,84):
                 indexes.append(x)
 
@@ -200,6 +201,8 @@ def loadUNBFile(name):
                     featLabels.append(lineData[i])
                 else:
                     temp.append(lineData[i])
+            print(featLabels)
+            exit(0)
             if count >= 1:
                 mat.append(temp)
             count += 1

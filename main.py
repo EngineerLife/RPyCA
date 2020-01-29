@@ -1,5 +1,18 @@
 # Python3 file
 # Created by Marissa Bennett
+# PACKAGE METHODS TO BE USED IN HERE
+# (names of these can be changed later)
+#       setConfiguration    - for users to set it
+#       updateConfiguration - for users to update it
+#       deleteConfiguration - for users to get rid of some
+# (run RPCA Projection Models [TODO need better package name...])
+#       runINIT             - first run of data set
+#       runRP               - for users to do the thing with their own models
+#       runRPM              - for users to do the thing
+#
+#       printPlots
+
+# TODO need init function
 
 import math, sys, csv, ast, re, warnings
 import numpy as np
@@ -49,16 +62,15 @@ def runAnalysis(X, lamScale):
     scaleWant = lamScale/(1/math.sqrt(max(T.shape[0],T.shape[1])))
 #    print("LAMBDA SCALE WANT: ", lamScale/(1/math.sqrt(max(T.shape[0],T.shape[1]))))
     logMsg(0, "Lambda Scale: %s" % (str(scaleWant)))
-    
+
+    # B is not used, but needs to be stored in order to run sRPCA
     [U, E, VT, S, B] = sRPCA(T.shape[0], T.shape[1], u, v, vecM, vecEpsilon, maxRank, lam=lamScale)
 
     S = S.todense()
     E = np.diag(E)
-#    print("Dense S: ", S)   # eh
     ue = np.dot(U, E)
     L = np.dot(ue, VT)
 
-#    print("OG SHAPES, X U E VT L: ", X.shape, U.shape, E.shape, VT.shape, L.shape)
     logMsg(0, "OG SHAPES, X: %s  U: %s  E: %s  VT: %s  L: %s" % (str(X.shape), str(U.shape), str(E.shape), str(VT.shape), str(L.shape)))
 
     # TODO
@@ -115,8 +127,11 @@ if __name__ == '__main__':
     typ = con['Dataset']
     mode = con['Mode']
 
+    # TODO combine these later so we only have 1 function
+    # AKA create consistency in the csv file given.
+    # E.G.: csv must be in form header, data, ..., data. Labels at beginning/end of column
     # Create X and y
-    if typ == "LLDOS":
+    if typ == "LLDOS":  # TODO remove this later
         # retrieves malicious packet indexes
         malPkts1, malPkts2, malPkts3 = listLLDOSLabels("phase-all-MORE-counts.txt")
         # puts all malicious packet lists into one
@@ -140,14 +155,15 @@ if __name__ == '__main__':
     print("X SHAPE; feat shape", X.shape, len(fls))
 
     # randomizes data and creates separated matrices
-#    [X1, X2, X3], ymat = randData(X, y, ratioTest=0.06)
     [X1, X2, X3], ymat = randData(X, y, con['RatioTrainData'], con['RatioTestData'])
     
     # ML model to run
     toRun = [con['Models']]
     goodData = []  # XXX plotting
     howToRun = []
-    if mode:    # this is used for plotting
+    if mode:        # mode = 1
+        howToRun = [con['LambdaStartValue']]
+    elif mode == 2: # this is used for plotting
         howToRun = [con['LambdaStartValue']] * 10
     else:           # default for finding a good lambda
         howToRun = frange(con['LambdaStartValue'], con['LambdaEndValue'], con['LambdaIncrValue'])

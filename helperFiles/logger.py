@@ -2,6 +2,7 @@
 import logging
 
 logSET = False
+overrideLevel = False   # TODO incorporate variable???
 
 # logs a message to the previously set file
 #   Input: lvl - log level (see: https://docs.python.org/3/howto/logging.html)
@@ -15,7 +16,10 @@ def logMsg(lvl, msg):
         return
 
     # check level
-    if lvl == 0:
+    if lvl == -1:
+        # logger should not and does not log event
+        return
+    elif lvl == 0:
         logging.debug(msg)
     elif lvl == 1:
         logging.info(msg)
