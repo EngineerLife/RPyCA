@@ -1,421 +1,265 @@
-2019-12-31 12:12:45,670  INFO: Run started.
-2019-12-31 12:13:34,082  INFO: Run started.
-2019-12-31 12:13:35,926  INFO: Saving final X matrix to helperFiles/files/normedX
-2019-12-31 12:13:35,963  DEBUG: Random seed = 5188
-2019-12-31 12:13:36,016  DEBUG: X_train size: (2700, 114)
-2019-12-31 12:13:36,017  DEBUG: X_test size: (2700, 114)
-2019-12-31 12:13:36,017  DEBUG: X_valid size: (2700, 114)
-2019-12-31 12:13:36,019  DEBUG: y_train class counts: (array([0, 1]), array([2676,   24]))
-2019-12-31 12:13:36,019  DEBUG: y_test class counts: (array([0, 1]), array([2685,   15]))
-2019-12-31 12:13:36,020  DEBUG: y_valid class counts: (array([0, 1]), array([2669,   31]))
-2019-12-31 12:13:36,020  INFO: Randomizaiton of X and y matrices complete.
-2019-12-31 12:13:36,022  INFO: Lambda: 0.01
-2019-12-31 12:13:36,059  DEBUG: Max Rank: 80
-2019-12-31 12:13:37,160  DEBUG: Lambda Scale: 0.5196152422706632
-2019-12-31 12:13:38,179  DEBUG: criterion1 is the constraint
-2019-12-31 12:13:38,179  DEBUG: criterion2 is the solution
-2019-12-31 12:13:38,180  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:13:41,086  DEBUG:        10   2.47e-02 1.00e-05   2.72e-04 1.00e-04 3.08e+00 1.67e-02
-2019-12-31 12:13:44,112  DEBUG:        20   3.55e-03 1.00e-05   2.92e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:13:47,040  DEBUG:        30   4.59e-04 1.00e-05   1.00e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:13:52,197  DEBUG:        40   7.16e-05 1.00e-05   9.30e-05 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:13:56,446  DEBUG:        50   7.38e-06 1.00e-05   3.76e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:13:56,446  DEBUG:        50   7.38e-06 1.00e-05   3.76e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:13:56,466  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:13:56,466  DEBUG: HAT SHAPES, Uhat: (2700, 11)  Ehat: (11, 11)  VThat: (11, 114)  VTta: (69, 114)
-2019-12-31 12:13:56,468  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:13:56,477  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:13:56,725  INFO: ************ SVM ************
-2019-12-31 12:13:56,726  INFO: FOR MATRIX: X
-2019-12-31 12:13:56,851  INFO: 
+2020-01-29 14:41:25,104  INFO: Run started.
+2020-01-29 14:41:25,104  INFO: CONFIGURATION USED: TEST
+2020-01-29 14:43:25,737  INFO: Run started.
+2020-01-29 14:43:25,737  INFO: CONFIGURATION USED: TEST
+2020-01-29 14:43:25,767  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 14:55:15,407  INFO: Run started.
+2020-01-30 14:55:15,407  INFO: CONFIGURATION USED: TEST
+2020-01-30 14:55:15,483  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 14:56:24,121  INFO: Run started.
+2020-01-30 14:56:24,122  INFO: CONFIGURATION USED: TEST
+2020-01-30 14:56:24,180  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:05:18,102  INFO: Run started.
+2020-01-30 15:05:18,102  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:05:18,167  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:05:57,429  INFO: Run started.
+2020-01-30 15:05:57,429  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:05:57,508  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:07:03,915  INFO: Run started.
+2020-01-30 15:07:03,917  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:07:03,982  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:08:45,367  INFO: Run started.
+2020-01-30 15:08:45,368  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:08:45,429  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:10:28,009  INFO: Run started.
+2020-01-30 15:10:28,009  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:10:28,080  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:32:27,175  INFO: Run started.
+2020-01-30 15:32:27,176  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:32:27,239  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:32:46,795  INFO: Run started.
+2020-01-30 15:32:46,795  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:32:46,858  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:33:33,185  INFO: Run started.
+2020-01-30 15:33:33,186  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:33:33,255  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:34:50,855  INFO: Run started.
+2020-01-30 15:34:50,855  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:34:50,917  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:35:07,436  INFO: Run started.
+2020-01-30 15:35:07,438  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:35:07,497  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:42:22,351  INFO: Run started.
+2020-01-30 15:42:22,352  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:42:22,420  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:46:50,288  INFO: Run started.
+2020-01-30 15:46:50,288  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:46:50,349  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:47:01,926  INFO: Run started.
+2020-01-30 15:47:01,927  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:47:01,994  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:48:27,739  INFO: Run started.
+2020-01-30 15:48:27,740  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:48:27,826  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:50:19,106  INFO: Run started.
+2020-01-30 15:50:19,106  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:50:19,176  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:58:30,938  INFO: Run started.
+2020-01-30 15:58:30,939  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:58:31,001  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:58:48,237  INFO: Run started.
+2020-01-30 15:58:48,237  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:58:48,305  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:59:24,791  INFO: Run started.
+2020-01-30 15:59:24,795  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:59:24,858  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 15:59:50,497  INFO: Run started.
+2020-01-30 15:59:50,497  INFO: CONFIGURATION USED: TEST
+2020-01-30 15:59:50,562  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:01:30,162  INFO: Run started.
+2020-01-30 16:01:30,162  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:01:30,236  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:02:09,990  INFO: Run started.
+2020-01-30 16:02:09,991  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:02:10,053  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:04:34,140  INFO: Run started.
+2020-01-30 16:04:34,145  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:04:34,238  INFO: FEATURES USED []
+2020-01-30 16:05:22,601  INFO: Run started.
+2020-01-30 16:05:22,602  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:05:22,664  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:12:52,927  INFO: Run started.
+2020-01-30 16:12:52,927  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:12:52,992  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:13:20,132  INFO: Run started.
+2020-01-30 16:13:20,133  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:13:20,198  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:13:22,213  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-01-30 16:13:22,242  DEBUG: Random seed = 626
+2020-01-30 16:13:22,298  DEBUG: X_train size: (2700, 270)
+2020-01-30 16:13:22,299  DEBUG: X_test size: (2700, 270)
+2020-01-30 16:13:22,299  DEBUG: X_valid size: (2700, 270)
+2020-01-30 16:13:22,300  DEBUG: y_train class counts: (array([0, 1]), array([2671,   29]))
+2020-01-30 16:13:22,300  DEBUG: y_test class counts: (array([0, 1]), array([2684,   16]))
+2020-01-30 16:13:22,301  DEBUG: y_valid class counts: (array([0, 1]), array([2675,   25]))
+2020-01-30 16:13:22,301  INFO: Randomizaiton of X and y matrices complete.
+2020-01-30 16:13:22,303  INFO: Lambda: 0.01
+2020-01-30 16:13:22,413  DEBUG: Max Rank: 202
+2020-01-30 16:13:41,088  INFO: Run started.
+2020-01-30 16:13:41,088  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:13:41,145  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:13:43,710  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-01-30 16:13:43,740  DEBUG: Random seed = 6221
+2020-01-30 16:13:43,806  DEBUG: X_train size: (2700, 270)
+2020-01-30 16:13:43,806  DEBUG: X_test size: (2700, 270)
+2020-01-30 16:13:43,806  DEBUG: X_valid size: (2700, 270)
+2020-01-30 16:13:43,807  DEBUG: y_train class counts: (array([0, 1]), array([2677,   23]))
+2020-01-30 16:13:43,808  DEBUG: y_test class counts: (array([0, 1]), array([2676,   24]))
+2020-01-30 16:13:43,808  DEBUG: y_valid class counts: (array([0, 1]), array([2677,   23]))
+2020-01-30 16:13:43,808  INFO: Randomizaiton of X and y matrices complete.
+2020-01-30 16:13:43,811  INFO: Lambda: 0.01
+2020-01-30 16:13:43,902  DEBUG: Max Rank: 212
+2020-01-30 16:13:46,314  DEBUG: Lambda Scale: 0.5196152422706632
+2020-01-30 16:14:54,240  INFO: Run started.
+2020-01-30 16:14:54,240  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:14:54,305  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:15:55,640  INFO: Run started.
+2020-01-30 16:15:55,641  INFO: CONFIGURATION USED: TEST
+2020-01-30 16:15:55,701  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-01-30 16:15:57,433  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-01-30 16:15:57,468  DEBUG: Random seed = 2200
+2020-01-30 16:15:57,515  DEBUG: X_train size: (2700, 118)
+2020-01-30 16:15:57,515  DEBUG: X_test size: (2700, 118)
+2020-01-30 16:15:57,515  DEBUG: X_valid size: (2700, 118)
+2020-01-30 16:15:57,516  DEBUG: y_train class counts: (array([0, 1]), array([2669,   31]))
+2020-01-30 16:15:57,517  DEBUG: y_test class counts: (array([0, 1]), array([2686,   14]))
+2020-01-30 16:15:57,517  DEBUG: y_valid class counts: (array([0, 1]), array([2675,   25]))
+2020-01-30 16:15:57,518  INFO: Randomizaiton of X and y matrices complete.
+2020-01-30 16:15:57,519  INFO: Lambda: 0.01
+2020-01-30 16:15:57,577  DEBUG: Max Rank: 83
+2020-01-30 16:15:58,847  DEBUG: Lambda Scale: 0.5196152422706632
+2020-01-30 16:16:00,040  DEBUG: criterion1 is the constraint
+2020-01-30 16:16:00,040  DEBUG: criterion2 is the solution
+2020-01-30 16:16:00,041  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-01-30 16:16:02,869  DEBUG:        10   2.37e-02 1.00e-05   2.64e-04 1.00e-04 3.08e+00 1.66e-02
+2020-01-30 16:16:06,131  DEBUG:        20   3.49e-03 1.00e-05   2.72e-04 1.00e-04 3.08e+00 1.57e-01
+2020-01-30 16:16:09,251  DEBUG:        30   4.60e-04 1.00e-05   2.35e-04 1.00e-04 3.08e+00 1.48e+00
+2020-01-30 16:16:12,285  DEBUG:        40   5.74e-05 1.00e-05   7.18e-05 1.00e-04 3.08e+00 4.56e+00
+2020-01-30 16:16:14,816  DEBUG:        48   9.87e-06 1.00e-05   4.32e-05 1.00e-04 3.08e+00 4.31e+01
+2020-01-30 16:16:14,823  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 83)  E: (83, 83)  VT: (83, 118)  L: (2700, 118)
+2020-01-30 16:16:14,823  DEBUG: HAT SHAPES, Uhat: (2700, 11)  Ehat: (11, 11)  VThat: (11, 118)  VTta: (72, 118)
+2020-01-30 16:16:14,825  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-01-30 16:16:14,828  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-01-30 16:16:15,012  INFO: ************ SVM ************
+2020-01-30 16:16:15,012  INFO: FOR MATRIX: X
+2020-01-30 16:16:15,104  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2685   1
+1                         2  12
+2020-01-30 16:16:15,107  INFO: f1_Score: 0.888889
+2020-01-30 16:16:15,426  INFO: ************ SVM ************
+2020-01-30 16:16:15,426  INFO: FOR MATRIX: CONCAT LS
+2020-01-30 16:16:15,476  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2686   0
+1                         2  12
+2020-01-30 16:16:15,479  INFO: f1_Score: 0.923077
+2020-01-30 16:16:15,900  INFO: ************ SVM ************
+2020-01-30 16:16:15,900  INFO: FOR MATRIX: CONCAT XLS
+2020-01-30 16:16:15,940  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2685   1
+1                         2  12
+2020-01-30 16:16:15,943  INFO: f1_Score: 0.888889
+2020-01-30 16:16:15,943  INFO: Validating GOOD Lambda: 0.01
+2020-01-30 16:16:15,947  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-01-30 16:16:16,128  INFO: ************ SVM ************
+2020-01-30 16:16:16,129  INFO: FOR MATRIX: X
+2020-01-30 16:16:16,159  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2672   3
+1                         7  18
+2020-01-30 16:16:16,160  INFO: f1_Score: 0.782609
+2020-01-30 16:16:16,467  INFO: ************ SVM ************
+2020-01-30 16:16:16,467  INFO: FOR MATRIX: CONCAT LS
+2020-01-30 16:16:16,510  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-01-30 16:16:16,512  INFO: f1_Score: 0.717949
+2020-01-30 16:16:16,953  INFO: ************ SVM ************
+2020-01-30 16:16:16,953  INFO: FOR MATRIX: CONCAT XLS
+2020-01-30 16:16:16,994  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        11  14
+2020-01-30 16:16:16,996  INFO: f1_Score: 0.700000
+2020-01-30 16:16:16,997  INFO: Lambda: 0.02
+2020-01-30 16:16:17,021  DEBUG: Max Rank: 83
+2020-01-30 16:16:18,115  DEBUG: Lambda Scale: 1.0392304845413265
+2020-01-30 16:16:18,972  DEBUG: criterion1 is the constraint
+2020-01-30 16:16:18,972  DEBUG: criterion2 is the solution
+2020-01-30 16:16:18,972  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-01-30 16:16:21,825  DEBUG:        10   5.15e-02 1.00e-05   1.04e-04 1.00e-04 3.08e+00 5.38e-03
+2020-01-30 16:16:24,940  DEBUG:        20   9.70e-03 1.00e-05   3.02e-04 1.00e-04 3.08e+00 5.09e-02
+2020-01-30 16:16:28,097  DEBUG:        30   1.93e-03 1.00e-05   1.15e-04 1.00e-04 3.08e+00 1.57e-01
+2020-01-30 16:16:31,010  DEBUG:        40   3.65e-04 1.00e-05   2.39e-04 1.00e-04 3.08e+00 1.48e+00
+2020-01-30 16:16:33,976  DEBUG:        50   7.05e-05 1.00e-05   6.62e-05 1.00e-04 3.08e+00 4.56e+00
+2020-01-30 16:16:36,988  DEBUG:        60   1.49e-05 1.00e-05   4.73e-05 1.00e-04 3.08e+00 4.31e+01
+2020-01-30 16:16:37,670  DEBUG:        62   9.12e-06 1.00e-05   3.68e-05 1.00e-04 3.08e+00 4.31e+01
+2020-01-30 16:16:37,677  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 83)  E: (83, 83)  VT: (83, 118)  L: (2700, 118)
+2020-01-30 16:16:37,678  DEBUG: HAT SHAPES, Uhat: (2700, 37)  Ehat: (37, 37)  VThat: (37, 118)  VTta: (46, 118)
+2020-01-30 16:16:37,679  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-01-30 16:16:37,683  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-01-30 16:16:37,854  INFO: ************ SVM ************
+2020-01-30 16:16:37,854  INFO: FOR MATRIX: X
+2020-01-30 16:16:37,896  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2685   1
+1                         2  12
+2020-01-30 16:16:37,898  INFO: f1_Score: 0.888889
+2020-01-30 16:16:38,253  INFO: ************ SVM ************
+2020-01-30 16:16:38,253  INFO: FOR MATRIX: CONCAT LS
+2020-01-30 16:16:38,291  INFO: 
 Predicted Packet Type     0
 Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:13:56,854  INFO: f1_Score: 0.000000
-2019-12-31 12:13:57,116  INFO: ************ SVM ************
-2019-12-31 12:13:57,117  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:13:57,164  INFO: 
+0                      2686
+1                        14
+2020-01-30 16:16:38,294  INFO: f1_Score: 0.000000
+2020-01-30 16:16:38,787  INFO: ************ SVM ************
+2020-01-30 16:16:38,787  INFO: FOR MATRIX: CONCAT XLS
+2020-01-30 16:16:38,827  INFO: 
 Predicted Packet Type     0
 Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:13:57,166  INFO: f1_Score: 0.000000
-2019-12-31 12:13:57,583  INFO: ************ SVM ************
-2019-12-31 12:13:57,583  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:13:57,636  INFO: 
+0                      2686
+1                        14
+2020-01-30 16:16:38,829  INFO: f1_Score: 0.000000
+2020-01-30 16:16:38,829  INFO: Validating GOOD Lambda: 0.02
+2020-01-30 16:16:38,833  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-01-30 16:16:39,021  INFO: ************ SVM ************
+2020-01-30 16:16:39,021  INFO: FOR MATRIX: X
+2020-01-30 16:16:39,061  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2672   3
+1                         7  18
+2020-01-30 16:16:39,065  INFO: f1_Score: 0.782609
+2020-01-30 16:16:39,408  INFO: ************ SVM ************
+2020-01-30 16:16:39,408  INFO: FOR MATRIX: CONCAT LS
+2020-01-30 16:16:39,438  INFO: 
 Predicted Packet Type     0
 Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:13:57,638  INFO: f1_Score: 0.000000
-2019-12-31 12:13:57,639  INFO: Lambda: 0.02
-2019-12-31 12:13:57,682  DEBUG: Max Rank: 80
-2019-12-31 12:13:59,009  DEBUG: Lambda Scale: 1.0392304845413265
-2019-12-31 12:14:00,216  DEBUG: criterion1 is the constraint
-2019-12-31 12:14:00,216  DEBUG: criterion2 is the solution
-2019-12-31 12:14:00,217  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:14:03,285  DEBUG:        10   5.24e-02 1.00e-05   3.02e-04 1.00e-04 3.08e+00 1.67e-02
-2019-12-31 12:14:08,332  DEBUG:        20   8.16e-03 1.00e-05   2.37e-04 1.00e-04 3.08e+00 5.15e-02
-2019-12-31 12:14:13,182  DEBUG:        30   1.76e-03 1.00e-05   2.97e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:14:16,932  DEBUG:        40   3.05e-04 1.00e-05   2.07e-04 1.00e-04 3.08e+00 1.50e+00
-2019-12-31 12:14:19,814  DEBUG:        50   6.61e-05 1.00e-05   5.23e-05 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:14:24,113  DEBUG:        60   1.35e-05 1.00e-05   4.02e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:14:24,719  DEBUG:        62   8.72e-06 1.00e-05   3.26e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:14:24,728  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:14:24,728  DEBUG: HAT SHAPES, Uhat: (2700, 34)  Ehat: (34, 34)  VThat: (34, 114)  VTta: (46, 114)
-2019-12-31 12:14:24,730  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:14:24,736  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:14:24,932  INFO: ************ SVM ************
-2019-12-31 12:14:24,932  INFO: FOR MATRIX: X
-2019-12-31 12:14:24,991  INFO: 
+0                      2675
+1                        25
+2020-01-30 16:16:39,439  INFO: f1_Score: 0.000000
+2020-01-30 16:16:39,880  INFO: ************ SVM ************
+2020-01-30 16:16:39,880  INFO: FOR MATRIX: CONCAT XLS
+2020-01-30 16:16:39,924  INFO: 
 Predicted Packet Type     0
 Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:14:24,994  INFO: f1_Score: 0.000000
-2019-12-31 12:14:25,292  INFO: ************ SVM ************
-2019-12-31 12:14:25,293  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:14:25,331  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:14:25,333  INFO: f1_Score: 0.000000
-2019-12-31 12:14:25,744  INFO: ************ SVM ************
-2019-12-31 12:14:25,744  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:14:25,782  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:14:25,785  INFO: f1_Score: 0.000000
-2019-12-31 12:14:25,785  INFO: Lambda: 0.03
-2019-12-31 12:14:25,816  DEBUG: Max Rank: 80
-2019-12-31 12:14:27,003  DEBUG: Lambda Scale: 1.5588457268119895
-2019-12-31 12:14:27,849  DEBUG: criterion1 is the constraint
-2019-12-31 12:14:27,849  DEBUG: criterion2 is the solution
-2019-12-31 12:14:27,849  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:14:31,466  DEBUG:        10   6.51e-02 1.00e-05   1.14e-04 1.00e-04 3.08e+00 5.44e-03
-2019-12-31 12:14:34,797  DEBUG:        20   1.49e-02 1.00e-05   4.28e-04 1.00e-04 3.08e+00 5.15e-02
-2019-12-31 12:14:38,792  DEBUG:        30   3.18e-03 1.00e-05   2.54e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:14:41,726  DEBUG:        40   6.87e-04 1.00e-05   1.31e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:14:44,707  DEBUG:        50   1.67e-04 1.00e-05   1.15e-04 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:14:48,071  DEBUG:        60   3.50e-05 1.00e-05   7.05e-05 1.00e-04 3.08e+00 1.42e+01
-2019-12-31 12:14:52,285  DEBUG:        68   8.57e-06 1.00e-05   3.59e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:14:52,304  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:14:52,305  DEBUG: HAT SHAPES, Uhat: (2700, 53)  Ehat: (53, 53)  VThat: (53, 114)  VTta: (27, 114)
-2019-12-31 12:14:52,307  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:14:52,319  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:14:52,538  INFO: ************ SVM ************
-2019-12-31 12:14:52,538  INFO: FOR MATRIX: X
-2019-12-31 12:14:52,593  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:14:52,595  INFO: f1_Score: 0.000000
-2019-12-31 12:14:52,898  INFO: ************ SVM ************
-2019-12-31 12:14:52,899  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:14:52,954  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:14:52,960  INFO: f1_Score: 0.000000
-2019-12-31 12:14:53,405  INFO: ************ SVM ************
-2019-12-31 12:14:53,405  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:14:53,445  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:14:53,449  INFO: f1_Score: 0.000000
-2019-12-31 12:14:53,449  INFO: Lambda: 0.04
-2019-12-31 12:14:53,478  DEBUG: Max Rank: 80
-2019-12-31 12:14:54,587  DEBUG: Lambda Scale: 2.078460969082653
-2019-12-31 12:14:55,661  DEBUG: criterion1 is the constraint
-2019-12-31 12:14:55,662  DEBUG: criterion2 is the solution
-2019-12-31 12:14:55,662  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:15:00,331  DEBUG:        10   7.22e-02 1.00e-05   1.62e-04 1.00e-04 3.08e+00 5.44e-03
-2019-12-31 12:15:03,751  DEBUG:        20   1.96e-02 1.00e-05   1.50e-04 1.00e-04 3.08e+00 1.67e-02
-2019-12-31 12:15:08,472  DEBUG:        30   4.89e-03 1.00e-05   4.30e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:15:11,466  DEBUG:        40   9.57e-04 1.00e-05   2.35e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:15:14,572  DEBUG:        50   2.08e-04 1.00e-05   9.78e-05 1.00e-04 3.08e+00 1.50e+00
-2019-12-31 12:15:17,497  DEBUG:        60   4.20e-05 1.00e-05   7.80e-05 1.00e-04 3.08e+00 1.42e+01
-2019-12-31 12:15:19,817  DEBUG:        68   8.57e-06 1.00e-05   3.19e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:15:19,826  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:15:19,827  DEBUG: HAT SHAPES, Uhat: (2700, 59)  Ehat: (59, 59)  VThat: (59, 114)  VTta: (21, 114)
-2019-12-31 12:15:19,829  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:15:19,833  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:15:19,986  INFO: ************ SVM ************
-2019-12-31 12:15:19,986  INFO: FOR MATRIX: X
-2019-12-31 12:15:20,025  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:15:20,028  INFO: f1_Score: 0.000000
-2019-12-31 12:15:20,282  INFO: ************ SVM ************
-2019-12-31 12:15:20,283  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:15:20,322  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:15:20,324  INFO: f1_Score: 0.000000
-2019-12-31 12:15:20,708  INFO: ************ SVM ************
-2019-12-31 12:15:20,708  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:15:20,747  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:15:20,750  INFO: f1_Score: 0.000000
-2019-12-31 12:15:20,750  INFO: Lambda: 0.05
-2019-12-31 12:15:20,801  DEBUG: Max Rank: 80
-2019-12-31 12:15:21,895  DEBUG: Lambda Scale: 2.598076211353316
-2019-12-31 12:15:22,787  DEBUG: criterion1 is the constraint
-2019-12-31 12:15:22,788  DEBUG: criterion2 is the solution
-2019-12-31 12:15:22,788  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:15:26,217  DEBUG:        10   7.80e-02 1.00e-05   1.91e-04 1.00e-04 3.08e+00 5.44e-03
-2019-12-31 12:15:29,934  DEBUG:        20   1.81e-02 1.00e-05   2.34e-04 1.00e-04 3.08e+00 5.15e-02
-2019-12-31 12:15:34,324  DEBUG:        30   4.61e-03 1.00e-05   3.11e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:15:37,583  DEBUG:        40   8.01e-04 1.00e-05   1.64e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:15:41,860  DEBUG:        50   1.70e-04 1.00e-05   1.34e-04 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:15:45,039  DEBUG:        60   2.31e-05 1.00e-05   4.09e-05 1.00e-04 3.08e+00 1.42e+01
-2019-12-31 12:15:46,616  DEBUG:        65   8.11e-06 1.00e-05   3.73e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:15:46,623  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:15:46,623  DEBUG: HAT SHAPES, Uhat: (2700, 60)  Ehat: (60, 60)  VThat: (60, 114)  VTta: (20, 114)
-2019-12-31 12:15:46,625  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:15:46,630  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:15:46,777  INFO: ************ SVM ************
-2019-12-31 12:15:46,777  INFO: FOR MATRIX: X
-2019-12-31 12:15:46,818  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:15:46,820  INFO: f1_Score: 0.000000
-2019-12-31 12:15:47,106  INFO: ************ SVM ************
-2019-12-31 12:15:47,108  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:15:47,148  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:15:47,151  INFO: f1_Score: 0.000000
-2019-12-31 12:15:47,533  INFO: ************ SVM ************
-2019-12-31 12:15:47,533  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:15:47,589  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:15:47,591  INFO: f1_Score: 0.000000
-2019-12-31 12:15:47,591  INFO: Lambda: 0.060000000000000005
-2019-12-31 12:15:47,670  DEBUG: Max Rank: 80
-2019-12-31 12:15:49,100  DEBUG: Lambda Scale: 3.1176914536239795
-2019-12-31 12:15:50,327  DEBUG: criterion1 is the constraint
-2019-12-31 12:15:50,328  DEBUG: criterion2 is the solution
-2019-12-31 12:15:50,328  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:15:55,311  DEBUG:        10   7.94e-02 1.00e-05   2.08e-04 1.00e-04 3.08e+00 5.44e-03
-2019-12-31 12:16:00,235  DEBUG:        20   2.08e-02 1.00e-05   2.62e-04 1.00e-04 3.08e+00 5.15e-02
-2019-12-31 12:16:05,708  DEBUG:        30   5.31e-03 1.00e-05   1.98e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:16:11,467  DEBUG:        40   8.89e-04 1.00e-05   2.40e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:16:16,804  DEBUG:        50   1.53e-04 1.00e-05   1.06e-04 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:16:20,198  DEBUG:        60   1.69e-05 1.00e-05   4.50e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:16:20,988  DEBUG:        62   9.69e-06 1.00e-05   5.42e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:16:21,006  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:16:21,007  DEBUG: HAT SHAPES, Uhat: (2700, 61)  Ehat: (61, 61)  VThat: (61, 114)  VTta: (19, 114)
-2019-12-31 12:16:21,009  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:16:21,024  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:16:21,245  INFO: ************ SVM ************
-2019-12-31 12:16:21,246  INFO: FOR MATRIX: X
-2019-12-31 12:16:21,306  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:16:21,310  INFO: f1_Score: 0.000000
-2019-12-31 12:16:21,603  INFO: ************ SVM ************
-2019-12-31 12:16:21,603  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:16:21,648  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:16:21,651  INFO: f1_Score: 0.000000
-2019-12-31 12:16:22,067  INFO: ************ SVM ************
-2019-12-31 12:16:22,070  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:16:22,122  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:16:22,124  INFO: f1_Score: 0.000000
-2019-12-31 12:16:22,125  INFO: Lambda: 0.07
-2019-12-31 12:16:22,195  DEBUG: Max Rank: 80
-2019-12-31 12:16:23,449  DEBUG: Lambda Scale: 3.637306695894643
-2019-12-31 12:16:24,655  DEBUG: criterion1 is the constraint
-2019-12-31 12:16:24,655  DEBUG: criterion2 is the solution
-2019-12-31 12:16:24,655  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:16:27,831  DEBUG:        10   7.90e-02 1.00e-05   1.60e-04 1.00e-04 3.08e+00 5.44e-03
-2019-12-31 12:16:32,442  DEBUG:        20   2.06e-02 1.00e-05   1.04e-04 1.00e-04 3.08e+00 1.67e-02
-2019-12-31 12:16:36,318  DEBUG:        30   5.51e-03 1.00e-05   3.41e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:16:39,311  DEBUG:        40   7.53e-04 1.00e-05   1.98e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:16:43,174  DEBUG:        50   7.79e-05 1.00e-05   1.68e-04 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:16:46,244  DEBUG:        60   9.66e-06 1.00e-05   5.08e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:16:46,245  DEBUG:        60   9.66e-06 1.00e-05   5.08e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:16:46,253  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:16:46,253  DEBUG: HAT SHAPES, Uhat: (2700, 61)  Ehat: (61, 61)  VThat: (61, 114)  VTta: (19, 114)
-2019-12-31 12:16:46,255  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:16:46,260  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:16:46,400  INFO: ************ SVM ************
-2019-12-31 12:16:46,400  INFO: FOR MATRIX: X
-2019-12-31 12:16:46,436  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:16:46,438  INFO: f1_Score: 0.000000
-2019-12-31 12:16:46,851  INFO: ************ SVM ************
-2019-12-31 12:16:46,851  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:16:46,906  INFO: 
-Predicted Packet Type     0  1
-Actual Packet Type            
-0                      2681  4
-1                        15  0
-2019-12-31 12:16:46,908  INFO: f1_Score: 0.000000
-2019-12-31 12:16:47,312  INFO: ************ SVM ************
-2019-12-31 12:16:47,312  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:16:47,352  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:16:47,355  INFO: f1_Score: 0.000000
-2019-12-31 12:16:47,355  INFO: Lambda: 0.08
-2019-12-31 12:16:47,403  DEBUG: Max Rank: 80
-2019-12-31 12:16:48,707  DEBUG: Lambda Scale: 4.156921938165306
-2019-12-31 12:16:49,997  DEBUG: criterion1 is the constraint
-2019-12-31 12:16:49,997  DEBUG: criterion2 is the solution
-2019-12-31 12:16:49,997  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:16:55,271  DEBUG:        10   7.91e-02 1.00e-05   1.88e-04 1.00e-04 3.08e+00 5.44e-03
-2019-12-31 12:17:00,545  DEBUG:        20   1.91e-02 1.00e-05   5.16e-04 1.00e-04 3.08e+00 5.15e-02
-2019-12-31 12:17:05,535  DEBUG:        30   3.37e-03 1.00e-05   3.70e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:17:10,188  DEBUG:        40   4.47e-04 1.00e-05   1.49e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:17:14,778  DEBUG:        50   6.67e-05 1.00e-05   1.20e-04 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:17:17,502  DEBUG:        59   9.75e-06 1.00e-05   4.54e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:17:17,511  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:17:17,511  DEBUG: HAT SHAPES, Uhat: (2700, 63)  Ehat: (63, 63)  VThat: (63, 114)  VTta: (17, 114)
-2019-12-31 12:17:17,512  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:17:17,519  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:17:17,680  INFO: ************ SVM ************
-2019-12-31 12:17:17,681  INFO: FOR MATRIX: X
-2019-12-31 12:17:17,722  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:17:17,724  INFO: f1_Score: 0.000000
-2019-12-31 12:17:18,196  INFO: ************ SVM ************
-2019-12-31 12:17:18,196  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:17:18,241  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:17:18,243  INFO: f1_Score: 0.000000
-2019-12-31 12:17:18,648  INFO: ************ SVM ************
-2019-12-31 12:17:18,648  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:17:18,686  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:17:18,687  INFO: f1_Score: 0.000000
-2019-12-31 12:17:18,687  INFO: Lambda: 0.09
-2019-12-31 12:17:18,708  DEBUG: Max Rank: 80
-2019-12-31 12:17:19,775  DEBUG: Lambda Scale: 4.676537180435969
-2019-12-31 12:17:21,004  DEBUG: criterion1 is the constraint
-2019-12-31 12:17:21,004  DEBUG: criterion2 is the solution
-2019-12-31 12:17:21,004  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:17:23,681  DEBUG:        10   8.03e-02 1.00e-05   1.83e-04 1.00e-04 3.08e+00 5.44e-03
-2019-12-31 12:17:28,357  DEBUG:        20   2.02e-02 1.00e-05   2.96e-04 1.00e-04 3.08e+00 5.15e-02
-2019-12-31 12:17:31,918  DEBUG:        30   3.91e-03 1.00e-05   5.09e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:17:35,750  DEBUG:        40   4.52e-04 1.00e-05   1.84e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:17:39,489  DEBUG:        50   6.37e-05 1.00e-05   7.20e-05 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:17:42,802  DEBUG:        59   7.60e-06 1.00e-05   3.80e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:17:42,809  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:17:42,810  DEBUG: HAT SHAPES, Uhat: (2700, 64)  Ehat: (64, 64)  VThat: (64, 114)  VTta: (16, 114)
-2019-12-31 12:17:42,811  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:17:42,818  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:17:42,967  INFO: ************ SVM ************
-2019-12-31 12:17:42,967  INFO: FOR MATRIX: X
-2019-12-31 12:17:43,008  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:17:43,010  INFO: f1_Score: 0.000000
-2019-12-31 12:17:43,322  INFO: ************ SVM ************
-2019-12-31 12:17:43,323  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:17:43,389  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:17:43,391  INFO: f1_Score: 0.000000
-2019-12-31 12:17:43,886  INFO: ************ SVM ************
-2019-12-31 12:17:43,886  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:17:43,946  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:17:43,949  INFO: f1_Score: 0.000000
-2019-12-31 12:17:43,949  INFO: Lambda: 0.09999999999999999
-2019-12-31 12:17:44,006  DEBUG: Max Rank: 80
-2019-12-31 12:17:45,335  DEBUG: Lambda Scale: 5.196152422706632
-2019-12-31 12:17:46,355  DEBUG: criterion1 is the constraint
-2019-12-31 12:17:46,355  DEBUG: criterion2 is the solution
-2019-12-31 12:17:46,355  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
-2019-12-31 12:17:49,571  DEBUG:        10   7.95e-02 1.00e-05   2.01e-04 1.00e-04 3.08e+00 5.44e-03
-2019-12-31 12:17:55,642  DEBUG:        20   1.74e-02 1.00e-05   4.03e-04 1.00e-04 3.08e+00 5.15e-02
-2019-12-31 12:18:01,069  DEBUG:        30   3.78e-03 1.00e-05   3.27e-04 1.00e-04 3.08e+00 1.58e-01
-2019-12-31 12:18:06,648  DEBUG:        40   4.73e-04 1.00e-05   1.05e-04 1.00e-04 3.08e+00 4.87e-01
-2019-12-31 12:18:11,222  DEBUG:        50   7.18e-05 1.00e-05   8.15e-05 1.00e-04 3.08e+00 4.61e+00
-2019-12-31 12:18:16,765  DEBUG:        60   8.07e-06 1.00e-05   2.80e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:18:16,765  DEBUG:        60   8.07e-06 1.00e-05   2.80e-05 1.00e-04 3.08e+00 4.36e+01
-2019-12-31 12:18:16,777  DEBUG: OG SHAPES, X: (2700, 114)  U: (2700, 80)  E: (80, 80)  VT: (80, 114)  L: (2700, 114)
-2019-12-31 12:18:16,778  DEBUG: HAT SHAPES, Uhat: (2700, 65)  Ehat: (65, 65)  VThat: (65, 114)  VTta: (15, 114)
-2019-12-31 12:18:16,780  DEBUG: X1 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:18:16,793  DEBUG: X2 SHAPES: X: (2700, 114)  L: (2700, 114)  S: (2700, 114)
-2019-12-31 12:18:16,969  INFO: ************ SVM ************
-2019-12-31 12:18:16,970  INFO: FOR MATRIX: X
-2019-12-31 12:18:17,042  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:18:17,046  INFO: f1_Score: 0.000000
-2019-12-31 12:18:17,387  INFO: ************ SVM ************
-2019-12-31 12:18:17,387  INFO: FOR MATRIX: CONCAT LS
-2019-12-31 12:18:17,441  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:18:17,444  INFO: f1_Score: 0.000000
-2019-12-31 12:18:17,836  INFO: ************ SVM ************
-2019-12-31 12:18:17,836  INFO: FOR MATRIX: CONCAT XLS
-2019-12-31 12:18:17,882  INFO: 
-Predicted Packet Type     0
-Actual Packet Type         
-0                      2685
-1                        15
-2019-12-31 12:18:17,884  INFO: f1_Score: 0.000000
-2020-01-29 11:38:48,911  INFO: Run started.
-2020-01-29 11:39:28,122  INFO: Run started.
-2020-01-29 11:39:56,208  INFO: Run started.
+0                      2675
+1                        25
+2020-01-30 16:16:39,926  INFO: f1_Score: 0.000000
+2020-01-30 16:16:39,927  INFO: Lambda: 0.03
+2020-01-30 16:16:39,981  DEBUG: Max Rank: 83
+2020-01-30 16:16:41,072  DEBUG: Lambda Scale: 1.5588457268119895
+2020-01-30 16:16:41,904  DEBUG: criterion1 is the constraint
+2020-01-30 16:16:41,905  DEBUG: criterion2 is the solution
+2020-01-30 16:16:41,905  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu

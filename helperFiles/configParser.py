@@ -19,10 +19,11 @@ dictStruct = OrderedDict([('LambdaStartValue', [str(floor((x*100))/100) for x in
                         ('RatioTrainData',''), ('RatioTestData',''), 
                         ('Mode',['0', '1']), ('Models',['rf','knn','svm','logreg','dtree','nb','kmeans','gb','nn']), 
                         ('LogFile','')])
-
+'''
 
 # writes/configures config file
 # TODO UPDATE THIS
+'''
 def generateSection(secName):
     global config
     config[secName] = OrderedDict([('LambdaStartValue','0.01'),
@@ -35,10 +36,12 @@ def generateSection(secName):
                                   ('LogFile','trash')])
     with open(filePath, 'a') as configfile:
         config.write(configfile)
+'''
 
 # helps user create new configuration
+'''
 def createNewConfig():
-#    secName = input("\nChoose a name for the section: ")
+    secName = input("\nChoose a name for the section: ")
     copyDict = dictStruct
     for key in dictStruct:
         val = None
@@ -56,10 +59,9 @@ def readConfig(typ='DEFAULT'):
     global config
     config.read(filePath)
     configType = config[typ]    
-    return OrderedDict([('LambdaStartValue',float(configType['LambdaStartValue'])),
+    return typ, OrderedDict([('LambdaStartValue',float(configType['LambdaStartValue'])),
                        ('LambdaEndValue',float(configType['LambdaEndValue'])),
                        ('LambdaIncrValue',float(configType['LambdaIncrValue'])),                       
-                       ('Dataset',configType['Dataset']),
                        ('CSVFile',configType['CSVFile']),
                        ('RatioTrainData',float(-1 if configType['RatioTrainData'] == '' else Fraction(configType['RatioTrainData']))),
                        ('RatioTestData',float(-1 if configType['RatioTestData'] == '' else Fraction(configType['RatioTestData']))),
@@ -87,7 +89,7 @@ def getConfigTypes():
 # sets the configuration variables for the run
 # TODO make this actually functional later. (OR add default auto run config???)
 def setConfig():
-    return readConfig()
+    return readConfig("TEST")
     '''
     ready = False
     print("Available configurations:",getConfigTypes())

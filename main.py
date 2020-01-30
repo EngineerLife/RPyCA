@@ -99,14 +99,6 @@ def runAnalysis(X, lamScale):
 #    return S, X, s, E, L, maxRank  # used in old plotter
     return S, L, VThat
 
-# float range function
-#def frange(start, stop, step):
-#    i = start
-#    while i < stop:
-#        yield i
-#        i += step
-
-
 # !!!!!!TODO make the input for creating X the same (csv or something)
 
 # TODO TODO TODO:
@@ -121,36 +113,38 @@ def runAnalysis(X, lamScale):
 # main function
 if __name__ == '__main__':
     # Ask for configuration to use
-    con = setConfig()
-
+    configType, con = setConfig()
+    # Set log for debugging or other purposes (can be overridden)
     setLog(con['LogFile'])
-    typ = con['Dataset']
+    logMsg(1,"CONFIGURATION USED: %s" % str(configType))
     mode = con['Mode']
+    fileName = con['CSVFile']
 
     # TODO combine these later so we only have 1 function
     # AKA create consistency in the csv file given.
     # E.G.: csv must be in form header, data, ..., data. Labels at beginning/end of column
     # Create X and y
-    if typ == "LLDOS":  # TODO remove this later
+#    if typ == "LLDOS":  # TODO remove this later
         # retrieves malicious packet indexes
-        malPkts1, malPkts2, malPkts3 = listLLDOSLabels("phase-all-MORE-counts.txt")
+#        malPkts1, malPkts2, malPkts3 = listLLDOSLabels("phase-all-MORE-counts.txt")
         # puts all malicious packet lists into one
-        y = createY(len(X), np.concatenate((malPkts1, malPkts2, malPkts3)))
-        X = getLLDOSData(con['CSVFile'])   # loads and formats data from file
-        newX = createMatrixProposal(X)  # This creates the matrix according to the OG Kathleen paper
-    else:
-        fileName = con['CSVFile']
-        y = loadUNBLabels(fileName)
-        X, featLabels = loadUNBFile(fileName)
-        preOp = [2,2,1,0]
-        preOp = np.zeros(len(featLabels))
-        preOp[0] = 2    # TODO change l8r
-        preOp[1] = 2    # TODO change l8r
-        # TODO make this less manual. These are hardcoded for this data set
-        # these are being labeled for running thru 1-hot
-        for i in [2,32,33,34,35,45,46,47,48,49,50,51,52]:
-            preOp[i] = 1
-        X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
+#        y = createY(len(X), np.concatenate((malPkts1, malPkts2, malPkts3)))
+#        X = getLLDOSData(con['CSVFile'])   # loads and formats data from file
+#        newX = createMatrixProposal(X)  # This creates the matrix according to the OG Kathleen paper
+ #   else:
+    
+    y = loadUNBLabels(fileName)
+    X, featLabels = loadUNBFile(fileName)
+#    preOp = [2,2,1,0]
+    preOp = np.zeros(len(featLabels))
+    preOp[0] = 2    # TODO change l8r src port
+    preOp[5] = 2    # TODO change l8r dest port
+    # TODO make this less manual. These are hardcoded for this data set
+    # these are being labeled for running thru 1-hot
+    for i in [6,36,37,38,39,49,50,51,52,53,54,55,56]:   # incremented due to dest ip additions
+#    for i in [2,32,33,34,35,45,46,47,48,49,50,51,52]:
+        preOp[i] = 1
+    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
 
     print("X SHAPE; feat shape", X.shape, len(fls))
 

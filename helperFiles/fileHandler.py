@@ -162,6 +162,17 @@ def createY(lenData, atkPnts):
 # XXX UNB main thesis dataset functions
 #
 #
+
+# function for handling IP addresses;
+# separates the bytes into their own features
+# INPUT: ip addr
+# OUTPUT: 
+def splitIP(ipAddr):
+    sepIP = ipAddr.split(".")
+#    print(sepIP)
+#    exit(0)
+    return sepIP
+
 # gets the list of csv's from directory
 # eg: testing = getUNBFile(files, True)[1]
 def getUNBFile(day='', typ=False):
@@ -197,13 +208,23 @@ def loadUNBFile(name):
 
             temp = []
             for i in indexes:
+                ld = lineData[i]
                 if count == 0:
-                    featLabels.append(lineData[i])
+                    if "IP" in ld:
+                        for i in range(4):
+                            featLabels.append(ld)
+                    else:
+                        featLabels.append(ld)
                 else:
-                    temp.append(lineData[i])
-            print(featLabels)
-            exit(0)
-            if count >= 1:
+                    if i == 3:
+                        ld = splitIP(ld)    # only gets destination ip to split
+                        for ip in ld:
+                            temp.append(ip)
+                    else:
+                        temp.append(ld)
+            if count == 0:
+                logMsg(1,"FEATURES USED %s" % str(featLabels))
+            else:
                 mat.append(temp)
             count += 1
     return np.matrix(mat), featLabels

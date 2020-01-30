@@ -16,7 +16,7 @@ def logMsg(lvl, msg):
         return
 
     # check level
-    if lvl == -1:
+    if lvl == -1 or overrideLevel:
         # logger should not and does not log event
         return
     elif lvl == 0:
@@ -36,10 +36,27 @@ def logMsg(lvl, msg):
 # starts log with a filename
 #   Input: fileName - string name of the file to log to
 #   Output: None
-def setLog(fileName):
+def setLog(fileName, override=False):
     logging.basicConfig(format='%(asctime)s  %(levelname)s: %(message)s', filename='logs/'+fileName+'.log', level=logging.DEBUG)#, filemode='w',)
     # NOTE filemode='w' overwrites previous file. 
     #      If omitted, future runs will append to file
     logging.info("Run started.")
+    if override:
+        logging.info("Logging has been overridden.")
+        global overrideLevel
+        overrideLevel = True
     global logSET
     logSET = True
+
+# Manually override logs with this function
+def overrideLogs():
+    logging.info("Logging has been overridden.")
+    global overrideLevel
+    overrideLevel = True
+
+# Manually stop overriding logs with this function
+def continueLogs():
+    logging.info("Logging has resumed.")
+    global overrideLevel
+    overrideLevel = False
+
