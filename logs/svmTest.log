@@ -1,0 +1,3363 @@
+2020-02-04 09:43:50,753  INFO: Run started.
+2020-02-04 09:43:50,754  INFO: CONFIGURATION USED: SVMTEST
+2020-02-04 09:43:50,820  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-04 09:43:52,656  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-04 09:43:52,700  DEBUG: Random seed = 2613
+2020-02-04 09:43:52,770  DEBUG: X_train size: (2700, 118)
+2020-02-04 09:43:52,771  DEBUG: X_test size: (2700, 118)
+2020-02-04 09:43:52,771  DEBUG: X_valid size: (2700, 118)
+2020-02-04 09:43:52,772  DEBUG: y_train class counts: (array([0, 1]), array([2676,   24]))
+2020-02-04 09:43:52,772  DEBUG: y_test class counts: (array([0, 1]), array([2674,   26]))
+2020-02-04 09:43:52,773  DEBUG: y_valid class counts: (array([0, 1]), array([2680,   20]))
+2020-02-04 09:43:52,773  INFO: Randomizaiton of X and y matrices complete.
+2020-02-04 09:43:52,774  INFO: Lambda: 0.001
+2020-02-04 09:43:52,803  DEBUG: Max Rank: 84
+2020-02-04 09:43:53,979  DEBUG: Lambda Scale: 0.05196152422706632
+2020-02-04 09:43:54,968  DEBUG: criterion1 is the constraint
+2020-02-04 09:43:54,969  DEBUG: criterion2 is the solution
+2020-02-04 09:43:54,970  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:43:57,844  DEBUG:        10   1.59e-04 1.00e-05   1.84e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:43:58,759  DEBUG:        13   3.11e-07 1.00e-05   3.26e-06 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:43:58,765  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:43:58,765  DEBUG: HAT SHAPES, Uhat: (2700, 0)  Ehat: (0, 0)  VThat: (0, 118)  VTta: (84, 118)
+2020-02-04 09:43:58,766  WARNING: L matrix seems to be empty.
+2020-02-04 09:43:58,767  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:43:58,769  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:43:58,932  INFO: ************ SVM ************
+2020-02-04 09:43:58,932  INFO: FOR MATRIX: X
+2020-02-04 09:43:58,986  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:43:58,988  INFO: f1_Score: 0.818182
+2020-02-04 09:43:59,269  INFO: ************ SVM ************
+2020-02-04 09:43:59,269  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:43:59,317  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:43:59,319  INFO: f1_Score: 0.818182
+2020-02-04 09:43:59,774  INFO: ************ SVM ************
+2020-02-04 09:43:59,774  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:43:59,843  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:43:59,845  INFO: f1_Score: 0.818182
+2020-02-04 09:43:59,846  INFO: Validating GOOD Lambda: 0.001
+2020-02-04 09:43:59,847  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:00,029  INFO: ************ SVM ************
+2020-02-04 09:44:00,031  INFO: FOR MATRIX: X
+2020-02-04 09:44:00,141  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:00,143  INFO: f1_Score: 0.750000
+2020-02-04 09:44:00,422  INFO: ************ SVM ************
+2020-02-04 09:44:00,422  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:00,479  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:00,482  INFO: f1_Score: 0.750000
+2020-02-04 09:44:00,872  INFO: ************ SVM ************
+2020-02-04 09:44:00,872  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:00,938  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:00,940  INFO: f1_Score: 0.750000
+2020-02-04 09:44:00,940  INFO: Lambda: 0.002
+2020-02-04 09:44:00,962  DEBUG: Max Rank: 84
+2020-02-04 09:44:02,307  DEBUG: Lambda Scale: 0.10392304845413264
+2020-02-04 09:44:03,191  DEBUG: criterion1 is the constraint
+2020-02-04 09:44:03,191  DEBUG: criterion2 is the solution
+2020-02-04 09:44:03,192  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:44:05,988  DEBUG:        10   6.56e-04 1.00e-05   1.95e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:44:07,992  DEBUG:        17   4.73e-07 1.00e-05   1.90e-06 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:44:07,998  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:44:07,998  DEBUG: HAT SHAPES, Uhat: (2700, 0)  Ehat: (0, 0)  VThat: (0, 118)  VTta: (84, 118)
+2020-02-04 09:44:07,999  WARNING: L matrix seems to be empty.
+2020-02-04 09:44:08,000  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:08,002  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:08,166  INFO: ************ SVM ************
+2020-02-04 09:44:08,167  INFO: FOR MATRIX: X
+2020-02-04 09:44:08,209  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:44:08,211  INFO: f1_Score: 0.818182
+2020-02-04 09:44:08,499  INFO: ************ SVM ************
+2020-02-04 09:44:08,500  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:08,544  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:44:08,547  INFO: f1_Score: 0.818182
+2020-02-04 09:44:08,936  INFO: ************ SVM ************
+2020-02-04 09:44:08,936  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:08,982  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:44:08,985  INFO: f1_Score: 0.818182
+2020-02-04 09:44:08,985  INFO: Validating GOOD Lambda: 0.002
+2020-02-04 09:44:08,986  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:09,150  INFO: ************ SVM ************
+2020-02-04 09:44:09,151  INFO: FOR MATRIX: X
+2020-02-04 09:44:09,197  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:09,200  INFO: f1_Score: 0.750000
+2020-02-04 09:44:09,475  INFO: ************ SVM ************
+2020-02-04 09:44:09,476  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:09,517  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:09,518  INFO: f1_Score: 0.750000
+2020-02-04 09:44:09,912  INFO: ************ SVM ************
+2020-02-04 09:44:09,913  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:09,955  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:09,957  INFO: f1_Score: 0.750000
+2020-02-04 09:44:09,957  INFO: Lambda: 0.003
+2020-02-04 09:44:09,998  DEBUG: Max Rank: 84
+2020-02-04 09:44:11,093  DEBUG: Lambda Scale: 0.15588457268119896
+2020-02-04 09:44:12,066  DEBUG: criterion1 is the constraint
+2020-02-04 09:44:12,066  DEBUG: criterion2 is the solution
+2020-02-04 09:44:12,066  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:44:14,753  DEBUG:        10   3.77e-03 1.00e-05   2.06e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:44:17,538  DEBUG:        20   7.59e-05 1.00e-05   1.17e-04 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:44:19,081  DEBUG:        25   8.14e-06 1.00e-05   3.00e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:44:19,088  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:44:19,088  DEBUG: HAT SHAPES, Uhat: (2700, 1)  Ehat: (1, 1)  VThat: (1, 118)  VTta: (83, 118)
+2020-02-04 09:44:19,090  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:19,093  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:19,272  INFO: ************ SVM ************
+2020-02-04 09:44:19,272  INFO: FOR MATRIX: X
+2020-02-04 09:44:19,313  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:44:19,315  INFO: f1_Score: 0.818182
+2020-02-04 09:44:19,572  INFO: ************ SVM ************
+2020-02-04 09:44:19,572  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:19,616  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:44:19,618  INFO: f1_Score: 0.818182
+2020-02-04 09:44:20,004  INFO: ************ SVM ************
+2020-02-04 09:44:20,004  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:20,045  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:44:20,047  INFO: f1_Score: 0.818182
+2020-02-04 09:44:20,048  INFO: Validating GOOD Lambda: 0.003
+2020-02-04 09:44:20,050  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:20,203  INFO: ************ SVM ************
+2020-02-04 09:44:20,204  INFO: FOR MATRIX: X
+2020-02-04 09:44:20,247  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:20,249  INFO: f1_Score: 0.750000
+2020-02-04 09:44:20,508  INFO: ************ SVM ************
+2020-02-04 09:44:20,508  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:20,550  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:20,551  INFO: f1_Score: 0.750000
+2020-02-04 09:44:20,941  INFO: ************ SVM ************
+2020-02-04 09:44:20,941  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:20,983  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:20,985  INFO: f1_Score: 0.750000
+2020-02-04 09:44:20,985  INFO: Lambda: 0.004
+2020-02-04 09:44:21,031  DEBUG: Max Rank: 84
+2020-02-04 09:44:22,072  DEBUG: Lambda Scale: 0.20784609690826528
+2020-02-04 09:44:22,921  DEBUG: criterion1 is the constraint
+2020-02-04 09:44:22,921  DEBUG: criterion2 is the solution
+2020-02-04 09:44:22,921  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:44:25,565  DEBUG:        10   7.27e-03 1.00e-05   2.24e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:44:29,054  DEBUG:        20   2.52e-04 1.00e-05   2.12e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:44:33,565  DEBUG:        30   8.96e-06 1.00e-05   3.20e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:44:33,565  DEBUG:        30   8.96e-06 1.00e-05   3.20e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:44:33,573  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:44:33,573  DEBUG: HAT SHAPES, Uhat: (2700, 2)  Ehat: (2, 2)  VThat: (2, 118)  VTta: (82, 118)
+2020-02-04 09:44:33,575  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:33,579  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:33,743  INFO: ************ SVM ************
+2020-02-04 09:44:33,744  INFO: FOR MATRIX: X
+2020-02-04 09:44:33,816  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:44:33,819  INFO: f1_Score: 0.818182
+2020-02-04 09:44:34,141  INFO: ************ SVM ************
+2020-02-04 09:44:34,141  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:34,173  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:44:34,175  INFO: f1_Score: 0.000000
+2020-02-04 09:44:34,604  INFO: ************ SVM ************
+2020-02-04 09:44:34,604  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:34,657  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         9  17
+2020-02-04 09:44:34,658  INFO: f1_Score: 0.790698
+2020-02-04 09:44:34,658  INFO: Validating GOOD Lambda: 0.004
+2020-02-04 09:44:34,660  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:34,792  INFO: ************ SVM ************
+2020-02-04 09:44:34,792  INFO: FOR MATRIX: X
+2020-02-04 09:44:34,834  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:34,835  INFO: f1_Score: 0.750000
+2020-02-04 09:44:35,172  INFO: ************ SVM ************
+2020-02-04 09:44:35,173  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:35,212  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:44:35,214  INFO: f1_Score: 0.000000
+2020-02-04 09:44:35,651  INFO: ************ SVM ************
+2020-02-04 09:44:35,651  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:35,743  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:35,746  INFO: f1_Score: 0.750000
+2020-02-04 09:44:35,747  INFO: Lambda: 0.005
+2020-02-04 09:44:35,895  DEBUG: Max Rank: 84
+2020-02-04 09:44:37,167  DEBUG: Lambda Scale: 0.2598076211353316
+2020-02-04 09:44:38,351  DEBUG: criterion1 is the constraint
+2020-02-04 09:44:38,352  DEBUG: criterion2 is the solution
+2020-02-04 09:44:38,352  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:44:41,124  DEBUG:        10   1.06e-02 1.00e-05   1.23e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:44:44,078  DEBUG:        20   3.61e-04 1.00e-05   1.49e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:44:47,245  DEBUG:        30   1.94e-05 1.00e-05   6.27e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:44:47,871  DEBUG:        32   9.15e-06 1.00e-05   3.08e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:44:47,877  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:44:47,878  DEBUG: HAT SHAPES, Uhat: (2700, 2)  Ehat: (2, 2)  VThat: (2, 118)  VTta: (82, 118)
+2020-02-04 09:44:47,879  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:47,883  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:48,052  INFO: ************ SVM ************
+2020-02-04 09:44:48,052  INFO: FOR MATRIX: X
+2020-02-04 09:44:48,137  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:44:48,140  INFO: f1_Score: 0.818182
+2020-02-04 09:44:48,445  INFO: ************ SVM ************
+2020-02-04 09:44:48,446  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:48,512  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:44:48,515  INFO: f1_Score: 0.000000
+2020-02-04 09:44:48,916  INFO: ************ SVM ************
+2020-02-04 09:44:48,917  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:48,961  INFO: 
+Predicted Packet Type     0  1
+Actual Packet Type            
+0                      2674  0
+1                        19  7
+2020-02-04 09:44:48,963  INFO: f1_Score: 0.424242
+2020-02-04 09:44:48,963  INFO: Validating GOOD Lambda: 0.005
+2020-02-04 09:44:48,965  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:44:49,178  INFO: ************ SVM ************
+2020-02-04 09:44:49,179  INFO: FOR MATRIX: X
+2020-02-04 09:44:49,240  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:44:49,244  INFO: f1_Score: 0.750000
+2020-02-04 09:44:49,524  INFO: ************ SVM ************
+2020-02-04 09:44:49,524  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:44:49,600  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:44:49,604  INFO: f1_Score: 0.000000
+2020-02-04 09:44:49,995  INFO: ************ SVM ************
+2020-02-04 09:44:49,996  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:44:50,046  INFO: 
+Predicted Packet Type     0  1
+Actual Packet Type            
+0                      2680  0
+1                        14  6
+2020-02-04 09:44:50,048  INFO: f1_Score: 0.461538
+2020-02-04 09:44:50,049  INFO: Lambda: 0.006
+2020-02-04 09:44:50,091  DEBUG: Max Rank: 84
+2020-02-04 09:44:51,497  DEBUG: Lambda Scale: 0.3117691453623979
+2020-02-04 09:44:52,568  DEBUG: criterion1 is the constraint
+2020-02-04 09:44:52,568  DEBUG: criterion2 is the solution
+2020-02-04 09:44:52,568  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:44:55,480  DEBUG:        10   1.55e-02 1.00e-05   1.78e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:44:58,500  DEBUG:        20   1.06e-03 1.00e-05   1.05e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:45:01,555  DEBUG:        30   7.62e-05 1.00e-05   1.16e-04 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:45:03,863  DEBUG:        38   9.20e-06 1.00e-05   4.20e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:45:03,871  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:45:03,872  DEBUG: HAT SHAPES, Uhat: (2700, 4)  Ehat: (4, 4)  VThat: (4, 118)  VTta: (80, 118)
+2020-02-04 09:45:03,874  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:03,876  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:04,044  INFO: ************ SVM ************
+2020-02-04 09:45:04,044  INFO: FOR MATRIX: X
+2020-02-04 09:45:04,088  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:45:04,090  INFO: f1_Score: 0.818182
+2020-02-04 09:45:04,361  INFO: ************ SVM ************
+2020-02-04 09:45:04,361  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:45:04,398  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:45:04,400  INFO: f1_Score: 0.000000
+2020-02-04 09:45:04,804  INFO: ************ SVM ************
+2020-02-04 09:45:04,805  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:45:04,882  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:45:04,886  INFO: f1_Score: 0.000000
+2020-02-04 09:45:04,887  INFO: Validating GOOD Lambda: 0.006
+2020-02-04 09:45:04,890  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:05,057  INFO: ************ SVM ************
+2020-02-04 09:45:05,058  INFO: FOR MATRIX: X
+2020-02-04 09:45:05,096  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:45:05,098  INFO: f1_Score: 0.750000
+2020-02-04 09:45:05,361  INFO: ************ SVM ************
+2020-02-04 09:45:05,361  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:45:05,397  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:45:05,399  INFO: f1_Score: 0.000000
+2020-02-04 09:45:05,802  INFO: ************ SVM ************
+2020-02-04 09:45:05,802  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:45:05,846  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:45:05,848  INFO: f1_Score: 0.000000
+2020-02-04 09:45:05,849  INFO: Lambda: 0.007
+2020-02-04 09:45:05,918  DEBUG: Max Rank: 84
+2020-02-04 09:45:07,290  DEBUG: Lambda Scale: 0.36373066958946426
+2020-02-04 09:45:08,224  DEBUG: criterion1 is the constraint
+2020-02-04 09:45:08,225  DEBUG: criterion2 is the solution
+2020-02-04 09:45:08,225  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:45:10,929  DEBUG:        10   1.50e-02 1.00e-05   2.06e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:45:14,107  DEBUG:        20   1.44e-03 1.00e-05   1.54e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:45:17,167  DEBUG:        30   1.41e-04 1.00e-05   1.08e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:45:20,197  DEBUG:        40   1.08e-05 1.00e-05   4.52e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:45:20,494  DEBUG:        41   7.69e-06 1.00e-05   3.94e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:45:20,499  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:45:20,500  DEBUG: HAT SHAPES, Uhat: (2700, 5)  Ehat: (5, 5)  VThat: (5, 118)  VTta: (79, 118)
+2020-02-04 09:45:20,501  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:20,503  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:20,671  INFO: ************ SVM ************
+2020-02-04 09:45:20,672  INFO: FOR MATRIX: X
+2020-02-04 09:45:20,729  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:45:20,731  INFO: f1_Score: 0.818182
+2020-02-04 09:45:21,046  INFO: ************ SVM ************
+2020-02-04 09:45:21,046  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:45:21,085  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:45:21,087  INFO: f1_Score: 0.000000
+2020-02-04 09:45:21,499  INFO: ************ SVM ************
+2020-02-04 09:45:21,499  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:45:21,539  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:45:21,541  INFO: f1_Score: 0.000000
+2020-02-04 09:45:21,541  INFO: Validating GOOD Lambda: 0.007
+2020-02-04 09:45:21,543  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:21,701  INFO: ************ SVM ************
+2020-02-04 09:45:21,701  INFO: FOR MATRIX: X
+2020-02-04 09:45:21,748  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:45:21,749  INFO: f1_Score: 0.750000
+2020-02-04 09:45:22,019  INFO: ************ SVM ************
+2020-02-04 09:45:22,020  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:45:22,057  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:45:22,059  INFO: f1_Score: 0.000000
+2020-02-04 09:45:22,457  INFO: ************ SVM ************
+2020-02-04 09:45:22,458  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:45:22,496  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:45:22,498  INFO: f1_Score: 0.000000
+2020-02-04 09:45:22,499  INFO: Lambda: 0.008
+2020-02-04 09:45:22,520  DEBUG: Max Rank: 84
+2020-02-04 09:45:23,581  DEBUG: Lambda Scale: 0.41569219381653055
+2020-02-04 09:45:24,514  DEBUG: criterion1 is the constraint
+2020-02-04 09:45:24,515  DEBUG: criterion2 is the solution
+2020-02-04 09:45:24,515  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:45:27,221  DEBUG:        10   1.80e-02 1.00e-05   2.21e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:45:31,043  DEBUG:        20   1.91e-03 1.00e-05   2.29e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:45:34,973  DEBUG:        30   2.28e-04 1.00e-05   1.78e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:45:38,300  DEBUG:        40   2.65e-05 1.00e-05   6.65e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:45:39,355  DEBUG:        44   9.93e-06 1.00e-05   3.74e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:45:39,362  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:45:39,362  DEBUG: HAT SHAPES, Uhat: (2700, 7)  Ehat: (7, 7)  VThat: (7, 118)  VTta: (77, 118)
+2020-02-04 09:45:39,364  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:39,367  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:39,491  INFO: ************ SVM ************
+2020-02-04 09:45:39,491  INFO: FOR MATRIX: X
+2020-02-04 09:45:39,527  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:45:39,528  INFO: f1_Score: 0.818182
+2020-02-04 09:45:39,714  INFO: ************ SVM ************
+2020-02-04 09:45:39,714  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:45:39,739  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:45:39,741  INFO: f1_Score: 0.000000
+2020-02-04 09:45:40,001  INFO: ************ SVM ************
+2020-02-04 09:45:40,003  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:45:40,042  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                        10  16
+2020-02-04 09:45:40,043  INFO: f1_Score: 0.761905
+2020-02-04 09:45:40,043  INFO: Validating GOOD Lambda: 0.008
+2020-02-04 09:45:40,047  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:40,170  INFO: ************ SVM ************
+2020-02-04 09:45:40,170  INFO: FOR MATRIX: X
+2020-02-04 09:45:40,207  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:45:40,208  INFO: f1_Score: 0.750000
+2020-02-04 09:45:40,463  INFO: ************ SVM ************
+2020-02-04 09:45:40,463  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:45:40,548  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:45:40,553  INFO: f1_Score: 0.000000
+2020-02-04 09:45:40,983  INFO: ************ SVM ************
+2020-02-04 09:45:40,983  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:45:41,019  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         9  11
+2020-02-04 09:45:41,021  INFO: f1_Score: 0.709677
+2020-02-04 09:45:41,021  INFO: Lambda: 0.009000000000000001
+2020-02-04 09:45:41,101  DEBUG: Max Rank: 84
+2020-02-04 09:45:42,673  DEBUG: Lambda Scale: 0.46765371804359696
+2020-02-04 09:45:43,654  DEBUG: criterion1 is the constraint
+2020-02-04 09:45:43,654  DEBUG: criterion2 is the solution
+2020-02-04 09:45:43,654  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:45:46,288  DEBUG:        10   2.06e-02 1.00e-05   2.55e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:45:49,443  DEBUG:        20   2.44e-03 1.00e-05   2.50e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:45:52,918  DEBUG:        30   3.33e-04 1.00e-05   2.36e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:45:55,998  DEBUG:        40   4.11e-05 1.00e-05   7.83e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:45:57,722  DEBUG:        46   9.11e-06 1.00e-05   4.39e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:45:57,728  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:45:57,729  DEBUG: HAT SHAPES, Uhat: (2700, 9)  Ehat: (9, 9)  VThat: (9, 118)  VTta: (75, 118)
+2020-02-04 09:45:57,730  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:57,732  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:57,984  INFO: ************ SVM ************
+2020-02-04 09:45:57,986  INFO: FOR MATRIX: X
+2020-02-04 09:45:58,081  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:45:58,084  INFO: f1_Score: 0.818182
+2020-02-04 09:45:58,388  INFO: ************ SVM ************
+2020-02-04 09:45:58,388  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:45:58,422  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:45:58,424  INFO: f1_Score: 0.000000
+2020-02-04 09:45:58,981  INFO: ************ SVM ************
+2020-02-04 09:45:58,982  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:45:59,046  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                        11  15
+2020-02-04 09:45:59,048  INFO: f1_Score: 0.731707
+2020-02-04 09:45:59,048  INFO: Validating GOOD Lambda: 0.009000000000000001
+2020-02-04 09:45:59,051  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:45:59,239  INFO: ************ SVM ************
+2020-02-04 09:45:59,239  INFO: FOR MATRIX: X
+2020-02-04 09:45:59,299  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:45:59,303  INFO: f1_Score: 0.750000
+2020-02-04 09:45:59,613  INFO: ************ SVM ************
+2020-02-04 09:45:59,613  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:45:59,673  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:45:59,676  INFO: f1_Score: 0.000000
+2020-02-04 09:46:00,133  INFO: ************ SVM ************
+2020-02-04 09:46:00,133  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:46:00,199  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                        10  10
+2020-02-04 09:46:00,202  INFO: f1_Score: 0.666667
+2020-02-04 09:46:00,203  INFO: Lambda: 0.010000000000000002
+2020-02-04 09:46:00,264  DEBUG: Max Rank: 84
+2020-02-04 09:46:01,671  DEBUG: Lambda Scale: 0.5196152422706634
+2020-02-04 09:46:02,754  DEBUG: criterion1 is the constraint
+2020-02-04 09:46:02,754  DEBUG: criterion2 is the solution
+2020-02-04 09:46:02,754  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:46:05,537  DEBUG:        10   2.74e-02 1.00e-05   2.39e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:46:08,572  DEBUG:        20   3.90e-03 1.00e-05   1.04e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:46:11,846  DEBUG:        30   4.97e-04 1.00e-05   1.19e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:46:15,068  DEBUG:        40   6.65e-05 1.00e-05   9.08e-05 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:46:18,306  DEBUG:        50   8.51e-06 1.00e-05   3.48e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:46:18,306  DEBUG:        50   8.51e-06 1.00e-05   3.48e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:46:18,312  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:46:18,312  DEBUG: HAT SHAPES, Uhat: (2700, 11)  Ehat: (11, 11)  VThat: (11, 118)  VTta: (73, 118)
+2020-02-04 09:46:18,314  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:18,316  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:18,484  INFO: ************ SVM ************
+2020-02-04 09:46:18,484  INFO: FOR MATRIX: X
+2020-02-04 09:46:18,528  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:46:18,531  INFO: f1_Score: 0.818182
+2020-02-04 09:46:18,816  INFO: ************ SVM ************
+2020-02-04 09:46:18,817  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:46:18,850  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:46:18,852  INFO: f1_Score: 0.000000
+2020-02-04 09:46:19,246  INFO: ************ SVM ************
+2020-02-04 09:46:19,246  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:46:19,285  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:46:19,287  INFO: f1_Score: 0.000000
+2020-02-04 09:46:19,287  INFO: Validating GOOD Lambda: 0.010000000000000002
+2020-02-04 09:46:19,290  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:19,457  INFO: ************ SVM ************
+2020-02-04 09:46:19,457  INFO: FOR MATRIX: X
+2020-02-04 09:46:19,521  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:46:19,528  INFO: f1_Score: 0.750000
+2020-02-04 09:46:19,796  INFO: ************ SVM ************
+2020-02-04 09:46:19,797  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:46:19,837  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:46:19,839  INFO: f1_Score: 0.000000
+2020-02-04 09:46:20,206  INFO: ************ SVM ************
+2020-02-04 09:46:20,208  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:46:20,259  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:46:20,261  INFO: f1_Score: 0.000000
+2020-02-04 09:46:20,261  INFO: Lambda: 0.011000000000000003
+2020-02-04 09:46:20,324  DEBUG: Max Rank: 84
+2020-02-04 09:46:21,457  DEBUG: Lambda Scale: 0.5715767664977297
+2020-02-04 09:46:22,314  DEBUG: criterion1 is the constraint
+2020-02-04 09:46:22,315  DEBUG: criterion2 is the solution
+2020-02-04 09:46:22,315  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:46:24,947  DEBUG:        10   2.64e-02 1.00e-05   2.88e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:46:28,121  DEBUG:        20   3.60e-03 1.00e-05   2.39e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:46:31,329  DEBUG:        30   4.65e-04 1.00e-05   1.10e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:46:34,138  DEBUG:        40   6.95e-05 1.00e-05   9.33e-05 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:46:37,210  DEBUG:        50   1.03e-05 1.00e-05   3.89e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:46:37,538  DEBUG:        51   7.48e-06 1.00e-05   3.64e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:46:37,546  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:46:37,546  DEBUG: HAT SHAPES, Uhat: (2700, 13)  Ehat: (13, 13)  VThat: (13, 118)  VTta: (71, 118)
+2020-02-04 09:46:37,548  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:37,550  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:37,711  INFO: ************ SVM ************
+2020-02-04 09:46:37,712  INFO: FOR MATRIX: X
+2020-02-04 09:46:37,762  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:46:37,765  INFO: f1_Score: 0.818182
+2020-02-04 09:46:38,078  INFO: ************ SVM ************
+2020-02-04 09:46:38,078  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:46:38,119  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:46:38,122  INFO: f1_Score: 0.000000
+2020-02-04 09:46:38,590  INFO: ************ SVM ************
+2020-02-04 09:46:38,590  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:46:38,625  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:46:38,626  INFO: f1_Score: 0.000000
+2020-02-04 09:46:38,627  INFO: Validating GOOD Lambda: 0.011000000000000003
+2020-02-04 09:46:38,629  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:38,781  INFO: ************ SVM ************
+2020-02-04 09:46:38,781  INFO: FOR MATRIX: X
+2020-02-04 09:46:38,871  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:46:38,875  INFO: f1_Score: 0.750000
+2020-02-04 09:46:39,245  INFO: ************ SVM ************
+2020-02-04 09:46:39,245  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:46:39,304  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:46:39,307  INFO: f1_Score: 0.000000
+2020-02-04 09:46:39,751  INFO: ************ SVM ************
+2020-02-04 09:46:39,752  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:46:39,791  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:46:39,793  INFO: f1_Score: 0.000000
+2020-02-04 09:46:39,793  INFO: Lambda: 0.012000000000000004
+2020-02-04 09:46:39,841  DEBUG: Max Rank: 84
+2020-02-04 09:46:41,016  DEBUG: Lambda Scale: 0.623538290724796
+2020-02-04 09:46:41,910  DEBUG: criterion1 is the constraint
+2020-02-04 09:46:41,910  DEBUG: criterion2 is the solution
+2020-02-04 09:46:41,911  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:46:44,907  DEBUG:        10   2.72e-02 1.00e-05   3.50e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:46:48,065  DEBUG:        20   4.38e-03 1.00e-05   3.03e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:46:51,204  DEBUG:        30   5.67e-04 1.00e-05   1.45e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:46:54,353  DEBUG:        40   1.10e-04 1.00e-05   1.19e-04 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:46:57,573  DEBUG:        50   1.63e-05 1.00e-05   3.14e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:46:58,547  DEBUG:        53   7.92e-06 1.00e-05   3.88e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:46:58,554  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:46:58,555  DEBUG: HAT SHAPES, Uhat: (2700, 15)  Ehat: (15, 15)  VThat: (15, 118)  VTta: (69, 118)
+2020-02-04 09:46:58,556  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:58,559  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:58,712  INFO: ************ SVM ************
+2020-02-04 09:46:58,712  INFO: FOR MATRIX: X
+2020-02-04 09:46:58,763  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:46:58,766  INFO: f1_Score: 0.818182
+2020-02-04 09:46:59,020  INFO: ************ SVM ************
+2020-02-04 09:46:59,021  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:46:59,057  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:46:59,059  INFO: f1_Score: 0.000000
+2020-02-04 09:46:59,346  INFO: ************ SVM ************
+2020-02-04 09:46:59,347  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:46:59,395  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:46:59,398  INFO: f1_Score: 0.000000
+2020-02-04 09:46:59,398  INFO: Validating GOOD Lambda: 0.012000000000000004
+2020-02-04 09:46:59,408  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:46:59,608  INFO: ************ SVM ************
+2020-02-04 09:46:59,608  INFO: FOR MATRIX: X
+2020-02-04 09:46:59,669  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:46:59,671  INFO: f1_Score: 0.750000
+2020-02-04 09:46:59,939  INFO: ************ SVM ************
+2020-02-04 09:46:59,940  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:46:59,983  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:46:59,985  INFO: f1_Score: 0.000000
+2020-02-04 09:47:00,407  INFO: ************ SVM ************
+2020-02-04 09:47:00,407  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:47:00,477  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:47:00,483  INFO: f1_Score: 0.000000
+2020-02-04 09:47:00,483  INFO: Lambda: 0.013000000000000005
+2020-02-04 09:47:00,549  DEBUG: Max Rank: 84
+2020-02-04 09:47:01,736  DEBUG: Lambda Scale: 0.6754998149518624
+2020-02-04 09:47:02,637  DEBUG: criterion1 is the constraint
+2020-02-04 09:47:02,640  DEBUG: criterion2 is the solution
+2020-02-04 09:47:02,640  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:47:05,482  DEBUG:        10   3.43e-02 1.00e-05   3.67e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:47:08,350  DEBUG:        20   5.51e-03 1.00e-05   1.38e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:47:11,977  DEBUG:        30   8.47e-04 1.00e-05   2.42e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:47:14,984  DEBUG:        40   1.63e-04 1.00e-05   8.34e-05 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:47:17,954  DEBUG:        50   2.94e-05 1.00e-05   7.13e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:47:19,717  DEBUG:        56   8.20e-06 1.00e-05   3.88e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:47:19,727  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:47:19,728  DEBUG: HAT SHAPES, Uhat: (2700, 18)  Ehat: (18, 18)  VThat: (18, 118)  VTta: (66, 118)
+2020-02-04 09:47:19,730  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:47:19,733  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:47:19,928  INFO: ************ SVM ************
+2020-02-04 09:47:19,928  INFO: FOR MATRIX: X
+2020-02-04 09:47:19,969  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:47:19,971  INFO: f1_Score: 0.818182
+2020-02-04 09:47:20,225  INFO: ************ SVM ************
+2020-02-04 09:47:20,226  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:47:20,281  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:47:20,283  INFO: f1_Score: 0.000000
+2020-02-04 09:47:20,687  INFO: ************ SVM ************
+2020-02-04 09:47:20,687  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:47:20,724  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:47:20,727  INFO: f1_Score: 0.000000
+2020-02-04 09:47:20,727  INFO: Validating GOOD Lambda: 0.013000000000000005
+2020-02-04 09:47:20,732  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:47:20,904  INFO: ************ SVM ************
+2020-02-04 09:47:20,905  INFO: FOR MATRIX: X
+2020-02-04 09:47:20,949  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:47:20,951  INFO: f1_Score: 0.750000
+2020-02-04 09:47:21,220  INFO: ************ SVM ************
+2020-02-04 09:47:21,221  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:47:21,260  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:47:21,263  INFO: f1_Score: 0.000000
+2020-02-04 09:47:21,660  INFO: ************ SVM ************
+2020-02-04 09:47:21,660  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:47:21,695  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:47:21,697  INFO: f1_Score: 0.000000
+2020-02-04 09:47:21,697  INFO: Lambda: 0.014000000000000005
+2020-02-04 09:47:21,749  DEBUG: Max Rank: 84
+2020-02-04 09:47:22,791  DEBUG: Lambda Scale: 0.7274613391789287
+2020-02-04 09:47:23,596  DEBUG: criterion1 is the constraint
+2020-02-04 09:47:23,597  DEBUG: criterion2 is the solution
+2020-02-04 09:47:23,597  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:47:26,249  DEBUG:        10   3.99e-02 1.00e-05   2.52e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:47:29,185  DEBUG:        20   5.85e-03 1.00e-05   1.49e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:47:32,397  DEBUG:        30   1.10e-03 1.00e-05   2.59e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:47:35,776  DEBUG:        40   1.89e-04 1.00e-05   1.07e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:47:38,734  DEBUG:        50   3.88e-05 1.00e-05   7.44e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:47:40,761  DEBUG:        57   9.23e-06 1.00e-05   4.14e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:47:40,768  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:47:40,769  DEBUG: HAT SHAPES, Uhat: (2700, 20)  Ehat: (20, 20)  VThat: (20, 118)  VTta: (64, 118)
+2020-02-04 09:47:40,771  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:47:40,773  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:47:40,954  INFO: ************ SVM ************
+2020-02-04 09:47:40,955  INFO: FOR MATRIX: X
+2020-02-04 09:47:41,007  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:47:41,009  INFO: f1_Score: 0.818182
+2020-02-04 09:47:41,282  INFO: ************ SVM ************
+2020-02-04 09:47:41,282  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:47:41,334  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:47:41,336  INFO: f1_Score: 0.000000
+2020-02-04 09:47:41,796  INFO: ************ SVM ************
+2020-02-04 09:47:41,796  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:47:41,838  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:47:41,840  INFO: f1_Score: 0.000000
+2020-02-04 09:47:41,840  INFO: Validating GOOD Lambda: 0.014000000000000005
+2020-02-04 09:47:41,843  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:47:42,037  INFO: ************ SVM ************
+2020-02-04 09:47:42,037  INFO: FOR MATRIX: X
+2020-02-04 09:47:42,081  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:47:42,083  INFO: f1_Score: 0.750000
+2020-02-04 09:47:42,348  INFO: ************ SVM ************
+2020-02-04 09:47:42,348  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:47:42,416  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:47:42,420  INFO: f1_Score: 0.000000
+2020-02-04 09:47:42,931  INFO: ************ SVM ************
+2020-02-04 09:47:42,931  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:47:42,970  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:47:42,972  INFO: f1_Score: 0.000000
+2020-02-04 09:47:42,973  INFO: Lambda: 0.015000000000000006
+2020-02-04 09:47:43,035  DEBUG: Max Rank: 84
+2020-02-04 09:47:44,372  DEBUG: Lambda Scale: 0.7794228634059951
+2020-02-04 09:47:45,638  DEBUG: criterion1 is the constraint
+2020-02-04 09:47:45,639  DEBUG: criterion2 is the solution
+2020-02-04 09:47:45,639  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:47:48,898  DEBUG:        10   4.23e-02 1.00e-05   2.52e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:47:52,057  DEBUG:        20   6.27e-03 1.00e-05   1.46e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:47:55,055  DEBUG:        30   1.17e-03 1.00e-05   2.74e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:47:58,141  DEBUG:        40   2.18e-04 1.00e-05   1.31e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:48:01,227  DEBUG:        50   4.74e-05 1.00e-05   6.78e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:48:03,600  DEBUG:        58   9.83e-06 1.00e-05   4.29e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:48:03,607  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:48:03,607  DEBUG: HAT SHAPES, Uhat: (2700, 23)  Ehat: (23, 23)  VThat: (23, 118)  VTta: (61, 118)
+2020-02-04 09:48:03,609  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:03,612  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:03,806  INFO: ************ SVM ************
+2020-02-04 09:48:03,807  INFO: FOR MATRIX: X
+2020-02-04 09:48:03,892  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:48:03,896  INFO: f1_Score: 0.818182
+2020-02-04 09:48:04,286  INFO: ************ SVM ************
+2020-02-04 09:48:04,286  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:48:04,343  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:48:04,346  INFO: f1_Score: 0.000000
+2020-02-04 09:48:04,752  INFO: ************ SVM ************
+2020-02-04 09:48:04,753  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:48:04,846  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:48:04,848  INFO: f1_Score: 0.000000
+2020-02-04 09:48:04,852  INFO: Validating GOOD Lambda: 0.015000000000000006
+2020-02-04 09:48:04,857  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:05,071  INFO: ************ SVM ************
+2020-02-04 09:48:05,071  INFO: FOR MATRIX: X
+2020-02-04 09:48:05,131  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:48:05,134  INFO: f1_Score: 0.750000
+2020-02-04 09:48:05,385  INFO: ************ SVM ************
+2020-02-04 09:48:05,386  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:48:05,444  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:48:05,448  INFO: f1_Score: 0.000000
+2020-02-04 09:48:05,870  INFO: ************ SVM ************
+2020-02-04 09:48:05,871  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:48:05,939  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:48:05,942  INFO: f1_Score: 0.000000
+2020-02-04 09:48:05,943  INFO: Lambda: 0.016000000000000007
+2020-02-04 09:48:06,007  DEBUG: Max Rank: 84
+2020-02-04 09:48:07,423  DEBUG: Lambda Scale: 0.8313843876330616
+2020-02-04 09:48:08,401  DEBUG: criterion1 is the constraint
+2020-02-04 09:48:08,402  DEBUG: criterion2 is the solution
+2020-02-04 09:48:08,402  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:48:12,131  DEBUG:        10   4.29e-02 1.00e-05   2.63e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:48:16,019  DEBUG:        20   7.25e-03 1.00e-05   1.77e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:48:19,169  DEBUG:        30   1.41e-03 1.00e-05   2.59e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:48:22,401  DEBUG:        40   2.32e-04 1.00e-05   1.43e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:48:25,593  DEBUG:        50   4.88e-05 1.00e-05   6.89e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:48:28,337  DEBUG:        59   9.26e-06 1.00e-05   3.88e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:48:28,343  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:48:28,344  DEBUG: HAT SHAPES, Uhat: (2700, 26)  Ehat: (26, 26)  VThat: (26, 118)  VTta: (58, 118)
+2020-02-04 09:48:28,347  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:28,351  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:28,570  INFO: ************ SVM ************
+2020-02-04 09:48:28,570  INFO: FOR MATRIX: X
+2020-02-04 09:48:28,633  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:48:28,635  INFO: f1_Score: 0.818182
+2020-02-04 09:48:28,891  INFO: ************ SVM ************
+2020-02-04 09:48:28,892  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:48:28,939  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:48:28,941  INFO: f1_Score: 0.000000
+2020-02-04 09:48:29,503  INFO: ************ SVM ************
+2020-02-04 09:48:29,504  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:48:29,567  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:48:29,570  INFO: f1_Score: 0.000000
+2020-02-04 09:48:29,570  INFO: Validating GOOD Lambda: 0.016000000000000007
+2020-02-04 09:48:29,577  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:29,812  INFO: ************ SVM ************
+2020-02-04 09:48:29,812  INFO: FOR MATRIX: X
+2020-02-04 09:48:29,904  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:48:29,907  INFO: f1_Score: 0.750000
+2020-02-04 09:48:30,207  INFO: ************ SVM ************
+2020-02-04 09:48:30,207  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:48:30,287  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:48:30,292  INFO: f1_Score: 0.000000
+2020-02-04 09:48:30,811  INFO: ************ SVM ************
+2020-02-04 09:48:30,811  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:48:30,869  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:48:30,871  INFO: f1_Score: 0.000000
+2020-02-04 09:48:30,872  INFO: Lambda: 0.017000000000000008
+2020-02-04 09:48:30,972  DEBUG: Max Rank: 84
+2020-02-04 09:48:32,408  DEBUG: Lambda Scale: 0.8833459118601279
+2020-02-04 09:48:33,441  DEBUG: criterion1 is the constraint
+2020-02-04 09:48:33,442  DEBUG: criterion2 is the solution
+2020-02-04 09:48:33,442  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:48:36,251  DEBUG:        10   4.48e-02 1.00e-05   2.60e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:48:39,744  DEBUG:        20   6.69e-03 1.00e-05   1.63e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:48:43,163  DEBUG:        30   1.42e-03 1.00e-05   2.58e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:48:46,604  DEBUG:        40   2.64e-04 1.00e-05   1.64e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:48:49,699  DEBUG:        50   5.59e-05 1.00e-05   4.91e-05 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:48:52,825  DEBUG:        60   9.63e-06 1.00e-05   4.07e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:48:52,825  DEBUG:        60   9.63e-06 1.00e-05   4.07e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:48:52,834  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:48:52,835  DEBUG: HAT SHAPES, Uhat: (2700, 28)  Ehat: (28, 28)  VThat: (28, 118)  VTta: (56, 118)
+2020-02-04 09:48:52,838  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:52,842  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:53,036  INFO: ************ SVM ************
+2020-02-04 09:48:53,037  INFO: FOR MATRIX: X
+2020-02-04 09:48:53,106  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:48:53,109  INFO: f1_Score: 0.818182
+2020-02-04 09:48:53,443  INFO: ************ SVM ************
+2020-02-04 09:48:53,443  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:48:53,504  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:48:53,507  INFO: f1_Score: 0.000000
+2020-02-04 09:48:53,942  INFO: ************ SVM ************
+2020-02-04 09:48:53,942  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:48:53,985  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:48:53,987  INFO: f1_Score: 0.000000
+2020-02-04 09:48:53,988  INFO: Validating GOOD Lambda: 0.017000000000000008
+2020-02-04 09:48:53,993  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:48:54,169  INFO: ************ SVM ************
+2020-02-04 09:48:54,170  INFO: FOR MATRIX: X
+2020-02-04 09:48:54,231  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:48:54,234  INFO: f1_Score: 0.750000
+2020-02-04 09:48:54,548  INFO: ************ SVM ************
+2020-02-04 09:48:54,549  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:48:54,605  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:48:54,608  INFO: f1_Score: 0.000000
+2020-02-04 09:48:54,993  INFO: ************ SVM ************
+2020-02-04 09:48:55,001  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:48:55,068  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:48:55,070  INFO: f1_Score: 0.000000
+2020-02-04 09:48:55,070  INFO: Lambda: 0.01800000000000001
+2020-02-04 09:48:55,146  DEBUG: Max Rank: 84
+2020-02-04 09:48:56,637  DEBUG: Lambda Scale: 0.9353074360871942
+2020-02-04 09:48:57,597  DEBUG: criterion1 is the constraint
+2020-02-04 09:48:57,597  DEBUG: criterion2 is the solution
+2020-02-04 09:48:57,597  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:49:00,723  DEBUG:        10   4.68e-02 1.00e-05   2.69e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:49:03,914  DEBUG:        20   7.68e-03 1.00e-05   2.03e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:49:08,329  DEBUG:        30   1.49e-03 1.00e-05   2.76e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:49:11,700  DEBUG:        40   2.42e-04 1.00e-05   1.46e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:49:14,889  DEBUG:        50   5.36e-05 1.00e-05   7.70e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:49:19,324  DEBUG:        60   7.95e-06 1.00e-05   3.34e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:49:19,325  DEBUG:        60   7.95e-06 1.00e-05   3.34e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:49:19,334  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:49:19,337  DEBUG: HAT SHAPES, Uhat: (2700, 31)  Ehat: (31, 31)  VThat: (31, 118)  VTta: (53, 118)
+2020-02-04 09:49:19,340  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:49:19,344  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:49:19,540  INFO: ************ SVM ************
+2020-02-04 09:49:19,540  INFO: FOR MATRIX: X
+2020-02-04 09:49:19,611  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:49:19,613  INFO: f1_Score: 0.818182
+2020-02-04 09:49:19,883  INFO: ************ SVM ************
+2020-02-04 09:49:19,883  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:49:19,943  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:49:19,947  INFO: f1_Score: 0.000000
+2020-02-04 09:49:20,355  INFO: ************ SVM ************
+2020-02-04 09:49:20,355  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:49:20,400  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:49:20,403  INFO: f1_Score: 0.000000
+2020-02-04 09:49:20,404  INFO: Validating GOOD Lambda: 0.01800000000000001
+2020-02-04 09:49:20,408  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:49:20,585  INFO: ************ SVM ************
+2020-02-04 09:49:20,585  INFO: FOR MATRIX: X
+2020-02-04 09:49:20,658  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:49:20,662  INFO: f1_Score: 0.750000
+2020-02-04 09:49:20,924  INFO: ************ SVM ************
+2020-02-04 09:49:20,925  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:49:20,989  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:49:20,993  INFO: f1_Score: 0.000000
+2020-02-04 09:49:21,370  INFO: ************ SVM ************
+2020-02-04 09:49:21,370  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:49:21,416  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:49:21,420  INFO: f1_Score: 0.000000
+2020-02-04 09:49:21,420  INFO: Lambda: 0.01900000000000001
+2020-02-04 09:49:21,478  DEBUG: Max Rank: 84
+2020-02-04 09:49:23,034  DEBUG: Lambda Scale: 0.9872689603142606
+2020-02-04 09:49:24,247  DEBUG: criterion1 is the constraint
+2020-02-04 09:49:24,247  DEBUG: criterion2 is the solution
+2020-02-04 09:49:24,247  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:49:26,892  DEBUG:        10   4.89e-02 1.00e-05   2.93e-04 1.00e-04 3.08e+00 1.72e-02
+2020-02-04 09:49:30,341  DEBUG:        20   7.89e-03 1.00e-05   2.27e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:49:33,498  DEBUG:        30   1.59e-03 1.00e-05   2.69e-04 1.00e-04 3.08e+00 5.02e-01
+2020-02-04 09:49:36,761  DEBUG:        40   2.81e-04 1.00e-05   1.80e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:49:40,137  DEBUG:        50   5.91e-05 1.00e-05   5.07e-05 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:49:43,071  DEBUG:        60   1.05e-05 1.00e-05   4.13e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:49:43,769  DEBUG:        61   8.37e-06 1.00e-05   3.39e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:49:43,793  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:49:43,793  DEBUG: HAT SHAPES, Uhat: (2700, 34)  Ehat: (34, 34)  VThat: (34, 118)  VTta: (50, 118)
+2020-02-04 09:49:43,798  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:49:43,826  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:49:44,062  INFO: ************ SVM ************
+2020-02-04 09:49:44,063  INFO: FOR MATRIX: X
+2020-02-04 09:49:44,113  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:49:44,115  INFO: f1_Score: 0.818182
+2020-02-04 09:49:44,386  INFO: ************ SVM ************
+2020-02-04 09:49:44,386  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:49:44,425  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:49:44,427  INFO: f1_Score: 0.000000
+2020-02-04 09:49:44,860  INFO: ************ SVM ************
+2020-02-04 09:49:44,860  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:49:44,901  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:49:44,903  INFO: f1_Score: 0.000000
+2020-02-04 09:49:44,903  INFO: Validating GOOD Lambda: 0.01900000000000001
+2020-02-04 09:49:44,907  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:49:45,083  INFO: ************ SVM ************
+2020-02-04 09:49:45,083  INFO: FOR MATRIX: X
+2020-02-04 09:49:45,128  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:49:45,130  INFO: f1_Score: 0.750000
+2020-02-04 09:49:45,418  INFO: ************ SVM ************
+2020-02-04 09:49:45,418  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:49:45,460  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:49:45,462  INFO: f1_Score: 0.000000
+2020-02-04 09:49:45,913  INFO: ************ SVM ************
+2020-02-04 09:49:45,914  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:49:45,961  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:49:45,963  INFO: f1_Score: 0.000000
+2020-02-04 09:49:45,964  INFO: Lambda: 0.02000000000000001
+2020-02-04 09:49:46,028  DEBUG: Max Rank: 84
+2020-02-04 09:49:47,318  DEBUG: Lambda Scale: 1.039230484541327
+2020-02-04 09:49:48,160  DEBUG: criterion1 is the constraint
+2020-02-04 09:49:48,161  DEBUG: criterion2 is the solution
+2020-02-04 09:49:48,161  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:49:50,927  DEBUG:        10   5.06e-02 1.00e-05   1.00e-04 1.00e-04 3.08e+00 5.61e-03
+2020-02-04 09:49:54,079  DEBUG:        20   9.42e-03 1.00e-05   3.12e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:49:57,374  DEBUG:        30   2.00e-03 1.00e-05   1.41e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:50:00,638  DEBUG:        40   4.29e-04 1.00e-05   2.29e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:50:03,806  DEBUG:        50   7.97e-05 1.00e-05   8.16e-05 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:50:07,139  DEBUG:        60   1.76e-05 1.00e-05   4.59e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:50:08,065  DEBUG:        63   8.69e-06 1.00e-05   3.63e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:50:08,073  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:50:08,074  DEBUG: HAT SHAPES, Uhat: (2700, 37)  Ehat: (37, 37)  VThat: (37, 118)  VTta: (47, 118)
+2020-02-04 09:50:08,076  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:50:08,080  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:50:08,285  INFO: ************ SVM ************
+2020-02-04 09:50:08,286  INFO: FOR MATRIX: X
+2020-02-04 09:50:08,347  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:50:08,350  INFO: f1_Score: 0.818182
+2020-02-04 09:50:08,716  INFO: ************ SVM ************
+2020-02-04 09:50:08,716  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:50:08,766  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:50:08,768  INFO: f1_Score: 0.000000
+2020-02-04 09:50:09,106  INFO: ************ SVM ************
+2020-02-04 09:50:09,107  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:50:09,149  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:50:09,153  INFO: f1_Score: 0.000000
+2020-02-04 09:50:09,153  INFO: Validating GOOD Lambda: 0.02000000000000001
+2020-02-04 09:50:09,158  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:50:09,399  INFO: ************ SVM ************
+2020-02-04 09:50:09,399  INFO: FOR MATRIX: X
+2020-02-04 09:50:09,450  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:50:09,455  INFO: f1_Score: 0.750000
+2020-02-04 09:50:09,782  INFO: ************ SVM ************
+2020-02-04 09:50:09,782  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:50:09,824  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:50:09,826  INFO: f1_Score: 0.000000
+2020-02-04 09:50:10,232  INFO: ************ SVM ************
+2020-02-04 09:50:10,233  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:50:10,290  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:50:10,295  INFO: f1_Score: 0.000000
+2020-02-04 09:50:10,295  INFO: Lambda: 0.02100000000000001
+2020-02-04 09:50:10,378  DEBUG: Max Rank: 84
+2020-02-04 09:50:12,401  DEBUG: Lambda Scale: 1.0911920087683933
+2020-02-04 09:50:13,519  DEBUG: criterion1 is the constraint
+2020-02-04 09:50:13,520  DEBUG: criterion2 is the solution
+2020-02-04 09:50:13,520  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:50:16,810  DEBUG:        10   5.12e-02 1.00e-05   1.09e-04 1.00e-04 3.08e+00 5.61e-03
+2020-02-04 09:50:20,016  DEBUG:        20   9.69e-03 1.00e-05   3.11e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:50:24,442  DEBUG:        30   1.94e-03 1.00e-05   1.16e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:50:27,546  DEBUG:        40   4.24e-04 1.00e-05   2.30e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:50:30,675  DEBUG:        50   8.17e-05 1.00e-05   8.60e-05 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:50:34,725  DEBUG:        60   1.77e-05 1.00e-05   2.66e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:50:36,258  DEBUG:        64   8.31e-06 1.00e-05   3.21e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:50:36,264  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:50:36,264  DEBUG: HAT SHAPES, Uhat: (2700, 40)  Ehat: (40, 40)  VThat: (40, 118)  VTta: (44, 118)
+2020-02-04 09:50:36,266  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:50:36,272  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:50:36,463  INFO: ************ SVM ************
+2020-02-04 09:50:36,463  INFO: FOR MATRIX: X
+2020-02-04 09:50:36,516  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:50:36,520  INFO: f1_Score: 0.818182
+2020-02-04 09:50:36,897  INFO: ************ SVM ************
+2020-02-04 09:50:36,897  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:50:36,988  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:50:36,990  INFO: f1_Score: 0.000000
+2020-02-04 09:50:37,400  INFO: ************ SVM ************
+2020-02-04 09:50:37,400  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:50:37,443  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:50:37,446  INFO: f1_Score: 0.000000
+2020-02-04 09:50:37,447  INFO: Validating GOOD Lambda: 0.02100000000000001
+2020-02-04 09:50:37,460  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:50:37,631  INFO: ************ SVM ************
+2020-02-04 09:50:37,631  INFO: FOR MATRIX: X
+2020-02-04 09:50:37,685  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:50:37,688  INFO: f1_Score: 0.750000
+2020-02-04 09:50:38,010  INFO: ************ SVM ************
+2020-02-04 09:50:38,011  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:50:38,061  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:50:38,064  INFO: f1_Score: 0.000000
+2020-02-04 09:50:38,546  INFO: ************ SVM ************
+2020-02-04 09:50:38,546  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:50:38,629  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:50:38,631  INFO: f1_Score: 0.000000
+2020-02-04 09:50:38,631  INFO: Lambda: 0.022000000000000013
+2020-02-04 09:50:38,688  DEBUG: Max Rank: 84
+2020-02-04 09:50:40,195  DEBUG: Lambda Scale: 1.1431535329954596
+2020-02-04 09:50:41,089  DEBUG: criterion1 is the constraint
+2020-02-04 09:50:41,089  DEBUG: criterion2 is the solution
+2020-02-04 09:50:41,090  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:50:43,903  DEBUG:        10   5.32e-02 1.00e-05   1.08e-04 1.00e-04 3.08e+00 5.61e-03
+2020-02-04 09:50:46,897  DEBUG:        20   1.15e-02 1.00e-05   3.06e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:50:49,909  DEBUG:        30   2.22e-03 1.00e-05   1.50e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:50:53,056  DEBUG:        40   5.26e-04 1.00e-05   2.14e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:50:56,309  DEBUG:        50   9.81e-05 1.00e-05   1.09e-04 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:50:59,308  DEBUG:        60   2.03e-05 1.00e-05   3.34e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:51:00,824  DEBUG:        65   8.35e-06 1.00e-05   3.20e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:51:00,830  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:51:00,830  DEBUG: HAT SHAPES, Uhat: (2700, 43)  Ehat: (43, 43)  VThat: (43, 118)  VTta: (41, 118)
+2020-02-04 09:51:00,832  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:51:00,838  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:51:00,993  INFO: ************ SVM ************
+2020-02-04 09:51:00,993  INFO: FOR MATRIX: X
+2020-02-04 09:51:01,041  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:51:01,045  INFO: f1_Score: 0.818182
+2020-02-04 09:51:01,356  INFO: ************ SVM ************
+2020-02-04 09:51:01,356  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:51:01,398  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:51:01,400  INFO: f1_Score: 0.000000
+2020-02-04 09:51:01,819  INFO: ************ SVM ************
+2020-02-04 09:51:01,820  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:51:01,858  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:51:01,860  INFO: f1_Score: 0.000000
+2020-02-04 09:51:01,860  INFO: Validating GOOD Lambda: 0.022000000000000013
+2020-02-04 09:51:01,871  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:51:02,061  INFO: ************ SVM ************
+2020-02-04 09:51:02,062  INFO: FOR MATRIX: X
+2020-02-04 09:51:02,110  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:51:02,112  INFO: f1_Score: 0.750000
+2020-02-04 09:51:02,378  INFO: ************ SVM ************
+2020-02-04 09:51:02,379  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:51:02,417  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:51:02,419  INFO: f1_Score: 0.000000
+2020-02-04 09:51:02,829  INFO: ************ SVM ************
+2020-02-04 09:51:02,830  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:51:02,880  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:51:02,883  INFO: f1_Score: 0.000000
+2020-02-04 09:51:02,883  INFO: Lambda: 0.023000000000000013
+2020-02-04 09:51:02,942  DEBUG: Max Rank: 84
+2020-02-04 09:51:04,041  DEBUG: Lambda Scale: 1.195115057222526
+2020-02-04 09:51:04,908  DEBUG: criterion1 is the constraint
+2020-02-04 09:51:04,908  DEBUG: criterion2 is the solution
+2020-02-04 09:51:04,908  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:51:07,583  DEBUG:        10   5.47e-02 1.00e-05   1.07e-04 1.00e-04 3.08e+00 5.61e-03
+2020-02-04 09:51:10,743  DEBUG:        20   1.02e-02 1.00e-05   3.14e-04 1.00e-04 3.08e+00 5.31e-02
+2020-02-04 09:51:13,772  DEBUG:        30   2.20e-03 1.00e-05   1.49e-04 1.00e-04 3.08e+00 1.63e-01
+2020-02-04 09:51:16,755  DEBUG:        40   5.38e-04 1.00e-05   2.29e-04 1.00e-04 3.08e+00 1.54e+00
+2020-02-04 09:51:19,838  DEBUG:        50   9.69e-05 1.00e-05   1.08e-04 1.00e-04 3.08e+00 4.75e+00
+2020-02-04 09:51:22,969  DEBUG:        60   1.99e-05 1.00e-05   3.26e-05 1.00e-04 3.08e+00 1.46e+01
+2020-02-04 09:51:24,379  DEBUG:        64   8.86e-06 1.00e-05   3.52e-05 1.00e-04 3.08e+00 4.49e+01
+2020-02-04 09:51:24,385  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 09:51:24,386  DEBUG: HAT SHAPES, Uhat: (2700, 47)  Ehat: (47, 47)  VThat: (47, 118)  VTta: (37, 118)
+2020-02-04 09:51:24,389  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:51:24,393  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:51:24,588  INFO: ************ SVM ************
+2020-02-04 09:51:24,588  INFO: FOR MATRIX: X
+2020-02-04 09:51:24,633  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   0
+1                         8  18
+2020-02-04 09:51:24,635  INFO: f1_Score: 0.818182
+2020-02-04 09:51:24,918  INFO: ************ SVM ************
+2020-02-04 09:51:24,918  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:51:24,957  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:51:24,959  INFO: f1_Score: 0.000000
+2020-02-04 09:51:25,393  INFO: ************ SVM ************
+2020-02-04 09:51:25,393  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:51:25,440  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2674
+1                        26
+2020-02-04 09:51:25,443  INFO: f1_Score: 0.000000
+2020-02-04 09:51:25,443  INFO: Validating GOOD Lambda: 0.023000000000000013
+2020-02-04 09:51:25,451  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:51:25,609  INFO: ************ SVM ************
+2020-02-04 09:51:25,609  INFO: FOR MATRIX: X
+2020-02-04 09:51:25,675  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2680   0
+1                         8  12
+2020-02-04 09:51:25,678  INFO: f1_Score: 0.750000
+2020-02-04 09:51:26,100  INFO: ************ SVM ************
+2020-02-04 09:51:26,100  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:51:26,168  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:51:26,173  INFO: f1_Score: 0.000000
+2020-02-04 09:51:26,637  INFO: ************ SVM ************
+2020-02-04 09:51:26,637  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:51:26,690  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2680
+1                        20
+2020-02-04 09:51:26,692  INFO: f1_Score: 0.000000
+2020-02-04 09:51:26,692  INFO: Lambda: 0.024000000000000014
+2020-02-04 09:51:26,766  DEBUG: Max Rank: 84
+2020-02-04 09:51:28,293  DEBUG: Lambda Scale: 1.2470765814495925
+2020-02-04 09:51:29,120  DEBUG: criterion1 is the constraint
+2020-02-04 09:51:29,120  DEBUG: criterion2 is the solution
+2020-02-04 09:51:29,120  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:51:32,105  DEBUG:        10   5.70e-02 1.00e-05   1.09e-04 1.00e-04 3.08e+00 5.61e-03
+2020-02-04 09:54:36,255  INFO: Run started.
+2020-02-04 09:54:36,256  INFO: CONFIGURATION USED: SVMTEST
+2020-02-04 09:54:36,318  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-04 09:54:38,091  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-04 09:54:38,121  DEBUG: Random seed = 4262
+2020-02-04 09:54:38,172  DEBUG: X_train size: (2700, 118)
+2020-02-04 09:54:38,173  DEBUG: X_test size: (2700, 118)
+2020-02-04 09:54:38,173  DEBUG: X_valid size: (2700, 118)
+2020-02-04 09:54:38,173  DEBUG: y_train class counts: (array([0, 1]), array([2674,   26]))
+2020-02-04 09:54:38,174  DEBUG: y_test class counts: (array([0, 1]), array([2681,   19]))
+2020-02-04 09:54:38,175  DEBUG: y_valid class counts: (array([0, 1]), array([2675,   25]))
+2020-02-04 09:54:38,175  INFO: Randomizaiton of X and y matrices complete.
+2020-02-04 09:54:38,177  INFO: Lambda: 0.01
+2020-02-04 09:54:38,212  DEBUG: Max Rank: 81
+2020-02-04 09:54:39,285  DEBUG: Lambda Scale: 0.5196152422706632
+2020-02-04 09:54:40,256  DEBUG: criterion1 is the constraint
+2020-02-04 09:54:40,256  DEBUG: criterion2 is the solution
+2020-02-04 09:54:40,257  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:54:42,901  DEBUG:        10   2.84e-02 1.00e-05   2.63e-04 1.00e-04 3.08e+00 1.76e-02
+2020-02-04 09:54:45,785  DEBUG:        20   4.02e-03 1.00e-05   1.10e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 09:54:48,915  DEBUG:        30   5.28e-04 1.00e-05   1.33e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 09:54:51,974  DEBUG:        40   8.49e-05 1.00e-05   1.23e-04 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 09:54:55,385  DEBUG:        50   1.13e-05 1.00e-05   3.66e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 09:54:55,679  DEBUG:        51   8.63e-06 1.00e-05   3.57e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 09:54:55,686  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 09:54:55,686  DEBUG: HAT SHAPES, Uhat: (2700, 11)  Ehat: (11, 11)  VThat: (11, 118)  VTta: (70, 118)
+2020-02-04 09:54:55,688  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:54:55,691  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:54:55,861  INFO: ************ SVM ************
+2020-02-04 09:54:55,862  INFO: FOR MATRIX: X
+2020-02-04 09:54:55,927  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 09:54:55,931  INFO: f1_Score: 0.864865
+2020-02-04 09:54:56,268  INFO: ************ SVM ************
+2020-02-04 09:54:56,268  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:54:56,308  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2681
+1                        19
+2020-02-04 09:54:56,310  INFO: f1_Score: 0.000000
+2020-02-04 09:54:56,708  INFO: ************ SVM ************
+2020-02-04 09:54:56,708  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:54:56,751  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2681   0
+1                         3  16
+2020-02-04 09:54:56,753  INFO: f1_Score: 0.914286
+2020-02-04 09:54:56,753  INFO: Validating GOOD Lambda: 0.01
+2020-02-04 09:54:56,756  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:54:56,904  INFO: ************ SVM ************
+2020-02-04 09:54:56,904  INFO: FOR MATRIX: X
+2020-02-04 09:54:56,955  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 09:54:56,958  INFO: f1_Score: 0.717949
+2020-02-04 09:54:57,218  INFO: ************ SVM ************
+2020-02-04 09:54:57,219  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:54:57,257  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2675
+1                        25
+2020-02-04 09:54:57,260  INFO: f1_Score: 0.000000
+2020-02-04 09:54:57,642  INFO: ************ SVM ************
+2020-02-04 09:54:57,642  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:54:57,692  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 09:54:57,695  INFO: f1_Score: 0.717949
+2020-02-04 09:54:57,696  INFO: Lambda: 0.02
+2020-02-04 09:54:57,722  DEBUG: Max Rank: 81
+2020-02-04 09:54:58,783  DEBUG: Lambda Scale: 1.0392304845413265
+2020-02-04 09:54:59,659  DEBUG: criterion1 is the constraint
+2020-02-04 09:54:59,659  DEBUG: criterion2 is the solution
+2020-02-04 09:54:59,659  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:55:02,359  DEBUG:        10   5.29e-02 1.00e-05   1.08e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 09:55:05,406  DEBUG:        20   9.78e-03 1.00e-05   3.19e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 09:55:08,787  DEBUG:        30   2.07e-03 1.00e-05   1.50e-04 1.00e-04 3.08e+00 1.66e-01
+2020-02-04 09:55:11,781  DEBUG:        40   4.46e-04 1.00e-05   2.40e-04 1.00e-04 3.08e+00 1.57e+00
+2020-02-04 09:55:14,765  DEBUG:        50   9.09e-05 1.00e-05   1.03e-04 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 09:55:17,687  DEBUG:        60   2.05e-05 1.00e-05   3.36e-05 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:55:19,229  DEBUG:        65   8.61e-06 1.00e-05   3.60e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 09:55:19,236  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 09:55:19,237  DEBUG: HAT SHAPES, Uhat: (2700, 37)  Ehat: (37, 37)  VThat: (37, 118)  VTta: (44, 118)
+2020-02-04 09:55:19,238  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:55:19,242  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:55:19,368  INFO: ************ SVM ************
+2020-02-04 09:55:19,368  INFO: FOR MATRIX: X
+2020-02-04 09:55:19,407  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 09:55:19,409  INFO: f1_Score: 0.864865
+2020-02-04 09:55:19,804  INFO: ************ SVM ************
+2020-02-04 09:55:19,808  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:55:19,963  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2681
+1                        19
+2020-02-04 09:55:19,966  INFO: f1_Score: 0.000000
+2020-02-04 09:55:20,358  INFO: ************ SVM ************
+2020-02-04 09:55:20,358  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:55:20,396  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2681
+1                        19
+2020-02-04 09:55:20,398  INFO: f1_Score: 0.000000
+2020-02-04 09:55:20,399  INFO: Validating GOOD Lambda: 0.02
+2020-02-04 09:55:20,402  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:55:20,582  INFO: ************ SVM ************
+2020-02-04 09:55:20,582  INFO: FOR MATRIX: X
+2020-02-04 09:55:20,643  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 09:55:20,645  INFO: f1_Score: 0.717949
+2020-02-04 09:55:20,920  INFO: ************ SVM ************
+2020-02-04 09:55:20,921  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:55:20,964  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2675
+1                        25
+2020-02-04 09:55:20,966  INFO: f1_Score: 0.000000
+2020-02-04 09:55:21,393  INFO: ************ SVM ************
+2020-02-04 09:55:21,394  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:55:21,443  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2675
+1                        25
+2020-02-04 09:55:21,445  INFO: f1_Score: 0.000000
+2020-02-04 09:55:21,445  INFO: Lambda: 0.03
+2020-02-04 09:55:21,490  DEBUG: Max Rank: 81
+2020-02-04 09:55:22,687  DEBUG: Lambda Scale: 1.5588457268119895
+2020-02-04 09:55:23,552  DEBUG: criterion1 is the constraint
+2020-02-04 09:55:23,553  DEBUG: criterion2 is the solution
+2020-02-04 09:55:23,553  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:55:26,072  DEBUG:        10   6.70e-02 1.00e-05   1.22e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 09:55:29,071  DEBUG:        20   1.53e-02 1.00e-05   2.31e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 09:55:32,246  DEBUG:        30   3.23e-03 1.00e-05   2.78e-04 1.00e-04 3.08e+00 1.66e-01
+2020-02-04 09:55:35,341  DEBUG:        40   6.90e-04 1.00e-05   1.44e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 09:55:38,314  DEBUG:        50   1.67e-04 1.00e-05   1.26e-04 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 09:55:41,309  DEBUG:        60   3.34e-05 1.00e-05   6.43e-05 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:55:44,327  DEBUG:        70   1.12e-05 1.00e-05   3.29e-05 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:55:45,455  DEBUG:        74   9.41e-06 1.00e-05   3.93e-05 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:55:45,464  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 09:55:45,464  DEBUG: HAT SHAPES, Uhat: (2700, 58)  Ehat: (58, 58)  VThat: (58, 118)  VTta: (23, 118)
+2020-02-04 09:55:45,466  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:55:45,473  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:55:45,646  INFO: ************ SVM ************
+2020-02-04 09:55:45,647  INFO: FOR MATRIX: X
+2020-02-04 09:55:45,700  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 09:55:45,702  INFO: f1_Score: 0.864865
+2020-02-04 09:55:46,012  INFO: ************ SVM ************
+2020-02-04 09:55:46,017  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:55:46,059  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2681
+1                        19
+2020-02-04 09:55:46,062  INFO: f1_Score: 0.000000
+2020-02-04 09:55:46,489  INFO: ************ SVM ************
+2020-02-04 09:55:46,490  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:55:46,545  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 09:55:46,547  INFO: f1_Score: 0.864865
+2020-02-04 09:55:46,547  INFO: Validating GOOD Lambda: 0.03
+2020-02-04 09:55:46,553  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 09:55:46,703  INFO: ************ SVM ************
+2020-02-04 09:55:46,703  INFO: FOR MATRIX: X
+2020-02-04 09:55:46,758  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 09:55:46,761  INFO: f1_Score: 0.717949
+2020-02-04 09:55:47,065  INFO: ************ SVM ************
+2020-02-04 09:55:47,066  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 09:55:47,120  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2675
+1                        25
+2020-02-04 09:55:47,122  INFO: f1_Score: 0.000000
+2020-02-04 09:55:47,539  INFO: ************ SVM ************
+2020-02-04 09:55:47,539  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 09:55:47,587  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 09:55:47,589  INFO: f1_Score: 0.717949
+2020-02-04 09:55:47,589  INFO: Lambda: 0.04
+2020-02-04 09:55:47,687  DEBUG: Max Rank: 81
+2020-02-04 09:55:48,830  DEBUG: Lambda Scale: 2.078460969082653
+2020-02-04 09:55:49,701  DEBUG: criterion1 is the constraint
+2020-02-04 09:55:49,701  DEBUG: criterion2 is the solution
+2020-02-04 09:55:49,702  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 09:55:52,582  DEBUG:        10   7.49e-02 1.00e-05   1.45e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 09:55:55,695  DEBUG:        20   1.96e-02 1.00e-05   1.22e-04 1.00e-04 3.08e+00 1.76e-02
+2020-02-04 09:55:58,821  DEBUG:        30   5.50e-03 1.00e-05   1.14e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 09:56:01,901  DEBUG:        40   1.13e-03 1.00e-05   3.08e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 09:56:05,045  DEBUG:        50   2.40e-04 1.00e-05   1.35e-04 1.00e-04 3.08e+00 1.57e+00
+2020-02-04 09:56:08,239  DEBUG:        60   5.61e-05 1.00e-05   5.34e-05 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 09:56:11,110  DEBUG:        70   1.21e-05 1.00e-05   2.76e-05 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:14,062  DEBUG:        80   1.96e-05 1.00e-05   1.13e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:16,810  DEBUG:        90   2.72e-05 1.00e-05   1.60e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:20,060  DEBUG:       100   2.37e-05 1.00e-05   1.42e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:23,108  DEBUG:       110   2.42e-05 1.00e-05   1.53e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:26,094  DEBUG:       120   2.97e-05 1.00e-05   1.77e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:29,119  DEBUG:       130   3.12e-05 1.00e-05   1.75e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:32,339  DEBUG:       140   3.25e-05 1.00e-05   1.81e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:35,513  DEBUG:       150   3.02e-05 1.00e-05   1.65e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:39,154  DEBUG:       160   3.23e-05 1.00e-05   1.72e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:42,761  DEBUG:       170   3.09e-05 1.00e-05   1.85e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:45,478  DEBUG:       180   3.38e-05 1.00e-05   2.08e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:48,589  DEBUG:       190   3.42e-05 1.00e-05   2.21e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:51,718  DEBUG:       200   3.38e-05 1.00e-05   2.12e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:54,896  DEBUG:       210   3.55e-05 1.00e-05   2.21e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:56:57,999  DEBUG:       220   3.14e-05 1.00e-05   1.91e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:01,060  DEBUG:       230   3.50e-05 1.00e-05   1.81e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:03,991  DEBUG:       240   3.27e-05 1.00e-05   1.76e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:06,982  DEBUG:       250   3.61e-05 1.00e-05   2.08e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:10,056  DEBUG:       260   3.60e-05 1.00e-05   2.08e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:12,846  DEBUG:       270   3.44e-05 1.00e-05   1.86e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:15,896  DEBUG:       280   3.66e-05 1.00e-05   2.04e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:20,304  DEBUG:       290   3.20e-05 1.00e-05   1.64e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:23,383  DEBUG:       300   2.87e-05 1.00e-05   1.51e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:26,312  DEBUG:       310   3.75e-05 1.00e-05   2.04e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:30,403  DEBUG:       320   3.64e-05 1.00e-05   2.16e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:35,006  DEBUG:       330   3.99e-05 1.00e-05   1.95e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:37,887  DEBUG:       340   4.45e-05 1.00e-05   2.43e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:41,007  DEBUG:       350   4.15e-05 1.00e-05   2.61e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:44,983  DEBUG:       360   3.74e-05 1.00e-05   2.08e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:48,497  DEBUG:       370   4.07e-05 1.00e-05   2.17e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:51,547  DEBUG:       380   4.06e-05 1.00e-05   2.39e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:54,655  DEBUG:       390   4.02e-05 1.00e-05   2.12e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:57:57,830  DEBUG:       400   3.52e-05 1.00e-05   1.87e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:01,478  DEBUG:       410   3.30e-05 1.00e-05   1.78e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:04,547  DEBUG:       420   3.89e-05 1.00e-05   1.86e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:07,741  DEBUG:       430   3.43e-05 1.00e-05   1.81e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:10,886  DEBUG:       440   4.04e-05 1.00e-05   1.99e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:14,050  DEBUG:       450   3.05e-05 1.00e-05   1.35e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:17,357  DEBUG:       460   3.06e-05 1.00e-05   1.52e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:20,253  DEBUG:       470   3.11e-05 1.00e-05   1.41e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:23,341  DEBUG:       480   3.40e-05 1.00e-05   1.74e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:26,168  DEBUG:       490   2.70e-05 1.00e-05   1.29e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:29,492  DEBUG:       500   2.76e-05 1.00e-05   1.35e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:32,712  DEBUG:       510   3.61e-05 1.00e-05   1.69e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:35,834  DEBUG:       520   4.44e-05 1.00e-05   2.15e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:41,030  DEBUG:       530   4.13e-05 1.00e-05   2.19e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:44,601  DEBUG:       540   3.99e-05 1.00e-05   1.65e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:47,609  DEBUG:       550   3.30e-05 1.00e-05   1.75e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:51,602  DEBUG:       560   4.72e-05 1.00e-05   2.10e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:54,921  DEBUG:       570   4.03e-05 1.00e-05   2.03e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:58:58,090  DEBUG:       580   3.36e-05 1.00e-05   1.64e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:01,281  DEBUG:       590   2.98e-05 1.00e-05   1.59e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:04,320  DEBUG:       600   3.82e-05 1.00e-05   1.57e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:07,227  DEBUG:       610   3.69e-05 1.00e-05   1.87e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:10,159  DEBUG:       620   3.71e-05 1.00e-05   2.43e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:13,178  DEBUG:       630   3.70e-05 1.00e-05   1.90e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:16,270  DEBUG:       640   3.30e-05 1.00e-05   1.84e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:19,250  DEBUG:       650   2.82e-05 1.00e-05   1.64e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:22,198  DEBUG:       660   2.84e-05 1.00e-05   1.79e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:25,170  DEBUG:       670   2.98e-05 1.00e-05   1.74e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:28,242  DEBUG:       680   2.64e-05 1.00e-05   1.60e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:31,199  DEBUG:       690   2.76e-05 1.00e-05   1.41e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:34,220  DEBUG:       700   3.39e-05 1.00e-05   2.07e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:37,110  DEBUG:       710   2.01e-05 1.00e-05   1.08e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:40,026  DEBUG:       720   2.43e-05 1.00e-05   1.13e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:42,989  DEBUG:       730   3.14e-05 1.00e-05   1.72e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:45,947  DEBUG:       740   4.38e-05 1.00e-05   2.80e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:48,838  DEBUG:       750   3.40e-05 1.00e-05   1.91e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:52,886  DEBUG:       760   2.24e-05 1.00e-05   1.04e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:55,889  DEBUG:       770   2.26e-05 1.00e-05   1.14e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 09:59:58,941  DEBUG:       780   2.54e-05 1.00e-05   1.19e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:02,104  DEBUG:       790   2.81e-05 1.00e-05   1.35e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:05,138  DEBUG:       800   2.84e-05 1.00e-05   1.67e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:08,115  DEBUG:       810   2.62e-05 1.00e-05   1.23e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:11,297  DEBUG:       820   2.63e-05 1.00e-05   1.41e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:14,415  DEBUG:       830   3.18e-05 1.00e-05   1.85e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:17,454  DEBUG:       840   3.02e-05 1.00e-05   1.41e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:20,412  DEBUG:       850   3.40e-05 1.00e-05   2.19e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:23,460  DEBUG:       860   3.35e-05 1.00e-05   2.14e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:26,512  DEBUG:       870   3.06e-05 1.00e-05   1.24e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:29,534  DEBUG:       880   2.99e-05 1.00e-05   1.34e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:32,617  DEBUG:       890   2.74e-05 1.00e-05   1.29e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:35,640  DEBUG:       900   3.90e-05 1.00e-05   1.71e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:38,683  DEBUG:       910   3.31e-05 1.00e-05   1.62e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:41,590  DEBUG:       920   3.28e-05 1.00e-05   1.54e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:44,643  DEBUG:       930   3.00e-05 1.00e-05   1.37e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:47,964  DEBUG:       940   2.64e-05 1.00e-05   1.19e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:51,003  DEBUG:       950   2.39e-05 1.00e-05   9.73e-05 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:53,924  DEBUG:       960   2.63e-05 1.00e-05   1.18e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:56,898  DEBUG:       970   2.54e-05 1.00e-05   1.21e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:00:59,958  DEBUG:       980   2.24e-05 1.00e-05   1.15e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:01:03,156  DEBUG:       990   2.49e-05 1.00e-05   1.23e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:01:06,424  DEBUG:      1000   3.23e-05 1.00e-05   1.87e-04 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:01:06,437  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 10:01:06,438  DEBUG: HAT SHAPES, Uhat: (2700, 66)  Ehat: (66, 66)  VThat: (66, 118)  VTta: (15, 118)
+2020-02-04 10:01:06,439  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:06,449  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:06,648  INFO: ************ SVM ************
+2020-02-04 10:01:06,648  INFO: FOR MATRIX: X
+2020-02-04 10:01:06,696  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:06,699  INFO: f1_Score: 0.864865
+2020-02-04 10:01:07,026  INFO: ************ SVM ************
+2020-02-04 10:01:07,026  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:01:07,074  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:07,082  INFO: f1_Score: 0.864865
+2020-02-04 10:01:07,490  INFO: ************ SVM ************
+2020-02-04 10:01:07,491  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:01:07,537  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:07,539  INFO: f1_Score: 0.864865
+2020-02-04 10:01:07,539  INFO: Validating GOOD Lambda: 0.04
+2020-02-04 10:01:07,546  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:07,692  INFO: ************ SVM ************
+2020-02-04 10:01:07,692  INFO: FOR MATRIX: X
+2020-02-04 10:01:07,736  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:01:07,739  INFO: f1_Score: 0.717949
+2020-02-04 10:01:08,059  INFO: ************ SVM ************
+2020-02-04 10:01:08,060  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:01:08,112  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:01:08,114  INFO: f1_Score: 0.717949
+2020-02-04 10:01:08,537  INFO: ************ SVM ************
+2020-02-04 10:01:08,538  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:01:08,586  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:01:08,588  INFO: f1_Score: 0.717949
+2020-02-04 10:01:08,589  INFO: Lambda: 0.05
+2020-02-04 10:01:08,642  DEBUG: Max Rank: 81
+2020-02-04 10:01:09,848  DEBUG: Lambda Scale: 2.598076211353316
+2020-02-04 10:01:10,821  DEBUG: criterion1 is the constraint
+2020-02-04 10:01:10,821  DEBUG: criterion2 is the solution
+2020-02-04 10:01:10,821  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 10:01:13,616  DEBUG:        10   7.13e-02 1.00e-05   2.22e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 10:01:16,753  DEBUG:        20   1.87e-02 1.00e-05   2.88e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 10:01:20,088  DEBUG:        30   4.59e-03 1.00e-05   3.79e-04 1.00e-04 3.08e+00 1.66e-01
+2020-02-04 10:01:23,251  DEBUG:        40   8.40e-04 1.00e-05   2.10e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 10:01:26,422  DEBUG:        50   1.80e-04 1.00e-05   8.71e-05 1.00e-04 3.08e+00 1.57e+00
+2020-02-04 10:01:29,569  DEBUG:        60   2.75e-05 1.00e-05   5.16e-05 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:01:31,427  DEBUG:        66   9.10e-06 1.00e-05   3.53e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:01:31,444  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 10:01:31,444  DEBUG: HAT SHAPES, Uhat: (2700, 64)  Ehat: (64, 64)  VThat: (64, 118)  VTta: (17, 118)
+2020-02-04 10:01:31,446  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:31,458  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:31,632  INFO: ************ SVM ************
+2020-02-04 10:01:31,632  INFO: FOR MATRIX: X
+2020-02-04 10:01:31,676  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:31,679  INFO: f1_Score: 0.864865
+2020-02-04 10:01:31,968  INFO: ************ SVM ************
+2020-02-04 10:01:31,968  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:01:32,015  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:32,018  INFO: f1_Score: 0.864865
+2020-02-04 10:01:32,450  INFO: ************ SVM ************
+2020-02-04 10:01:32,451  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:01:32,499  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:32,501  INFO: f1_Score: 0.864865
+2020-02-04 10:01:32,501  INFO: Validating GOOD Lambda: 0.05
+2020-02-04 10:01:32,509  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:32,675  INFO: ************ SVM ************
+2020-02-04 10:01:32,675  INFO: FOR MATRIX: X
+2020-02-04 10:01:32,718  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:01:32,721  INFO: f1_Score: 0.717949
+2020-02-04 10:01:33,005  INFO: ************ SVM ************
+2020-02-04 10:01:33,005  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:01:33,049  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        10  15
+2020-02-04 10:01:33,052  INFO: f1_Score: 0.731707
+2020-02-04 10:01:33,484  INFO: ************ SVM ************
+2020-02-04 10:01:33,484  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:01:33,533  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        11  14
+2020-02-04 10:01:33,535  INFO: f1_Score: 0.700000
+2020-02-04 10:01:33,535  INFO: Lambda: 0.060000000000000005
+2020-02-04 10:01:33,591  DEBUG: Max Rank: 81
+2020-02-04 10:01:34,842  DEBUG: Lambda Scale: 3.1176914536239795
+2020-02-04 10:01:35,901  DEBUG: criterion1 is the constraint
+2020-02-04 10:01:35,902  DEBUG: criterion2 is the solution
+2020-02-04 10:01:35,902  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 10:01:38,749  DEBUG:        10   7.52e-02 1.00e-05   1.78e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 10:01:41,850  DEBUG:        20   2.12e-02 1.00e-05   1.09e-04 1.00e-04 3.08e+00 1.76e-02
+2020-02-04 10:01:45,028  DEBUG:        30   5.77e-03 1.00e-05   1.16e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 10:01:48,132  DEBUG:        40   1.22e-03 1.00e-05   2.15e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 10:01:51,285  DEBUG:        50   1.97e-04 1.00e-05   1.16e-04 1.00e-04 3.08e+00 1.57e+00
+2020-02-04 10:01:54,405  DEBUG:        60   2.96e-05 1.00e-05   7.34e-05 1.00e-04 3.08e+00 1.49e+01
+2020-02-04 10:01:56,315  DEBUG:        66   8.52e-06 1.00e-05   4.64e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:01:56,326  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 10:01:56,327  DEBUG: HAT SHAPES, Uhat: (2700, 66)  Ehat: (66, 66)  VThat: (66, 118)  VTta: (15, 118)
+2020-02-04 10:01:56,328  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:56,333  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:56,501  INFO: ************ SVM ************
+2020-02-04 10:01:56,502  INFO: FOR MATRIX: X
+2020-02-04 10:01:56,546  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:56,549  INFO: f1_Score: 0.864865
+2020-02-04 10:01:56,849  INFO: ************ SVM ************
+2020-02-04 10:01:56,850  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:01:56,891  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:56,894  INFO: f1_Score: 0.864865
+2020-02-04 10:01:57,297  INFO: ************ SVM ************
+2020-02-04 10:01:57,298  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:01:57,344  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:01:57,347  INFO: f1_Score: 0.864865
+2020-02-04 10:01:57,348  INFO: Validating GOOD Lambda: 0.060000000000000005
+2020-02-04 10:01:57,353  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:01:57,516  INFO: ************ SVM ************
+2020-02-04 10:01:57,517  INFO: FOR MATRIX: X
+2020-02-04 10:01:57,573  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:01:57,575  INFO: f1_Score: 0.717949
+2020-02-04 10:01:57,875  INFO: ************ SVM ************
+2020-02-04 10:01:57,875  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:01:57,930  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        10  15
+2020-02-04 10:01:57,932  INFO: f1_Score: 0.731707
+2020-02-04 10:01:58,322  INFO: ************ SVM ************
+2020-02-04 10:01:58,322  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:01:58,363  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        11  14
+2020-02-04 10:01:58,367  INFO: f1_Score: 0.700000
+2020-02-04 10:01:58,367  INFO: Lambda: 0.07
+2020-02-04 10:01:58,412  DEBUG: Max Rank: 81
+2020-02-04 10:01:59,740  DEBUG: Lambda Scale: 3.637306695894643
+2020-02-04 10:02:00,750  DEBUG: criterion1 is the constraint
+2020-02-04 10:02:00,750  DEBUG: criterion2 is the solution
+2020-02-04 10:02:00,751  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 10:02:03,564  DEBUG:        10   7.69e-02 1.00e-05   1.39e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 10:02:06,660  DEBUG:        20   1.83e-02 1.00e-05   3.04e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 10:02:09,844  DEBUG:        30   3.95e-03 1.00e-05   4.30e-04 1.00e-04 3.08e+00 1.66e-01
+2020-02-04 10:02:13,035  DEBUG:        40   6.97e-04 1.00e-05   1.65e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 10:02:16,225  DEBUG:        50   1.14e-04 1.00e-05   1.49e-04 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 10:02:19,417  DEBUG:        60   1.35e-05 1.00e-05   4.56e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:02:19,720  DEBUG:        61   9.12e-06 1.00e-05   5.08e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:02:19,728  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 10:02:19,728  DEBUG: HAT SHAPES, Uhat: (2700, 65)  Ehat: (65, 65)  VThat: (65, 118)  VTta: (16, 118)
+2020-02-04 10:02:19,730  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:02:19,735  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:02:19,901  INFO: ************ SVM ************
+2020-02-04 10:02:19,902  INFO: FOR MATRIX: X
+2020-02-04 10:02:19,953  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:02:19,958  INFO: f1_Score: 0.864865
+2020-02-04 10:02:20,266  INFO: ************ SVM ************
+2020-02-04 10:02:20,266  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:02:20,312  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:02:20,314  INFO: f1_Score: 0.864865
+2020-02-04 10:02:20,733  INFO: ************ SVM ************
+2020-02-04 10:02:20,733  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:02:20,779  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:02:20,783  INFO: f1_Score: 0.864865
+2020-02-04 10:02:20,784  INFO: Validating GOOD Lambda: 0.07
+2020-02-04 10:02:20,799  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:02:20,980  INFO: ************ SVM ************
+2020-02-04 10:02:20,980  INFO: FOR MATRIX: X
+2020-02-04 10:02:21,029  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:02:21,031  INFO: f1_Score: 0.717949
+2020-02-04 10:02:21,326  INFO: ************ SVM ************
+2020-02-04 10:02:21,328  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:02:21,373  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        11  14
+2020-02-04 10:02:21,375  INFO: f1_Score: 0.700000
+2020-02-04 10:02:21,801  INFO: ************ SVM ************
+2020-02-04 10:02:21,802  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:02:21,844  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        11  14
+2020-02-04 10:02:21,847  INFO: f1_Score: 0.700000
+2020-02-04 10:02:21,848  INFO: Lambda: 0.08
+2020-02-04 10:02:21,901  DEBUG: Max Rank: 81
+2020-02-04 10:02:23,010  DEBUG: Lambda Scale: 4.156921938165306
+2020-02-04 10:02:23,887  DEBUG: criterion1 is the constraint
+2020-02-04 10:02:23,888  DEBUG: criterion2 is the solution
+2020-02-04 10:02:23,888  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 10:02:26,768  DEBUG:        10   7.63e-02 1.00e-05   1.80e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 10:02:29,998  DEBUG:        20   1.83e-02 1.00e-05   1.18e-04 1.00e-04 3.08e+00 1.76e-02
+2020-02-04 10:02:33,215  DEBUG:        30   5.80e-03 1.00e-05   1.94e-04 1.00e-04 3.08e+00 1.66e-01
+2020-02-04 10:02:36,390  DEBUG:        40   6.90e-04 1.00e-05   2.12e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 10:02:39,524  DEBUG:        50   1.09e-04 1.00e-05   1.45e-04 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 10:02:42,633  DEBUG:        60   1.59e-05 1.00e-05   4.13e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:02:43,244  DEBUG:        62   7.94e-06 1.00e-05   4.21e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:02:43,251  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 10:02:43,251  DEBUG: HAT SHAPES, Uhat: (2700, 65)  Ehat: (65, 65)  VThat: (65, 118)  VTta: (16, 118)
+2020-02-04 10:02:43,253  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:02:43,257  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:02:43,413  INFO: ************ SVM ************
+2020-02-04 10:02:43,414  INFO: FOR MATRIX: X
+2020-02-04 10:02:43,457  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:02:43,459  INFO: f1_Score: 0.864865
+2020-02-04 10:02:43,746  INFO: ************ SVM ************
+2020-02-04 10:02:43,746  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:02:43,790  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:02:43,792  INFO: f1_Score: 0.864865
+2020-02-04 10:02:44,199  INFO: ************ SVM ************
+2020-02-04 10:02:44,199  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:02:44,244  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:02:44,247  INFO: f1_Score: 0.864865
+2020-02-04 10:02:44,247  INFO: Validating GOOD Lambda: 0.08
+2020-02-04 10:02:44,254  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:02:44,421  INFO: ************ SVM ************
+2020-02-04 10:02:44,422  INFO: FOR MATRIX: X
+2020-02-04 10:02:44,475  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:02:44,478  INFO: f1_Score: 0.717949
+2020-02-04 10:02:44,769  INFO: ************ SVM ************
+2020-02-04 10:02:44,770  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:02:44,814  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        11  14
+2020-02-04 10:02:44,816  INFO: f1_Score: 0.700000
+2020-02-04 10:02:45,239  INFO: ************ SVM ************
+2020-02-04 10:02:45,240  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:02:45,285  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        11  14
+2020-02-04 10:02:45,288  INFO: f1_Score: 0.700000
+2020-02-04 10:02:45,289  INFO: Lambda: 0.09
+2020-02-04 10:02:45,345  DEBUG: Max Rank: 81
+2020-02-04 10:02:46,475  DEBUG: Lambda Scale: 4.676537180435969
+2020-02-04 10:02:47,328  DEBUG: criterion1 is the constraint
+2020-02-04 10:02:47,328  DEBUG: criterion2 is the solution
+2020-02-04 10:02:47,329  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 10:02:50,165  DEBUG:        10   7.50e-02 1.00e-05   2.54e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 10:02:53,336  DEBUG:        20   1.80e-02 1.00e-05   1.46e-04 1.00e-04 3.08e+00 1.76e-02
+2020-02-04 10:02:56,477  DEBUG:        30   4.89e-03 1.00e-05   4.78e-04 1.00e-04 3.08e+00 1.66e-01
+2020-02-04 10:02:59,704  DEBUG:        40   9.18e-04 1.00e-05   3.12e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 10:03:02,934  DEBUG:        50   1.05e-04 1.00e-05   1.47e-04 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 10:03:06,185  DEBUG:        60   1.23e-05 1.00e-05   5.60e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:03:06,483  DEBUG:        61   7.58e-06 1.00e-05   4.90e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:03:06,489  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 10:03:06,490  DEBUG: HAT SHAPES, Uhat: (2700, 68)  Ehat: (68, 68)  VThat: (68, 118)  VTta: (13, 118)
+2020-02-04 10:03:06,491  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:06,497  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:06,677  INFO: ************ SVM ************
+2020-02-04 10:03:06,678  INFO: FOR MATRIX: X
+2020-02-04 10:03:06,726  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:06,728  INFO: f1_Score: 0.864865
+2020-02-04 10:03:07,019  INFO: ************ SVM ************
+2020-02-04 10:03:07,020  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:03:07,064  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:07,066  INFO: f1_Score: 0.864865
+2020-02-04 10:03:07,461  INFO: ************ SVM ************
+2020-02-04 10:03:07,462  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:03:07,507  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:07,509  INFO: f1_Score: 0.864865
+2020-02-04 10:03:07,510  INFO: Validating GOOD Lambda: 0.09
+2020-02-04 10:03:07,516  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:07,680  INFO: ************ SVM ************
+2020-02-04 10:03:07,680  INFO: FOR MATRIX: X
+2020-02-04 10:03:07,725  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:03:07,727  INFO: f1_Score: 0.717949
+2020-02-04 10:03:08,000  INFO: ************ SVM ************
+2020-02-04 10:03:08,035  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:03:08,113  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2674   1
+1                        11  14
+2020-02-04 10:03:08,118  INFO: f1_Score: 0.700000
+2020-02-04 10:03:08,537  INFO: ************ SVM ************
+2020-02-04 10:03:08,537  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:03:08,584  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:03:08,587  INFO: f1_Score: 0.717949
+2020-02-04 10:03:08,587  INFO: Lambda: 0.09999999999999999
+2020-02-04 10:03:08,642  DEBUG: Max Rank: 81
+2020-02-04 10:03:09,827  DEBUG: Lambda Scale: 5.196152422706632
+2020-02-04 10:03:10,742  DEBUG: criterion1 is the constraint
+2020-02-04 10:03:10,742  DEBUG: criterion2 is the solution
+2020-02-04 10:03:10,743  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 10:03:13,594  DEBUG:        10   7.90e-02 1.00e-05   1.88e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 10:03:16,686  DEBUG:        20   1.77e-02 1.00e-05   2.40e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 10:03:19,813  DEBUG:        30   4.85e-03 1.00e-05   1.03e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 10:03:22,946  DEBUG:        40   9.42e-04 1.00e-05   3.79e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 10:03:26,132  DEBUG:        50   1.16e-04 1.00e-05   1.58e-04 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 10:03:29,228  DEBUG:        60   1.45e-05 1.00e-05   4.47e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:03:29,875  DEBUG:        62   5.31e-06 1.00e-05   4.55e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:03:29,881  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 10:03:29,881  DEBUG: HAT SHAPES, Uhat: (2700, 69)  Ehat: (69, 69)  VThat: (69, 118)  VTta: (12, 118)
+2020-02-04 10:03:29,883  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:29,889  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:30,041  INFO: ************ SVM ************
+2020-02-04 10:03:30,042  INFO: FOR MATRIX: X
+2020-02-04 10:03:30,096  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:30,101  INFO: f1_Score: 0.864865
+2020-02-04 10:03:30,466  INFO: ************ SVM ************
+2020-02-04 10:03:30,466  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:03:30,512  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:30,515  INFO: f1_Score: 0.864865
+2020-02-04 10:03:30,885  INFO: ************ SVM ************
+2020-02-04 10:03:30,885  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:03:30,930  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:30,932  INFO: f1_Score: 0.864865
+2020-02-04 10:03:30,932  INFO: Validating GOOD Lambda: 0.09999999999999999
+2020-02-04 10:03:30,938  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:31,100  INFO: ************ SVM ************
+2020-02-04 10:03:31,100  INFO: FOR MATRIX: X
+2020-02-04 10:03:31,152  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:03:31,155  INFO: f1_Score: 0.717949
+2020-02-04 10:03:31,446  INFO: ************ SVM ************
+2020-02-04 10:03:31,446  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:03:31,493  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:03:31,495  INFO: f1_Score: 0.717949
+2020-02-04 10:03:31,884  INFO: ************ SVM ************
+2020-02-04 10:03:31,885  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:03:31,932  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:03:31,934  INFO: f1_Score: 0.717949
+2020-02-04 10:03:31,935  INFO: Lambda: 0.10999999999999999
+2020-02-04 10:03:31,990  DEBUG: Max Rank: 81
+2020-02-04 10:03:33,177  DEBUG: Lambda Scale: 5.715767664977294
+2020-02-04 10:03:34,055  DEBUG: criterion1 is the constraint
+2020-02-04 10:03:34,055  DEBUG: criterion2 is the solution
+2020-02-04 10:03:34,055  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 10:03:36,763  DEBUG:        10   8.16e-02 1.00e-05   1.49e-04 1.00e-04 3.08e+00 5.71e-03
+2020-02-04 10:03:39,756  DEBUG:        20   1.81e-02 1.00e-05   1.05e-04 1.00e-04 3.08e+00 1.76e-02
+2020-02-04 10:03:42,880  DEBUG:        30   5.20e-03 1.00e-05   1.02e-04 1.00e-04 3.08e+00 5.40e-02
+2020-02-04 10:03:46,003  DEBUG:        40   1.27e-03 1.00e-05   3.46e-04 1.00e-04 3.08e+00 5.11e-01
+2020-02-04 10:03:49,065  DEBUG:        50   1.65e-04 1.00e-05   1.39e-04 1.00e-04 3.08e+00 4.84e+00
+2020-02-04 10:03:52,263  DEBUG:        60   1.29e-05 1.00e-05   8.23e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:03:52,585  DEBUG:        61   8.23e-06 1.00e-05   4.62e-05 1.00e-04 3.08e+00 4.58e+01
+2020-02-04 10:03:52,594  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 81)  E: (81, 81)  VT: (81, 118)  L: (2700, 118)
+2020-02-04 10:03:52,595  DEBUG: HAT SHAPES, Uhat: (2700, 70)  Ehat: (70, 70)  VThat: (70, 118)  VTta: (11, 118)
+2020-02-04 10:03:52,596  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:52,603  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:52,762  INFO: ************ SVM ************
+2020-02-04 10:03:52,762  INFO: FOR MATRIX: X
+2020-02-04 10:03:52,810  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:52,814  INFO: f1_Score: 0.864865
+2020-02-04 10:03:53,098  INFO: ************ SVM ************
+2020-02-04 10:03:53,098  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:03:53,145  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:53,148  INFO: f1_Score: 0.864865
+2020-02-04 10:03:53,556  INFO: ************ SVM ************
+2020-02-04 10:03:53,557  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:03:53,602  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2679   2
+1                         3  16
+2020-02-04 10:03:53,605  INFO: f1_Score: 0.864865
+2020-02-04 10:03:53,605  INFO: Validating GOOD Lambda: 0.10999999999999999
+2020-02-04 10:03:53,614  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 10:03:53,774  INFO: ************ SVM ************
+2020-02-04 10:03:53,774  INFO: FOR MATRIX: X
+2020-02-04 10:03:53,822  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:03:53,824  INFO: f1_Score: 0.717949
+2020-02-04 10:03:54,103  INFO: ************ SVM ************
+2020-02-04 10:03:54,103  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 10:03:54,162  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:03:54,164  INFO: f1_Score: 0.717949
+2020-02-04 10:03:54,582  INFO: ************ SVM ************
+2020-02-04 10:03:54,582  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 10:03:54,631  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   0
+1                        11  14
+2020-02-04 10:03:54,634  INFO: f1_Score: 0.717949
+2020-02-04 11:00:42,263  INFO: Run started.
+2020-02-04 11:00:42,264  INFO: CONFIGURATION USED: SVMTEST
+2020-02-04 11:00:42,325  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-04 11:00:44,042  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-04 11:00:44,079  DEBUG: Random seed = 4353
+2020-02-04 11:00:44,130  DEBUG: X_train size: (2700, 118)
+2020-02-04 11:00:44,130  DEBUG: X_test size: (2700, 118)
+2020-02-04 11:00:44,130  DEBUG: X_valid size: (2700, 118)
+2020-02-04 11:00:44,131  DEBUG: y_train class counts: (array([0, 1]), array([2669,   31]))
+2020-02-04 11:00:44,132  DEBUG: y_test class counts: (array([0, 1]), array([2676,   24]))
+2020-02-04 11:00:44,132  DEBUG: y_valid class counts: (array([0, 1]), array([2685,   15]))
+2020-02-04 11:00:44,132  INFO: Randomizaiton of X and y matrices complete.
+2020-02-04 11:00:44,134  INFO: Lambda: 0.005
+2020-02-04 11:00:44,168  DEBUG: Max Rank: 84
+2020-02-04 11:00:45,213  DEBUG: Lambda Scale: 0.2598076211353316
+2020-02-04 11:00:46,160  DEBUG: criterion1 is the constraint
+2020-02-04 11:00:46,160  DEBUG: criterion2 is the solution
+2020-02-04 11:00:46,161  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:00:48,909  DEBUG:        10   1.19e-02 1.00e-05   1.08e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:00:51,976  DEBUG:        20   3.99e-04 1.00e-05   1.45e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:00:54,979  DEBUG:        30   1.76e-05 1.00e-05   6.16e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:00:55,879  DEBUG:        33   6.16e-06 1.00e-05   3.91e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:00:55,885  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:00:55,885  DEBUG: HAT SHAPES, Uhat: (2700, 2)  Ehat: (2, 2)  VThat: (2, 118)  VTta: (82, 118)
+2020-02-04 11:00:55,887  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:00:55,889  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:00:56,079  INFO: ************ SVM ************
+2020-02-04 11:00:56,080  INFO: FOR MATRIX: X
+2020-02-04 11:00:56,123  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:00:56,124  INFO: f1_Score: 0.717949
+2020-02-04 11:00:56,452  INFO: ************ SVM ************
+2020-02-04 11:00:56,453  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:00:56,488  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:00:56,491  INFO: f1_Score: 0.717949
+2020-02-04 11:00:56,965  INFO: ************ SVM ************
+2020-02-04 11:00:56,965  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:00:57,003  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:00:57,007  INFO: f1_Score: 0.717949
+2020-02-04 11:00:57,007  INFO: Validating GOOD Lambda: 0.005
+2020-02-04 11:00:57,010  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:00:57,206  INFO: ************ SVM ************
+2020-02-04 11:00:57,207  INFO: FOR MATRIX: X
+2020-02-04 11:00:57,248  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:00:57,250  INFO: f1_Score: 0.857143
+2020-02-04 11:00:57,568  INFO: ************ SVM ************
+2020-02-04 11:00:57,568  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:00:57,610  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:00:57,613  INFO: f1_Score: 0.814815
+2020-02-04 11:00:58,095  INFO: ************ SVM ************
+2020-02-04 11:00:58,096  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:00:58,139  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:00:58,141  INFO: f1_Score: 0.814815
+2020-02-04 11:00:58,142  INFO: Lambda: 0.006
+2020-02-04 11:00:58,163  DEBUG: Max Rank: 84
+2020-02-04 11:00:59,186  DEBUG: Lambda Scale: 0.3117691453623979
+2020-02-04 11:01:00,052  DEBUG: criterion1 is the constraint
+2020-02-04 11:01:00,052  DEBUG: criterion2 is the solution
+2020-02-04 11:01:00,052  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:01:02,839  DEBUG:        10   1.46e-02 1.00e-05   1.24e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:01:05,932  DEBUG:        20   7.37e-04 1.00e-05   2.01e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:01:08,972  DEBUG:        30   5.08e-05 1.00e-05   6.82e-05 1.00e-04 3.08e+00 3.97e+00
+2020-02-04 11:01:10,735  DEBUG:        36   7.96e-06 1.00e-05   4.40e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:01:10,742  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:01:10,742  DEBUG: HAT SHAPES, Uhat: (2700, 4)  Ehat: (4, 4)  VThat: (4, 118)  VTta: (80, 118)
+2020-02-04 11:01:10,744  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:10,746  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:10,935  INFO: ************ SVM ************
+2020-02-04 11:01:10,936  INFO: FOR MATRIX: X
+2020-02-04 11:01:10,990  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:01:10,992  INFO: f1_Score: 0.717949
+2020-02-04 11:01:11,320  INFO: ************ SVM ************
+2020-02-04 11:01:11,320  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:01:11,364  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2676   0
+1                        10  14
+2020-02-04 11:01:11,366  INFO: f1_Score: 0.736842
+2020-02-04 11:01:11,857  INFO: ************ SVM ************
+2020-02-04 11:01:11,858  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:01:11,899  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:01:11,901  INFO: f1_Score: 0.717949
+2020-02-04 11:01:11,901  INFO: Validating GOOD Lambda: 0.006
+2020-02-04 11:01:11,904  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:12,104  INFO: ************ SVM ************
+2020-02-04 11:01:12,105  INFO: FOR MATRIX: X
+2020-02-04 11:01:12,145  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:01:12,147  INFO: f1_Score: 0.857143
+2020-02-04 11:01:12,467  INFO: ************ SVM ************
+2020-02-04 11:01:12,467  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:01:12,505  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2685   0
+1                         4  11
+2020-02-04 11:01:12,507  INFO: f1_Score: 0.846154
+2020-02-04 11:01:12,984  INFO: ************ SVM ************
+2020-02-04 11:01:12,984  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:01:13,025  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:01:13,027  INFO: f1_Score: 0.814815
+2020-02-04 11:01:13,027  INFO: Lambda: 0.007
+2020-02-04 11:01:13,048  DEBUG: Max Rank: 84
+2020-02-04 11:01:14,097  DEBUG: Lambda Scale: 0.36373066958946426
+2020-02-04 11:01:14,948  DEBUG: criterion1 is the constraint
+2020-02-04 11:01:14,949  DEBUG: criterion2 is the solution
+2020-02-04 11:01:14,949  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:01:17,618  DEBUG:        10   1.65e-02 1.00e-05   1.97e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:01:20,689  DEBUG:        20   1.67e-03 1.00e-05   1.40e-04 1.00e-04 3.08e+00 1.36e-01
+2020-02-04 11:01:23,676  DEBUG:        30   1.37e-04 1.00e-05   1.52e-04 1.00e-04 3.08e+00 3.97e+00
+2020-02-04 11:01:26,681  DEBUG:        40   8.77e-06 1.00e-05   4.00e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:01:26,681  DEBUG:        40   8.77e-06 1.00e-05   4.00e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:01:26,689  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:01:26,690  DEBUG: HAT SHAPES, Uhat: (2700, 5)  Ehat: (5, 5)  VThat: (5, 118)  VTta: (79, 118)
+2020-02-04 11:01:26,692  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:26,694  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:26,869  INFO: ************ SVM ************
+2020-02-04 11:01:26,869  INFO: FOR MATRIX: X
+2020-02-04 11:01:26,909  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:01:26,910  INFO: f1_Score: 0.717949
+2020-02-04 11:01:27,237  INFO: ************ SVM ************
+2020-02-04 11:01:27,237  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:01:27,277  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:01:27,280  INFO: f1_Score: 0.717949
+2020-02-04 11:01:27,747  INFO: ************ SVM ************
+2020-02-04 11:01:27,747  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:01:27,788  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:01:27,790  INFO: f1_Score: 0.717949
+2020-02-04 11:01:27,790  INFO: Validating GOOD Lambda: 0.007
+2020-02-04 11:01:27,793  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:27,979  INFO: ************ SVM ************
+2020-02-04 11:01:27,979  INFO: FOR MATRIX: X
+2020-02-04 11:01:28,022  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:01:28,024  INFO: f1_Score: 0.857143
+2020-02-04 11:01:28,353  INFO: ************ SVM ************
+2020-02-04 11:01:28,353  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:01:28,391  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:01:28,393  INFO: f1_Score: 0.814815
+2020-02-04 11:01:28,871  INFO: ************ SVM ************
+2020-02-04 11:01:28,871  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:01:28,913  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:01:28,915  INFO: f1_Score: 0.814815
+2020-02-04 11:01:28,916  INFO: Lambda: 0.008
+2020-02-04 11:01:28,968  DEBUG: Max Rank: 84
+2020-02-04 11:01:30,003  DEBUG: Lambda Scale: 0.41569219381653055
+2020-02-04 11:01:30,844  DEBUG: criterion1 is the constraint
+2020-02-04 11:01:30,844  DEBUG: criterion2 is the solution
+2020-02-04 11:01:30,844  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:01:33,545  DEBUG:        10   2.00e-02 1.00e-05   2.00e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:01:36,545  DEBUG:        20   2.14e-03 1.00e-05   2.28e-04 1.00e-04 3.08e+00 1.36e-01
+2020-02-04 11:01:39,547  DEBUG:        30   2.44e-04 1.00e-05   1.73e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:01:42,437  DEBUG:        40   2.27e-05 1.00e-05   5.87e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:01:43,613  DEBUG:        44   8.75e-06 1.00e-05   3.79e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:01:43,621  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:01:43,622  DEBUG: HAT SHAPES, Uhat: (2700, 8)  Ehat: (8, 8)  VThat: (8, 118)  VTta: (76, 118)
+2020-02-04 11:01:43,624  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:43,626  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:43,826  INFO: ************ SVM ************
+2020-02-04 11:01:43,826  INFO: FOR MATRIX: X
+2020-02-04 11:01:43,890  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:01:43,892  INFO: f1_Score: 0.717949
+2020-02-04 11:01:44,199  INFO: ************ SVM ************
+2020-02-04 11:01:44,199  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:01:44,249  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:01:44,252  INFO: f1_Score: 0.717949
+2020-02-04 11:01:44,718  INFO: ************ SVM ************
+2020-02-04 11:01:44,721  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:01:44,764  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:01:44,767  INFO: f1_Score: 0.717949
+2020-02-04 11:01:44,767  INFO: Validating GOOD Lambda: 0.008
+2020-02-04 11:01:44,770  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:01:44,974  INFO: ************ SVM ************
+2020-02-04 11:01:44,974  INFO: FOR MATRIX: X
+2020-02-04 11:01:45,015  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:01:45,017  INFO: f1_Score: 0.857143
+2020-02-04 11:01:45,346  INFO: ************ SVM ************
+2020-02-04 11:01:45,346  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:01:45,386  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:01:45,388  INFO: f1_Score: 0.814815
+2020-02-04 11:01:45,858  INFO: ************ SVM ************
+2020-02-04 11:01:45,858  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:01:45,898  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:01:45,900  INFO: f1_Score: 0.814815
+2020-02-04 11:01:45,900  INFO: Lambda: 0.009000000000000001
+2020-02-04 11:01:45,951  DEBUG: Max Rank: 84
+2020-02-04 11:01:46,976  DEBUG: Lambda Scale: 0.46765371804359696
+2020-02-04 11:01:47,815  DEBUG: criterion1 is the constraint
+2020-02-04 11:01:47,815  DEBUG: criterion2 is the solution
+2020-02-04 11:01:47,815  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:01:50,687  DEBUG:        10   2.36e-02 1.00e-05   2.25e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:01:53,903  DEBUG:        20   2.77e-03 1.00e-05   2.45e-04 1.00e-04 3.08e+00 1.36e-01
+2020-02-04 11:01:57,048  DEBUG:        30   3.63e-04 1.00e-05   2.39e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:02:00,177  DEBUG:        40   3.70e-05 1.00e-05   8.10e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:02:02,034  DEBUG:        46   7.36e-06 1.00e-05   3.92e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:02:02,042  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:02:02,042  DEBUG: HAT SHAPES, Uhat: (2700, 9)  Ehat: (9, 9)  VThat: (9, 118)  VTta: (75, 118)
+2020-02-04 11:02:02,044  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:02,047  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:02,286  INFO: ************ SVM ************
+2020-02-04 11:02:02,287  INFO: FOR MATRIX: X
+2020-02-04 11:02:02,359  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:02:02,364  INFO: f1_Score: 0.717949
+2020-02-04 11:02:02,728  INFO: ************ SVM ************
+2020-02-04 11:02:02,728  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:02:02,769  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2676   0
+1                        10  14
+2020-02-04 11:02:02,771  INFO: f1_Score: 0.736842
+2020-02-04 11:02:03,239  INFO: ************ SVM ************
+2020-02-04 11:02:03,239  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:02:03,284  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:02:03,288  INFO: f1_Score: 0.717949
+2020-02-04 11:02:03,289  INFO: Validating GOOD Lambda: 0.009000000000000001
+2020-02-04 11:02:03,293  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:03,513  INFO: ************ SVM ************
+2020-02-04 11:02:03,514  INFO: FOR MATRIX: X
+2020-02-04 11:02:03,553  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:02:03,555  INFO: f1_Score: 0.857143
+2020-02-04 11:02:03,862  INFO: ************ SVM ************
+2020-02-04 11:02:03,863  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:02:03,912  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2685   0
+1                         4  11
+2020-02-04 11:02:03,914  INFO: f1_Score: 0.846154
+2020-02-04 11:02:04,371  INFO: ************ SVM ************
+2020-02-04 11:02:04,371  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:02:04,410  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:02:04,411  INFO: f1_Score: 0.814815
+2020-02-04 11:02:04,412  INFO: Lambda: 0.010000000000000002
+2020-02-04 11:02:04,472  DEBUG: Max Rank: 84
+2020-02-04 11:02:05,551  DEBUG: Lambda Scale: 0.5196152422706634
+2020-02-04 11:02:06,434  DEBUG: criterion1 is the constraint
+2020-02-04 11:02:06,434  DEBUG: criterion2 is the solution
+2020-02-04 11:02:06,434  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:02:09,150  DEBUG:        10   2.56e-02 1.00e-05   2.39e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:02:12,291  DEBUG:        20   2.51e-03 1.00e-05   2.76e-04 1.00e-04 3.08e+00 1.36e-01
+2020-02-04 11:02:15,389  DEBUG:        30   3.05e-04 1.00e-05   2.29e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:02:18,432  DEBUG:        40   4.62e-05 1.00e-05   7.60e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:02:20,606  DEBUG:        47   7.82e-06 1.00e-05   3.73e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:02:20,634  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:02:20,634  DEBUG: HAT SHAPES, Uhat: (2700, 11)  Ehat: (11, 11)  VThat: (11, 118)  VTta: (73, 118)
+2020-02-04 11:02:20,639  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:20,643  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:20,854  INFO: ************ SVM ************
+2020-02-04 11:02:20,854  INFO: FOR MATRIX: X
+2020-02-04 11:02:20,903  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:02:20,908  INFO: f1_Score: 0.717949
+2020-02-04 11:02:21,227  INFO: ************ SVM ************
+2020-02-04 11:02:21,227  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:02:21,286  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:02:21,289  INFO: f1_Score: 0.000000
+2020-02-04 11:02:21,718  INFO: ************ SVM ************
+2020-02-04 11:02:21,718  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:02:21,777  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:02:21,779  INFO: f1_Score: 0.717949
+2020-02-04 11:02:21,780  INFO: Validating GOOD Lambda: 0.010000000000000002
+2020-02-04 11:02:21,786  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:22,062  INFO: ************ SVM ************
+2020-02-04 11:02:22,063  INFO: FOR MATRIX: X
+2020-02-04 11:02:22,141  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:02:22,144  INFO: f1_Score: 0.857143
+2020-02-04 11:02:22,433  INFO: ************ SVM ************
+2020-02-04 11:02:22,433  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:02:22,479  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:02:22,482  INFO: f1_Score: 0.000000
+2020-02-04 11:02:22,944  INFO: ************ SVM ************
+2020-02-04 11:02:22,944  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:02:22,997  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         4  11
+2020-02-04 11:02:23,001  INFO: f1_Score: 0.814815
+2020-02-04 11:02:23,001  INFO: Lambda: 0.011000000000000003
+2020-02-04 11:02:23,074  DEBUG: Max Rank: 84
+2020-02-04 11:02:24,220  DEBUG: Lambda Scale: 0.5715767664977297
+2020-02-04 11:02:25,110  DEBUG: criterion1 is the constraint
+2020-02-04 11:02:25,111  DEBUG: criterion2 is the solution
+2020-02-04 11:02:25,112  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:02:27,928  DEBUG:        10   2.93e-02 1.00e-05   2.44e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:02:31,072  DEBUG:        20   3.54e-03 1.00e-05   2.94e-04 1.00e-04 3.08e+00 1.36e-01
+2020-02-04 11:02:34,059  DEBUG:        30   4.56e-04 1.00e-05   2.36e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:02:37,099  DEBUG:        40   6.45e-05 1.00e-05   7.33e-05 1.00e-04 3.08e+00 3.97e+00
+2020-02-04 11:02:40,141  DEBUG:        50   8.56e-06 1.00e-05   3.80e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:02:40,141  DEBUG:        50   8.56e-06 1.00e-05   3.80e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:02:40,147  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:02:40,147  DEBUG: HAT SHAPES, Uhat: (2700, 12)  Ehat: (12, 12)  VThat: (12, 118)  VTta: (72, 118)
+2020-02-04 11:02:40,150  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:40,153  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:40,401  INFO: ************ SVM ************
+2020-02-04 11:02:40,402  INFO: FOR MATRIX: X
+2020-02-04 11:02:40,442  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:02:40,444  INFO: f1_Score: 0.717949
+2020-02-04 11:02:40,815  INFO: ************ SVM ************
+2020-02-04 11:02:40,815  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:02:40,856  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:02:40,858  INFO: f1_Score: 0.000000
+2020-02-04 11:02:41,351  INFO: ************ SVM ************
+2020-02-04 11:02:41,351  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:02:41,393  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2676   0
+1                        10  14
+2020-02-04 11:02:41,395  INFO: f1_Score: 0.736842
+2020-02-04 11:02:41,395  INFO: Validating GOOD Lambda: 0.011000000000000003
+2020-02-04 11:02:41,399  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:41,608  INFO: ************ SVM ************
+2020-02-04 11:02:41,609  INFO: FOR MATRIX: X
+2020-02-04 11:02:41,659  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:02:41,661  INFO: f1_Score: 0.857143
+2020-02-04 11:02:42,004  INFO: ************ SVM ************
+2020-02-04 11:02:42,004  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:02:42,048  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:02:42,050  INFO: f1_Score: 0.000000
+2020-02-04 11:02:42,525  INFO: ************ SVM ************
+2020-02-04 11:02:42,525  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:02:42,569  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2685   0
+1                         4  11
+2020-02-04 11:02:42,571  INFO: f1_Score: 0.846154
+2020-02-04 11:02:42,572  INFO: Lambda: 0.012000000000000004
+2020-02-04 11:02:42,632  DEBUG: Max Rank: 84
+2020-02-04 11:02:43,687  DEBUG: Lambda Scale: 0.623538290724796
+2020-02-04 11:02:44,624  DEBUG: criterion1 is the constraint
+2020-02-04 11:02:44,624  DEBUG: criterion2 is the solution
+2020-02-04 11:02:44,624  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:02:47,423  DEBUG:        10   3.12e-02 1.00e-05   2.77e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:02:50,631  DEBUG:        20   3.96e-03 1.00e-05   3.06e-04 1.00e-04 3.08e+00 1.36e-01
+2020-02-04 11:02:53,656  DEBUG:        30   5.40e-04 1.00e-05   1.02e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:02:56,630  DEBUG:        40   8.26e-05 1.00e-05   9.62e-05 1.00e-04 3.08e+00 3.97e+00
+2020-02-04 11:02:59,537  DEBUG:        50   1.31e-05 1.00e-05   4.76e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:02:59,835  DEBUG:        51   9.51e-06 1.00e-05   4.31e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:02:59,842  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:02:59,843  DEBUG: HAT SHAPES, Uhat: (2700, 15)  Ehat: (15, 15)  VThat: (15, 118)  VTta: (69, 118)
+2020-02-04 11:02:59,845  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:02:59,848  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:03:00,074  INFO: ************ SVM ************
+2020-02-04 11:03:00,075  INFO: FOR MATRIX: X
+2020-02-04 11:03:00,172  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:03:00,176  INFO: f1_Score: 0.717949
+2020-02-04 11:03:00,555  INFO: ************ SVM ************
+2020-02-04 11:03:00,555  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:03:00,597  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:03:00,599  INFO: f1_Score: 0.000000
+2020-02-04 11:03:01,121  INFO: ************ SVM ************
+2020-02-04 11:03:01,121  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:03:01,166  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2676   0
+1                        10  14
+2020-02-04 11:03:01,168  INFO: f1_Score: 0.736842
+2020-02-04 11:03:01,168  INFO: Validating GOOD Lambda: 0.012000000000000004
+2020-02-04 11:03:01,172  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:03:01,377  INFO: ************ SVM ************
+2020-02-04 11:03:01,378  INFO: FOR MATRIX: X
+2020-02-04 11:03:01,416  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:03:01,419  INFO: f1_Score: 0.857143
+2020-02-04 11:03:01,761  INFO: ************ SVM ************
+2020-02-04 11:03:01,761  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:03:01,800  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:03:01,802  INFO: f1_Score: 0.000000
+2020-02-04 11:03:02,302  INFO: ************ SVM ************
+2020-02-04 11:03:02,302  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:03:02,369  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2685   0
+1                         4  11
+2020-02-04 11:03:02,371  INFO: f1_Score: 0.846154
+2020-02-04 11:03:02,371  INFO: Lambda: 0.013000000000000005
+2020-02-04 11:03:02,432  DEBUG: Max Rank: 84
+2020-02-04 11:03:03,564  DEBUG: Lambda Scale: 0.6754998149518624
+2020-02-04 11:03:04,440  DEBUG: criterion1 is the constraint
+2020-02-04 11:03:04,440  DEBUG: criterion2 is the solution
+2020-02-04 11:03:04,440  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:03:07,141  DEBUG:        10   3.20e-02 1.00e-05   3.25e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:03:10,276  DEBUG:        20   5.38e-03 1.00e-05   1.01e-04 1.00e-04 3.08e+00 4.44e-02
+2020-02-04 11:03:13,374  DEBUG:        30   7.56e-04 1.00e-05   1.77e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:03:16,368  DEBUG:        40   1.44e-04 1.00e-05   1.44e-04 1.00e-04 3.08e+00 3.97e+00
+2020-02-04 11:03:19,441  DEBUG:        50   2.05e-05 1.00e-05   3.61e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:03:20,642  DEBUG:        54   9.26e-06 1.00e-05   3.92e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:03:20,653  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:03:20,653  DEBUG: HAT SHAPES, Uhat: (2700, 18)  Ehat: (18, 18)  VThat: (18, 118)  VTta: (66, 118)
+2020-02-04 11:03:20,656  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:03:20,659  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:03:20,867  INFO: ************ SVM ************
+2020-02-04 11:03:20,868  INFO: FOR MATRIX: X
+2020-02-04 11:03:20,911  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:03:20,913  INFO: f1_Score: 0.717949
+2020-02-04 11:03:21,251  INFO: ************ SVM ************
+2020-02-04 11:03:21,252  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:03:21,296  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:03:21,300  INFO: f1_Score: 0.000000
+2020-02-04 11:03:21,791  INFO: ************ SVM ************
+2020-02-04 11:03:21,791  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:03:21,838  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2676   0
+1                        10  14
+2020-02-04 11:03:21,840  INFO: f1_Score: 0.736842
+2020-02-04 11:03:21,840  INFO: Validating GOOD Lambda: 0.013000000000000005
+2020-02-04 11:03:21,843  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:03:22,071  INFO: ************ SVM ************
+2020-02-04 11:03:22,071  INFO: FOR MATRIX: X
+2020-02-04 11:03:22,113  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:03:22,115  INFO: f1_Score: 0.857143
+2020-02-04 11:03:22,445  INFO: ************ SVM ************
+2020-02-04 11:03:22,445  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:03:22,484  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:03:22,486  INFO: f1_Score: 0.000000
+2020-02-04 11:03:22,977  INFO: ************ SVM ************
+2020-02-04 11:03:22,977  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:03:23,022  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2685   0
+1                         4  11
+2020-02-04 11:03:23,024  INFO: f1_Score: 0.846154
+2020-02-04 11:03:23,025  INFO: Lambda: 0.014000000000000005
+2020-02-04 11:03:23,074  DEBUG: Max Rank: 84
+2020-02-04 11:03:24,303  DEBUG: Lambda Scale: 0.7274613391789287
+2020-02-04 11:03:25,148  DEBUG: criterion1 is the constraint
+2020-02-04 11:03:25,148  DEBUG: criterion2 is the solution
+2020-02-04 11:03:25,149  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:03:27,935  DEBUG:        10   3.97e-02 1.00e-05   3.54e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:03:31,102  DEBUG:        20   6.29e-03 1.00e-05   1.26e-04 1.00e-04 3.08e+00 4.44e-02
+2020-02-04 11:03:34,174  DEBUG:        30   8.73e-04 1.00e-05   2.01e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:03:37,080  DEBUG:        40   1.64e-04 1.00e-05   1.32e-04 1.00e-04 3.08e+00 3.97e+00
+2020-02-04 11:03:40,017  DEBUG:        50   2.74e-05 1.00e-05   5.68e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:03:41,721  DEBUG:        56   8.08e-06 1.00e-05   3.34e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:03:41,727  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:03:41,727  DEBUG: HAT SHAPES, Uhat: (2700, 21)  Ehat: (21, 21)  VThat: (21, 118)  VTta: (63, 118)
+2020-02-04 11:03:41,729  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:03:41,733  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:03:41,924  INFO: ************ SVM ************
+2020-02-04 11:03:41,924  INFO: FOR MATRIX: X
+2020-02-04 11:03:41,966  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:03:41,968  INFO: f1_Score: 0.717949
+2020-02-04 11:03:42,302  INFO: ************ SVM ************
+2020-02-04 11:03:42,306  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:03:42,348  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:03:42,350  INFO: f1_Score: 0.000000
+2020-02-04 11:03:42,808  INFO: ************ SVM ************
+2020-02-04 11:03:42,808  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:03:42,846  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:03:42,848  INFO: f1_Score: 0.000000
+2020-02-04 11:03:42,848  INFO: Validating GOOD Lambda: 0.014000000000000005
+2020-02-04 11:03:42,851  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:03:43,046  INFO: ************ SVM ************
+2020-02-04 11:03:43,047  INFO: FOR MATRIX: X
+2020-02-04 11:03:43,087  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:03:43,089  INFO: f1_Score: 0.857143
+2020-02-04 11:03:43,419  INFO: ************ SVM ************
+2020-02-04 11:03:43,419  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:03:43,456  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:03:43,459  INFO: f1_Score: 0.000000
+2020-02-04 11:03:43,933  INFO: ************ SVM ************
+2020-02-04 11:03:43,933  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:03:43,972  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:03:43,974  INFO: f1_Score: 0.000000
+2020-02-04 11:03:43,974  INFO: Lambda: 0.015000000000000006
+2020-02-04 11:03:44,033  DEBUG: Max Rank: 84
+2020-02-04 11:03:45,050  DEBUG: Lambda Scale: 0.7794228634059951
+2020-02-04 11:03:45,874  DEBUG: criterion1 is the constraint
+2020-02-04 11:03:45,874  DEBUG: criterion2 is the solution
+2020-02-04 11:03:45,874  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:03:48,473  DEBUG:        10   4.54e-02 1.00e-05   2.65e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:03:51,425  DEBUG:        20   6.84e-03 1.00e-05   1.32e-04 1.00e-04 3.08e+00 4.44e-02
+2020-02-04 11:03:54,416  DEBUG:        30   1.06e-03 1.00e-05   2.54e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:03:57,386  DEBUG:        40   2.07e-04 1.00e-05   1.02e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:04:00,554  DEBUG:        50   3.56e-05 1.00e-05   7.00e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:04:02,735  DEBUG:        57   8.66e-06 1.00e-05   3.34e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:04:02,745  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:04:02,746  DEBUG: HAT SHAPES, Uhat: (2700, 23)  Ehat: (23, 23)  VThat: (23, 118)  VTta: (61, 118)
+2020-02-04 11:04:02,748  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:02,752  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:02,942  INFO: ************ SVM ************
+2020-02-04 11:04:02,943  INFO: FOR MATRIX: X
+2020-02-04 11:04:02,989  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:04:02,991  INFO: f1_Score: 0.717949
+2020-02-04 11:04:03,325  INFO: ************ SVM ************
+2020-02-04 11:04:03,326  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:04:03,395  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:04:03,399  INFO: f1_Score: 0.000000
+2020-02-04 11:04:03,864  INFO: ************ SVM ************
+2020-02-04 11:04:03,865  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:04:03,925  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:04:03,927  INFO: f1_Score: 0.000000
+2020-02-04 11:04:03,927  INFO: Validating GOOD Lambda: 0.015000000000000006
+2020-02-04 11:04:03,932  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:04,148  INFO: ************ SVM ************
+2020-02-04 11:04:04,148  INFO: FOR MATRIX: X
+2020-02-04 11:04:04,201  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:04:04,203  INFO: f1_Score: 0.857143
+2020-02-04 11:04:04,571  INFO: ************ SVM ************
+2020-02-04 11:04:04,572  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:04:04,621  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:04:04,624  INFO: f1_Score: 0.000000
+2020-02-04 11:04:05,083  INFO: ************ SVM ************
+2020-02-04 11:04:05,083  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:04:05,129  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:04:05,131  INFO: f1_Score: 0.000000
+2020-02-04 11:04:05,132  INFO: Lambda: 0.016000000000000007
+2020-02-04 11:04:05,184  DEBUG: Max Rank: 84
+2020-02-04 11:04:06,454  DEBUG: Lambda Scale: 0.8313843876330616
+2020-02-04 11:04:07,366  DEBUG: criterion1 is the constraint
+2020-02-04 11:04:07,366  DEBUG: criterion2 is the solution
+2020-02-04 11:04:07,366  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:04:10,171  DEBUG:        10   4.77e-02 1.00e-05   2.51e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:04:13,306  DEBUG:        20   7.81e-03 1.00e-05   1.76e-04 1.00e-04 3.08e+00 4.44e-02
+2020-02-04 11:04:16,396  DEBUG:        30   1.42e-03 1.00e-05   2.85e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:04:19,496  DEBUG:        40   2.29e-04 1.00e-05   1.20e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:04:22,556  DEBUG:        50   3.89e-05 1.00e-05   8.03e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:04:24,914  DEBUG:        58   8.77e-06 1.00e-05   3.29e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:04:24,921  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:04:24,922  DEBUG: HAT SHAPES, Uhat: (2700, 26)  Ehat: (26, 26)  VThat: (26, 118)  VTta: (58, 118)
+2020-02-04 11:04:24,923  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:24,926  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:25,167  INFO: ************ SVM ************
+2020-02-04 11:04:25,167  INFO: FOR MATRIX: X
+2020-02-04 11:04:25,225  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:04:25,227  INFO: f1_Score: 0.717949
+2020-02-04 11:04:25,574  INFO: ************ SVM ************
+2020-02-04 11:04:25,574  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:04:25,615  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:04:25,617  INFO: f1_Score: 0.000000
+2020-02-04 11:04:26,081  INFO: ************ SVM ************
+2020-02-04 11:04:26,081  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:04:26,121  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:04:26,123  INFO: f1_Score: 0.000000
+2020-02-04 11:04:26,123  INFO: Validating GOOD Lambda: 0.016000000000000007
+2020-02-04 11:04:26,131  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:26,349  INFO: ************ SVM ************
+2020-02-04 11:04:26,349  INFO: FOR MATRIX: X
+2020-02-04 11:04:26,392  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:04:26,395  INFO: f1_Score: 0.857143
+2020-02-04 11:04:26,738  INFO: ************ SVM ************
+2020-02-04 11:04:26,738  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:04:26,784  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:04:26,786  INFO: f1_Score: 0.000000
+2020-02-04 11:04:27,246  INFO: ************ SVM ************
+2020-02-04 11:04:27,246  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:04:27,287  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:04:27,289  INFO: f1_Score: 0.000000
+2020-02-04 11:04:27,289  INFO: Lambda: 0.017000000000000008
+2020-02-04 11:04:27,342  DEBUG: Max Rank: 84
+2020-02-04 11:04:28,400  DEBUG: Lambda Scale: 0.8833459118601279
+2020-02-04 11:04:29,283  DEBUG: criterion1 is the constraint
+2020-02-04 11:04:29,283  DEBUG: criterion2 is the solution
+2020-02-04 11:04:29,283  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:04:32,045  DEBUG:        10   4.85e-02 1.00e-05   2.63e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:04:35,051  DEBUG:        20   7.36e-03 1.00e-05   1.48e-04 1.00e-04 3.08e+00 4.44e-02
+2020-02-04 11:04:38,014  DEBUG:        30   1.14e-03 1.00e-05   3.09e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:04:41,007  DEBUG:        40   2.01e-04 1.00e-05   1.02e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:04:43,913  DEBUG:        50   3.80e-05 1.00e-05   7.25e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:04:46,275  DEBUG:        58   8.77e-06 1.00e-05   3.40e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:04:46,283  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:04:46,284  DEBUG: HAT SHAPES, Uhat: (2700, 28)  Ehat: (28, 28)  VThat: (28, 118)  VTta: (56, 118)
+2020-02-04 11:04:46,286  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:46,289  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:46,479  INFO: ************ SVM ************
+2020-02-04 11:04:46,480  INFO: FOR MATRIX: X
+2020-02-04 11:04:46,521  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:04:46,523  INFO: f1_Score: 0.717949
+2020-02-04 11:04:46,866  INFO: ************ SVM ************
+2020-02-04 11:04:46,866  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:04:46,903  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:04:46,905  INFO: f1_Score: 0.000000
+2020-02-04 11:04:47,364  INFO: ************ SVM ************
+2020-02-04 11:04:47,364  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:04:47,403  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:04:47,405  INFO: f1_Score: 0.000000
+2020-02-04 11:04:47,405  INFO: Validating GOOD Lambda: 0.017000000000000008
+2020-02-04 11:04:47,408  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:04:47,575  INFO: ************ SVM ************
+2020-02-04 11:04:47,575  INFO: FOR MATRIX: X
+2020-02-04 11:04:47,613  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:04:47,615  INFO: f1_Score: 0.857143
+2020-02-04 11:04:47,931  INFO: ************ SVM ************
+2020-02-04 11:04:47,931  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:04:47,971  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:04:47,973  INFO: f1_Score: 0.000000
+2020-02-04 11:04:48,446  INFO: ************ SVM ************
+2020-02-04 11:04:48,447  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:04:48,483  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:04:48,485  INFO: f1_Score: 0.000000
+2020-02-04 11:04:48,486  INFO: Lambda: 0.01800000000000001
+2020-02-04 11:04:48,538  DEBUG: Max Rank: 84
+2020-02-04 11:04:49,617  DEBUG: Lambda Scale: 0.9353074360871942
+2020-02-04 11:04:50,440  DEBUG: criterion1 is the constraint
+2020-02-04 11:04:50,440  DEBUG: criterion2 is the solution
+2020-02-04 11:04:50,440  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:04:53,159  DEBUG:        10   5.06e-02 1.00e-05   2.65e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:04:56,118  DEBUG:        20   7.62e-03 1.00e-05   1.58e-04 1.00e-04 3.08e+00 4.44e-02
+2020-02-04 11:04:59,011  DEBUG:        30   1.46e-03 1.00e-05   3.05e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:05:02,180  DEBUG:        40   2.42e-04 1.00e-05   1.18e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:05:05,099  DEBUG:        50   5.04e-05 1.00e-05   7.90e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:05:07,734  DEBUG:        59   9.05e-06 1.00e-05   3.43e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:05:07,742  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:05:07,743  DEBUG: HAT SHAPES, Uhat: (2700, 31)  Ehat: (31, 31)  VThat: (31, 118)  VTta: (53, 118)
+2020-02-04 11:05:07,744  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:05:07,748  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:05:07,944  INFO: ************ SVM ************
+2020-02-04 11:05:07,944  INFO: FOR MATRIX: X
+2020-02-04 11:05:07,983  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:05:07,985  INFO: f1_Score: 0.717949
+2020-02-04 11:05:08,317  INFO: ************ SVM ************
+2020-02-04 11:05:08,317  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:05:08,355  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:05:08,357  INFO: f1_Score: 0.000000
+2020-02-04 11:05:08,797  INFO: ************ SVM ************
+2020-02-04 11:05:08,797  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:05:08,834  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:05:08,836  INFO: f1_Score: 0.000000
+2020-02-04 11:05:08,836  INFO: Validating GOOD Lambda: 0.01800000000000001
+2020-02-04 11:05:08,840  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:05:09,020  INFO: ************ SVM ************
+2020-02-04 11:05:09,020  INFO: FOR MATRIX: X
+2020-02-04 11:05:09,061  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:05:09,063  INFO: f1_Score: 0.857143
+2020-02-04 11:05:09,386  INFO: ************ SVM ************
+2020-02-04 11:05:09,386  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:05:09,421  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:05:09,423  INFO: f1_Score: 0.000000
+2020-02-04 11:05:09,892  INFO: ************ SVM ************
+2020-02-04 11:05:09,892  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:05:09,931  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:05:09,933  INFO: f1_Score: 0.000000
+2020-02-04 11:05:09,933  INFO: Lambda: 0.01900000000000001
+2020-02-04 11:05:09,991  DEBUG: Max Rank: 84
+2020-02-04 11:05:11,035  DEBUG: Lambda Scale: 0.9872689603142606
+2020-02-04 11:05:11,825  DEBUG: criterion1 is the constraint
+2020-02-04 11:05:11,826  DEBUG: criterion2 is the solution
+2020-02-04 11:05:11,826  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-04 11:05:14,688  DEBUG:        10   5.35e-02 1.00e-05   2.75e-04 1.00e-04 3.08e+00 1.44e-02
+2020-02-04 11:05:17,747  DEBUG:        20   8.86e-03 1.00e-05   2.02e-04 1.00e-04 3.08e+00 4.44e-02
+2020-02-04 11:05:20,783  DEBUG:        30   1.60e-03 1.00e-05   3.03e-04 1.00e-04 3.08e+00 4.20e-01
+2020-02-04 11:05:23,800  DEBUG:        40   2.78e-04 1.00e-05   1.36e-04 1.00e-04 3.08e+00 1.29e+00
+2020-02-04 11:05:26,873  DEBUG:        50   6.18e-05 1.00e-05   8.08e-05 1.00e-04 3.08e+00 1.22e+01
+2020-02-04 11:05:29,867  DEBUG:        60   9.45e-06 1.00e-05   3.55e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:05:29,867  DEBUG:        60   9.45e-06 1.00e-05   3.55e-05 1.00e-04 3.08e+00 3.76e+01
+2020-02-04 11:05:29,874  DEBUG: OG SHAPES, X: (2700, 118)  U: (2700, 84)  E: (84, 84)  VT: (84, 118)  L: (2700, 118)
+2020-02-04 11:05:29,875  DEBUG: HAT SHAPES, Uhat: (2700, 34)  Ehat: (34, 34)  VThat: (34, 118)  VTta: (50, 118)
+2020-02-04 11:05:29,877  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:05:29,881  DEBUG: X2 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:05:30,117  INFO: ************ SVM ************
+2020-02-04 11:05:30,117  INFO: FOR MATRIX: X
+2020-02-04 11:05:30,176  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2675   1
+1                        10  14
+2020-02-04 11:05:30,179  INFO: f1_Score: 0.717949
+2020-02-04 11:05:30,525  INFO: ************ SVM ************
+2020-02-04 11:05:30,525  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:05:30,565  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:05:30,567  INFO: f1_Score: 0.000000
+2020-02-04 11:05:31,033  INFO: ************ SVM ************
+2020-02-04 11:05:31,033  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:05:31,062  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2676
+1                        24
+2020-02-04 11:05:31,064  INFO: f1_Score: 0.000000
+2020-02-04 11:05:31,065  INFO: Validating GOOD Lambda: 0.01900000000000001
+2020-02-04 11:05:31,071  DEBUG: X3 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-04 11:05:31,297  INFO: ************ SVM ************
+2020-02-04 11:05:31,297  INFO: FOR MATRIX: X
+2020-02-04 11:05:31,341  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2684   1
+1                         3  12
+2020-02-04 11:05:31,343  INFO: f1_Score: 0.857143
+2020-02-04 11:05:31,667  INFO: ************ SVM ************
+2020-02-04 11:05:31,667  INFO: FOR MATRIX: CONCAT LS
+2020-02-04 11:05:31,706  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:05:31,708  INFO: f1_Score: 0.000000
+2020-02-04 11:05:32,180  INFO: ************ SVM ************
+2020-02-04 11:05:32,180  INFO: FOR MATRIX: CONCAT XLS
+2020-02-04 11:05:32,219  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2685
+1                        15
+2020-02-04 11:05:32,221  INFO: f1_Score: 0.000000

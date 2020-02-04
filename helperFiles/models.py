@@ -158,7 +158,7 @@ def findOptVal(regr, X_train, y_train):
 #          code defaults to empty (all models run) or contains codes for specific ones to run
 #          tune if we are tuning the model with the data to find optimal values
 #   Output: Prints confusion matricies for each model and f1_scores
-def runModels(X, L, S, ymats, code=[], tune=False):
+def runModels(X, L, S, ymats, code='', tune=False):
     y_train, y_test = ymats[0], ymats[1]
 #    print(y_train.shape, y_test.shape)
 
@@ -174,51 +174,50 @@ def runModels(X, L, S, ymats, code=[], tune=False):
         # for running a custom model. Saves off training and testing
         print("RUN CUSTOM MODEL")
     # runs all models if no code given
-    elif code[0] == "all":
-        code = np.arange(9)    # NOTE if there are more models increase this number
+    # FIXME does not work with new design in main.py
+#    elif code[0] == "all":
+#        code = np.arange(9)    # NOTE if there are more models increase this number
     ifgood = False
 
     # XXX for plotting
     d = []
-
-    for i in code:
-        countName = 0
-        for matType in range(3):
-            X_train = train[matType]
-            X_test = test[matType]
-#            print("SHAPES (train, test validate): X[", X_train.shape, X_test.shape, X_validate.shape, "]\n \
-#            y[", y_train.shape, y_test.shape, y_validate.shape, "]")
+    print(code)
+    countName = 0
+    for matType in range(3):
+        X_train = train[matType]
+        X_test = test[matType]
 #            print("Model SHAPES:", X_train.shape, X_test.shape, y_train.shape, y_test.shape)
-
-            y_pred, regr, m = chooseModel(str(i), X_train, X_test, y_train, tune)
-            logMsg(1, m)    # logs the chosen model
-            # ONLY for tuning; not for training/main algo
-            if tune and not regr == None:
-                print("Oops! Did not want to test this right now.")
-                exit(0)
-                findOptVal(regr, X_train, y_train)
+        y_pred, regr, m = chooseModel(code, X_train, X_test, y_train, tune)
+        logMsg(1, m)    # logs the chosen model
+        # ONLY for tuning; not for training/main algo
+#        if tune and not regr == None:
+#            print("Oops! Did not want to test this right now.")
+#            exit(0)
+#            findOptVal(regr, X_train, y_train)
 
 #            print("FOR MATRIX: ", matName[countName])
-            logMsg(1, "FOR MATRIX: %s" % (matName[countName]))
+        logMsg(1, "FOR MATRIX: %s" % (matName[countName]))
 
-            # Create confusion matrix
-            cfm = pd.crosstab(y_test, y_pred, rownames=['Actual Packet Type'], colnames=['Predicted Packet Type'])
-            logMsg(1, "\n%s" % str(cfm))
+        # Create confusion matrix
+        cfm = pd.crosstab(y_test, y_pred, rownames=['Actual Packet Type'], colnames=['Predicted Packet Type'])
+        logMsg(1, "\n%s" % str(cfm))
 #            print(cfm)
-            f1 = f1_score(y_test, y_pred)
-            logMsg(1, "f1_Score: %f" % f1)
+        f1 = f1_score(y_test, y_pred)
+        logMsg(1, "f1_Score: %f" % f1)
 
-            # XXX creates row for plotting
-            d.append(f1)
+        # XXX creates row for plotting
+        d.append(f1)
 
-            if float(f1) > 0.0:
-                print("f1_Score for %s : %s" % (matName[countName], str(f1)))
+        if float(f1) > 0.0:
+            print("f1_Score for %s : %s" % (matName[countName], str(f1)))
 #            if float(f1) >= 0.51:
-                ifgood = True
+            ifgood = True
 #                print("GOOD f1_Score for %s : %s" % (matName[countName], str(f1)))
-            countName += 1
+        countName += 1
+
     return ifgood, d
 
+# TODO FIXME clean this function up later
 ####
 # chooses the model to run 
 #   [and any other qualities of it (used for tuning only)]

@@ -91,7 +91,7 @@ def mapper(T, S):
 loopError = 0
 
 # randomizes the data in the main X matrix and cooresponding y labels
-def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(2/3)):
+def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioTest=(2/3)):
     randX, randy = [], []   # made this var before I realized it's your name; Randy P.
 
     # determine size of train, test, and validate matrices
@@ -102,11 +102,13 @@ def randData(X_data, y_data, ratioTrain=(2/3), ratioTest=(2/3)):
 #    numValid = numItems - (numTrain+numTest)    # rest of rest is validation
     
     # set random seed
-    rSeed = randint(0,numItems)
-#    rSeed = 6102
+    if not randSeed:
+        rSeed = randint(0,numItems)
+    else:
+        rSeed = randSeed
     logMsg(0, "Random seed = %d" % rSeed)
     seed(rSeed)
-
+    
     # produce a random arrangement
     order = np.arange(numItems)
     shuffle(order)

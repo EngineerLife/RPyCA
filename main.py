@@ -73,7 +73,6 @@ def runAnalysis(X, lamScale):
 
     logMsg(0, "OG SHAPES, X: %s  U: %s  E: %s  VT: %s  L: %s" % (str(X.shape), str(U.shape), str(E.shape), str(VT.shape), str(L.shape)))
 
-    # TODO
     # L^hat = u^hat dot E^hat dot VT^hat
     hatRows = len(E[E > 0])
     Uhat = U[:,:hatRows]
@@ -119,7 +118,7 @@ if __name__ == '__main__':
     logMsg(1,"CONFIGURATION USED: %s" % str(configType))
     mode = con['Mode']
     fileName = con['CSVFile']
-
+    seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
     # TODO combine these later so we only have 1 function
     # AKA create consistency in the csv file given.
     # E.G.: csv must be in form header, data, ..., data. Labels at beginning/end of column
@@ -149,10 +148,12 @@ if __name__ == '__main__':
     print("X SHAPE; feat shape", X.shape, len(fls))
 
     # randomizes data and creates separated matrices
-    [X1, X2, X3], ymat = randData(X, y, con['RatioTrainData'], con['RatioTestData'])
+    [X1, X2, X3], ymat = randData(X, y, seed, con['RatioTrainData'], con['RatioTestData'])
     
     # ML model to run
     toRun = [con['Models']]
+    if "all" == con['Models']:
+        toRun = ['rf','knn','svm','logreg','svm','dtree','nb','kmeans','gb']
     goodData = []  # XXX plotting
     howToRun = []
     if mode:        # mode = 1
@@ -163,6 +164,8 @@ if __name__ == '__main__':
         howToRun = frange(con['LambdaStartValue'], con['LambdaEndValue'], con['LambdaIncrValue'])
 
     for l in howToRun:
+#    l = con['LambdaStartValue']
+#    for m in toRun:
         logMsg(1, "Lambda: %s" % (str(l)))
         print("\n\nLAMBDA: ", l)
         
@@ -178,6 +181,7 @@ if __name__ == '__main__':
 #        print("S:\n%s\n%s" % (str(S1), str(SC1)))
 
         # test
+        # Equation: L2 = X2*(V)^hat*(VT)^hat
         X2VTT = np.dot(X2, VThat.T)
         L2 = np.dot(X2VTT, VThat)
         S2 = X2 - L2
@@ -185,30 +189,27 @@ if __name__ == '__main__':
 
         # ML/AI
         Xmat, Lmat, Smat, ymatX12 = [X1, X2], [L1, L2], [S1, S2], [ymat[0], ymat[1]]
-#        Lmat = [L1, L2]
-#        Smat = [S1, S2]
-#        ymatX12 = [ymat[0], ymat[1]]
 
-        res, dall = runModels(Xmat, Lmat, Smat, ymatX12, code=toRun)
-        
-        if res:
-            print("Validating...")
-            logMsg(1, "Validating GOOD Lambda: %s" % (str(l)))
+#        res, dall = runModels(Xmat, Lmat, Smat, ymatX12, code=toRun)
+        for m in toRun:
+            res, dall = runModels(Xmat, Lmat, Smat, ymatX12, code=m)
 
-            # validate
-            X3VTT = np.dot(X3, VThat.T)
-            L3 = np.dot(X3VTT, VThat)
-            S3 = X3 - L3
-            logMsg(0, "X3 SHAPES: X: %s  L: %s  S: %s" % (str(X3.shape), str(L3.shape), str(S3.shape)))
+            if res:
+                print("Validating...")
+                logMsg(1, "Validating GOOD Lambda: %s" % (str(l)))
 
-            # ML/AI
-            Xmat, Lmat, Smat, ymatX13 = [X1, X3], [L1, L3], [S1, S3], [ymat[0], ymat[2]]
-#            Lmat = [L1, L3]
-#            Smat = [S1, S3]
-#            ymatX13 = [ymat[0], ymat[2]]
+                # validate
+                X3VTT = np.dot(X3, VThat.T)
+                L3 = np.dot(X3VTT, VThat)
+                S3 = X3 - L3
+                logMsg(0, "X3 SHAPES: X: %s  L: %s  S: %s" % (str(X3.shape), str(L3.shape), str(S3.shape)))
 
-            res, dgood = runModels(Xmat, Lmat, Smat, ymatX13, code=toRun)
-            goodData.append(dgood)  # XXX used for plotting
+                # ML/AI
+                Xmat, Lmat, Smat, ymatX13 = [X1, X3], [L1, L3], [S1, S3], [ymat[0], ymat[2]]
+
+#                res, dgood = runModels(Xmat, Lmat, Smat, ymatX13, code=[toRun])
+                res, dgood = runModels(Xmat, Lmat, Smat, ymatX13, code=m)
+                goodData.append(dgood)  # XXX used for plotting
     exit(0)
 
     # XXX quick plot graph
