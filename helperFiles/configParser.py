@@ -6,6 +6,8 @@ from collections import OrderedDict
 
 # NOTE File path starts where main.py executes
 
+
+
 # TODO finish adding functionality for auto adding new configuration
 
 config = configparser.ConfigParser()
@@ -63,6 +65,11 @@ def readConfig(typ='DEFAULT'):
                        ('LambdaEndValue',float(configType['LambdaEndValue'])),
                        ('LambdaIncrValue',float(configType['LambdaIncrValue'])),                       
                        ('CSVFile',configType['CSVFile']),
+                       ('Header',configType['Header']),
+                       ('Labels',configType['Labels']),
+                       ('RowClmn',configType['RowClmn']),
+                       ('OneHot',configType['OneHot']),
+                       ('Skip',configType['Skip']),
                        ('RandomSeed',int(configType['randomSeed'])),
                        ('RatioTrainData',float(-1 if configType['RatioTrainData'] == '' else Fraction(configType['RatioTrainData']))),
                        ('RatioTestData',float(-1 if configType['RatioTestData'] == '' else Fraction(configType['RatioTestData']))),
@@ -90,11 +97,7 @@ def getConfigTypes():
 # sets the configuration variables for the run
 # TODO make this actually functional later. (OR add default auto run config???)
 def setConfig():
-    return readConfig("SVMTEST")
-#    return readConfig("LOGREGTEST")
-#   return readConfig("KNNTEST")
-#    return readConfig("ALLTEST")
-#    return readConfig("OGTEST")
+    return readConfig("MAIN")
     '''
     ready = False
     print("Available configurations:",getConfigTypes())

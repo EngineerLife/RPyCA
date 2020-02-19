@@ -76,8 +76,8 @@ def plotS(T, svd, srpca, maxRank, xname, x=None, log=False):
 def plotProp(mat, name, subx):
 #    fig, subx = plt.subplots(1,3)
 
-#    subx.matshow(mat)
-    subx.plot(mat, 'bo')
+    subx.matshow(mat)
+#    subx.plot(mat, 'bo')
 #    subx.set_ylim([0,1])
 
     subx.set_title(name)
@@ -87,6 +87,20 @@ def plotProp(mat, name, subx):
 
     subx.set_xlabel("Features")
     subx.set_ylabel("Packets")
+
+
+# TODO histograph plots for results
+def plotHist(ar, name, subx):
+    subx.hist(ar[0], label='x', color='#000000')
+    subx.hist(ar[1], label='concat ls', color='#FD7E00')
+    subx.hist(ar[2], label='concat xls', color='#4BBDDA')
+
+    subx.legend(loc='upper right')
+    subx.set_xlabel('F1 Score')
+#   subx.set_ylabel('# of Runs')
+    subx.set_title(name)
+
+
 
 
 # NOTE NOTE NOTE this is for proposal only!!!!!
@@ -130,5 +144,7 @@ plotter(S3,malPkts3,alpha,xname="Phase 3 w/ Lambda: "+str(l),bx=x3)
 #plotter(S1,mpc,alpha,xname="All Phases w/ LambdaScale: "+str(lam),bx=x1)
 #i += 1
 '''
+
+
 
 

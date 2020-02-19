@@ -5,14 +5,31 @@ from random import shuffle, randint, seed
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import OneHotEncoder
 from .logger import *
-from .fileHandler import save
+from .fileHandler import *
+
+# TODO update load func
+def preproc(fileName, header, labelsLoc, rowClmn, rSeed, ratioTrain, ratioTest, oneHot=[], skip=[]):
+#    y = loadLabels(fileName, header, labelsLoc)
+    X, featLabels, y = loadFile(fileName, header, labelsLoc, rowClmn, skip)
+    preOp = np.zeros(len(featLabels))
+    preOp[0] = 2    # TODO change l8r src port
+    preOp[5] = 2    # TODO change l8r dest port
+    for i in oneHot:
+       preOp[i] = 1
+    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
+    print("X SHAPE; feat shape", X.shape, len(fls))
+    return randData(X, y, rSeed, ratioTrain, ratioTest)
+
 
 # float range function
 def frange(start, stop, step):
+    ar = []
     i = start
     while i < stop:
-        yield i
+        ar.append(i)
+#        yield i
         i += step
+    return ar
 
 # DO need this; Flow Bytes/s literally has the word "Infinity" used...
 def cleanMat(M):
@@ -150,7 +167,7 @@ def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioTest=(2/3)):
             exit(1)
         logMsg(2, "Check failed for creating matrix sections! Revaluating...")
         return randData(X_data, y_data, ratioTrain, ratioTest)
-
+    
     # XXX checking y_test counts of 1:
 #    unique, counts = np.unique(y_test, return_counts=True)
 #    print(unique[1], counts[1])

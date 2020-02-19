@@ -20,6 +20,7 @@ import matplotlib.pyplot as plt
 from collections import Counter
 from sklearn.decomposition import PCA
 from helperFiles.sRPCAviaADMMFast import *
+from helperFiles.RPCA import *
 from helperFiles.logger import *
 from helperFiles.matrixOp import *
 from helperFiles.fileHandler import *
@@ -30,83 +31,7 @@ from helperFiles.configParser import *
 import pandas as pd     # XXX used for plotting only
 
 
-# function to run PCA and RPCA
-def runAnalysis(X, lamScale):
-    # SVD PCA
-#    u, s, vh = np.linalg.svd(X)
-#    print("PCA thru SVD Sigma matrix: ",s)
-
-    maxRank = np.linalg.matrix_rank(X)
-    print("Max Rank: ", maxRank)
-    logMsg(0, "Max Rank: %d" % maxRank)
-    T = np.asmatrix(X)  # gets shape of X
-    u, v, vecM, vecEpsilon = [], [], [], []
-
-    for i in range(T.shape[0]):
-        for j in range(T.shape[1]):
-            u.append(i)
-            v.append(j)
-            vecEpsilon.append(1e-5)     # NOTE original value is 1e-5
-            Mij = float(T[i,j])
-            vecM.append(Mij)
-
-    u = np.array(u)
-    v = np.array(v)
-    vecM = np.array(vecM)
-    vecEpsilon = np.array(vecEpsilon)
-
-#    print((1/math.sqrt(max(T.shape[0],T.shape[1]))))
-#    newLambda = (1/math.sqrt(max(T.shape[0],T.shape[1])))* lamScale
-#    print("Norm lambda: ", newLambda/lamScale)
-
-    scaleWant = lamScale/(1/math.sqrt(max(T.shape[0],T.shape[1])))
-#    print("LAMBDA SCALE WANT: ", lamScale/(1/math.sqrt(max(T.shape[0],T.shape[1]))))
-    logMsg(0, "Lambda Scale: %s" % (str(scaleWant)))
-
-    # B is not used, but needs to be stored in order to run sRPCA
-    [U, E, VT, S, B] = sRPCA(T.shape[0], T.shape[1], u, v, vecM, vecEpsilon, maxRank, lam=lamScale)
-
-    S = S.todense()
-    E = np.diag(E)
-    ue = np.dot(U, E)
-    L = np.dot(ue, VT)
-
-    logMsg(0, "OG SHAPES, X: %s  U: %s  E: %s  VT: %s  L: %s" % (str(X.shape), str(U.shape), str(E.shape), str(VT.shape), str(L.shape)))
-
-    # L^hat = u^hat dot E^hat dot VT^hat
-    hatRows = len(E[E > 0])
-    Uhat = U[:,:hatRows]
-    Ehat = np.diag(E[E > 0])
-    VThat = VT[:hatRows]
-    VTta = VT[hatRows:]
-
-    logMsg(0, "HAT SHAPES, Uhat: %s  Ehat: %s  VThat: %s  VTta: %s" % (str(Uhat.shape), str(Ehat.shape), str(VThat.shape), str(VTta.shape)))
-
-# TODO email haitao:
-#    xtx = np.dot(X.T, X)
-#    print(xtx.shape)
-    
-    warnings.filterwarnings('always')
-    if abs(np.mean(L)) < 0.001: # arbitrary value
-        logMsg(2, "L matrix seems to be empty.")
-        warnings.warn('L matrix seems to be empty.\n')
-    if abs(S.max()/np.mean(L)) < 0.01:  # arbitrary value
-        logMsg(2, "S matrix seems to be empty.")
-        warnings.warn('S matrix seems to be empty.\n')
-    warnings.filterwarnings('ignore')
-
-#    return S, X, s, E, L, maxRank  # used in old plotter
-    return S, L, VThat
-
 # !!!!!!TODO make the input for creating X the same (csv or something)
-
-# TODO TODO TODO:
-# When explaining data:
-#   take x and y data to show that using IP's as a feature makes it too easy
-#   get writing done-ish before next semester
-#       where chapters are complete
-#   add better docs
-
 
 
 # main function
@@ -116,59 +41,42 @@ if __name__ == '__main__':
     # Set log for debugging or other purposes (can be overridden)
     setLog(con['LogFile'])
     logMsg(1,"CONFIGURATION USED: %s" % str(configType))
+    # Set all other configuration variables
     mode = con['Mode']
     fileName = con['CSVFile']
+    header, labelsLoc, rowClmn = int(con['Header']), int(con['Labels']), int(con['RowClmn'])
+    onehot = toList(con['OneHot'])
+    skip = toList(con['Skip'])
     seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
-    # TODO combine these later so we only have 1 function
-    # AKA create consistency in the csv file given.
-    # E.G.: csv must be in form header, data, ..., data. Labels at beginning/end of column
-    # Create X and y
-#    if typ == "LLDOS":  # TODO remove this later
-        # retrieves malicious packet indexes
-#        malPkts1, malPkts2, malPkts3 = listLLDOSLabels("phase-all-MORE-counts.txt")
-        # puts all malicious packet lists into one
-#        y = createY(len(X), np.concatenate((malPkts1, malPkts2, malPkts3)))
-#        X = getLLDOSData(con['CSVFile'])   # loads and formats data from file
-#        newX = createMatrixProposal(X)  # This creates the matrix according to the OG Kathleen paper
- #   else:
-    
-    y = loadUNBLabels(fileName)
-    X, featLabels = loadUNBFile(fileName)
-#    preOp = [2,2,1,0]
-    preOp = np.zeros(len(featLabels))
-    preOp[0] = 2    # TODO change l8r src port
-    preOp[5] = 2    # TODO change l8r dest port
-    # TODO make this less manual. These are hardcoded for this data set
-    # these are being labeled for running thru 1-hot
-    for i in [6,36,37,38,39,49,50,51,52,53,54,55,56]:   # incremented due to dest ip additions
-#    for i in [2,32,33,34,35,45,46,47,48,49,50,51,52]:
-        preOp[i] = 1
-    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
-
-    print("X SHAPE; feat shape", X.shape, len(fls))
-
-    # randomizes data and creates separated matrices
-    [X1, X2, X3], ymat = randData(X, y, seed, con['RatioTrainData'], con['RatioTestData'])
-    
+    ratioTrain, ratioTest = con['RatioTrainData'], con['RatioTestData']
     # ML model to run
     toRun = [con['Models']]
     if "all" == con['Models']:
         toRun = ['rf','knn','svm','logreg','svm','dtree','nb','kmeans','gb']
-    goodData = []  # XXX plotting
+    
     howToRun = []
-    if mode:        # mode = 1
+    if mode == 1:
         howToRun = [con['LambdaStartValue']]
     elif mode == 2: # this is used for plotting
+        print("SUP")
         howToRun = [con['LambdaStartValue']] * 10
     else:           # default for finding a good lambda
         howToRun = frange(con['LambdaStartValue'], con['LambdaEndValue'], con['LambdaIncrValue'])
 
+    # ensures preprocessing happens at least once
+    # TODO look into if I could just randomize the random data again instead???
+    pre = True
+
+    # main loop
+    # TODO normalize each matrix with X1 things (see paper)
     for l in howToRun:
-#    l = con['LambdaStartValue']
-#    for m in toRun:
+        if not mode == 0 or pre:
+            [X1, X2, X3], ymat = preproc(fileName, header, labelsLoc, rowClmn, seed, ratioTrain, ratioTest, onehot, skip)
+            pre = False     # done preprocessing for mode 0 only!
+
         logMsg(1, "Lambda: %s" % (str(l)))
         print("\n\nLAMBDA: ", l)
-        
+
         # runs RPCA
         S1, L1, VThat = runAnalysis(X1, l)
         logMsg(0, "X1 SHAPES: X: %s  L: %s  S: %s" % (str(X1.shape), str(L1.shape), str(S1.shape)))
@@ -180,24 +88,21 @@ if __name__ == '__main__':
 #        print("L:\n%s\n%s" % (str(L1), str(LC1)))
 #        print("S:\n%s\n%s" % (str(S1), str(SC1)))
 
-        # test
-        # Equation: L2 = X2*(V)^hat*(VT)^hat
+        # Test Matrix;   Equation: L2 = X2*(V)^hat*(VT)^hat
         X2VTT = np.dot(X2, VThat.T)
         L2 = np.dot(X2VTT, VThat)
         S2 = X2 - L2
         logMsg(0, "X2 SHAPES: X: %s  L: %s  S: %s" % (str(X2.shape), str(L2.shape), str(S2.shape)))
 
-        # ML/AI
-        Xmat, Lmat, Smat, ymatX12 = [X1, X2], [L1, L2], [S1, S2], [ymat[0], ymat[1]]
-
-#        res, dall = runModels(Xmat, Lmat, Smat, ymatX12, code=toRun)
         for m in toRun:
+            # ML/AI
+            Xmat, Lmat, Smat, ymatX12 = [X1, X2], [L1, L2], [S1, S2], [ymat[0], ymat[1]]
             res, dall = runModels(Xmat, Lmat, Smat, ymatX12, code=m)
 
-            if res:
+            if res:     # Validates ONLY if a good f1 score occurred 
                 print("Validating...")
                 logMsg(1, "Validating GOOD Lambda: %s" % (str(l)))
-
+    
                 # validate
                 X3VTT = np.dot(X3, VThat.T)
                 L3 = np.dot(X3VTT, VThat)
@@ -206,21 +111,42 @@ if __name__ == '__main__':
 
                 # ML/AI
                 Xmat, Lmat, Smat, ymatX13 = [X1, X3], [L1, L3], [S1, S3], [ymat[0], ymat[2]]
-
-#                res, dgood = runModels(Xmat, Lmat, Smat, ymatX13, code=[toRun])
                 res, dgood = runModels(Xmat, Lmat, Smat, ymatX13, code=m)
-                goodData.append(dgood)  # XXX used for plotting
     exit(0)
 
-    # XXX quick plot graph
-    # TODO make plotter function in plotter.py
-    # TODO use histograms
-    # (each matrix data in clmn (X, LS, XLS), each run in rows)
-    df = pd.DataFrame(goodData, columns=['X', 'CONCAT LS', 'CONCAT XLS'])
-    boxplot = df.boxplot(column=['X', 'CONCAT LS', 'CONCAT XLS'])
-    plt.title('Validation Matrix F1 Scores')
-    plt.ylabel("F1 Scores")
-    plt.show()
-#    plt.savefig('goodData0.08.png')
-#    plt.savefig('goodData0.1.png')
-    plt.savefig('final_f1_scores.png')
+
+    # PLOT for training lambda
+    '''
+                
+                    fig = plt.figure()
+#                    fig.subplots_adjust(left=0.07, bottom=0.21, right= 0.95, top=0.83, wspace=0.36, hspace=0.2)
+                    testHist = fig.add_subplot(1, 2, 1)
+                    validHist = fig.add_subplot(1, 2, 2)
+                    plotHist(dall, "Testing Set", testHist)
+                    plotHist(dgood, "Validation Set", validHist)
+                    name = "runFig" + str(j) + ".png"
+                    plt.savefig(name)
+#                    plt.show()
+
+                    plt.hist(dall[0], label='x')
+                    plt.hist(histdls, label='concat ls')
+                    plt.hist(histdxls, label='concat xls')
+                    plt.legend(loc='upper right')
+                    plt.xlabel('F1 Score')
+#                    plt.ylabel('# of Runs')
+                    plt.title('Testing Set')
+                    name = "testSet" + str(j) + ".png"
+                    plt.savefig(name)
+#                    plt.show()
+
+                    plt.hist(gooddx, label='x')
+                    plt.hist(gooddls, label='concat ls')
+                    plt.hist(gooddxls, label='concat xls')
+                    plt.legend(loc='upper right')
+                    plt.xlabel('F1 Score')
+#                    plt.ylabel('# of Runs')
+                    plt.title('Validation Set')
+                    name = "validateSet" + str(j) + ".png"
+                    plt.savefig(name)
+#                    plt.show()
+                    '''
