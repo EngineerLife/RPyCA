@@ -878,3 +878,448 @@ Actual Packet Type
 2020-02-19 15:54:20,115  DEBUG: criterion1 is the constraint
 2020-02-19 15:54:20,115  DEBUG: criterion2 is the solution
 2020-02-19 15:54:20,115  DEBUG: iteration criterion1 epsilon1 criterion2 epsilon2 rho      mu
+2020-02-28 14:29:03,496  INFO: Run started.
+2020-02-28 14:29:03,496  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:29:03,500  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:29:04,204  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:29:04,219  DEBUG: Random seed = 720
+2020-02-28 14:29:04,242  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:29:04,242  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:29:04,242  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:29:04,242  DEBUG: y_train class counts: (array([0, 1]), array([2679,   21]))
+2020-02-28 14:29:04,243  DEBUG: y_test class counts: (array([0, 1]), array([2679,   21]))
+2020-02-28 14:29:04,243  DEBUG: y_valid class counts: (array([0, 1]), array([2672,   28]))
+2020-02-28 14:29:04,243  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:29:04,244  INFO: Lambda: 0.005
+2020-02-28 14:40:13,978  INFO: Run started.
+2020-02-28 14:40:13,978  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:40:13,979  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:40:14,662  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:40:14,675  DEBUG: Random seed = 886
+2020-02-28 14:40:14,697  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:40:14,698  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:40:14,698  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:40:14,698  DEBUG: y_train class counts: (array([0, 1]), array([2679,   21]))
+2020-02-28 14:40:14,698  DEBUG: y_test class counts: (array([0, 1]), array([2671,   29]))
+2020-02-28 14:40:14,698  DEBUG: y_valid class counts: (array([0, 1]), array([2680,   20]))
+2020-02-28 14:40:14,699  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:40:14,699  INFO: Lambda: 0.005
+2020-02-28 14:40:48,580  INFO: Run started.
+2020-02-28 14:40:48,580  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:40:48,580  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:40:49,265  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:40:49,278  DEBUG: Random seed = 4190
+2020-02-28 14:40:49,300  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:40:49,300  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:40:49,300  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:40:49,300  DEBUG: y_train class counts: (array([0, 1]), array([2676,   24]))
+2020-02-28 14:40:49,301  DEBUG: y_test class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 14:40:49,301  DEBUG: y_valid class counts: (array([0, 1]), array([2681,   19]))
+2020-02-28 14:40:49,301  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:40:49,302  INFO: Lambda: 0.005
+2020-02-28 14:41:35,615  INFO: Run started.
+2020-02-28 14:41:35,615  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:41:35,615  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:41:36,280  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:41:36,293  DEBUG: Random seed = 150
+2020-02-28 14:41:36,315  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:41:36,315  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:41:36,315  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:41:36,316  DEBUG: y_train class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 14:41:36,316  DEBUG: y_test class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 14:41:36,316  DEBUG: y_valid class counts: (array([0, 1]), array([2684,   16]))
+2020-02-28 14:41:36,316  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:41:36,317  INFO: Lambda: 0.005
+2020-02-28 14:42:12,290  INFO: Run started.
+2020-02-28 14:42:12,291  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:42:12,291  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:42:12,966  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:42:12,979  DEBUG: Random seed = 2537
+2020-02-28 14:42:13,001  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:42:13,001  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:42:13,001  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:42:13,001  DEBUG: y_train class counts: (array([0, 1]), array([2680,   20]))
+2020-02-28 14:42:13,001  DEBUG: y_test class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 14:42:13,002  DEBUG: y_valid class counts: (array([0, 1]), array([2677,   23]))
+2020-02-28 14:42:13,002  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:42:13,002  INFO: Lambda: 0.005
+2020-02-28 14:53:37,197  INFO: Run started.
+2020-02-28 14:53:37,197  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:53:37,197  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:53:37,876  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:53:37,889  DEBUG: Random seed = 3108
+2020-02-28 14:53:37,912  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:53:37,912  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:53:37,912  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:53:37,912  DEBUG: y_train class counts: (array([0, 1]), array([2681,   19]))
+2020-02-28 14:53:37,912  DEBUG: y_test class counts: (array([0, 1]), array([2675,   25]))
+2020-02-28 14:53:37,913  DEBUG: y_valid class counts: (array([0, 1]), array([2674,   26]))
+2020-02-28 14:53:37,913  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:53:37,914  INFO: Lambda: 0.005
+2020-02-28 14:55:22,051  INFO: Run started.
+2020-02-28 14:55:22,051  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:55:22,051  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:55:22,726  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:55:22,743  DEBUG: Random seed = 5258
+2020-02-28 14:55:22,769  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:55:22,769  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:55:22,769  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:55:22,769  DEBUG: y_train class counts: (array([0, 1]), array([2678,   22]))
+2020-02-28 14:55:22,770  DEBUG: y_test class counts: (array([0, 1]), array([2678,   22]))
+2020-02-28 14:55:22,770  DEBUG: y_valid class counts: (array([0, 1]), array([2674,   26]))
+2020-02-28 14:55:22,770  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:55:22,771  INFO: Lambda: 0.005
+2020-02-28 14:57:40,253  INFO: Run started.
+2020-02-28 14:57:40,254  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:57:40,254  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:57:40,932  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:57:40,946  DEBUG: Random seed = 642
+2020-02-28 14:57:40,970  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:57:40,970  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:57:40,970  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:57:40,970  DEBUG: y_train class counts: (array([0, 1]), array([2680,   20]))
+2020-02-28 14:57:40,970  DEBUG: y_test class counts: (array([0, 1]), array([2677,   23]))
+2020-02-28 14:57:40,971  DEBUG: y_valid class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 14:57:40,971  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:57:40,971  INFO: Lambda: 0.005
+2020-02-28 14:58:33,980  INFO: Run started.
+2020-02-28 14:58:33,980  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:58:33,980  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:58:34,646  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:58:34,662  DEBUG: Random seed = 546
+2020-02-28 14:58:34,684  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:58:34,685  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:58:34,685  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:58:34,685  DEBUG: y_train class counts: (array([0, 1]), array([2674,   26]))
+2020-02-28 14:58:34,685  DEBUG: y_test class counts: (array([0, 1]), array([2678,   22]))
+2020-02-28 14:58:34,685  DEBUG: y_valid class counts: (array([0, 1]), array([2678,   22]))
+2020-02-28 14:58:34,686  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:58:34,686  INFO: Lambda: 0.005
+2020-02-28 14:59:24,792  INFO: Run started.
+2020-02-28 14:59:24,792  INFO: CONFIGURATION USED: MAIN
+2020-02-28 14:59:24,793  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 14:59:25,461  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 14:59:25,477  DEBUG: Random seed = 3668
+2020-02-28 14:59:25,500  DEBUG: X_train size: (2700, 118)
+2020-02-28 14:59:25,500  DEBUG: X_test size: (2700, 118)
+2020-02-28 14:59:25,501  DEBUG: X_valid size: (2700, 118)
+2020-02-28 14:59:25,501  DEBUG: y_train class counts: (array([0, 1]), array([2677,   23]))
+2020-02-28 14:59:25,501  DEBUG: y_test class counts: (array([0, 1]), array([2676,   24]))
+2020-02-28 14:59:25,501  DEBUG: y_valid class counts: (array([0, 1]), array([2677,   23]))
+2020-02-28 14:59:25,501  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 14:59:25,502  INFO: Lambda: 0.005
+2020-02-28 15:00:33,805  INFO: Run started.
+2020-02-28 15:00:33,805  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:00:33,806  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:00:34,459  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:00:34,474  DEBUG: Random seed = 5413
+2020-02-28 15:00:34,497  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:00:34,498  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:00:34,498  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:00:34,498  DEBUG: y_train class counts: (array([0, 1]), array([2678,   22]))
+2020-02-28 15:00:34,498  DEBUG: y_test class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 15:00:34,499  DEBUG: y_valid class counts: (array([0, 1]), array([2679,   21]))
+2020-02-28 15:00:34,499  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:00:34,499  INFO: Lambda: 0.005
+2020-02-28 15:05:00,799  INFO: Run started.
+2020-02-28 15:05:00,799  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:05:00,799  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:05:01,531  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:05:01,545  DEBUG: Random seed = 4025
+2020-02-28 15:05:01,567  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:05:01,567  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:05:01,567  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:05:01,568  DEBUG: y_train class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 15:05:01,568  DEBUG: y_test class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 15:05:01,568  DEBUG: y_valid class counts: (array([0, 1]), array([2684,   16]))
+2020-02-28 15:05:01,568  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:05:01,569  INFO: Lambda: 0.005
+2020-02-28 15:05:24,146  INFO: Run started.
+2020-02-28 15:05:24,147  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:05:24,147  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:05:24,834  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:05:24,847  DEBUG: Random seed = 7122
+2020-02-28 15:05:24,867  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:05:24,867  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:05:24,867  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:05:24,868  DEBUG: y_train class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 15:05:24,868  DEBUG: y_test class counts: (array([0, 1]), array([2675,   25]))
+2020-02-28 15:05:24,868  DEBUG: y_valid class counts: (array([0, 1]), array([2682,   18]))
+2020-02-28 15:05:24,868  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:05:24,869  INFO: Lambda: 0.005
+2020-02-28 15:12:19,267  INFO: Run started.
+2020-02-28 15:12:19,267  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:12:19,267  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:12:20,051  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:12:20,065  DEBUG: Random seed = 3602
+2020-02-28 15:12:20,085  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:12:20,085  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:12:20,085  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:12:20,086  DEBUG: y_train class counts: (array([0, 1]), array([2677,   23]))
+2020-02-28 15:12:20,086  DEBUG: y_test class counts: (array([0, 1]), array([2674,   26]))
+2020-02-28 15:12:20,086  DEBUG: y_valid class counts: (array([0, 1]), array([2679,   21]))
+2020-02-28 15:12:20,086  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:12:20,087  INFO: Lambda: 0.005
+2020-02-28 15:13:41,105  INFO: Run started.
+2020-02-28 15:13:41,105  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:13:41,106  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:13:41,929  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:13:41,943  DEBUG: Random seed = 6344
+2020-02-28 15:13:41,965  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:13:41,966  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:13:41,966  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:13:41,966  DEBUG: y_train class counts: (array([0, 1]), array([2675,   25]))
+2020-02-28 15:13:41,966  DEBUG: y_test class counts: (array([0, 1]), array([2679,   21]))
+2020-02-28 15:13:41,967  DEBUG: y_valid class counts: (array([0, 1]), array([2676,   24]))
+2020-02-28 15:13:41,967  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:13:41,967  INFO: Lambda: 0.005
+2020-02-28 15:15:54,996  INFO: Run started.
+2020-02-28 15:15:54,996  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:15:54,996  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:15:55,715  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:15:55,729  DEBUG: Random seed = 14
+2020-02-28 15:15:55,752  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:15:55,752  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:15:55,752  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:15:55,753  DEBUG: y_train class counts: (array([0, 1]), array([2673,   27]))
+2020-02-28 15:15:55,754  DEBUG: y_test class counts: (array([0, 1]), array([2680,   20]))
+2020-02-28 15:15:55,754  DEBUG: y_valid class counts: (array([0, 1]), array([2677,   23]))
+2020-02-28 15:15:55,754  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:15:55,755  INFO: Lambda: 0.005
+2020-02-28 15:16:01,493  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:16:01,494  INFO: # of features being kept: (2700, 118)
+2020-02-28 15:19:59,515  INFO: Run started.
+2020-02-28 15:19:59,515  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:19:59,515  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:20:00,248  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:20:00,261  DEBUG: Random seed = 4455
+2020-02-28 15:20:00,289  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:20:00,290  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:20:00,290  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:20:00,290  DEBUG: y_train class counts: (array([0, 1]), array([2682,   18]))
+2020-02-28 15:20:00,290  DEBUG: y_test class counts: (array([0, 1]), array([2669,   31]))
+2020-02-28 15:20:00,290  DEBUG: y_valid class counts: (array([0, 1]), array([2679,   21]))
+2020-02-28 15:20:00,291  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:20:00,291  INFO: Lambda: 0.005
+2020-02-28 15:20:06,279  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:20:06,279  INFO: # of features being kept: (2700, 118)
+2020-02-28 15:20:06,286  DEBUG: PROJECTION SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:20:06,365  INFO: ************ SVM ************
+2020-02-28 15:20:06,365  INFO: FOR MATRIX: X
+2020-02-28 15:20:06,393  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2669
+1                        31
+2020-02-28 15:20:06,394  INFO: f1_Score: 0.000000
+2020-02-28 15:20:06,506  INFO: ************ SVM ************
+2020-02-28 15:20:06,507  INFO: FOR MATRIX: CONCAT LS
+2020-02-28 15:20:06,523  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2669
+1                        31
+2020-02-28 15:20:06,524  INFO: f1_Score: 0.000000
+2020-02-28 15:20:06,672  INFO: ************ SVM ************
+2020-02-28 15:20:06,672  INFO: FOR MATRIX: CONCAT XLS
+2020-02-28 15:20:06,688  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2669
+1                        31
+2020-02-28 15:20:06,689  INFO: f1_Score: 0.000000
+2020-02-28 15:23:03,722  INFO: Run started.
+2020-02-28 15:23:03,722  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:23:03,722  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:23:04,446  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:23:04,467  DEBUG: Random seed = 3314
+2020-02-28 15:23:04,497  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:23:04,497  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:23:04,497  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:23:04,497  DEBUG: y_train class counts: (array([0, 1]), array([2676,   24]))
+2020-02-28 15:23:04,498  DEBUG: y_test class counts: (array([0, 1]), array([2670,   30]))
+2020-02-28 15:23:04,498  DEBUG: y_valid class counts: (array([0, 1]), array([2684,   16]))
+2020-02-28 15:23:04,498  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:23:04,499  INFO: Lambda: 0.005
+2020-02-28 15:23:10,689  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:23:10,689  INFO: # of features being kept: (2700, 118)
+2020-02-28 15:23:10,696  DEBUG: PROJECTION SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:23:10,787  INFO: ************ SVM ************
+2020-02-28 15:23:10,787  INFO: FOR MATRIX: X
+2020-02-28 15:23:10,810  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2670   0
+1                         8  22
+2020-02-28 15:23:10,811  INFO: f1_Score: 0.846154
+2020-02-28 15:23:10,947  INFO: ************ SVM ************
+2020-02-28 15:23:10,947  INFO: FOR MATRIX: CONCAT LS
+2020-02-28 15:23:10,964  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2670
+1                        30
+2020-02-28 15:23:10,965  INFO: f1_Score: 0.000000
+2020-02-28 15:23:11,163  INFO: ************ SVM ************
+2020-02-28 15:23:11,164  INFO: FOR MATRIX: CONCAT XLS
+2020-02-28 15:23:11,186  INFO: 
+Predicted Packet Type     0   1
+Actual Packet Type             
+0                      2670   0
+1                        10  20
+2020-02-28 15:23:11,186  INFO: f1_Score: 0.800000
+2020-02-28 15:23:11,187  INFO: Validating GOOD Lambda: 0.005
+2020-02-28 15:23:11,195  DEBUG: PROJECTION SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:23:37,396  INFO: Run started.
+2020-02-28 15:23:37,396  INFO: CONFIGURATION USED: MAIN
+2020-02-28 15:23:37,396  INFO: FEATURES USED [' Source Port', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination IP', ' Destination Port', ' Protocol', ' Flow Duration', ' Total Fwd Packets', ' Total Backward Packets', 'Total Length of Fwd Packets', ' Total Length of Bwd Packets', ' Fwd Packet Length Max', ' Fwd Packet Length Min', ' Fwd Packet Length Mean', ' Fwd Packet Length Std', 'Bwd Packet Length Max', ' Bwd Packet Length Min', ' Bwd Packet Length Mean', ' Bwd Packet Length Std', 'Flow Bytes/s', ' Flow Packets/s', ' Flow IAT Mean', ' Flow IAT Std', ' Flow IAT Max', ' Flow IAT Min', 'Fwd IAT Total', ' Fwd IAT Mean', ' Fwd IAT Std', ' Fwd IAT Max', ' Fwd IAT Min', 'Bwd IAT Total', ' Bwd IAT Mean', ' Bwd IAT Std', ' Bwd IAT Max', ' Bwd IAT Min', 'Fwd PSH Flags', ' Bwd PSH Flags', ' Fwd URG Flags', ' Bwd URG Flags', ' Fwd Header Length', ' Bwd Header Length', 'Fwd Packets/s', ' Bwd Packets/s', ' Min Packet Length', ' Max Packet Length', ' Packet Length Mean', ' Packet Length Std', ' Packet Length Variance', 'FIN Flag Count', ' SYN Flag Count', ' RST Flag Count', ' PSH Flag Count', ' ACK Flag Count', ' URG Flag Count', ' CWE Flag Count', ' ECE Flag Count', ' Down/Up Ratio', ' Average Packet Size', ' Avg Fwd Segment Size', ' Avg Bwd Segment Size', ' Fwd Header Length', 'Fwd Avg Bytes/Bulk', ' Fwd Avg Packets/Bulk', ' Fwd Avg Bulk Rate', ' Bwd Avg Bytes/Bulk', ' Bwd Avg Packets/Bulk', 'Bwd Avg Bulk Rate', 'Subflow Fwd Packets', ' Subflow Fwd Bytes', ' Subflow Bwd Packets', ' Subflow Bwd Bytes', 'Init_Win_bytes_forward', ' Init_Win_bytes_backward', ' act_data_pkt_fwd', ' min_seg_size_forward', 'Active Mean', ' Active Std', ' Active Max', ' Active Min', 'Idle Mean', ' Idle Std', ' Idle Max', ' Idle Min']
+2020-02-28 15:23:38,150  INFO: Saving final X matrix to helperFiles/files/normedX
+2020-02-28 15:23:38,163  DEBUG: Random seed = 6587
+2020-02-28 15:23:38,187  DEBUG: X_train size: (2700, 118)
+2020-02-28 15:23:38,187  DEBUG: X_test size: (2700, 118)
+2020-02-28 15:23:38,187  DEBUG: X_valid size: (2700, 118)
+2020-02-28 15:23:38,188  DEBUG: y_train class counts: (array([0, 1]), array([2682,   18]))
+2020-02-28 15:23:38,188  DEBUG: y_test class counts: (array([0, 1]), array([2667,   33]))
+2020-02-28 15:23:38,188  DEBUG: y_valid class counts: (array([0, 1]), array([2681,   19]))
+2020-02-28 15:23:38,188  INFO: Randomizaiton of X and y matrices complete.
+2020-02-28 15:23:38,189  INFO: Lambda: 0.005
+2020-02-28 15:23:45,091  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:23:45,091  INFO: # of features being kept: (2700, 118)
+2020-02-28 15:23:45,099  DEBUG: PROJECTION SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:23:45,165  INFO: ************ SVM ************
+2020-02-28 15:23:45,166  INFO: FOR MATRIX: X
+2020-02-28 15:23:45,193  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:23:45,194  INFO: f1_Score: 0.000000
+2020-02-28 15:23:45,310  INFO: ************ SVM ************
+2020-02-28 15:23:45,310  INFO: FOR MATRIX: CONCAT LS
+2020-02-28 15:23:45,326  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:23:45,327  INFO: f1_Score: 0.000000
+2020-02-28 15:23:45,487  INFO: ************ SVM ************
+2020-02-28 15:23:45,487  INFO: FOR MATRIX: CONCAT XLS
+2020-02-28 15:23:45,505  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:23:45,506  INFO: f1_Score: 0.000000
+2020-02-28 15:23:45,506  INFO: Lambda: 0.006
+2020-02-28 15:23:52,857  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:23:52,857  INFO: # of features being kept: (2700, 118)
+2020-02-28 15:23:52,864  DEBUG: PROJECTION SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:23:52,959  INFO: ************ SVM ************
+2020-02-28 15:23:52,960  INFO: FOR MATRIX: X
+2020-02-28 15:23:52,979  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:23:52,980  INFO: f1_Score: 0.000000
+2020-02-28 15:23:53,090  INFO: ************ SVM ************
+2020-02-28 15:23:53,090  INFO: FOR MATRIX: CONCAT LS
+2020-02-28 15:23:53,119  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:23:53,121  INFO: f1_Score: 0.000000
+2020-02-28 15:23:53,284  INFO: ************ SVM ************
+2020-02-28 15:23:53,284  INFO: FOR MATRIX: CONCAT XLS
+2020-02-28 15:23:53,300  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:23:53,301  INFO: f1_Score: 0.000000
+2020-02-28 15:23:53,301  INFO: Lambda: 0.007
+2020-02-28 15:24:01,083  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:24:01,083  INFO: # of features being kept: (2700, 118)
+2020-02-28 15:24:01,091  DEBUG: PROJECTION SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:24:01,198  INFO: ************ SVM ************
+2020-02-28 15:24:01,198  INFO: FOR MATRIX: X
+2020-02-28 15:24:01,214  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:01,215  INFO: f1_Score: 0.000000
+2020-02-28 15:24:01,325  INFO: ************ SVM ************
+2020-02-28 15:24:01,325  INFO: FOR MATRIX: CONCAT LS
+2020-02-28 15:24:01,341  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:01,343  INFO: f1_Score: 0.000000
+2020-02-28 15:24:01,514  INFO: ************ SVM ************
+2020-02-28 15:24:01,514  INFO: FOR MATRIX: CONCAT XLS
+2020-02-28 15:24:01,533  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:01,534  INFO: f1_Score: 0.000000
+2020-02-28 15:24:01,534  INFO: Lambda: 0.008
+2020-02-28 15:24:10,825  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:24:10,825  INFO: # of features being kept: (2700, 118)
+2020-02-28 15:24:10,833  DEBUG: PROJECTION SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:24:10,893  INFO: ************ SVM ************
+2020-02-28 15:24:10,893  INFO: FOR MATRIX: X
+2020-02-28 15:24:10,916  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:10,918  INFO: f1_Score: 0.000000
+2020-02-28 15:24:11,028  INFO: ************ SVM ************
+2020-02-28 15:24:11,028  INFO: FOR MATRIX: CONCAT LS
+2020-02-28 15:24:11,045  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:11,046  INFO: f1_Score: 0.000000
+2020-02-28 15:24:11,211  INFO: ************ SVM ************
+2020-02-28 15:24:11,211  INFO: FOR MATRIX: CONCAT XLS
+2020-02-28 15:24:11,229  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:11,230  INFO: f1_Score: 0.000000
+2020-02-28 15:24:11,231  INFO: Lambda: 0.009000000000000001
+2020-02-28 15:24:21,241  DEBUG: X1 SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:24:21,241  INFO: # of features being kept: (2700, 118)
+2020-02-28 15:24:21,248  DEBUG: PROJECTION SHAPES: X: (2700, 118)  L: (2700, 118)  S: (2700, 118)
+2020-02-28 15:24:21,315  INFO: ************ SVM ************
+2020-02-28 15:24:21,315  INFO: FOR MATRIX: X
+2020-02-28 15:24:21,334  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:21,336  INFO: f1_Score: 0.000000
+2020-02-28 15:24:21,476  INFO: ************ SVM ************
+2020-02-28 15:24:21,476  INFO: FOR MATRIX: CONCAT LS
+2020-02-28 15:24:21,501  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:21,504  INFO: f1_Score: 0.000000
+2020-02-28 15:24:21,681  INFO: ************ SVM ************
+2020-02-28 15:24:21,681  INFO: FOR MATRIX: CONCAT XLS
+2020-02-28 15:24:21,704  INFO: 
+Predicted Packet Type     0
+Actual Packet Type         
+0                      2667
+1                        33
+2020-02-28 15:24:21,705  INFO: f1_Score: 0.000000
+2020-02-28 15:24:21,706  INFO: Lambda: 0.010000000000000002

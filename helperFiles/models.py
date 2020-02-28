@@ -104,7 +104,7 @@ def rf(X_train, X_test, y_train):#, maxDepth, nEst, randState):
     return y_pred
 
 ####
-# Gradient Boosting????
+# Gradient Boosting
 ####
 def gb(X_train, X_test, y_train):
     clf = GradientBoostingClassifier()
@@ -158,16 +158,16 @@ def findOptVal(regr, X_train, y_train):
 #          code defaults to empty (all models run) or contains codes for specific ones to run
 #          tune if we are tuning the model with the data to find optimal values
 #   Output: Prints confusion matricies for each model and f1_scores
-def runModels(X, L, S, ymats, code='', tune=False):
+def runModels(X, LS, XLS, ymats, code='', tune=False):
     y_train, y_test = ymats[0], ymats[1]
 #    print(y_train.shape, y_test.shape)
 
-    LStrain = np.concatenate((L[0],S[0]), axis=1)
-    XLStrain = np.concatenate((X[0], L[0], S[0]), axis=1)
-    LStest = np.concatenate((L[1],S[1]), axis=1)
-    XLStest = np.concatenate((X[1], L[1], S[1]), axis=1)
-    train = [X[0], LStrain, XLStrain]     # holds data matricies to run models on
-    test = [X[1], LStest, XLStest]
+#    LStrain = np.concatenate((L[0],S[0]), axis=1)
+#    XLStrain = np.concatenate((X[0], L[0], S[0]), axis=1)
+#    LStest = np.concatenate((L[1],S[1]), axis=1)
+#    XLStest = np.concatenate((X[1], L[1], S[1]), axis=1)
+    train = [X[0], LS[0], XLS[0]]     # holds data matricies to run models on
+    test = [X[1], LS[1], XLS[1]]
 
     matName = ["X", "CONCAT LS", "CONCAT XLS"]
     if not code:

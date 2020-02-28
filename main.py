@@ -16,11 +16,12 @@
 
 import math, sys, csv, ast, re, warnings
 import numpy as np
-import matplotlib.pyplot as plt
-from collections import Counter
-from sklearn.decomposition import PCA
-from helperFiles.sRPCAviaADMMFast import *
-from helperFiles.RPCA import *
+import rpyca as rp
+#import matplotlib.pyplot as plt
+#from collections import Counter
+#from sklearn.decomposition import PCA
+#from helperFiles.sRPCAviaADMMFast import *
+#from helperFiles.RPCA import *
 from helperFiles.logger import *
 from helperFiles.matrixOp import *
 from helperFiles.fileHandler import *
@@ -78,9 +79,10 @@ if __name__ == '__main__':
         print("\n\nLAMBDA: ", l)
 
         # runs RPCA
-        S1, L1, VThat = runAnalysis(X1, l)
-        logMsg(0, "X1 SHAPES: X: %s  L: %s  S: %s" % (str(X1.shape), str(L1.shape), str(S1.shape)))
-
+#        S1, L1, VThat = runAnalysis(X1, l)
+        [LS1, LS2], [XLS1, XLS2] = rp.rpca(X1, X2, l)
+#        logMsg(0, "X1 SHAPES: X: %s  L: %s  S: %s" % (str(X1.shape), str(L1.shape), str(S1.shape)))
+        
         # CHECK for S1 and L1
 #        X1VTT = np.dot(X1, VThat.T)
 #        LC1 = np.dot(X1VTT, VThat)
@@ -89,29 +91,31 @@ if __name__ == '__main__':
 #        print("S:\n%s\n%s" % (str(S1), str(SC1)))
 
         # Test Matrix;   Equation: L2 = X2*(V)^hat*(VT)^hat
-        X2VTT = np.dot(X2, VThat.T)
-        L2 = np.dot(X2VTT, VThat)
-        S2 = X2 - L2
-        logMsg(0, "X2 SHAPES: X: %s  L: %s  S: %s" % (str(X2.shape), str(L2.shape), str(S2.shape)))
+#        X2VTT = np.dot(X2, VThat.T)
+#        L2 = np.dot(X2VTT, VThat)
+#        S2 = X2 - L2
+#        logMsg(0, "X2 SHAPES: X: %s  L: %s  S: %s" % (str(X2.shape), str(L2.shape), str(S2.shape)))
 
         for m in toRun:
             # ML/AI
-            Xmat, Lmat, Smat, ymatX12 = [X1, X2], [L1, L2], [S1, S2], [ymat[0], ymat[1]]
-            res, dall = runModels(Xmat, Lmat, Smat, ymatX12, code=m)
-
+            Xmat, LSmat, XLSmat, ymatX12 = [X1, X2], [LS1, LS2], [XLS1, XLS2], [ymat[0], ymat[1]]
+#            Xmat, Lmat, Smat, ymatX12 = [X1, X2], [L1, L2], [S1, S2], [ymat[0], ymat[1]]
+            res, dall = runModels(Xmat, LSmat, XLSmat, ymatX12, code=m)
             if res:     # Validates ONLY if a good f1 score occurred 
                 print("Validating...")
                 logMsg(1, "Validating GOOD Lambda: %s" % (str(l)))
     
                 # validate
-                X3VTT = np.dot(X3, VThat.T)
-                L3 = np.dot(X3VTT, VThat)
-                S3 = X3 - L3
-                logMsg(0, "X3 SHAPES: X: %s  L: %s  S: %s" % (str(X3.shape), str(L3.shape), str(S3.shape)))
+#                X3VTT = np.dot(X3, VThat.T)
+#                L3 = np.dot(X3VTT, VThat)
+#                S3 = X3 - L3
+                [LS1, LS3], [XLS1, XLS3] = rp.project(X1, X3)
+#                logMsg(0, "X3 SHAPES: X: %s  L: %s  S: %s" % (str(X3.shape), str(L3.shape), str(S3.shape)))
 
                 # ML/AI
-                Xmat, Lmat, Smat, ymatX13 = [X1, X3], [L1, L3], [S1, S3], [ymat[0], ymat[2]]
-                res, dgood = runModels(Xmat, Lmat, Smat, ymatX13, code=m)
+                Xmat, LSmat, XLSmat, ymatX13 = [X1, X3], [LS1, LS3], [XLS1, XLS3], [ymat[0], ymat[2]]
+#                Xmat, Lmat, Smat, ymatX13 = [X1, X3], [L1, L3], [S1, S3], [ymat[0], ymat[2]]
+                res, dgood = runModels(Xmat, LSmat, XLSmat, ymatX13, code=m)
     exit(0)
 
 
