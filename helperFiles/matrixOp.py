@@ -1,5 +1,6 @@
 import math, sys, ast
 import numpy as np
+import pandas as pd
 from numpy import argmax
 from random import shuffle, randint, seed
 from sklearn.preprocessing import LabelEncoder
@@ -8,17 +9,34 @@ from .logger import *
 from .fileHandler import *
 
 # TODO update load func
-def preproc(fileName, header, labelsLoc, rowClmn, rSeed, ratioTrain, ratioTest, oneHot=[], skip=[]):
-#    y = loadLabels(fileName, header, labelsLoc)
-    X, featLabels, y = loadFile(fileName, header, labelsLoc, rowClmn, skip)
-    preOp = np.zeros(len(featLabels))
-    preOp[0] = 2    # TODO change l8r src port
-    preOp[5] = 2    # TODO change l8r dest port
-    for i in oneHot:
-       preOp[i] = 1
-    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
-    print("X SHAPE; feat shape", X.shape, len(fls))
-    return randData(X, y, rSeed, ratioTrain, ratioTest)
+def preproc(fileName, labelsName, rSeed, ratioTrain, ratioTest, oneHot=[], skip=[]):
+    # Load in data from csv file
+    X, featLabels, y = load(fileName, labelsName, skip)
+
+    # ***************************************************************************************************
+    # NOTE These following commands up to ****** are custom for UNB data set!!! 
+    # Set y labels to 0 and 1 values
+    y = pd.Series(np.where(y.values == 'BENIGN', 0, 1), y.index)
+    # TODO come up with better method later for ports
+    X['SourcePort'][X['SourcePort'] >= 1024] = 1024
+    X['DestinationPort'][X['DestinationPort'] >= 1024] = 1024
+    # Splits Destination IP
+    X[['DestIP_Byte1','DestIP_Byte2','DestIP_Byte3','DestIP_Byte4']] = X.DestinationIP.str.split(".", expand=True)
+    X = X.drop(columns=['DestinationIP'])
+    # one hot encodes specific columns
+    X = pd.get_dummies(X, columns=['SourcePort', 'DestinationPort', 'Protocol', 'DestIP_Byte1','DestIP_Byte2','DestIP_Byte3','DestIP_Byte4'])
+    # ***************************************************************************************************
+   
+    # Turn X into Numpy matrix
+    Xnp = np.asmatrix(X.to_numpy(), dtype=float)
+    # Turn y into Numpy array
+    ynp = np.asarray(y.to_numpy())
+    # Normalize columns in Xnp
+    Xnp = normMat(Xnp)
+
+#    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
+    print("X SHAPE:", Xnp.shape)
+    return randData(Xnp, y, rSeed, ratioTrain, ratioTest)
 
 
 # float range function
@@ -50,7 +68,7 @@ def normMat(M):
     stdDev[stdDev <= 0] = 1e-5
     # Z-Score
     normed = (M - np.mean(M,axis=0)) / stdDev
-    save(normed, "normedX")
+#    save(normed, "normedX")
     return normed
 
 # Function one hot encodes data
@@ -310,7 +328,7 @@ def createMatrixProposal(X):
 # record which feature
 
 # start from 1st clmn of X
-def createMatrix(X, preOp,  featLabels):
+def createMatrix(X, preOp, featLabels):
     M, feats = [], []
 
 #    print("COLUMNS TO GO THRU:",X.shape[1])

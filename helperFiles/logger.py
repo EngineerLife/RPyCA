@@ -2,7 +2,7 @@
 import logging
 
 logSET = False
-overrideLevel = False   # TODO incorporate variable???
+overrideLevel = False
 
 # logs a message to the previously set file
 #   Input: lvl - log level (see: https://docs.python.org/3/howto/logging.html)
