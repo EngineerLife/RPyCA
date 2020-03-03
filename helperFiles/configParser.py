@@ -95,7 +95,8 @@ def getConfigTypes():
 # sets the configuration variables for the run
 # TODO make this actually functional later. (OR add default auto run config???)
 def setConfig():
-    return readConfig("MAIN")
+    return readConfig("KAGGLEV2")
+#    return readConfig("MAIN")
     '''
     ready = False
     print("Available configurations:",getConfigTypes())

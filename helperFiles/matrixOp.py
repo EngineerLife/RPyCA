@@ -39,6 +39,31 @@ def preproc(fileName, labelsName, rSeed, ratioTrain, ratioTest, oneHot=[], skip=
     return randData(Xnp, y, rSeed, ratioTrain, ratioTest)
 
 
+# TODO update load func
+def preprocKaggle(fileName, labelsName, rSeed, ratioTrain, ratioTest, oneHot=[], skip=[]):
+    # Load in data from csv file
+    X, featLabels, y = load(fileName, labelsName, skip)
+
+#    y = pd.Series(np.where(y.values == 'BENIGN', 0, 1), y.index)
+#    X['SourcePort'][X['SourcePort'] >= 1024] = 1024
+#    X['DestinationPort'][X['DestinationPort'] >= 1024] = 1024
+    # one hot encodes specific columns
+    X = pd.get_dummies(X, columns=['ethnicity','gender','hospital_admit_source','icu_admit_source','icu_stay_type','icu_type','apache_3j_bodysystem','apache_2_bodysystem'])
+#    X = pd.get_dummies(X, columns=oneHot)
+
+    # Turn X into Numpy matrix
+    Xnp = np.asmatrix(X.to_numpy(), dtype=float)
+    # Turn y into Numpy array
+    ynp = np.asarray(y.to_numpy())
+    # Normalize columns in Xnp
+    Xnp = normMat(Xnp)
+
+#    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
+    print("X SHAPE:", Xnp.shape)
+    return randData(Xnp, y, rSeed, ratioTrain, ratioTest)
+
+
+
 # float range function
 def frange(start, stop, step):
     ar = []
@@ -136,25 +161,54 @@ def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioTest=(2/3)):
     numTest = numTrain
 #    numValid = numItems - (numTrain+numTest)    # rest of rest is validation
     
-    # set random seed
-    if not randSeed:
-        rSeed = randint(0,numItems)
+    # check if we want to randomize
+    if not randSeed == -1:
+        # set random seed
+        if not randSeed:
+            rSeed = randint(0,numItems)
+        else:
+            rSeed = randSeed
+        logMsg(0, "Random seed = %d" % rSeed)
+        seed(rSeed)    
+        # produce a random arrangement
+        order = np.arange(numItems)
+        shuffle(order)
+
+        # randomize rows indexes based on order variable
+        X_data = np.array(X_data)
+        for index in order:
+            # for X:
+            randX.append(X_data[index])
+            # for y:
+            randy.append(y_data[index])
     else:
-        rSeed = randSeed
-    logMsg(0, "Random seed = %d" % rSeed)
-    seed(rSeed)
+        # DOESN'T randomize. Because we (hopefully) didn't want to
+        X_data = np.array(X_data)
+        for index in range(numItems):
+            # for X:
+            randX.append(X_data[index])
+            # for y:
+            randy.append(y_data[index])
+
+    # set random seed
+#    if not randSeed:
+#        rSeed = randint(0,numItems)
+#    else:
+#        rSeed = randSeed
+#    logMsg(0, "Random seed = %d" % rSeed)
+#    seed(rSeed)
     
     # produce a random arrangement
-    order = np.arange(numItems)
-    shuffle(order)
+#    order = np.arange(numItems)
+#    shuffle(order)
 
     # randomize rows indexes based on order variable
-    X_data = np.array(X_data)
-    for index in order:
+#    X_data = np.array(X_data)
+#    for index in order:
         # for X:
-        randX.append(X_data[index])
+#        randX.append(X_data[index])
         # for y:
-        randy.append(y_data[index])
+#        randy.append(y_data[index])
 
     # separate sections of data
     X_train = np.matrix(randX[:numTrain])

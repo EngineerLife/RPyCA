@@ -70,12 +70,13 @@ def loadFile(name, header, labelLoc, rowClmn, skip=[]):
 def load(name, labelName, skip=[]):
     df = pd.read_csv(name)
     df.columns = df.columns.str.replace(' ', '')
-    skip = ['FlowID']
+#    skip = ['FlowID']
 #    labelName = 'Label'
     labels = df[labelName]
 #    to_drop = skip.append(labelName)
-    df = df.drop(columns=['FlowID', 'SourceIP', 'Timestamp', 'Label'])
-#    print(df.columns)
+    print(skip)
+    df = df.drop(columns=skip)
+    print(df.columns)
     return df, df.columns, labels
 
 # saves matrix data to file

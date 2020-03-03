@@ -24,14 +24,14 @@ if __name__ == '__main__':
     # Set all other configuration variables
     fileName = con['CSVFile']
     labelsName = re.sub(r'[^\w]', '', con['Labels'])
-    onehot = toList(con['OneHot'])
+    onehot = toList(con['OneHot'], integer=False)
     skip = toList(con['Skip'], integer=False)
     seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
     ratioTrain, ratioTest = con['RatioTrainData'], con['RatioTestData']
     # Set ML model to run
     toRun = [con['Models']]
     if "all" == con['Models']:
-        toRun = ['rf','knn','svm','logreg','svm','dtree','nb','kmeans','gb']
+        toRun = ['rf','knn','svm','logreg','svm','dtree','nb','kmeans','gb','xgb']
     # Set Looping actions 
     howToRun = []
     mode = con['Mode']
@@ -50,7 +50,8 @@ if __name__ == '__main__':
     # TODO normalize each matrix with X1 things (see paper)
     for l in howToRun:
         if not mode == 0 or pre:
-            [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioTest, onehot, skip)
+#            [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioTest, onehot, skip)
+            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, seed, ratioTrain, ratioTest, oneHot, skip)
             pre = False     # done preprocessing for mode 0 only!
 
         logMsg(1, "Lambda: %s" % (str(l)))

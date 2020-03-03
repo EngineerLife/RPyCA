@@ -7,7 +7,7 @@ from .logger import *
 from scipy.spatial.distance import cdist
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import classification_report, confusion_matrix, f1_score
+from sklearn.metrics import classification_report, confusion_matrix, f1_score, roc_auc_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -15,6 +15,7 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor, GradientBoostingClassifier
 from sklearn.cluster import KMeans
+from xgboost import XGBClassifier
 from sklearn import svm
 #from sklearn import metrics
 
@@ -118,6 +119,17 @@ def gb(X_train, X_test, y_train):
 
 
 ####
+# XGBoost
+####
+def runXgb(X_train, X_test, y_train):
+    clf = XGBClassifier()
+    clf.fit(X_train, y_train)
+    y_pred = clf.predict(X_test)
+#    y_pred = clf.predict_proba(X_test)
+#    print(y_pred)
+    return y_pred
+
+####
 # Find Optimal Values TODO TODO TODO
 ####
 # checks all combinations of model on data to find optimal tuning values
@@ -202,17 +214,22 @@ def runModels(X, LS, XLS, ymats, code='', tune=False):
         cfm = pd.crosstab(y_test, y_pred, rownames=['Actual Packet Type'], colnames=['Predicted Packet Type'])
         logMsg(1, "\n%s" % str(cfm))
 #            print(cfm)
-        f1 = f1_score(y_test, y_pred)
-        logMsg(1, "f1_Score: %f" % f1)
+#        f1 = f1_score(y_test, y_pred)
+#        logMsg(1, "f1_Score: %f" % f1)
 
         # XXX creates row for plotting
-        d.append(f1)
+#        d.append(f1)
 
-        if float(f1) > 0.0:
-            print("f1_Score for %s : %s" % (matName[countName], str(f1)))
+#        if float(f1) > 0.0:
+#            print("f1_Score for %s : %s" % (matName[countName], str(f1)))
 #            if float(f1) >= 0.51:
-            ifgood = True
+#            ifgood = True
 #                print("GOOD f1_Score for %s : %s" % (matName[countName], str(f1)))
+        auc = roc_auc_score(y_test, y_pred)
+        logMsg(1, "auc_Score: %f" % auc)
+        if float(auc) > 0.0:
+            print("auc_Score for %s : %s" % (matName[countName], str(auc)))
+            ifgood = True
         countName += 1
 
     return ifgood, d
@@ -256,7 +273,11 @@ def chooseModel(code, X_train, X_test, y_train, tune=False):
         if tune: return None, RandomForestRegressor()
         m = "************ GRAD. BOOSTING ************"
         y_pred = gb(X_train, X_test, y_train)
-    elif code == "nn" or code == "8":
+    elif code == "xgb" or code == "8":
+        if tune: return None, XGBClassifier()
+        m = "************ XGBOOST ************"
+        y_pred = runXgb(X_train, X_test, y_train)
+    elif code == "nn" or code == "9":
         if tune: return None, RandomForestRegressor()
         m = "************ NN ************"
         y_pred = runNN(X_train, X_test, y_train)
