@@ -3,7 +3,7 @@ datasets/
 __pycache__/
 /helperFiles/__pycache__/
 logs/
-oldThesisFiles/
+extraFiles/
 plots/
 images/
 runs/
