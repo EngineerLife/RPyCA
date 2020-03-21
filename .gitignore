@@ -1,9 +1,6 @@
-data_and_labeling/
 datasets/
 __pycache__/
 /helperFiles/__pycache__/
 logs/
-extraFiles/
 plots/
 images/
-runs/
