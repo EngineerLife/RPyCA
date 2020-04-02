@@ -5,8 +5,6 @@ import math, sys, csv, ast, re, warnings
 import numpy as np
 import pandas as pd
 import rpyca as rp
-#import matplotlib.pyplot as plt
-#from collections import Counter
 from helperFiles.logger import *
 from helperFiles.matrixOp import *
 from helperFiles.fileHandler import *
@@ -50,8 +48,8 @@ if __name__ == '__main__':
     # TODO normalize each matrix with X1 things (see paper)
     for l in howToRun:
         if not mode == 0 or pre:
-#            [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioTest, onehot, skip)
-            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, seed, ratioTrain, ratioTest, oneHot, skip)
+            [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioTest, onehot, skip)
+#            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, seed, ratioTrain, ratioTest, oneHot, skip)
             pre = False     # done preprocessing for mode 0 only!
 
         logMsg(1, "Lambda: %s" % (str(l)))
@@ -59,7 +57,9 @@ if __name__ == '__main__':
 
         # runs RPCA
         [LS1, LS2], [XLS1, XLS2] = rp.rpca(X1, X2, l)
-       
+
+        # TODO see if I can tune lambda outside of using ML models??
+
         # ML/AI loop
         for m in toRun:
             Xmat, LSmat, XLSmat, ymatX12 = [X1, X2], [LS1, LS2], [XLS1, XLS2], [ymat[0], ymat[1]]
@@ -71,6 +71,8 @@ if __name__ == '__main__':
                 logMsg(1, "Validating GOOD Lambda: %s" % (str(l)))
     
                 # validate
+                # XXX Test with both X1X2
+#                X1 = np.concatenate((X1,X2), axis=0)
                 [LS1, LS3], [XLS1, XLS3] = rp.project(X1, X3)
 
                 # ML/AI
