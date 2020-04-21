@@ -27,19 +27,18 @@ def project(X1, X2):
     L1 = L
     S1 = S
 
-    # Test Matrix;   Equation: L2 = X2*(V)^hat*(VT)^hat
+    # Projection;   Equation: L2 = X2*(V)^hat*(VT)^hat
     X2VTT = np.dot(X2, VThat.T)
     L2 = np.dot(X2VTT, VThat)
     S2 = X2 - L2
     
-    Xmat, Lmat, Smat = [X1, X2], [L1, L2], [S1, S2]
-
     LS1 = np.concatenate((L1, S1), axis=1)
     XLS1 = np.concatenate((X1, L1, S1), axis=1)
     
     LS2 = np.concatenate((L2, S2), axis=1)
     XLS2 = np.concatenate((X2, L2, S2), axis=1)
-    
+   
+    logMsg(0, "PROJ. STEPS: VThat.T: %s X2VTT: %s  L2: %s  S2: %s" % (str(VThat.T.shape), str(X2VTT.shape), str(L2.shape), str(S2.shape)))
     logMsg(0, "PROJECTION SHAPES: X: %s  L: %s  S: %s" % (str(X2.shape), str(L2.shape), str(S2.shape)))
 
     return [LS1, LS2], [XLS1, XLS2]

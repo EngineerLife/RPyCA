@@ -3,6 +3,27 @@ import matplotlib.pyplot as plt
 import numpy as np
 import numpy.linalg as LA
 
+
+# logs/prints table for latex of results
+def generateResults(m,l,Xlis,LSlis,XLSlis):
+    # model, params, X, LS, XLS, countLS, countXLS
+    Xavg = np.average(Xlis)
+    LSavg = np.average(LSlis)
+    XLSavg = np.average(XLSlis)
+    LSc, XLSc = 0, 0
+    for i in range(len(Xlis)):
+        if float(LSlis[i]) > float(Xlis[i]):
+            LSc += 1
+        if float(XLSlis[i]) > float(Xlis[i]):
+            XLSc += 1
+
+    print("%s & %s & %s & %s & %s & %s & %s\\ \n" % (str(m),str(l),str(Xavg),str(LSavg),str(XLSavg),str(LSc),str(XLSc)))
+    logMsg(0,"%s & %s & %s & %s & %s & %s & %s\\ \n" % (str(m),str(l),str(Xavg),str(LSavg),str(XLSavg),str(LSc),str(XLSc)))
+
+
+
+
+
 # USE:
 #    plotMat(S)
 #    plotS(X, s, E, maxRank)

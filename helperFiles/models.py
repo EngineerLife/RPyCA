@@ -4,6 +4,7 @@ import pandas as pd
 import re
 from .fileHandler import *
 from .logger import *
+from .pynn import *
 from scipy.spatial.distance import cdist
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
@@ -17,21 +18,26 @@ from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor, Grad
 from sklearn.cluster import KMeans
 from xgboost import XGBClassifier
 from sklearn import svm
-#from sklearn import metrics
+from sklearn.neural_network import MLPClassifier
 
-# Each of these will have their own lambdas
+# NOTE Each of these will have their own lambdas
 
 ####
-# NN
+# NN sklearn
 ####
 def runNN(X_train, X_test, y_train):
-    # use pytorch
-    print("please no")
+    # default config
+    clf = MLPClassifier(solver='lbfgs', alpha=1e-5,
+                        hidden_layer_sizes=(5, 2), random_state=1)
+    clf.fit(X_train, y_train)
+    y_pred = clf.predict(X_test)
+    return y_pred
 
 ####
 # Logistic Regression
 ####
 def runLogReg(X_train, X_test, y_train):
+    # default config
     clf = LogisticRegression(random_state=0, solver='lbfgs',
                              multi_class='multinomial')
     clf.fit(X_train, y_train)
@@ -172,35 +178,27 @@ def findOptVal(regr, X_train, y_train):
 #   Output: Prints confusion matricies for each model and f1_scores
 def runModels(X, LS, XLS, ymats, code='', tune=False):
     y_train, y_test = ymats[0], ymats[1]
-#    print(y_train.shape, y_test.shape)
-
-#    LStrain = np.concatenate((L[0],S[0]), axis=1)
-#    XLStrain = np.concatenate((X[0], L[0], S[0]), axis=1)
-#    LStest = np.concatenate((L[1],S[1]), axis=1)
-#    XLStest = np.concatenate((X[1], L[1], S[1]), axis=1)
-    train = [X[0], LS[0], XLS[0]]     # holds data matricies to run models on
+    train = [X[0], LS[0], XLS[0]]
     test = [X[1], LS[1], XLS[1]]
-
     matName = ["X", "CONCAT LS", "CONCAT XLS"]
+    
     if not code:
         # for running a custom model. Saves off training and testing
         print("RUN CUSTOM MODEL")
-    # runs all models if no code given
-    # FIXME does not work with new design in main.py
-#    elif code[0] == "all":
-#        code = np.arange(9)    # NOTE if there are more models increase this number
+        # TODO add saving stuff 
     ifgood = False
 
-    # XXX for plotting
+    # XXX for plotting and Latex
     d = []
-    print(code)
+    
     countName = 0
     for matType in range(3):
         X_train = train[matType]
         X_test = test[matType]
-#            print("Model SHAPES:", X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+       
         y_pred, regr, m = chooseModel(code, X_train, X_test, y_train, tune)
         logMsg(1, m)    # logs the chosen model
+        
         # ONLY for tuning; not for training/main algo
 #        if tune and not regr == None:
 #            print("Oops! Did not want to test this right now.")
@@ -208,28 +206,23 @@ def runModels(X, LS, XLS, ymats, code='', tune=False):
 #            findOptVal(regr, X_train, y_train)
 
 #            print("FOR MATRIX: ", matName[countName])
+
         logMsg(1, "FOR MATRIX: %s" % (matName[countName]))
 
         # Create confusion matrix
         cfm = pd.crosstab(y_test, y_pred, rownames=['Actual Packet Type'], colnames=['Predicted Packet Type'])
         logMsg(1, "\n%s" % str(cfm))
-#            print(cfm)
-#        f1 = f1_score(y_test, y_pred)
-#        logMsg(1, "f1_Score: %f" % f1)
+        
+        f1 = f1_score(y_test, y_pred)
+        logMsg(1, "f1_Score: %f" % f1)
 
         # XXX creates row for plotting
 #        d.append(f1)
 
-#        if float(f1) > 0.0:
-#            print("f1_Score for %s : %s" % (matName[countName], str(f1)))
-#            if float(f1) >= 0.51:
-#            ifgood = True
-#                print("GOOD f1_Score for %s : %s" % (matName[countName], str(f1)))
-        auc = roc_auc_score(y_test, y_pred)
-        logMsg(1, "auc_Score: %f" % auc)
-        if float(auc) > 0.0:
-            print("auc_Score for %s : %s" % (matName[countName], str(auc)))
-            ifgood = True
+        if float(f1) > 0.0:
+            print("f1_Score for %s : %s" % (matName[countName], str(f1)))
+            if float(f1) >= 0.51:
+                ifgood = True
         countName += 1
 
     return ifgood, d
@@ -248,7 +241,7 @@ def chooseModel(code, X_train, X_test, y_train, tune=False):
     elif code == "knn" or code == "1":
         if tune: return None, RandomForestRegressor()
         m = "************ KNN ************"
-        y_pred = runKNN(X_train, X_test, y_train, 5)     # TODO accomidate for different number clusters
+        y_pred = runKNN(X_train, X_test, y_train, 3)     # TODO accomidate for different number clusters
     elif code == "svm" or code == "2":
         if tune: return None, RandomForestRegressor()
         m = "************ SVM ************"
@@ -281,6 +274,10 @@ def chooseModel(code, X_train, X_test, y_train, tune=False):
         if tune: return None, RandomForestRegressor()
         m = "************ NN ************"
         y_pred = runNN(X_train, X_test, y_train)
+    elif code == "pynn" or code == "10":
+        if tune: return None, RandomForestRegressor()
+        m = "************ PYTORCH NN ************"
+        y_pred = runPyNN(X_train, X_test, y_train)
     else:   # SHOULD NEVER GET HERE
         m = "************ ELSE ************"
         exit(0)

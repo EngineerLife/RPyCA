@@ -5,13 +5,16 @@ from random import shuffle, randint, seed
 from .logger import *
 from .fileHandler import *
 
-def preproc(fileName, labelsName, rSeed, ratioTrain, ratioTest, oneHot=[], skip=[]):
+def preproc(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
     # Load in data from csv file
     X, featLabels, y = load(fileName, labelsName, skip)
 
     # ***************************************************************************************************
     # NOTE These following commands up to ****** are custom for UNB data set!!! 
     # Set y labels to 0 and 1 values
+    cluster = len(np.unique(y))
+    print(cluster)
+#    exit(0)
     y = pd.Series(np.where(y.values == 'BENIGN', 0, 1), y.index)
     # TODO come up with better method later for ports
     X['SourcePort'][X['SourcePort'] >= 1024] = 1024
@@ -32,10 +35,10 @@ def preproc(fileName, labelsName, rSeed, ratioTrain, ratioTest, oneHot=[], skip=
 
 #    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
     print("X SHAPE:", Xnp.shape)
-    return randData(Xnp, y, rSeed, ratioTrain, ratioTest)
+    return randData(Xnp, y, rSeed, ratioTrain, ratioValid)
 
 
-#def preprocKaggle(fileName, labelsName, rSeed, ratioTrain, ratioTest, oneHot=[], skip=[]):
+#def preprocKaggle(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
     # Load in data from csv file
 #    X, featLabels, y = load(fileName, labelsName, skip)
 #    y = pd.Series(np.where(y.values == 'BENIGN', 0, 1), y.index)
@@ -52,7 +55,7 @@ def preproc(fileName, labelsName, rSeed, ratioTrain, ratioTest, oneHot=[], skip=
 #    Xnp = normMat(Xnp)
 #    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
 #    print("X SHAPE:", Xnp.shape)
-#    return randData(Xnp, y, rSeed, ratioTrain, ratioTest)
+#    return randData(Xnp, y, rSeed, ratioTrain, ratioValid)
 
 
 
@@ -94,15 +97,14 @@ def normMat(M):
 loopError = 0
 
 # randomizes the data in the main X matrix and cooresponding y labels
-def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioTest=(2/3)):
+def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioValid=(2/3)):
     randX, randy = [], []   # made this var before I realized it's your name; Randy P.
 
     # determine size of train, test, and validate matrices
     numItems = X_data.shape[0]
-    numTrain = math.ceil(X_data.shape[0] * ratioTrain)    # default is 2/3 is training
-#    numTest = math.ceil(numTrain * ratioTest)    # default is 2/3 of rest is testing
-    numTest = numTrain
-#    numValid = numItems - (numTrain+numTest)    # rest of rest is validation
+    numTrain = math.ceil(X_data.shape[0] * ratioTrain)
+    numValid = math.ceil((numItems-numTrain) * ratioValid)
+    # rest of data is validation
     
     # check if we want to randomize
     if not randSeed == -1:
@@ -135,25 +137,23 @@ def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioTest=(2/3)):
 
     # separate sections of data
     X_train = np.matrix(randX[:numTrain])
-    X_test = np.matrix(randX[numTrain:(numTrain+numTest)])
-    X_valid = np.matrix(randX[(numTrain+numTest):])
-#    X_mats = [X_train, X_test, X_valid]
+    X_test = np.matrix(randX[numTrain:(numTrain+numValid)])
+    X_valid = np.matrix(randX[(numTrain+numValid):])
 
     y_train = np.array(randy[:numTrain])
-    y_test = np.array(randy[numTrain:(numTrain+numTest)])
-    y_valid = np.array(randy[(numTrain+numTest):])
-#    y_mats = [y_train, y_test, y_valid]
+    y_test = np.array(randy[numTrain:(numTrain+numValid)])
+    y_valid = np.array(randy[(numTrain+numValid):])
 
     # log sizes of y labels    
     logMsg(0, "X_train size: %s" % str(X_train.shape))
-    logMsg(0, "X_test size: %s" % str(X_test.shape))
     logMsg(0, "X_valid size: %s" % str(X_valid.shape))
+    logMsg(0, "X_test size: %s" % str(X_test.shape))
     logMsg(0, "y_train class counts: %s" % str(np.unique(y_train, return_counts=True)))
-    logMsg(0, "y_test class counts: %s" % str(np.unique(y_test, return_counts=True)))
     logMsg(0, "y_valid class counts: %s" % str(np.unique(y_valid, return_counts=True)))
+    logMsg(0, "y_test class counts: %s" % str(np.unique(y_test, return_counts=True)))
 
     # check that each section has at least 2 classes
-    if (not 1 in y_train) or (not 1 in y_test) or (not 1 in y_valid):
+    if (not 1 in y_train) or (not 1 in y_valid) or (not 1 in y_test):
         global loopError 
         loopError += 1
         if loopError >= 10:
@@ -161,12 +161,12 @@ def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioTest=(2/3)):
             logMsg(4, "Cannot create matrix sections! Only found 1 class.")  # issue if this occurs
             exit(1)
         logMsg(2, "Check failed for creating matrix sections! Revaluating...")
-        return randData(X_data, y_data, ratioTrain, ratioTest)
+        return randData(X_data, y_data, ratioTrain, ratioValid)
     
     loopError = 0
     logMsg(1, "Randomizaiton of X and y matrices complete.")
-#    return X_mats, y_mats
-    return [X_train, X_test, X_valid], [y_train, y_test, y_valid]
+    
+    return [X_train, X_valid, X_test], [y_train, y_valid, y_test]
 
 
 

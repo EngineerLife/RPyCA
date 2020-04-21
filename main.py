@@ -1,7 +1,7 @@
 # Python3 file
 # Created by Marissa Bennett
 
-import math, sys, csv, ast, re, warnings
+import math, sys, csv, ast, time, re, warnings
 import numpy as np
 import pandas as pd
 import rpyca as rp
@@ -14,6 +14,7 @@ from helperFiles.configParser import *
 
 # main function
 if __name__ == '__main__':
+    start_time = time.time()
     # Ask for configuration to use
     configType, con = setConfig()
     # Set log for debugging or other purposes (can be overridden)
@@ -25,11 +26,13 @@ if __name__ == '__main__':
     onehot = toList(con['OneHot'], integer=False)
     skip = toList(con['Skip'], integer=False)
     seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
-    ratioTrain, ratioTest = con['RatioTrainData'], con['RatioTestData']
+    ratioTrain, ratioValid = con['RatioTrainData'], con['RatioValidData']
     # Set ML model to run
+#    toRun = [str(sys.argv[1])]
+#    print(toRun)
     toRun = [con['Models']]
     if "all" == con['Models']:
-        toRun = ['rf','knn','svm','logreg','svm','dtree','nb','kmeans','gb','xgb']
+        toRun = ['rf','knn','logreg','svm','dtree','nb','kmeans','gb','xgb','nn','pynn']
     # Set Looping actions 
     howToRun = []
     mode = con['Mode']
@@ -48,8 +51,8 @@ if __name__ == '__main__':
     # TODO normalize each matrix with X1 things (see paper)
     for l in howToRun:
         if not mode == 0 or pre:
-            [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioTest, onehot, skip)
-#            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, seed, ratioTrain, ratioTest, oneHot, skip)
+            [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioValid, onehot, skip)
+#            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, seed, ratioTrain, ratioValid, oneHot, skip)
             pre = False     # done preprocessing for mode 0 only!
 
         logMsg(1, "Lambda: %s" % (str(l)))
@@ -57,11 +60,11 @@ if __name__ == '__main__':
 
         # runs RPCA
         [LS1, LS2], [XLS1, XLS2] = rp.rpca(X1, X2, l)
-
-        # TODO see if I can tune lambda outside of using ML models??
+        # XXX Future Work: see if lambda can be tuned outside of using ML models??
 
         # ML/AI loop
         for m in toRun:
+            print("running ML")
             Xmat, LSmat, XLSmat, ymatX12 = [X1, X2], [LS1, LS2], [XLS1, XLS2], [ymat[0], ymat[1]]
             res, dall = runModels(Xmat, LSmat, XLSmat, ymatX12, code=m)
            
@@ -78,3 +81,6 @@ if __name__ == '__main__':
                 # ML/AI
                 Xmat, LSmat, XLSmat, ymatX13 = [X1, X3], [LS1, LS3], [XLS1, XLS3], [ymat[0], ymat[2]]
                 res, dgood = runModels(Xmat, LSmat, XLSmat, ymatX13, code=m)
+
+    generateResults(toRun[0].upper(),l,Xlis,LSlis,XLSlis)
+    logMsg(1, "Time to complete: %s" % str(time.time() - start_time))
