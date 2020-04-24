@@ -1,8 +1,7 @@
-# imports???
 import matplotlib.pyplot as plt
 import numpy as np
 import numpy.linalg as LA
-
+from helperFiles.logger import *
 
 # logs/prints table for latex of results
 def generateResults(m,l,Xlis,LSlis,XLSlis):

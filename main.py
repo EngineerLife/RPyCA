@@ -28,11 +28,10 @@ if __name__ == '__main__':
     seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
     ratioTrain, ratioValid = con['RatioTrainData'], con['RatioValidData']
     # Set ML model to run
-#    toRun = [str(sys.argv[1])]
-#    print(toRun)
     toRun = [con['Models']]
     if "all" == con['Models']:
-        toRun = ['rf','knn','logreg','svm','dtree','nb','kmeans','gb','xgb','nn','pynn']
+        # NOTE these are not all the models in the model.py file
+        toRun = ['rf','knn','logreg','svm','dtree','nb','kmeans','gb','pynn']
     # Set Looping actions 
     howToRun = []
     mode = con['Mode']
@@ -54,6 +53,30 @@ if __name__ == '__main__':
             [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioValid, onehot, skip)
 #            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, seed, ratioTrain, ratioValid, oneHot, skip)
             pre = False     # done preprocessing for mode 0 only!
+
+        '''
+        # XXX
+        import matplotlib.pyplot as plt
+        # SVD PCA
+        u, s, vh = np.linalg.svd(X3)
+#        print("U:\n",u[:,0])
+        x = np.array(u[:,0], dtype=float).flatten()
+        y = np.array(u[:,1], dtype=float).flatten()
+
+        bad_x, bad_y = [], []
+        for i in range(len(ymat[2])):
+            if ymat[2][i] == 1:
+                bad_x.append(x[i])
+                bad_y.append(y[i])
+                np.delete(x, i)
+                np.delete(y, i)
+
+        plt.scatter(x, y, color='green')
+        plt.scatter(bad_x, bad_y, color='red')
+        plt.show()
+        exit(0)
+        # XXX
+        '''
 
         logMsg(1, "Lambda: %s" % (str(l)))
         print("\n\nLAMBDA: ", l)

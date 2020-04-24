@@ -12,9 +12,6 @@ def preproc(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip
     # ***************************************************************************************************
     # NOTE These following commands up to ****** are custom for UNB data set!!! 
     # Set y labels to 0 and 1 values
-    cluster = len(np.unique(y))
-    print(cluster)
-#    exit(0)
     y = pd.Series(np.where(y.values == 'BENIGN', 0, 1), y.index)
     # TODO come up with better method later for ports
     X['SourcePort'][X['SourcePort'] >= 1024] = 1024

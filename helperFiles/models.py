@@ -74,7 +74,6 @@ def runSVM(X_train, X_test, y_train):
 ####
 # K Means
 ####
-# k-means 
 def runKmeans(X_train, X_test, y_train):
     clf = KMeans(n_clusters=2, random_state=0)
     clf.fit(X_train)
@@ -82,19 +81,14 @@ def runKmeans(X_train, X_test, y_train):
     return y_pred
 
 ####
-# kNN
+# KNN
 ####
-# X_train is a m by n matrix of training data
-# X_test is a m by n matrix of testing data
-# y_train is a m by 1 vector of training data labels
-# y_test is a m by 1 vector of testing data labels
-#
-def runKNN(X_train, X_test, y_train, cluster):
-    scaler = StandardScaler()
-    scaler.fit(X_train)
-    X_train = scaler.transform(X_train)
-    X_test = scaler.transform(X_test)
-    clf = KNeighborsClassifier(n_neighbors=cluster, leaf_size=1)
+def runKNN(X_train, X_test, y_train):
+#    scaler = StandardScaler()
+#    scaler.fit(X_train)
+#    X_train = scaler.transform(X_train)
+#    X_test = scaler.transform(X_test)
+    clf = KNeighborsClassifier()#n_neighbors=3)#cluster, leaf_size=1)
     clf.fit(X_train, y_train)
     y_pred = clf.predict(X_test)
     return y_pred
@@ -104,8 +98,8 @@ def runKNN(X_train, X_test, y_train, cluster):
 ####
 # Takes in data to fit and params
 # performs random forest classification
-def rf(X_train, X_test, y_train):#, maxDepth, nEst, randState):
-    clf = RandomForestClassifier(n_estimators=100, max_depth=2, min_samples_leaf=5, min_samples_split=10)#, random_state=0)
+def runRF(X_train, X_test, y_train):
+    clf = RandomForestClassifier(max_depth=2, random_state=0)#min_samples_leaf=5, min_samples_split=10, random_state=0)
     clf.fit(X_train, y_train)
     y_pred = clf.predict(X_test)
     return y_pred
@@ -113,19 +107,14 @@ def rf(X_train, X_test, y_train):#, maxDepth, nEst, randState):
 ####
 # Gradient Boosting
 ####
-def gb(X_train, X_test, y_train):
+def runGB(X_train, X_test, y_train):
     clf = GradientBoostingClassifier()
     clf.fit(X_train, y_train)
     y_pred = clf.predict(X_test)
     return y_pred
 
 ####
-# auto-encoder (MLP)
-###
-
-
-####
-# XGBoost
+# XGBoost   # XXX This was for Kaggle
 ####
 def runXgb(X_train, X_test, y_train):
     clf = XGBClassifier()
@@ -175,6 +164,12 @@ def findOptVal(regr, X_train, y_train):
 #          y mat = 2 vectors,
 #          code defaults to empty (all models run) or contains codes for specific ones to run
 #          tune if we are tuning the model with the data to find optimal values
+#
+# X_train is a m by n matrix of training data
+# X_test is a m by n matrix of testing data
+# y_train is a m by 1 vector of training data labels
+# y_test is a m by 1 vector of testing data labels
+#
 #   Output: Prints confusion matricies for each model and f1_scores
 def runModels(X, LS, XLS, ymats, code='', tune=False):
     y_train, y_test = ymats[0], ymats[1]
@@ -228,6 +223,8 @@ def runModels(X, LS, XLS, ymats, code='', tune=False):
     return ifgood, d
 
 # TODO FIXME clean this function up later
+# TODO RandomForestRegressor() in all except RF need to be changed
+#   to their actual regressors.
 ####
 # chooses the model to run 
 #   [and any other qualities of it (used for tuning only)]
@@ -237,11 +234,11 @@ def chooseModel(code, X_train, X_test, y_train, tune=False):
     if code == "rf" or code == "0":
         if tune: return None, RandomForestRegressor()
         m = "************ RANDOM FOREST ************"
-        y_pred = rf(X_train, X_test, y_train)
+        y_pred = runRF(X_train, X_test, y_train)
     elif code == "knn" or code == "1":
         if tune: return None, RandomForestRegressor()
         m = "************ KNN ************"
-        y_pred = runKNN(X_train, X_test, y_train, 3)     # TODO accomidate for different number clusters
+        y_pred = runKNN(X_train, X_test, y_train)
     elif code == "svm" or code == "2":
         if tune: return None, RandomForestRegressor()
         m = "************ SVM ************"
@@ -265,7 +262,7 @@ def chooseModel(code, X_train, X_test, y_train, tune=False):
     elif code == "gb" or code == "7":
         if tune: return None, RandomForestRegressor()
         m = "************ GRAD. BOOSTING ************"
-        y_pred = gb(X_train, X_test, y_train)
+        y_pred = runGB(X_train, X_test, y_train)
     elif code == "xgb" or code == "8":
         if tune: return None, XGBClassifier()
         m = "************ XGBOOST ************"
