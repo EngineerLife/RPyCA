@@ -121,8 +121,8 @@ def runAnalysis(X, lam):
     # save VThat, L, and S matricies to this class
     global VTH, S, L
     VTH = VThat
-    L = L1
-    S = S1
+    L = L
+    S = S
 
 #    return S, L, VThat
     
