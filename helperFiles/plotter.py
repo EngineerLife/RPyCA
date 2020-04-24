@@ -1,3 +1,5 @@
+# This is a super messy-throwAway file. May not get cleaned, sorry.
+
 import matplotlib.pyplot as plt
 import numpy as np
 import numpy.linalg as LA

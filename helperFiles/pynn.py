@@ -6,16 +6,14 @@ from torch.utils.data import DataLoader
 from torch.utils.data import TensorDataset
 from .logger import *
 
-# SKLEARN: solver='lbfgs', alpha=1e-5, hidden_layer_sizes=(5, 2), random_state=1
-
-
 ###
+# Goal was to make this model as simplistic as possible to use as a baseline
+#
 # Basic configuration taken from link below and modified
 #  https://medium.com/@prudhvirajnitjsr/simple-classifier-using-pytorch-37fba175c25c
 #
 ###
 def runPyNN(X_train, X_test, y_train):
-#    X = torch.FloatTensor(X_train)
     X_train = torch.FloatTensor(X_train)
     X_test = torch.FloatTensor(X_test)
     y = torch.tensor(y_train)
@@ -47,6 +45,8 @@ def runPyNN(X_train, X_test, y_train):
         optimizer.step()
 
     return model.predict(X_test).numpy()
+
+
 
 #our class must extend nn.Module
 class Net(nn.Module):

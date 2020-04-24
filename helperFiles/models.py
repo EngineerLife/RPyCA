@@ -166,9 +166,9 @@ def findOptVal(regr, X_train, y_train):
 #          tune if we are tuning the model with the data to find optimal values
 #
 # X_train is a m by n matrix of training data
-# X_test is a m by n matrix of testing data
+# X_test is a m by n matrix of validation/testing data
 # y_train is a m by 1 vector of training data labels
-# y_test is a m by 1 vector of testing data labels
+# y_test is a m by 1 vector of validation/testing data labels
 #
 #   Output: Prints confusion matricies for each model and f1_scores
 def runModels(X, LS, XLS, ymats, code='', tune=False):
