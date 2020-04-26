@@ -1,4 +1,6 @@
-datasets/
+datasets/TrafficLabelling
+datasets/inside/large_files
+datasets/inside/oldFiles
 __pycache__/
 /helperFiles/__pycache__/
 logs/
