@@ -17,9 +17,16 @@ def splitIP(ipAddr):
 #    exit(0)
     return sepIP
 
-def load(name, labelName, skip=[]):
+def load(name, labelName, sample=0, rSeed=0, skip=[]):
     df = pd.read_csv(name)
     df.columns = df.columns.str.replace(' ', '')
+    if not sample == 0:  # gets a sample; NOT the default!
+        df = df.sample(frac=sample, random_state=rSeed)
+        # TODO this could cause some issues potentially.
+        if 12 > df[labelName].value_counts()[1]: # gets 2nd most frequent item (bad pkts)
+            print("Error: Not enough class counts:\n%s" % str(df[labelName].value_counts()))
+            logMsg(3, "Error: Not enough class counts:\n%s" % str(df[labelName].value_counts()))
+            exit(1)
     labels = df[labelName]
     df = df.drop(columns=skip)
     return df, df.columns, labels

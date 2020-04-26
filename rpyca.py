@@ -12,9 +12,9 @@ from helperFiles.logger import *
 # rp.rpca(X,V)               # runs rpca on X_train and Validation
 
 # Global variables for use in RPCA
-VTH = None   # matrix
-L = None       # matrix
-S = None       # matrix
+VTH_g = None   # matrix
+L_g = None       # matrix
+S_g = None       # matrix
 
 ##
 # Makes a projection on matrix
@@ -27,10 +27,10 @@ def project(X1, X2):
     # get variables
     X1 = np.asmatrix(X1).astype(float)
     X2 = np.asmatrix(X2).astype(float)
-    global VTH, S, L
-    VThat = VTH
-    L1 = L
-    S1 = S
+    global VTH_g, S_g, L_g
+    VThat = VTH_g
+    L1 = L_g
+    S1 = S_g
 
     # Projection;   Equation: L2 = X2*(V)^hat*(VT)^hat
     X2VTT = np.dot(X2, VThat.T)
@@ -60,8 +60,8 @@ def rpca(X1, X2, l):
     # modify function to print
     #logMsg(0, "X1 SHAPES: X: %s  L: %s  S: %s" % (str(X1.shape), str(L1.shape), str(S1.shape)))
     # save VThat, L, and S matricies to this class
-#    global VTH, S, L
-#    VTH = VThat
+#    global VTH_g, S, L
+#    VTH_g = VThat
 #    L = L1
 #    S = S1
     return project(X1, X2)
@@ -119,10 +119,10 @@ def runAnalysis(X, lam):
     warnings.filterwarnings('ignore')
 
     # save VThat, L, and S matricies to this class
-    global VTH, S, L
-    VTH = VThat
-    L = L
-    S = S
+    global VTH_g, S_g, L_g
+    VTH_g = VThat
+    L_g = L
+    S_g = S
 
 #    return S, L, VThat
     

@@ -5,9 +5,11 @@ from random import shuffle, randint, seed
 from .logger import *
 from .fileHandler import *
 
-def preproc(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
+def preproc(fileName, labelsName, sample, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
+    # Get random seed
+    rSeed = getRand(rSeed)
     # Load in data from csv file
-    X, featLabels, y = load(fileName, labelsName, skip)
+    X, featLabels, y = load(fileName, labelsName, sample, rSeed, skip)
 
     # ***************************************************************************************************
     # NOTE These following commands up to ****** are custom for UNB data set!!! 
@@ -88,7 +90,6 @@ def preprocLLSDOS(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[]
 #    return randData(Xnp, y, rSeed, ratioTrain, ratioValid)
 
 
-
 # float range function
 def frange(start, stop, step):
     ar = []
@@ -122,6 +123,21 @@ def normMat(M):
     return normed
 
 
+def getRand(randSeed):
+    # check if we want to randomize
+    if not randSeed == -1:
+        # set random seed
+        if not randSeed:
+            rSeed = randint(0,1000000)  # arbitrary range
+        else:
+            rSeed = randSeed
+    else:
+        rSeed = -1
+    logMsg(0, "Random seed = %d" % rSeed)
+    seed(rSeed)
+    return rSeed
+
+
 # Used for randData function
 # !!! Must be global var bc func is recursive
 loopError = 0
@@ -139,12 +155,13 @@ def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioValid=(2/3)):
     # check if we want to randomize
     if not randSeed == -1:
         # set random seed
-        if not randSeed:
-            rSeed = randint(0,numItems)
-        else:
-            rSeed = randSeed
-        logMsg(0, "Random seed = %d" % rSeed)
-        seed(rSeed)    
+#        if not randSeed:
+#            rSeed = randint(0,numItems)
+#        else:
+#            rSeed = randSeed
+#        logMsg(0, "Random seed = %d" % rSeed)
+#        seed(rSeed)    
+
         # produce a random arrangement
         order = np.arange(numItems)
         shuffle(order)
@@ -158,6 +175,7 @@ def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioValid=(2/3)):
             randy.append(y_data[index])
     else:
         # DOESN'T randomize. Because we (hopefully) didn't want to
+        #   Still have to do this for loop for consistency with below methods
         X_data = np.array(X_data)
         for index in range(numItems):
             # for X:
@@ -197,11 +215,3 @@ def randData(X_data, y_data, randSeed, ratioTrain=(2/3), ratioValid=(2/3)):
     logMsg(1, "Randomizaiton of X and y matrices complete.")
     
     return [X_train, X_valid, X_test], [y_train, y_valid, y_test]
-
-
-
-
-# ONLY USED FOR THE PROPOSAL/OG KATHLEEN PAPER
-# PROPOSAL ONLY!!!!!!
-# EXAMPLE: ['172.16.112.50' '172.16.113.148' 'TELNET'   '60'      '23'        '4170']
-#               src ip          dest ip      protocol   len    src port     dest port

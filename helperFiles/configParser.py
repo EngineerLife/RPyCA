@@ -23,6 +23,7 @@ def readConfig(typ='DEFAULT'):
                        ('OneHot',configType['OneHot']),
                        ('Skip',configType['Skip']),
                        ('RandomSeed',int(configType['randomSeed'])),
+                       ('SampleSize',float(configType['SampleSize'])),
                        ('RatioTrainData',float(-1 if configType['RatioTrainData'] == '' else Fraction(configType['RatioTrainData']))),
                        ('RatioValidData',float(-1 if configType['RatioValidData'] == '' else Fraction(configType['RatioValidData']))),
                        ('Mode',int(configType['Mode'])),
