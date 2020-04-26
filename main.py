@@ -23,9 +23,13 @@ if __name__ == '__main__':
     # Set all other configuration variables
     fileName = con['CSVFile']
     labelsName = re.sub(r'[^\w]', '', con['Labels'])
+    ##### 
+    ## TODO need to make this better and more reliable
     onehot = toList(con['OneHot'], integer=False)
 #    skip = toList(con['Skip'], integer=False)
-    skip = ['FlowID', 'SourceIP', 'Timestamp', 'Label']
+    # XXX remove later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+    skip = ['No.', 'Label']
+    ######
     seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
     ratioTrain, ratioValid = con['RatioTrainData'], con['RatioValidData']
     # Set ML model to run
@@ -53,22 +57,23 @@ if __name__ == '__main__':
     # TODO normalize each matrix with X1 things (see paper)
     for l in howToRun:
         if not mode == 0 or pre:
-            [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioValid, onehot, skip)
-#            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, seed, ratioTrain, ratioValid, oneHot, skip)
+#            [X1, X2, X3], ymat = preproc(fileName, labelsName, seed, ratioTrain, ratioValid, onehot, skip)
+            [X1, X2, X3], ymat = preprocLLSDOS(fileName, labelsName, seed, ratioTrain, ratioValid, onehot, skip)
+#            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, seed, ratioTrain, ratioValid, onehot, skip)
             pre = False     # done preprocessing for mode 0 only!
-
         '''
         # XXX
         import matplotlib.pyplot as plt
         # SVD PCA
-        u, s, vh = np.linalg.svd(X3)
+        u, s, vh = np.linalg.svd(X1)
 #        print("U:\n",u[:,0])
         x = np.array(u[:,0], dtype=float).flatten()
         y = np.array(u[:,1], dtype=float).flatten()
 
         bad_x, bad_y = [], []
-        for i in range(len(ymat[2])):
-            if ymat[2][i] == 1:
+        b = 0
+        for i in range(len(ymat[b])):
+            if ymat[b][i] == 1:
                 bad_x.append(x[i])
                 bad_y.append(y[i])
                 np.delete(x, i)
@@ -80,7 +85,6 @@ if __name__ == '__main__':
         exit(0)
         # XXX
         '''
-
         logMsg(1, "Lambda: %s" % (str(l)))
         print("\n\nLAMBDA: ", l)
 

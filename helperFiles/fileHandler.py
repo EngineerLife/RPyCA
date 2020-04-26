@@ -20,13 +20,8 @@ def splitIP(ipAddr):
 def load(name, labelName, skip=[]):
     df = pd.read_csv(name)
     df.columns = df.columns.str.replace(' ', '')
-#    skip = ['FlowID']
-#    labelName = 'Label'
     labels = df[labelName]
-#    to_drop = skip.append(labelName)
-#    print(skip)
     df = df.drop(columns=skip)
-#    print(df.columns)
     return df, df.columns, labels
 
 # saves matrix data to file

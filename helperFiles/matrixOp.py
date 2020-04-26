@@ -14,6 +14,7 @@ def preproc(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip
     # Set y labels to 0 and 1 values
     y = pd.Series(np.where(y.values == 'BENIGN', 0, 1), y.index)
     # TODO come up with better method later for ports
+    # XXX could group ports by the thousands place?
     X['SourcePort'][X['SourcePort'] >= 1024] = 1024
     X['DestinationPort'][X['DestinationPort'] >= 1024] = 1024
     # Splits Destination IP
@@ -34,13 +35,45 @@ def preproc(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip
     print("X SHAPE:", Xnp.shape)
     return randData(Xnp, y, rSeed, ratioTrain, ratioValid)
 
+def preprocLLSDOS(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
+    # Load in data from csv file
+    X, featLabels, y = load(fileName, labelsName, skip)
+
+    # ***************************************************************************************************
+    # NOTE These following commands up to ****** are custom for LLS_DOS data set!!! 
+    X['SourcePort'][np.isnan(X['SourcePort'])] = -1
+    X['DestinationPort'][np.isnan(X['DestinationPort'])] = -1
+    # add 2 new features to dataframe: port # >= 1024 for src and dest.
+    portRangeSrc = pd.Series(np.where(X['SourcePort'] >= 1024, 1, 0), X.index)
+    portRangeDst = pd.Series(np.where(X['DestinationPort'] >= 1024, 1, 0), X.index)
+    X['portRangeSrc'] = portRangeSrc
+    X['portRangeDst'] = portRangeDst
+    # Set unimportant port numbers to 1024
+    X['SourcePort'][X['SourcePort'] >= 1024] = 1024
+    X['DestinationPort'][X['DestinationPort'] >= 1024] = 1024
+    # Splits IP's
+    X['SrcIP_Byte1'] = X.Source.str.split(".", expand=True)[0]
+    X['DestIP_Byte1'] = X.Destination.str.split(".", expand=True)[0]
+    X = X.drop(columns=['Destination', 'Source'])
+    # one hot encodes specific columns
+    X = pd.get_dummies(X, columns=['SrcIP_Byte1', 'DestIP_Byte1', 'SourcePort', 'DestinationPort', 'Protocol'])
+    # ***************************************************************************************************
+    
+    # Turn X into Numpy matrix
+    Xnp = np.asmatrix(X.to_numpy(), dtype=float)
+    # Turn y into Numpy array
+    ynp = np.asarray(y.to_numpy())
+    # Normalize columns in Xnp
+    Xnp = normMat(Xnp)
+
+#    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
+    print("X SHAPE:", Xnp.shape)
+    return randData(Xnp, y, rSeed, ratioTrain, ratioValid)
+
 
 #def preprocKaggle(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
     # Load in data from csv file
 #    X, featLabels, y = load(fileName, labelsName, skip)
-#    y = pd.Series(np.where(y.values == 'BENIGN', 0, 1), y.index)
-#    X['SourcePort'][X['SourcePort'] >= 1024] = 1024
-#    X['DestinationPort'][X['DestinationPort'] >= 1024] = 1024
     # one hot encodes specific columns
 #    X = pd.get_dummies(X, columns=['ethnicity','gender','hospital_admit_source','icu_admit_source','icu_stay_type','icu_type','apache_3j_bodysystem','apache_2_bodysystem'])
 #    X = pd.get_dummies(X, columns=oneHot)
