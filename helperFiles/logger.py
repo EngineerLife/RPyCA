@@ -37,6 +37,7 @@ def logMsg(lvl, msg):
 #   Input: fileName - string name of the file to log to
 #   Output: None
 def setLog(fileName, override=False):
+    # TODO auto create directory for logs
     logging.basicConfig(format='%(asctime)s  %(levelname)s: %(message)s', filename='logs/'+fileName+'.log', level=logging.DEBUG)#, filemode='w',)
     # NOTE filemode='w' overwrites previous file. 
     #      If omitted, future runs will append to file

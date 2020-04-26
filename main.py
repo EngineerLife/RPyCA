@@ -24,7 +24,8 @@ if __name__ == '__main__':
     fileName = con['CSVFile']
     labelsName = re.sub(r'[^\w]', '', con['Labels'])
     onehot = toList(con['OneHot'], integer=False)
-    skip = toList(con['Skip'], integer=False)
+#    skip = toList(con['Skip'], integer=False)
+    skip = ['FlowID', 'SourceIP', 'Timestamp', 'Label']
     seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
     ratioTrain, ratioValid = con['RatioTrainData'], con['RatioValidData']
     # Set ML model to run
@@ -45,6 +46,8 @@ if __name__ == '__main__':
     # ensures preprocessing happens at least once
     # TODO look into if I could just randomize the random data again instead???
     pre = True
+
+    Xlis,LSlis,XLSlis = [], [], []
 
     # main loop
     # TODO normalize each matrix with X1 things (see paper)
@@ -97,13 +100,15 @@ if __name__ == '__main__':
                 logMsg(1, "Validating GOOD Lambda: %s" % (str(l)))
     
                 # validate
-                # XXX Test with both X1X2
-#                X1 = np.concatenate((X1,X2), axis=0)
                 [LS1, LS3], [XLS1, XLS3] = rp.project(X1, X3)
 
                 # ML/AI
                 Xmat, LSmat, XLSmat, ymatX13 = [X1, X3], [LS1, LS3], [XLS1, XLS3], [ymat[0], ymat[2]]
                 res, dgood = runModels(Xmat, LSmat, XLSmat, ymatX13, code=m)
+
+                Xlis.append(dgood[0])
+                LSlis.append(dgood[1])
+                XLSlis.append(dgood[2])
 
     generateResults(toRun[0].upper(),l,Xlis,LSlis,XLSlis)
     logMsg(1, "Time to complete: %s" % str(time.time() - start_time))

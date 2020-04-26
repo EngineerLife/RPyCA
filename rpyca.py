@@ -66,7 +66,6 @@ def rpca(X1, X2, l):
 #    S = S1
     return project(X1, X2)
 
-
 # function to run PCA and RPCA
 def runAnalysis(X, lam):
     # for max rank, X needs to be all floats
@@ -110,7 +109,8 @@ def runAnalysis(X, lam):
 
     # For Marissa's debugging:
     print("HAT SHAPES, Uhat: %s  Ehat: %s  VThat: %s  VTta: %s" % (str(Uhat.shape), str(Ehat.shape), str(VThat.shape), str(VTta.shape)))
-    
+    logMsg(0,"HAT SHAPES, Uhat: %s  Ehat: %s  VThat: %s  VTta: %s" % (str(Uhat.shape), str(Ehat.shape), str(VThat.shape), str(VTta.shape)))    
+
     warnings.filterwarnings('always')
     if abs(np.mean(L)) < 0.001: # arbitrary value
         warnings.warn('L matrix seems to be empty.\n')

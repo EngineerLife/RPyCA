@@ -75,7 +75,7 @@ def runSVM(X_train, X_test, y_train):
 # K Means
 ####
 def runKmeans(X_train, X_test, y_train):
-    clf = KMeans(n_clusters=2, random_state=0)
+    clf = KMeans(random_state=0)
     clf.fit(X_train)
     y_pred = clf.predict(X_test)
     return y_pred
@@ -212,12 +212,18 @@ def runModels(X, LS, XLS, ymats, code='', tune=False):
         logMsg(1, "f1_Score: %f" % f1)
 
         # XXX creates row for plotting
-#        d.append(f1)
+        d.append(f1)
 
         if float(f1) > 0.0:
             print("f1_Score for %s : %s" % (matName[countName], str(f1)))
-            if float(f1) >= 0.51:
-                ifgood = True
+#            if float(f1) >= 0.51:
+            ifgood = True
+#                print("GOOD f1_Score for %s : %s" % (matName[countName], str(f1)))
+#        auc = roc_auc_score(y_test, y_pred)
+#        logMsg(1, "auc_Score: %f" % auc)
+#        if float(auc) > 0.0:
+#            print("auc_Score for %s : %s" % (matName[countName], str(auc)))
+#            ifgood = True
         countName += 1
 
     return ifgood, d
