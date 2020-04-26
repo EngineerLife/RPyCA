@@ -23,6 +23,23 @@ def generateResults(m,l,Xlis,LSlis,XLSlis):
 
 
 
+def plotU(X1, y1):
+    u, s, vh = LA.svd(X1)
+    x = np.array(u[:,0], dtype=float).flatten()
+    y = np.array(u[:,1], dtype=float).flatten()
+
+    bad_x, bad_y = [], []
+    for i in range(len(y1)):
+        if y1[i] == 1:
+            bad_x.append(x[i])
+            bad_y.append(y[i])
+            np.delete(x, i)
+            np.delete(y, i)
+
+    plt.scatter(x, y, color='green')
+    plt.scatter(bad_x, bad_y, color='red')
+    plt.show()
+    exit(0)
 
 
 

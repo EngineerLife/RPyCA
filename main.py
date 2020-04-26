@@ -62,30 +62,10 @@ if __name__ == '__main__':
 #            [X1, X2, X3], ymat = preprocLLSDOS(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
 #            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
             pre = False     # done preprocessing for mode 0 only!
-        '''
+        
         # XXX
-        import matplotlib.pyplot as plt
-        # SVD PCA
-        u, s, vh = np.linalg.svd(X1)
-#        print("U:\n",u[:,0])
-        x = np.array(u[:,0], dtype=float).flatten()
-        y = np.array(u[:,1], dtype=float).flatten()
-
-        bad_x, bad_y = [], []
-        b = 0
-        for i in range(len(ymat[b])):
-            if ymat[b][i] == 1:
-                bad_x.append(x[i])
-                bad_y.append(y[i])
-                np.delete(x, i)
-                np.delete(y, i)
-
-        plt.scatter(x, y, color='green')
-        plt.scatter(bad_x, bad_y, color='red')
-        plt.show()
-        exit(0)
-        # XXX
-        '''
+        #plotU(X1, ymat[0])
+        
         logMsg(1, "Lambda: %s" % (str(l)))
         print("\n\nLAMBDA: ", l)
 

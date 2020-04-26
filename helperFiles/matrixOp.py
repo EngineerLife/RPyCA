@@ -35,11 +35,13 @@ def preproc(fileName, labelsName, sample, rSeed, ratioTrain, ratioValid, oneHot=
 
 #    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
     print("X SHAPE:", Xnp.shape)
-    return randData(Xnp, y, rSeed, ratioTrain, ratioValid)
+    return randData(Xnp, ynp, rSeed, ratioTrain, ratioValid)
 
-def preprocLLSDOS(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
+def preprocLLSDOS(fileName, labelsName, sample, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
+    # Get random seed
+    rSeed = getRand(rSeed)
     # Load in data from csv file
-    X, featLabels, y = load(fileName, labelsName, skip)
+    X, featLabels, y = load(fileName, labelsName, sample, rSeed, skip)
 
     # ***************************************************************************************************
     # NOTE These following commands up to ****** are custom for LLS_DOS data set!!! 
@@ -70,12 +72,14 @@ def preprocLLSDOS(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[]
 
 #    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
     print("X SHAPE:", Xnp.shape)
-    return randData(Xnp, y, rSeed, ratioTrain, ratioValid)
+    return randData(Xnp, ynp, rSeed, ratioTrain, ratioValid)
 
 
-#def preprocKaggle(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
+#def preprocKaggle(fileName, labelsName, sample, rSeed, ratioTrain, ratioValid, oneHot=[], skip=[]):
+    # Get random seed
+#    rSeed = getRand(rSeed)
     # Load in data from csv file
-#    X, featLabels, y = load(fileName, labelsName, skip)
+#    X, featLabels, y = load(fileName, labelsName, sample, rSeed, skip)
     # one hot encodes specific columns
 #    X = pd.get_dummies(X, columns=['ethnicity','gender','hospital_admit_source','icu_admit_source','icu_stay_type','icu_type','apache_3j_bodysystem','apache_2_bodysystem'])
 #    X = pd.get_dummies(X, columns=oneHot)
@@ -87,7 +91,7 @@ def preprocLLSDOS(fileName, labelsName, rSeed, ratioTrain, ratioValid, oneHot=[]
 #    Xnp = normMat(Xnp)
 #    X, fls = createMatrix(X, preOp, featLabels)  # main thesis dataset (default)
 #    print("X SHAPE:", Xnp.shape)
-#    return randData(Xnp, y, rSeed, ratioTrain, ratioValid)
+#    return randData(Xnp, ynp, rSeed, ratioTrain, ratioValid)
 
 
 # float range function
