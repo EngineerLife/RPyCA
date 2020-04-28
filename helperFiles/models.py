@@ -78,6 +78,8 @@ def runKmeans(X_train, X_test, y_train):
     clf = KMeans(n_clusters=2, random_state=0)
     clf.fit(X_train)
     y_pred = clf.predict(X_test)
+#    print(y_pred)
+#    print("UNIQUE:",np.unique(y_pred))
     return y_pred
 
 ####
