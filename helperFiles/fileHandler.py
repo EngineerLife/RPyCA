@@ -26,13 +26,13 @@ def load(name, labelName, sample=0, rSeed=0, skip=[]):
             df_sample = df.sample(frac=sample)#, random_state=rSeed)
             if len(df_sample[labelName].value_counts()) != 2:
                 if 15 <= df_sample[labelName].value_counts()[1]: # gets 2nd most frequent item (bad pkts)
+                    df = df_sample
                     break
             elif tooSmall >= 10:
                 print("Error: Not enough class counts:\n%s" % str(df_sample[labelName].value_counts()))
                 logMsg(3, "Error: Was not able to get enough class counts:\n%s" % str(df_sample[labelName].value_counts()))
                 exit(1)
             tooSmall += 1
-    df = df_sample
     labels = df[labelName]
     df = df.drop(columns=skip)
     return df, df.columns, labels

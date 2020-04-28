@@ -24,12 +24,9 @@ if __name__ == '__main__':
     fileName = con['CSVFile']
     labelsName = re.sub(r'[^\w]', '', con['Labels'])
     ##### 
-    ## TODO need to make this better and more reliable
-    onehot = toList(con['OneHot'], integer=False)
+    ## TODO need to make these better and more reliable
+#    onehot = toList(con['OneHot'], integer=False)
 #    skip = toList(con['Skip'], integer=False)
-    # XXX remove later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    skip = ['FlowID', 'SourceIP', 'Timestamp', 'Label']
-#    skip = ['No.', 'Label']
     ######
     seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
     sample = (0 if (con['SampleSize'] == 0) else con['SampleSize'])
@@ -59,8 +56,12 @@ if __name__ == '__main__':
     # TODO normalize each matrix with X1 things (see paper)
     for l in howToRun:
         if not mode == 0 or pre:
-            [X1, X2, X3], ymat = preproc(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
-#            [X1, X2, X3], ymat = preprocLLSDOS(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
+            if "ISCX" in fileName:  # TODO these should be changed into a function or something in the future
+                skip = ['FlowID', 'SourceIP', 'Timestamp', 'Label']
+                [X1, X2, X3], ymat = preproc(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
+            elif "LLS_DDOS" in fileName:
+                skip = ['No.', 'Label']
+                [X1, X2, X3], ymat = preprocLLSDOS(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
 #            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
             pre = False     # done preprocessing for mode 0 only!
         
