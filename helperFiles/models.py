@@ -75,7 +75,7 @@ def runSVM(X_train, X_test, y_train):
 # K Means
 ####
 def runKmeans(X_train, X_test, y_train):
-    clf = KMeans(random_state=0)
+    clf = KMeans(n_clusters=2, random_state=0)
     clf.fit(X_train)
     y_pred = clf.predict(X_test)
     return y_pred

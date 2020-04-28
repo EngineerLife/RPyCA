@@ -5,6 +5,8 @@ import numpy as np
 from helperFiles.sRPCAviaADMMFast import *
 from helperFiles.logger import *
 
+import matplotlib.pyplot as plt
+
 # Thoughts on how this would work:
 #
 # import rpyca as rp
@@ -45,6 +47,19 @@ def project(X1, X2):
    
     logMsg(0, "PROJ. STEPS: VThat.T: %s X2VTT: %s  L2: %s  S2: %s" % (str(VThat.T.shape), str(X2VTT.shape), str(L2.shape), str(S2.shape)))
 
+    x = np.array(X2, dtype=float).flatten()
+    l = np.array(L2, dtype=float).flatten()
+    s = np.array(S2, dtype=float).flatten()
+    '''
+    # XXX
+    plt.scatter(x, x, color='green')
+    plt.show()
+    plt.scatter(l, l, color='red')
+    plt.show()
+    plt.scatter(s, s, color='blue')
+    plt.show()
+    exit(0)
+    '''
     return [LS1, LS2], [XLS1, XLS2]
     
 # Run RPCA on data
@@ -124,6 +139,27 @@ def runAnalysis(X, lam):
     L_g = L
     S_g = S
 
+    # XXX
+    '''
+    x = np.array(X, dtype=float).flatten()
+    l = np.array(L, dtype=float).flatten()
+    s = np.array(S, dtype=float).flatten()
+
+#    bad_x, bad_y = [], []
+#    for i in range(len(y1)):
+#        if y1[i] == 1:
+#            bad_x.append(x[i])
+#            bad_y.append(y[i])
+#            np.delete(x, i)
+#            np.delete(y, i)
+    print("X1")
+    plt.scatter(x, x, color='green')
+    plt.show()
+    plt.scatter(l, l, color='red')
+    plt.show()
+    plt.scatter(s, s, color='blue')
+    plt.show()
+    '''
 #    return S, L, VThat
     
 

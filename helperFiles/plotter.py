@@ -18,8 +18,8 @@ def generateResults(m,l,Xlis,LSlis,XLSlis):
         if float(XLSlis[i]) > float(Xlis[i]):
             XLSc += 1
 
-    print("%s & %s & %s & %s & %s & %s & %s\\ \n" % (str(m),str(l),str(Xavg),str(LSavg),str(XLSavg),str(LSc),str(XLSc)))
-    logMsg(0,"%s & %s & %s & %s & %s & %s & %s\\ \n" % (str(m),str(l),str(Xavg),str(LSavg),str(XLSavg),str(LSc),str(XLSc)))
+    print("%s & %s & %s & %s & %s & %s & %s\\ \n" % (str(m),str(l),str(round(Xavg,5)),str(round(LSavg,5)),str(round(XLSavg,5)),str(LSc),str(XLSc)))
+    logMsg(0,"%s & %s & %s & %s & %s & %s & %s\\ \n" % (str(m),str(l),str(round(Xavg,5)),str(round(LSavg,5)),str(round(XLSavg,5)),str(LSc),str(XLSc)))
 
 
 

@@ -26,8 +26,9 @@ if __name__ == '__main__':
     ##### 
     ## TODO need to make this better and more reliable
     onehot = toList(con['OneHot'], integer=False)
-    skip = toList(con['Skip'], integer=False)
-    # XXX remove later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+#    skip = toList(con['Skip'], integer=False)
+    # XXX remove later!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    skip = ['FlowID', 'SourceIP', 'Timestamp', 'Label']
 #    skip = ['No.', 'Label']
     ######
     seed = (0 if (con['RandomSeed'] == 0) else con['RandomSeed'])
@@ -95,5 +96,5 @@ if __name__ == '__main__':
                 LSlis.append(dgood[1])
                 XLSlis.append(dgood[2])
 
-    generateResults(toRun[0].upper(),l,Xlis,LSlis,XLSlis)
+    generateResults(toRun[0],l,Xlis,LSlis,XLSlis)
     logMsg(1, "Time to complete: %s" % str(time.time() - start_time))
