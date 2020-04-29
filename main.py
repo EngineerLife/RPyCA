@@ -59,10 +59,10 @@ if __name__ == '__main__':
         if not mode == 0 or pre:
             if "ISCX" in fileName:  # TODO these should be changed into a function or something in the future
                 skip = ['FlowID', 'SourceIP', 'Timestamp', 'Label']
-                [X1, X2, X3], ymat = preproc(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
+                [X1, X2, X3], ymat = preproc(fileName, labelsName, sample, seed, ratioTrain, ratioValid, skip=skip)# onehot, skip)
             elif "LLS_DDOS" in fileName:
                 skip = ['No.', 'Label']
-                [X1, X2, X3], ymat = preprocLLSDOS(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
+                [X1, X2, X3], ymat = preprocLLSDOS(fileName, labelsName, sample, seed, ratioTrain, ratioValid, skip=skip)# onehot, skip)
 #            [X1, X2, X3], ymat = preprocKaggle(fileName, labelsName, sample, seed, ratioTrain, ratioValid, onehot, skip)
             pre = False     # done preprocessing for mode 0 only!
         
