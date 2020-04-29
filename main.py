@@ -22,6 +22,7 @@ if __name__ == '__main__':
     logMsg(1,"CONFIGURATION USED: %s" % str(configType))
     # Set all other configuration variables
     fileName = con['CSVFile']
+    logMsg(1,"File Name: %s" % str(fileName))
     labelsName = re.sub(r'[^\w]', '', con['Labels'])
     ##### 
     ## TODO need to make these better and more reliable
