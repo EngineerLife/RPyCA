@@ -11,9 +11,9 @@ from helperFiles.fileHandler import *
 from helperFiles.plotter import *
 from helperFiles.models import *
 from helperFiles.configParser import *
+import cProfile
 
-# main function
-if __name__ == '__main__':
+def main_func():
     start_time = time.time()
     # Ask for configuration to use
     configType, con = setConfig()
@@ -100,3 +100,6 @@ if __name__ == '__main__':
 
     generateResults(toRun[0],l,Xlis,LSlis,XLSlis)
     logMsg(1, "Time to complete: %s" % str(time.time() - start_time))
+
+if __name__ == '__main__':
+    cProfile.run("main_func()")

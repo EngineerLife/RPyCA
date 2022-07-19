@@ -34,4 +34,5 @@ def readConfig(typ='DEFAULT'):
 # Input: User input string of the configuration name
 # Output: OrderedDict of config variables
 def setConfig():
+    # TODO: Fix so default is used if param not passed
     return readConfig(sys.argv[1])
