@@ -38,3 +38,6 @@ python3 main.py MAIN
 The argument after main.py is which config in config.ini to use.
 
 There is console output of results while it runs and logs are put in logs/resultsSVM.log. Note this file is overwritten if you rerun the program.
+
+# Profiling and Performance
+The profile_results.txt has the cprofile output lines. It's been manually trimmed for cumulative time > 10 seconds.
