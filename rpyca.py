@@ -1,11 +1,29 @@
+#!/bin/python3
+
+"""
+RPYCA module performs Robust Principal Component Analysis
+
+RPCA Usage:
+    [LS1, LS2], [XLS1, XLS2] = rpca(X1, X2, l)
+
+To improve performance, after the rpca call, you can just use the low dimensional 
+eigenvectors learned to compute the same results using project for similar data
+by calling:
+    [LS1, LS3], [XLS1, XLS3] = rp.project(X1, X3)
+
+Original Author: Marissa Bennett
+Updated by: EngineerLife
+"""
+
 # File created by Marissa Bennett on 02/28/2020
+
+# updated by: EngineerLife 07/18/2022
 
 import warnings
 import numpy as np
 from helperFiles.sRPCAviaADMMFast import *
 from helperFiles.logger import *
 
-import matplotlib.pyplot as plt
 
 # Thoughts on how this would work:
 #
@@ -50,16 +68,7 @@ def project(X1, X2):
     x = np.array(X2, dtype=float).flatten()
     l = np.array(L2, dtype=float).flatten()
     s = np.array(S2, dtype=float).flatten()
-    '''
-    # XXX
-    plt.scatter(x, x, color='green')
-    plt.show()
-    plt.scatter(l, l, color='red')
-    plt.show()
-    plt.scatter(s, s, color='blue')
-    plt.show()
-    exit(0)
-    '''
+
     return [LS1, LS2], [XLS1, XLS2]
     
 # Run RPCA on data
@@ -88,30 +97,24 @@ def runAnalysis(X, lam):
 
     maxRank = np.linalg.matrix_rank(X)
     logMsg(1,"Max Rank: %s" % str(maxRank))
-    u, v, vecM, vecEpsilon = [], [], [], []
 
-    for i in range(X.shape[0]):
-        for j in range(X.shape[1]):
-            u.append(i)
-            v.append(j)
-            vecEpsilon.append(1e-5)     # NOTE original value is 1e-5
-            Mij = float(X[i,j])
-            vecM.append(Mij)
-
-    u = np.array(u)
-    v = np.array(v)
-    vecM = np.array(vecM)
-    vecEpsilon = np.array(vecEpsilon)
-
-    # B is not used in our case, but needs to be stored in order to run sRPCA
+    u = np.repeat(range(X.shape[0]),X.shape[1])
+    v = np.tile(range(X.shape[1]),X.shape[0])
+    vecEpsilon = np.full((X.shape[0]*X.shape[1],),1e-5)
+    vecM = np.array(X.flatten().astype(float)).squeeze()
+    
+    logMsg(1,"starting sRPCA")
+        # B is not used in our case, but needs to be stored in order to run sRPCA
     [U, E, VT, S, B] = sRPCA(X.shape[0], X.shape[1], u, v, vecM, vecEpsilon, maxRank, lam=lam, maxIteration=250, verbose=False)
+
+    logMsg(1,"Done sRPCA call")
 
     S = S.todense()
     # Calculate L matrix
     E = np.diag(E)
     ue = np.dot(U, E)
     L = np.dot(ue, VT)
-
+    logMsg(1,"Done calculate L matrix")
     # Calculates projector 
     # L = u^hat dot E^hat dot VT^hat
     hatRows = len(E[E > 0])
@@ -139,29 +142,6 @@ def runAnalysis(X, lam):
     L_g = L
     S_g = S
 
-    # XXX
-    '''
-    x = np.array(X, dtype=float).flatten()
-    l = np.array(L, dtype=float).flatten()
-    s = np.array(S, dtype=float).flatten()
-
-#    bad_x, bad_y = [], []
-#    for i in range(len(y1)):
-#        if y1[i] == 1:
-#            bad_x.append(x[i])
-#            bad_y.append(y[i])
-#            np.delete(x, i)
-#            np.delete(y, i)
-    print("X1")
-    plt.scatter(x, x, color='green')
-    plt.show()
-    plt.scatter(l, l, color='red')
-    plt.show()
-    plt.scatter(s, s, color='blue')
-    plt.show()
-    '''
-#    return S, L, VThat
-    
 
 
 
